@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tonyblake.dublinpubfinder.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_dublinpubfinder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/title_margin_top"
+        android:text="@string/app_name"
+        android:textSize="@dimen/title_size"
+        android:fontFamily="sans-serif-medium"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/guinness"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/tv_qwhatpub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/qwhatpub_margin_top"
+        android:hint="@string/qwhatpub"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_findpub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/findpub"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/copyright_margin_top"
+        android:text="@string/copyright"
+        android:textSize="@dimen/copyright_text_size"/>
+
+</LinearLayout>

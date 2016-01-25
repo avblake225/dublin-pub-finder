@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Dublin Pub Finder</string>
+    <string name="qwhatpub">What pub are you looking for?</string>
+    <string name="findpub">Find pub</string>
+    <string name="copyright">© Tony Blake 2016</string>
+</resources>
