@@ -12,9 +12,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    DBManager dbManager;
     AutoCompleteTextView tv_qwhatpub;
     Button btn_findpub;
-
     String selected_pub;
 
     @Override
@@ -22,9 +22,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        dbManager = new DBManager(this);
+
         tv_qwhatpub = (AutoCompleteTextView)findViewById(R.id.tv_qwhatpub);
 
-        String[] pubs = new String[] {"The Temple Bar", "J.W.Sweetmans", "Fibber Magees", "The Globe"};
+        String[] pubs = dbManager.getPubNames();
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,pubs);
         tv_qwhatpub.setThreshold(1);

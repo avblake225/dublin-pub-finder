@@ -3,4 +3,21 @@
     <string name="qwhatpub">What pub are you looking for?</string>
     <string name="findpub">Find pub</string>
     <string name="copyright">© Tony Blake 2016</string>
+
+    <string name="the_temple_bar">The Temple Bar</string>
+    <string name="the_temple_bar_address">47 Temple Bar, Dublin 2.</string>
+    <string name="the_temple_bar_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Then, turn left and walk under Merchant Arch. You are now in Temple Bar, the Temple Bar is down the cobblestones on the right.</string>
+
+    <string name="jw_sweetman">J.W. Sweetman</string>
+    <string name="jw_sweetman_address">1 Burgh Quay, Dublin 2.</string>
+    <string name="jw_sweetman_directions">From O\'Connell Street, walk over O\'Connell bridge and turn left onto Burgh Quay. J.W. Sweetman is just a few steps away.</string>
+
+    <string name="fibber_magees">Fibber Magees</string>
+    <string name="fibber_magees_address">80 Parnel Street, Dublin 1.</string>
+    <string name="fibber_magees_directions">From O\'Connell Street, walk all the way down to Parnell Street and turn right. Fibber Magees is just a few feet away.</string>
+
+    <string name="the_globe_bar">The Globe Bar</string>
+    <string name="the_globe_bar_address">11 South Great Georges Street. Dublin 2.</string>
+    <string name="the_globe_bar_directions">From O\'Connell Street, walk over O\'Connell bridge and continue straight onto D\'Olier Street. At the end of this street, take a right up to College Green. From there, walk up Dame Street and turn left onto South Great Georges Street. Walk up this street a bit and you\'ll see The Globe Bar on your left.</string>
+
 </resources>
