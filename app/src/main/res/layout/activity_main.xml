@@ -28,7 +28,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/qwhatpub_margin_top"
         android:hint="@string/qwhatpub"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center">
+        <requestFocus />
+    </AutoCompleteTextView>
 
     <Button
         android:id="@+id/btn_findpub"
