@@ -76,9 +76,9 @@ public class DBManager extends SQLiteOpenHelper{
 
     }
 
-    public Cursor getAllData(){
+    public Cursor getPub(String selected_pub){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("SELECT * FROM " + TABLE_NAME,null);
+        Cursor res = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE NAME = '" + selected_pub + "'" ,null);
         return res;
     }
 }
