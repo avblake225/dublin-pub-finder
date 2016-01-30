@@ -23,7 +23,7 @@ public class DBManager extends SQLiteOpenHelper{
 
         pub_names = new String[]{context.getString(R.string.the_temple_bar),
                                  context.getString(R.string.jw_sweetman),
-                                 context.getString(R.string.fibber_magees),
+                                 context.getString(R.string.fibber_magee),
                                  context.getString(R.string.the_globe_bar)
         };
 
@@ -35,9 +35,9 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.jw_sweetman_address),
                 context.getString(R.string.jw_sweetman_directions));
 
-        insertData(context.getString(R.string.fibber_magees),
-                context.getString(R.string.fibber_magees_address),
-                context.getString(R.string.fibber_magees_directions));
+        insertData(context.getString(R.string.fibber_magee),
+                context.getString(R.string.fibber_magee_address),
+                context.getString(R.string.fibber_magee_directions));
 
         insertData(context.getString(R.string.the_globe_bar),
                 context.getString(R.string.the_globe_bar_address),

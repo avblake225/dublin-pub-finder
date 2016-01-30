@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity{
 
+    Context context;
     DBManager dbManager;
     AutoCompleteTextView tv_qwhatpub;
     Button btn_findpub;
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        context = this;
 
         dbManager = new DBManager(this);
 
@@ -57,7 +60,7 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
 
-                try{
+                try {
                     Cursor res = dbManager.getPub(name);
 
                     while (res.moveToNext()) {
@@ -67,16 +70,13 @@ public class MainActivity extends AppCompatActivity{
                         break;
                     }
 
-                    launchPubDetailsScreen();
-                }
-                catch(Exception e){
-
-                    Context context = getApplicationContext();
-                    CharSequence text = "Pub not found";
-                    int duration = Toast.LENGTH_SHORT;
-
-                    Toast toast = Toast.makeText(context, text, duration);
-                    toast.show();
+                    if (name != null) {
+                        launchPubDetailsScreen();
+                    } else {
+                        showToastMessage(context.getString(R.string.pubnotfound));
+                    }
+                } catch (Exception e) {
+                    showToastMessage(context.getString(R.string.errorfindingpub));
                 }
             }
         });
@@ -88,5 +88,11 @@ public class MainActivity extends AppCompatActivity{
         intent.putExtra("address", address);
         intent.putExtra("directions", directions);
         startActivity(intent);
+    }
+
+    private void showToastMessage(CharSequence text){
+        int duration = Toast.LENGTH_SHORT;
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
     }
 }

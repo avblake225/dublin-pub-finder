@@ -11,11 +11,10 @@ import android.widget.TextView;
 
 public class PubDetailsScreen extends Activity{
 
+    private Context context;
     private String name;
     private String address;
     private String directions;
-
-    private Context context;
 
     TextView tv_name;
     ImageView iv_pub;
@@ -27,12 +26,12 @@ public class PubDetailsScreen extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pub_details_screen);
 
+        context = this;
+
         savedInstanceState = getIntent().getExtras();
         name = savedInstanceState.getString("name");
         address = savedInstanceState.getString("address");
         directions = savedInstanceState.getString("directions");
-
-        context = this;
 
         tv_name = (TextView)findViewById(R.id.tv_name);
         iv_pub = (ImageView)findViewById(R.id.iv_pub);
@@ -48,8 +47,19 @@ public class PubDetailsScreen extends Activity{
 
         Drawable pub_pic = null;
 
+        // NB: replace code below with hashmap, e.g. getPubImage(pub_name)
+
         if(context.getString(R.string.the_temple_bar).equals(tv_name.getText())){
-            pub_pic = context.getResources().getDrawable(R.drawable.temple_bar);
+            pub_pic = context.getResources().getDrawable(R.drawable.the_temple_bar);
+        }
+        else if(context.getString(R.string.the_globe_bar).equals(tv_name.getText())){
+            pub_pic = context.getResources().getDrawable(R.drawable.the_globe_bar);
+        }
+        else if(context.getString(R.string.fibber_magee).equals(tv_name.getText())){
+            pub_pic = context.getResources().getDrawable(R.drawable.fibber_magee);
+        }
+        else if(context.getString(R.string.jw_sweetman).equals(tv_name.getText())){
+            pub_pic = context.getResources().getDrawable(R.drawable.jw_sweetman);
         }
 
         iv_pub.setImageDrawable(pub_pic);
