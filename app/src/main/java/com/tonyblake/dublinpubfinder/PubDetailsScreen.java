@@ -34,7 +34,7 @@ public class PubDetailsScreen extends Activity{
         tv_name = (TextView)findViewById(R.id.tv_name);
         iv_pub = (ImageView)findViewById(R.id.iv_pub);
 
-        Utilities.populatePubImages(context);
+        //Utilities.populatePubImageMap(context);
 
         tv_address = (TextView)findViewById(R.id.tv_address);
         tv_directions = (TextView)findViewById(R.id.tv_directions);
@@ -46,9 +46,9 @@ public class PubDetailsScreen extends Activity{
 
         tv_name.setText(name);
 
-        Drawable pub_pic = Utilities.getPubImage(name);
+        //Drawable pub_pic = Utilities.getPubImage(name);
 
-        iv_pub.setImageDrawable(pub_pic);
+        //iv_pub.setImageDrawable(pub_pic);
         tv_address.setText(address);
         tv_directions.setText(directions);
     }

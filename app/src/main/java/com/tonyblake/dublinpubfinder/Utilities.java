@@ -8,7 +8,7 @@ public class Utilities {
 
     public static HashMap<String,Drawable> getPubImage = new HashMap<String,Drawable>();
 
-    public static void populatePubImages(Context context){
+    public static void populatePubImageMap(Context context){
 
         getPubImage.put(context.getString(R.string.the_temple_bar), context.getResources().getDrawable(R.drawable.the_temple_bar));
         getPubImage.put(context.getString(R.string.the_globe_bar), context.getResources().getDrawable(R.drawable.the_globe_bar));
