@@ -1,9 +1,7 @@
 package com.tonyblake.dublinpubfinder;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -16,10 +14,10 @@ public class PubDetailsScreen extends Activity{
     private String address;
     private String directions;
 
-    TextView tv_name;
-    ImageView iv_pub;
-    TextView tv_address;
-    TextView tv_directions;
+    private TextView tv_name;
+    private ImageView iv_pub;
+    private TextView tv_address;
+    private TextView tv_directions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +33,9 @@ public class PubDetailsScreen extends Activity{
 
         tv_name = (TextView)findViewById(R.id.tv_name);
         iv_pub = (ImageView)findViewById(R.id.iv_pub);
+
+        Utilities.populatePubImages(context);
+
         tv_address = (TextView)findViewById(R.id.tv_address);
         tv_directions = (TextView)findViewById(R.id.tv_directions);
     }
@@ -45,22 +46,7 @@ public class PubDetailsScreen extends Activity{
 
         tv_name.setText(name);
 
-        Drawable pub_pic = null;
-
-        // NB: replace code below with hashmap, e.g. getPubImage(pub_name)
-
-        if(context.getString(R.string.the_temple_bar).equals(tv_name.getText())){
-            pub_pic = context.getResources().getDrawable(R.drawable.the_temple_bar);
-        }
-        else if(context.getString(R.string.the_globe_bar).equals(tv_name.getText())){
-            pub_pic = context.getResources().getDrawable(R.drawable.the_globe_bar);
-        }
-        else if(context.getString(R.string.fibber_magee).equals(tv_name.getText())){
-            pub_pic = context.getResources().getDrawable(R.drawable.fibber_magee);
-        }
-        else if(context.getString(R.string.jw_sweetman).equals(tv_name.getText())){
-            pub_pic = context.getResources().getDrawable(R.drawable.jw_sweetman);
-        }
+        Drawable pub_pic = Utilities.getPubImage(name);
 
         iv_pub.setImageDrawable(pub_pic);
         tv_address.setText(address);

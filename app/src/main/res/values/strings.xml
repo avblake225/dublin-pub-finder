@@ -5,6 +5,7 @@
     <string name="copyright">© Tony Blake 2016</string>
     <string name="pubnotfound">Pub not found</string>
     <string name="errorfindingpub">Error finding pub</string>
+    <string name="directions">Directions</string>
 
     <string name="the_temple_bar">The Temple Bar</string>
     <string name="the_temple_bar_address">47 Temple Bar, Dublin 2.</string>
