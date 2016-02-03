@@ -7,6 +7,18 @@
     <string name="errorfindingpub">Error finding pub</string>
     <string name="directions">Directions</string>
 
+    <string name="odonoghues">O Donoghues</string>
+    <string name="odonoghues_address">15 Merrion Row, Dublin 2</string>
+    <string name="odonoghues_directions">From College Green, turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. Then, turn left at St. Stephen\'s Green and continue on to Merrion Row. You will then see O\' Donoghue\'s on the right.</string>
+
+    <string name="the_long_hall">The Long Haul</string>
+    <string name="the_long_hall_address">51 South Great George\'s Street, Dublin 2</string>
+    <string name="the_long_hall_directions">From College Green walk straight up Dame Street. Take the third left turn and walk up South Great George\'s Street. The Long Hall is just beyond Fade Street.</string>
+
+    <string name="the_stags_head">The Stags Head</string>
+    <string name="the_stags_head_address">1 Dame Court, Dublin 2</string>
+    <string name="the_stags_head_directions">From O\'Connell Street, walk over O\'Connell bridge and continue straight onto D\'Olier Street. At the end of this street, take a right up to College Green. From there, walk up Dame Street and turn left onto Trinity Street. Turn right onto Dame Lane and you\'ll see The Stag\'s Head up on the left.</string>
+
     <string name="the_temple_bar">The Temple Bar</string>
     <string name="the_temple_bar_address">47 Temple Bar, Dublin 2.</string>
     <string name="the_temple_bar_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Then, turn left and walk under Merchant Arch. You are now in Temple Bar, the Temple Bar is down the cobblestones on the right.</string>

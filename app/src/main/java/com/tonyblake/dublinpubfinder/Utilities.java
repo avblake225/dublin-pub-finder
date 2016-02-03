@@ -23,6 +23,15 @@ public class Utilities {
 
     public static Drawable getPubImage(String name){
 
-        return getPubImage.get(name);
+        Drawable image = null;
+
+        try{
+            image = getPubImage.get(name);
+        }
+        catch(Exception e){
+            System.out.println("Error retrieving pub image");
+        }
+
+        return image;
     }
 }

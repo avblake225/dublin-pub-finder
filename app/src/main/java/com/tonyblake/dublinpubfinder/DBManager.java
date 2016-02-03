@@ -15,17 +15,35 @@ public class DBManager extends SQLiteOpenHelper{
     public static final String COL_3 = "ADDRESS";
     public static final String COL_4 = "DIRECTIONS";
 
+    public SQLiteDatabase db;
+
     public static String[] pub_names = null;
 
     // this creates the database
     public DBManager(Context context) {
         super(context, DATABASE_NAME, null, 1);
+        db = this.getWritableDatabase();
 
-        pub_names = new String[]{context.getString(R.string.the_temple_bar),
+        pub_names = new String[]{context.getString(R.string.odonoghues),
+                                 context.getString(R.string.the_long_hall),
+                                 context.getString(R.string.the_stags_head),
+                                 context.getString(R.string.the_temple_bar),
                                  context.getString(R.string.jw_sweetman),
                                  context.getString(R.string.fibber_magee),
                                  context.getString(R.string.the_globe_bar)
         };
+
+        insertData(context.getString(R.string.odonoghues),
+                context.getString(R.string.odonoghues_address),
+                context.getString(R.string.odonoghues_directions));
+
+        insertData(context.getString(R.string.the_long_hall),
+                context.getString(R.string.the_long_hall_address),
+                context.getString(R.string.the_long_hall_directions));
+
+        insertData(context.getString(R.string.the_stags_head),
+                context.getString(R.string.the_stags_head_address),
+                context.getString(R.string.the_stags_head_directions));
 
         insertData(context.getString(R.string.the_temple_bar),
                    context.getString(R.string.the_temple_bar_address),
@@ -55,7 +73,7 @@ public class DBManager extends SQLiteOpenHelper{
     }
 
     public boolean insertData(String name, String address, String directions){
-        SQLiteDatabase db = this.getWritableDatabase();
+
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_2, name);
         contentValues.put(COL_3, address);
