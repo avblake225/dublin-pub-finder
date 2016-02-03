@@ -1,7 +1,12 @@
 package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
+
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 import java.util.HashMap;
 
 public class Utilities {
