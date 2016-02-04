@@ -4,6 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context="com.tonyblake.dublinpubfinder.MainActivity">
 
     <TextView
@@ -14,13 +15,14 @@
         android:layout_marginTop="@dimen/title_margin_top"
         android:text="@string/app_name"
         android:textSize="@dimen/title_size"
+        android:textColor="@color/white"
         android:fontFamily="sans-serif-medium"/>
 
-    <ImageView
+    <!--<ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:src="@drawable/guinness"/>
+        android:src="@drawable/guinness"/>-->
 
     <AutoCompleteTextView
         android:id="@+id/tv_qwhatpub"
@@ -28,7 +30,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/qwhatpub_margin_top"
         android:hint="@string/qwhatpub"
-        android:layout_gravity="center">
+        android:textColorHint="@color/white"
+        android:layout_gravity="center"
+        android:textColor="@color/white">
         <requestFocus />
     </AutoCompleteTextView>
 
@@ -45,6 +49,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/copyright_margin_top"
         android:text="@string/copyright"
+        android:textColor="@color/white"
         android:textSize="@dimen/copyright_text_size"/>
 
 </LinearLayout>

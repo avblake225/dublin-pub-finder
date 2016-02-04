@@ -21,7 +21,7 @@ public class Utilities {
         getPubImage.put(context.getString(R.string.jw_sweetman), context.getResources().getDrawable(R.drawable.jw_sweetman));
     }
 
-    public static Drawable getPubImage(String name){
+    public static Drawable getPubImage(String name, Context context){
 
         Drawable image = null;
 
@@ -29,7 +29,7 @@ public class Utilities {
             image = getPubImage.get(name);
         }
         catch(Exception e){
-            System.out.println("Error retrieving pub image");
+            System.out.println(context.getString(R.string.errorretrievingpubimage));
         }
 
         return image;

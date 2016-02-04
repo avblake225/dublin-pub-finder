@@ -5,13 +5,14 @@
     <string name="copyright">© Tony Blake 2016</string>
     <string name="pubnotfound">Pub not found</string>
     <string name="errorfindingpub">Error finding pub</string>
+    <string name="errorretrievingpubimage">"Error retrieving pub image"</string>
     <string name="directions">Directions</string>
 
     <string name="odonoghues">O Donoghues</string>
     <string name="odonoghues_address">15 Merrion Row, Dublin 2</string>
     <string name="odonoghues_directions">From College Green, turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. Then, turn left at St. Stephen\'s Green and continue on to Merrion Row. You will then see O\' Donoghue\'s on the right.</string>
 
-    <string name="the_long_hall">The Long Haul</string>
+    <string name="the_long_hall">The Long Hall</string>
     <string name="the_long_hall_address">51 South Great George\'s Street, Dublin 2</string>
     <string name="the_long_hall_directions">From College Green walk straight up Dame Street. Take the third left turn and walk up South Great George\'s Street. The Long Hall is just beyond Fade Street.</string>
 

@@ -2,7 +2,6 @@ package com.tonyblake.dublinpubfinder;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -47,7 +46,7 @@ public class PubDetailsScreen extends Activity{
 
         tv_name.setText(name);
 
-        Drawable pub_pic = Utilities.getPubImage(name);
+        Drawable pub_pic = Utilities.getPubImage(name,context);
 
         iv_pub.setImageDrawable(pub_pic);
         tv_address.setText(address);

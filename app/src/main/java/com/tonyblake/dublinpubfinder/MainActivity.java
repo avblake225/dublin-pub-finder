@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity{
     Context context;
     DBManager dbManager;
     AutoCompleteTextView tv_qwhatpub;
+    String[] pubs;
     Button btn_findpub;
     String name;
     String address;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity{
 
         tv_qwhatpub = (AutoCompleteTextView)findViewById(R.id.tv_qwhatpub);
 
-        String[] pubs = dbManager.getPubNames();
+        pubs = dbManager.getPubNames();
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,pubs);
         tv_qwhatpub.setThreshold(1);
@@ -45,6 +46,10 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onResume(){
         super.onResume();
+
+        name = null;
+
+        tv_qwhatpub.setText("");
 
         tv_qwhatpub.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -94,5 +99,12 @@ public class MainActivity extends AppCompatActivity{
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+
+        name = null;
     }
 }
