@@ -24,7 +24,11 @@ public class DBManager extends SQLiteOpenHelper{
         super(context, DATABASE_NAME, null, 1);
         db = this.getWritableDatabase();
 
-        pub_names = new String[]{context.getString(R.string.odonoghues),
+        pub_names = new String[]{context.getString(R.string.alfie_byrnes),
+                                 context.getString(R.string.bruxelles),
+                                 context.getString(R.string.cassidys),
+                                 context.getString(R.string.doyles),
+                                 context.getString(R.string.odonoghues),
                                  context.getString(R.string.the_long_hall),
                                  context.getString(R.string.the_stags_head),
                                  context.getString(R.string.the_temple_bar),
@@ -32,6 +36,22 @@ public class DBManager extends SQLiteOpenHelper{
                                  context.getString(R.string.fibber_magee),
                                  context.getString(R.string.the_globe_bar)
         };
+
+        insertData(context.getString(R.string.alfie_byrnes),
+                context.getString(R.string.alfie_byrnes_address),
+                context.getString(R.string.alfie_byrnes_directions));
+
+        insertData(context.getString(R.string.bruxelles),
+                context.getString(R.string.bruxelles_address),
+                context.getString(R.string.bruxelles_directions));
+
+        insertData(context.getString(R.string.cassidys),
+                context.getString(R.string.cassidys_address),
+                context.getString(R.string.cassidys_directions));
+
+        insertData(context.getString(R.string.doyles),
+                context.getString(R.string.doyles_address),
+                context.getString(R.string.doyles_directions));
 
         insertData(context.getString(R.string.odonoghues),
                 context.getString(R.string.odonoghues_address),
