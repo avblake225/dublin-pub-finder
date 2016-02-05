@@ -13,7 +13,7 @@
     <string name="alfie_byrnes_directions">From College Green (Trinity College), turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. At the top of Dawson Street, turn left and walk around St. Stephen\'s Green. Then, turn left onto Lesson Street Lower. You will see Alfie Byrne\'s a few feet up this street on the right.</string>
 
     <string name="bruxelles">Bruxelles</string>
-    <string name="bruxelles_address">7\-8 Harry St, Dublin 2</string>
+    <string name="bruxelles_address">7 Harry St, Dublin 2</string>
     <string name="bruxelles_directions">From College Green (Trinity College), turn left and walk over to Grafton Street. Walk up Grafton Street and take the third right turn onto Harry Street. You will see Bruxelles on the right.</string>
 
     <string name="cassidys">Cassidys</string>
@@ -23,6 +23,34 @@
     <string name="doyles">Doyles</string>
     <string name="doyles_address">9 College St, Dublin 2</string>
     <string name="doyles_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight onto D\'Olier Street. Walk up to the top of this street and you will see Doyle\'s on the right.</string>
+
+    <string name="east_side_tavern">East Side Tavern</string>
+    <string name="east_side_tavern_address">104 Leeson Street Lower, Dublin 2</string>
+    <string name="east_side_tavern_directions">From College Green (Trinity College), turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. Then, turn left and walk around St. Stephen\'s Green. Turn left onto Leeson Street Lower and you will immediately see the East Side Tavern.</string>
+
+    <string name="fibber_magee">Fibber Magees</string>
+    <string name="fibber_magee_address">80 Parnel Street, Dublin 1.</string>
+    <string name="fibber_magee_directions">From O\'Connell Street, walk past the Savoy Cinema and continue on down to Parnell Street and turn right. Fibber Magees is just a few feet away.</string>
+
+    <string name="hartigans">Hartigans</string>
+    <string name="hartigans_address">100 Leeson Street Lower, Dublin 2</string>
+    <string name="hartigans_directions">From College Green (Trinity College), turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. Then, turn left and walk around St. Stephen\'s Green. Turn left onto Leeson Street Lower and you will see Hartigan\'s a few feet up the street.</string>
+
+    <string name="hogans">Hogans</string>
+    <string name="hogans_address">35 South Great Georges Street, Dublin 2</string>
+    <string name="hogans_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn and walk up South Great George\'s Street. Continue on up this street, past Exchequer Street, and you\'ll soon see Hogan\'s on the left.</string>
+
+    <string name="jj_smyths">J.J. Smyths</string>
+    <string name="jj_smyths_address">12 Aungier St, Dublin 2</string>
+    <string name="jj_smyths_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn and walk up South Great George\'s Street. Continue on up this street and onto Aungier Street. J.J. Smyth\'s is on the first left corner of this street.</string>
+
+    <string name="john_kehoe">John Kehoes</string>
+    <string name="john_kehoe_address">9 South Anne Street, Dublin 2</string>
+    <string name="john_kehoe_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the third right turn onto South Anne Street. You will see John Kehoe\'s on the left corner.</string>
+
+    <string name="jw_sweetman">J.W. Sweetman</string>
+    <string name="jw_sweetman_address">1 Burgh Quay, Dublin 2.</string>
+    <string name="jw_sweetman_directions">From O\'Connell Street, walk over O\'Connell bridge and turn left onto Burgh Quay. J.W. Sweetman is just a few steps away.</string>
 
     <string name="odonoghues">O Donoghues</string>
     <string name="odonoghues_address">15 Merrion Row, Dublin 2</string>
@@ -39,14 +67,6 @@
     <string name="the_temple_bar">The Temple Bar</string>
     <string name="the_temple_bar_address">47 Temple Bar, Dublin 2.</string>
     <string name="the_temple_bar_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Then, turn left and walk under Merchant Arch. You are now in Temple Bar, the Temple Bar is down the cobblestones on the right.</string>
-
-    <string name="jw_sweetman">J.W. Sweetman</string>
-    <string name="jw_sweetman_address">1 Burgh Quay, Dublin 2.</string>
-    <string name="jw_sweetman_directions">From O\'Connell Street, walk over O\'Connell bridge and turn left onto Burgh Quay. J.W. Sweetman is just a few steps away.</string>
-
-    <string name="fibber_magee">Fibber Magees</string>
-    <string name="fibber_magee_address">80 Parnel Street, Dublin 1.</string>
-    <string name="fibber_magee_directions">From O\'Connell Street, walk past the Savoy Cinema and continue on down to Parnell Street and turn right. Fibber Magees is just a few feet away.</string>
 
     <string name="the_globe_bar">The Globe Bar</string>
     <string name="the_globe_bar_address">11 South Great Georges Street. Dublin 2.</string>

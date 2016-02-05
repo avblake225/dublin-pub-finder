@@ -19,7 +19,6 @@ public class DBManager extends SQLiteOpenHelper{
 
     public static String[] pub_names = null;
 
-    // this creates the database
     public DBManager(Context context) {
         super(context, DATABASE_NAME, null, 1);
         db = this.getWritableDatabase();
@@ -28,12 +27,17 @@ public class DBManager extends SQLiteOpenHelper{
                                  context.getString(R.string.bruxelles),
                                  context.getString(R.string.cassidys),
                                  context.getString(R.string.doyles),
+                                 context.getString(R.string.east_side_tavern),
+                                 context.getString(R.string.fibber_magee),
+                                 context.getString(R.string.hartigans),
+                                 context.getString(R.string.hogans),
+                                 context.getString(R.string.jj_smyths),
+                                 context.getString(R.string.john_kehoe),
+                                 context.getString(R.string.jw_sweetman),
                                  context.getString(R.string.odonoghues),
                                  context.getString(R.string.the_long_hall),
                                  context.getString(R.string.the_stags_head),
                                  context.getString(R.string.the_temple_bar),
-                                 context.getString(R.string.jw_sweetman),
-                                 context.getString(R.string.fibber_magee),
                                  context.getString(R.string.the_globe_bar)
         };
 
@@ -53,6 +57,34 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.doyles_address),
                 context.getString(R.string.doyles_directions));
 
+        insertData(context.getString(R.string.east_side_tavern),
+                context.getString(R.string.east_side_tavern_address),
+                context.getString(R.string.east_side_tavern_directions));
+
+        insertData(context.getString(R.string.fibber_magee),
+                context.getString(R.string.fibber_magee_address),
+                context.getString(R.string.fibber_magee_directions));
+
+        insertData(context.getString(R.string.hartigans),
+                context.getString(R.string.hartigans_address),
+                context.getString(R.string.hartigans_directions));
+
+        insertData(context.getString(R.string.hogans),
+                context.getString(R.string.hogans_address),
+                context.getString(R.string.hogans_directions));
+
+        insertData(context.getString(R.string.jj_smyths),
+                context.getString(R.string.jj_smyths_address),
+                context.getString(R.string.jj_smyths_directions));
+
+        insertData(context.getString(R.string.john_kehoe),
+                context.getString(R.string.john_kehoe_address),
+                context.getString(R.string.john_kehoe_directions));
+
+        insertData(context.getString(R.string.jw_sweetman),
+                context.getString(R.string.jw_sweetman_address),
+                context.getString(R.string.jw_sweetman_directions));
+
         insertData(context.getString(R.string.odonoghues),
                 context.getString(R.string.odonoghues_address),
                 context.getString(R.string.odonoghues_directions));
@@ -68,14 +100,6 @@ public class DBManager extends SQLiteOpenHelper{
         insertData(context.getString(R.string.the_temple_bar),
                    context.getString(R.string.the_temple_bar_address),
                    context.getString(R.string.the_temple_bar_directions));
-
-        insertData(context.getString(R.string.jw_sweetman),
-                context.getString(R.string.jw_sweetman_address),
-                context.getString(R.string.jw_sweetman_directions));
-
-        insertData(context.getString(R.string.fibber_magee),
-                context.getString(R.string.fibber_magee_address),
-                context.getString(R.string.fibber_magee_directions));
 
         insertData(context.getString(R.string.the_globe_bar),
                 context.getString(R.string.the_globe_bar_address),
