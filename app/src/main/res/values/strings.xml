@@ -12,9 +12,17 @@
     <string name="alfie_byrnes_address">Earlsfort Terrace, Dublin 2</string>
     <string name="alfie_byrnes_directions">From College Green (Trinity College), turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. At the top of Dawson Street, turn left and walk around St. Stephen\'s Green. Then, turn left onto Lesson Street Lower. You will see Alfie Byrne\'s a few feet up this street on the right.</string>
 
+    <string name="bailey_bar">Bailey Bar</string>
+    <string name="bailey_bar_address">2 Duke St, Dublin 2</string>
+    <string name="bailey_bar_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the first left turn onto Duke Street. You will see the Bailey Bar on the left.</string>
+
     <string name="bruxelles">Bruxelles</string>
     <string name="bruxelles_address">7 Harry St, Dublin 2</string>
     <string name="bruxelles_directions">From College Green (Trinity College), turn left and walk over to Grafton Street. Walk up Grafton Street and take the third right turn onto Harry Street. You will see Bruxelles on the right.</string>
+
+    <string name="capitol_bar">Capitol Bar</string>
+    <string name="capitol_bar_address">1 Aungier St, Dublin 2</string>
+    <string name="capitol_bar_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn onto South Great George\'s Street. Walk up this street until you come to Aungier Street. You will see the Capitol Bar on the left corner.</string>
 
     <string name="cassidys">Cassidys</string>
     <string name="cassidys_address">27 Westmoreland St, Dublin 2</string>
@@ -49,12 +57,20 @@
     <string name="john_kehoe_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the third right turn onto South Anne Street. You will see John Kehoe\'s on the left corner.</string>
 
     <string name="jw_sweetman">J.W. Sweetman</string>
-    <string name="jw_sweetman_address">1 Burgh Quay, Dublin 2.</string>
+    <string name="jw_sweetman_address">1 Burgh Quay, Dublin 2</string>
     <string name="jw_sweetman_directions">From O\'Connell Street, walk over O\'Connell bridge and turn left onto Burgh Quay. J.W. Sweetman is just a few steps away.</string>
+
+    <string name="nearys">Nearys</string>
+    <string name="nearys_address">1 Chatham Street, Dublin 2</string>
+    <string name="nearys_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the fourth right turn onto Chatham Street. You will see Neary\'s on the left.</string>
 
     <string name="odonoghues">O Donoghues</string>
     <string name="odonoghues_address">15 Merrion Row, Dublin 2</string>
     <string name="odonoghues_directions">From College Green (Trinity College), turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. Then, turn left at St. Stephen\'s Green and continue on to Merrion Row. You will then see O\' Donoghue\'s on the right.</string>
+
+    <string name="synnotts">Synnotts</string>
+    <string name="synnotts_address">South King Street, Dublin 2</string>
+    <string name="synnotts_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the last right turn onto South King Street. You will see Synnott\'s on the left.</string>
 
     <string name="the_long_hall">The Long Hall</string>
     <string name="the_long_hall_address">51 South Great George\'s Street, Dublin 2</string>

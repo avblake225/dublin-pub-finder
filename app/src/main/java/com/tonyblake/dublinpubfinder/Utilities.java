@@ -16,7 +16,9 @@ public class Utilities {
     public static void populatePubImageMap(Context context){
 
         getPubImage.put(context.getString(R.string.alfie_byrnes),context.getResources().getDrawable(R.drawable.alfie_byrnes));
+        getPubImage.put(context.getString(R.string.bailey_bar),context.getResources().getDrawable(R.drawable.bailey_bar));
         getPubImage.put(context.getString(R.string.bruxelles),context.getResources().getDrawable(R.drawable.bruxelles));
+        getPubImage.put(context.getString(R.string.capitol_bar),context.getResources().getDrawable(R.drawable.capitol_bar));
         getPubImage.put(context.getString(R.string.cassidys),context.getResources().getDrawable(R.drawable.cassidys));
         getPubImage.put(context.getString(R.string.doyles),context.getResources().getDrawable(R.drawable.doyles));
         getPubImage.put(context.getString(R.string.east_side_tavern),context.getResources().getDrawable(R.drawable.east_side_tavern));
@@ -26,6 +28,9 @@ public class Utilities {
         getPubImage.put(context.getString(R.string.jj_smyths),context.getResources().getDrawable(R.drawable.jj_smyths));
         getPubImage.put(context.getString(R.string.john_kehoe),context.getResources().getDrawable(R.drawable.john_kehoe));
         getPubImage.put(context.getString(R.string.jw_sweetman), context.getResources().getDrawable(R.drawable.jw_sweetman));
+        getPubImage.put(context.getString(R.string.nearys), context.getResources().getDrawable(R.drawable.nearys));
+        getPubImage.put(context.getString(R.string.odonoghues), context.getResources().getDrawable(R.drawable.o_donoghues));
+        getPubImage.put(context.getString(R.string.synnotts), context.getResources().getDrawable(R.drawable.sinnotts));
         getPubImage.put(context.getString(R.string.the_temple_bar), context.getResources().getDrawable(R.drawable.the_temple_bar));
         getPubImage.put(context.getString(R.string.the_globe_bar), context.getResources().getDrawable(R.drawable.the_globe_bar));
     }
