@@ -68,9 +68,29 @@
     <string name="odonoghues_address">15 Merrion Row, Dublin 2</string>
     <string name="odonoghues_directions">From College Green (Trinity College), turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. Then, turn left at St. Stephen\'s Green and continue on to Merrion Row. You will then see O\' Donoghue\'s on the right.</string>
 
+    <string name="porterhouse_central">Porterhouse Central</string>
+    <string name="porterhouse_central_address">45 Nassau Street, Dublin 2</string>
+    <string name="porterhouse_central_directions">From College Green (Trinity College), turn left and walk up Nassau Street. You will see Porterhouse Central a few feet up on the right.</string>
+
+    <string name="river_bar">River Bar</string>
+    <string name="river_bar_address">1 Burgh Quay, Dublin 2</string>
+    <string name="river_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and turn left onto Burgh Quay. You will see the River Bar on the right.</string>
+
     <string name="synnotts">Synnotts</string>
     <string name="synnotts_address">South King Street, Dublin 2</string>
     <string name="synnotts_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the last right turn onto South King Street. You will see Synnott\'s on the left.</string>
+
+    <string name="the_duke">The Duke</string>
+    <string name="the_duke_address">8 Duke St, Dublin 2</string>
+    <string name="the_duke_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the first left turn onto Duke Street. You will see The Duke on the left.</string>
+
+    <string name="the_globe_bar">The Globe Bar</string>
+    <string name="the_globe_bar_address">11 South Great Georges Street. Dublin 2</string>
+    <string name="the_globe_bar_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn onto South Great George\'s Street. Walk a few feet up this street and you will see The Globe Bar on the left.</string>
+
+    <string name="the_grafton_lounge">The Grafton Lounge</string>
+    <string name="the_grafton_lounge_address">2 Duke Lane Upper, Dublin 2</string>
+    <string name="the_grafton_lounge_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the first left turn onto Duke Street. Then, take the first right turn onto Duke Lane Upper. You will see The Grafton Lounge a few feet down on the left.</string>
 
     <string name="the_long_hall">The Long Hall</string>
     <string name="the_long_hall_address">51 South Great George\'s Street, Dublin 2</string>
@@ -83,9 +103,5 @@
     <string name="the_temple_bar">The Temple Bar</string>
     <string name="the_temple_bar_address">47 Temple Bar, Dublin 2.</string>
     <string name="the_temple_bar_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Then, turn left and walk under Merchant Arch. You are now in Temple Bar, the Temple Bar is down the cobblestones on the right.</string>
-
-    <string name="the_globe_bar">The Globe Bar</string>
-    <string name="the_globe_bar_address">11 South Great Georges Street. Dublin 2.</string>
-    <string name="the_globe_bar_directions">From O\'Connell Street, walk over O\'Connell bridge and continue straight onto D\'Olier Street. At the end of this street, take a right up to College Green. From there, walk up Dame Street and turn left onto South Great Georges Street. Walk up this street a bit and you\'ll see The Globe Bar on your left.</string>
 
 </resources>
