@@ -84,13 +84,13 @@
     <string name="the_duke_address">8 Duke St, Dublin 2</string>
     <string name="the_duke_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the first left turn onto Duke Street. You will see The Duke on the left.</string>
 
-    <string name="the_globe_bar">The Globe Bar</string>
-    <string name="the_globe_bar_address">11 South Great Georges Street. Dublin 2</string>
-    <string name="the_globe_bar_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn onto South Great George\'s Street. Walk a few feet up this street and you will see The Globe Bar on the left.</string>
+    <string name="the_globe">The Globe</string>
+    <string name="the_globe_address">11 South Great Georges Street, Dublin 2</string>
+    <string name="the_globe_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn onto South Great George\'s Street. Walk a few feet up this street and you will see The Globe Bar on the left.</string>
 
-    <string name="the_grafton_lounge">The Grafton Lounge</string>
-    <string name="the_grafton_lounge_address">2 Duke Lane Upper, Dublin 2</string>
-    <string name="the_grafton_lounge_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the first left turn onto Duke Street. Then, take the first right turn onto Duke Lane Upper. You will see The Grafton Lounge a few feet down on the left.</string>
+    <string name="grafton_lounge">Grafton Lounge</string>
+    <string name="grafton_lounge_address">2 Duke Lane Upper, Dublin 2</string>
+    <string name="grafton_lounge_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the first left turn onto Duke Street. Then, take the first right turn onto Duke Lane Upper. You will see The Grafton Lounge a few feet down on the left.</string>
 
     <string name="the_long_hall">The Long Hall</string>
     <string name="the_long_hall_address">51 South Great George\'s Street, Dublin 2</string>

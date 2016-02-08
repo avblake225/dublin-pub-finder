@@ -34,10 +34,9 @@ public class Utilities {
         getPubImage.put(context.getString(R.string.river_bar), context.getResources().getDrawable(R.drawable.river_bar));
         getPubImage.put(context.getString(R.string.synnotts), context.getResources().getDrawable(R.drawable.sinnotts));
         getPubImage.put(context.getString(R.string.the_duke), context.getResources().getDrawable(R.drawable.the_duke));
-        getPubImage.put(context.getString(R.string.the_globe_bar), context.getResources().getDrawable(R.drawable.the_globe_bar));
-        getPubImage.put(context.getString(R.string.the_grafton_lounge), context.getResources().getDrawable(R.drawable.the_grafton_lounge));
+        getPubImage.put(context.getString(R.string.the_globe), context.getResources().getDrawable(R.drawable.the_globe));
+        getPubImage.put(context.getString(R.string.grafton_lounge), context.getResources().getDrawable(R.drawable.grafton_lounge));
         getPubImage.put(context.getString(R.string.the_temple_bar), context.getResources().getDrawable(R.drawable.the_temple_bar));
-        getPubImage.put(context.getString(R.string.the_globe_bar), context.getResources().getDrawable(R.drawable.the_globe_bar));
     }
 
     public static Drawable getPubImage(String name, Context context){
