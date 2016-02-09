@@ -12,6 +12,10 @@
     <string name="alfie_byrnes_address">Earlsfort Terrace, Dublin 2</string>
     <string name="alfie_byrnes_directions">From College Green (Trinity College), turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. At the top of Dawson Street, turn left and walk around St. Stephen\'s Green. Then, turn left onto Lesson Street Lower. You will see Alfie Byrne\'s a few feet up this street on the right.</string>
 
+    <string name="bad_bobs">Bad Bobs</string>
+    <string name="bad_bobs_address">35 Essex St East, Dublin 2</string>
+    <string name="bad_bobs_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street. You will see Bad Bob\'s on the left hand corner.</string>
+
     <string name="bailey_bar">Bailey Bar</string>
     <string name="bailey_bar_address">2 Duke St, Dublin 2</string>
     <string name="bailey_bar_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the first left turn onto Duke Street. You will see the Bailey Bar on the left.</string>
@@ -20,6 +24,10 @@
     <string name="bruxelles_address">7 Harry St, Dublin 2</string>
     <string name="bruxelles_directions">From College Green (Trinity College), turn left and walk over to Grafton Street. Walk up Grafton Street and take the third right turn onto Harry Street. You will see Bruxelles on the right.</string>
 
+    <string name="buskers">Buskers</string>
+    <string name="buskers_address">13 Fleet St, Dublin 2</string>
+    <string name="buskers_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight onto Westmoreland Street. Take the first right turn onto Fleet Street. Walk a few feet up this street and you will see Busker\'s on the right.</string>
+
     <string name="capitol_bar">Capitol Bar</string>
     <string name="capitol_bar_address">1 Aungier St, Dublin 2</string>
     <string name="capitol_bar_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn onto South Great George\'s Street. Walk up this street until you come to Aungier Street. You will see the Capitol Bar on the left corner.</string>
@@ -27,6 +35,10 @@
     <string name="cassidys">Cassidys</string>
     <string name="cassidys_address">27 Westmoreland St, Dublin 2</string>
     <string name="cassidys_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight onto Westmoreland Street. You will see Cassidys a few feet up this street on the left.</string>
+
+    <string name="czech_inn">Czech Inn</string>
+    <string name="czech_inn_address">Essex gate, Temple Bar, Dublin 8</string>
+    <string name="czech_inn_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street. Walk up this street and you will see The Czech Inn on the right hand corner.</string>
 
     <string name="dakota">Dakota</string>
     <string name="dakota_address">8 William Street South, Dublin 2</string>
@@ -43,6 +55,10 @@
     <string name="fibber_magee">Fibber Magees</string>
     <string name="fibber_magee_address">80 Parnel Street, Dublin 1</string>
     <string name="fibber_magee_directions">From O\'Connell Street, walk past the Savoy Cinema and continue on down to Parnell Street and turn right. Fibber Magees is just a few feet away.</string>
+
+    <string name="fitzsimons">Fitzsimons</string>
+    <string name="fitzsimons_address">21 Wellington Quay, Temple Bar, Dublin 2</string>
+    <string name="fitzsimons_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Then, turn left and walk under Merchant Arch. You are now in Temple Bar, Fitzsimon\'s is down the cobblestones on the right.</string>
 
     <string name="grafton_lounge">Grafton Lounge</string>
     <string name="grafton_lounge_address">2 Duke Lane Upper, Dublin 2</string>
