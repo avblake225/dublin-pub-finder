@@ -33,11 +33,13 @@ public class DBManager extends SQLiteOpenHelper{
                                  context.getString(R.string.east_side_tavern),
                                  context.getString(R.string.fibber_magee),
                                  context.getString(R.string.grafton_lounge),
+                                 context.getString(R.string.grogans),
                                  context.getString(R.string.hartigans),
                                  context.getString(R.string.hogans),
                                  context.getString(R.string.jj_smyths),
                                  context.getString(R.string.john_kehoe),
                                  context.getString(R.string.jw_sweetman),
+                                 context.getString(R.string.market_bar),
                                  context.getString(R.string.nearys),
                                  context.getString(R.string.odonoghues),
                                  context.getString(R.string.peters_pub),
@@ -93,6 +95,10 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.grafton_lounge_address),
                 context.getString(R.string.grafton_lounge_directions));
 
+        insertData(context.getString(R.string.grogans),
+                context.getString(R.string.grogans_address),
+                context.getString(R.string.grogans_directions));
+
         insertData(context.getString(R.string.hartigans),
                 context.getString(R.string.hartigans_address),
                 context.getString(R.string.hartigans_directions));
@@ -112,6 +118,10 @@ public class DBManager extends SQLiteOpenHelper{
         insertData(context.getString(R.string.jw_sweetman),
                 context.getString(R.string.jw_sweetman_address),
                 context.getString(R.string.jw_sweetman_directions));
+
+        insertData(context.getString(R.string.market_bar),
+                context.getString(R.string.market_bar_address),
+                context.getString(R.string.market_bar_directions));
 
         insertData(context.getString(R.string.nearys),
                 context.getString(R.string.nearys_address),

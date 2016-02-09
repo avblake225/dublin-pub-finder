@@ -41,12 +41,16 @@
     <string name="east_side_tavern_directions">From College Green (Trinity College), turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. Then, turn left and walk around St. Stephen\'s Green. Turn left onto Leeson Street Lower and you will immediately see the East Side Tavern.</string>
 
     <string name="fibber_magee">Fibber Magees</string>
-    <string name="fibber_magee_address">80 Parnel Street, Dublin 1.</string>
+    <string name="fibber_magee_address">80 Parnel Street, Dublin 1</string>
     <string name="fibber_magee_directions">From O\'Connell Street, walk past the Savoy Cinema and continue on down to Parnell Street and turn right. Fibber Magees is just a few feet away.</string>
 
     <string name="grafton_lounge">Grafton Lounge</string>
     <string name="grafton_lounge_address">2 Duke Lane Upper, Dublin 2</string>
     <string name="grafton_lounge_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the first left turn onto Duke Street. Then, take the first right turn onto Duke Lane Upper. You will see The Grafton Lounge a few feet down on the left.</string>
+
+    <string name="grogans">Grogans</string>
+    <string name="grogans_address">15 South William Street, Dublin 2</string>
+    <string name="grogans_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk a few feet up this street and you will see Grogan\'s on the left.</string>
 
     <string name="hartigans">Hartigans</string>
     <string name="hartigans_address">100 Leeson Street Lower, Dublin 2</string>
@@ -67,6 +71,10 @@
     <string name="jw_sweetman">J.W. Sweetman</string>
     <string name="jw_sweetman_address">1 Burgh Quay, Dublin 2</string>
     <string name="jw_sweetman_directions">From O\'Connell Street, walk over O\'Connell bridge and turn left onto Burgh Quay. J.W. Sweetman is just a few steps away.</string>
+
+    <string name="market_bar">Market Bar</string>
+    <string name="market_bar_address">14A Fade St, Dublin 2</string>
+    <string name="market_bar_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn and walk up South Great George\'s Street. Take the third left turn onto Fade Street. You will see The Market Bar a few feet away.</string>
 
     <string name="nearys">Nearys</string>
     <string name="nearys_address">1 Chatham Street, Dublin 2</string>
