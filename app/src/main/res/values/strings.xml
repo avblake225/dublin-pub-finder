@@ -68,6 +68,10 @@
     <string name="grogans_address">15 South William Street, Dublin 2</string>
     <string name="grogans_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk a few feet up this street and you will see Grogan\'s on the left.</string>
 
+    <string name="hairy_lemon">The Hairy Lemon</string>
+    <string name="hairy_lemon_address">Stephen Street Lower, Dublin 2</string>
+    <string name="hairy_lemon_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk all the way up this street and take the last right turn. You will see The Hairy Lemon on the right hand corner.</string>
+
     <string name="hartigans">Hartigans</string>
     <string name="hartigans_address">100 Leeson Street Lower, Dublin 2</string>
     <string name="hartigans_directions">From College Green (Trinity College), turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. Then, turn left and walk around St. Stephen\'s Green. Turn left onto Leeson Street Lower and you will see Hartigan\'s a few feet up the street.</string>
@@ -112,6 +116,10 @@
     <string name="p_macs_address">30 Stephen Street Lower, Dublin 2</string>
     <string name="p_macs_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk all the way up this street and take the last right turn. You will see P. Mac\'s on the left hand corner.</string>
 
+    <string name="robert_reid">Robert Reid</string>
+    <string name="robert_reid_address">19 Store St, Dublin 1</string>
+    <string name="robert_reid_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk up this street and take the second left turn onto Gardiner Street South. Take the first right turn and walk down Frenchman\'s Lane. You will see Robert Reid\'s at the end on the left.</string>
+
     <string name="river_bar">River Bar</string>
     <string name="river_bar_address">1 Burgh Quay, Dublin 2</string>
     <string name="river_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and turn left onto Burgh Quay. You will see the River Bar on the right.</string>
@@ -127,10 +135,6 @@
     <string name="the_globe">The Globe</string>
     <string name="the_globe_address">11 South Great Georges Street, Dublin 2</string>
     <string name="the_globe_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn onto South Great George\'s Street. Walk a few feet up this street and you will see The Globe Bar on the left.</string>
-
-    <string name="the_hairy_lemon">The Hairy Lemon</string>
-    <string name="the_hairy_lemon_address">Stephen Street Lower, Dublin 2</string>
-    <string name="the_hairy_lemon_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk all the way up this street and take the last right turn. You will see The Hairy Lemon on the right hand corner.</string>
 
     <string name="the_long_hall">The Long Hall</string>
     <string name="the_long_hall_address">51 South Great George\'s Street, Dublin 2</string>

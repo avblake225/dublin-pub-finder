@@ -16,26 +16,36 @@ public class Utilities {
     public static void populatePubImageMap(Context context){
 
         getPubImage.put(context.getString(R.string.alfie_byrnes),context.getResources().getDrawable(R.drawable.alfie_byrnes));
+        getPubImage.put(context.getString(R.string.bad_bobs),context.getResources().getDrawable(R.drawable.bad_bobs));
         getPubImage.put(context.getString(R.string.bailey_bar),context.getResources().getDrawable(R.drawable.bailey_bar));
         getPubImage.put(context.getString(R.string.bruxelles),context.getResources().getDrawable(R.drawable.bruxelles));
         getPubImage.put(context.getString(R.string.capitol_bar),context.getResources().getDrawable(R.drawable.capitol_bar));
         getPubImage.put(context.getString(R.string.cassidys),context.getResources().getDrawable(R.drawable.cassidys));
+        getPubImage.put(context.getString(R.string.czech_inn),context.getResources().getDrawable(R.drawable.czech_inn));
         getPubImage.put(context.getString(R.string.doyles),context.getResources().getDrawable(R.drawable.doyles));
         getPubImage.put(context.getString(R.string.east_side_tavern),context.getResources().getDrawable(R.drawable.east_side_tavern));
         getPubImage.put(context.getString(R.string.fibber_magee), context.getResources().getDrawable(R.drawable.fibber_magee));
+        getPubImage.put(context.getString(R.string.fitzsimons), context.getResources().getDrawable(R.drawable.fitzsimons));
+        getPubImage.put(context.getString(R.string.grogans), context.getResources().getDrawable(R.drawable.grogans));
+        getPubImage.put(context.getString(R.string.hairy_lemon),context.getResources().getDrawable(R.drawable.hairy_lemon));
         getPubImage.put(context.getString(R.string.hartigans),context.getResources().getDrawable(R.drawable.hartigans));
         getPubImage.put(context.getString(R.string.hogans),context.getResources().getDrawable(R.drawable.hogans));
         getPubImage.put(context.getString(R.string.jj_smyths),context.getResources().getDrawable(R.drawable.jj_smyths));
         getPubImage.put(context.getString(R.string.john_kehoe),context.getResources().getDrawable(R.drawable.john_kehoe));
         getPubImage.put(context.getString(R.string.jw_sweetman), context.getResources().getDrawable(R.drawable.jw_sweetman));
         getPubImage.put(context.getString(R.string.nearys), context.getResources().getDrawable(R.drawable.nearys));
+        getPubImage.put(context.getString(R.string.market_bar), context.getResources().getDrawable(R.drawable.market_bar));
         getPubImage.put(context.getString(R.string.odonoghues), context.getResources().getDrawable(R.drawable.o_donoghues));
         getPubImage.put(context.getString(R.string.porterhouse_central), context.getResources().getDrawable(R.drawable.porterhouse_central));
+        getPubImage.put(context.getString(R.string.p_macs), context.getResources().getDrawable(R.drawable.p_macs));
+        getPubImage.put(context.getString(R.string.peters_pub), context.getResources().getDrawable(R.drawable.peters_pub));
+        getPubImage.put(context.getString(R.string.robert_reid), context.getResources().getDrawable(R.drawable.robert_reid));
         getPubImage.put(context.getString(R.string.river_bar), context.getResources().getDrawable(R.drawable.river_bar));
         getPubImage.put(context.getString(R.string.synnotts), context.getResources().getDrawable(R.drawable.sinnotts));
         getPubImage.put(context.getString(R.string.the_duke), context.getResources().getDrawable(R.drawable.the_duke));
         getPubImage.put(context.getString(R.string.the_globe), context.getResources().getDrawable(R.drawable.the_globe));
         getPubImage.put(context.getString(R.string.grafton_lounge), context.getResources().getDrawable(R.drawable.grafton_lounge));
+        getPubImage.put(context.getString(R.string.the_long_hall), context.getResources().getDrawable(R.drawable.the_long_hall));
         getPubImage.put(context.getString(R.string.the_temple_bar), context.getResources().getDrawable(R.drawable.the_temple_bar));
     }
 
