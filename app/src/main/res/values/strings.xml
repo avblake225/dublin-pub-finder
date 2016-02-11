@@ -104,6 +104,10 @@
     <string name="jw_sweetman_address">1 Burgh Quay, Dublin 2</string>
     <string name="jw_sweetman_directions">From O\'Connell Street, walk over O\'Connell bridge and turn left onto Burgh Quay. J.W. Sweetman is just a few steps away.</string>
 
+    <string name="lanigans">Lanigans</string>
+    <string name="lanigans_address">10 Eden Quay, Dublin 1</string>
+    <string name="lanigans_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the last left turn onto Eden Quay. Walk a few feet up this street and you will see Lanigan\'s on the left.</string>
+
     <string name="lagoona">Lagoona</string>
     <string name="lagoona_address">Mayor Street Lower, IFSC, Dublin 1</string>
     <string name="lagoona_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk all the way up this street and around the bus garage (Busáras). Turn right and walk into the IFSC. Walk straight past the Harbourmaster and on to Mayor Street Lower. You will see Lagoona on the left.</string>
@@ -163,6 +167,10 @@
     <string name="the_long_hall">The Long Hall</string>
     <string name="the_long_hall_address">51 South Great George\'s Street, Dublin 2</string>
     <string name="the_long_hall_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn and walk up South Great George\'s Street. The Long Hall is just beyond Fade Street.</string>
+
+    <string name="mercantile">Mercantile</string>
+    <string name="mercantile_address">28 Dame St, Dublin 2</string>
+    <string name="mercantile_directions">From College Green (Trinity College), walk straight up Dame Street. Continue on past Church Lane and Trinity Street. You will soon see the Mercantile on the left.</string>
 
     <string name="the_norseman">The Norseman</string>
     <string name="the_norseman_address">28 Essex Street East, Dublin 2</string>
