@@ -20,6 +20,10 @@
     <string name="bailey_bar_address">2 Duke St, Dublin 2</string>
     <string name="bailey_bar_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the first left turn onto Duke Street. You will see the Bailey Bar on the left.</string>
 
+    <string name="break_for_the_border">Break For The Border</string>
+    <string name="break_for_the_border_address">Stephen Street Lower, Dublin 2</string>
+    <string name="break_for_the_border_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk all the way up this street and take the last right turn. You will see Break For The Border on the left.</string>
+
     <string name="bruxelles">Bruxelles</string>
     <string name="bruxelles_address">7 Harry St, Dublin 2</string>
     <string name="bruxelles_directions">From College Green (Trinity College), turn left and walk over to Grafton Street. Walk up Grafton Street and take the third right turn onto Harry Street. You will see Bruxelles on the right.</string>
@@ -68,6 +72,10 @@
     <string name="grogans_address">15 South William Street, Dublin 2</string>
     <string name="grogans_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk a few feet up this street and you will see Grogan\'s on the left.</string>
 
+    <string name="harbourmaster">Harbourmaster</string>
+    <string name="harbourmaster_address">1 Custom House Quay, IFSC, Dublin 1</string>
+    <string name="harbourmaster_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk all the way up this street and around the bus garage (Busáras). Turn right and walk into the IFSC. You will see the Harbourmaster on the left corner.</string>
+
     <string name="hairy_lemon">The Hairy Lemon</string>
     <string name="hairy_lemon_address">Stephen Street Lower, Dublin 2</string>
     <string name="hairy_lemon_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk all the way up this street and take the last right turn. You will see The Hairy Lemon on the right hand corner.</string>
@@ -91,6 +99,10 @@
     <string name="jw_sweetman">J.W. Sweetman</string>
     <string name="jw_sweetman_address">1 Burgh Quay, Dublin 2</string>
     <string name="jw_sweetman_directions">From O\'Connell Street, walk over O\'Connell bridge and turn left onto Burgh Quay. J.W. Sweetman is just a few steps away.</string>
+
+    <string name="lagoona">Lagoona</string>
+    <string name="lagoona_address">Mayor Street Lower, IFSC, Dublin 1</string>
+    <string name="lagoona_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk all the way up this street and around the bus garage (Busáras). Turn right and walk into the IFSC. Walk straight past the Harbourmaster and on to Mayor Street Lower. You will see Lagoona on the left.</string>
 
     <string name="market_bar">Market Bar</string>
     <string name="market_bar_address">14A Fade St, Dublin 2</string>
@@ -127,6 +139,10 @@
     <string name="synnotts">Synnotts</string>
     <string name="synnotts_address">South King Street, Dublin 2</string>
     <string name="synnotts_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the last right turn onto South King Street. You will see Synnott\'s on the left.</string>
+
+    <string name="the_brew_dock">The Brew Dock</string>
+    <string name="the_brew_dock_address">1 Amiens Street, Dublin 1</string>
+    <string name="the_brew_dock_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk all the way up this street and around the bus garage (Busáras). You will see The Brew Dock straight in front of you.</string>
 
     <string name="the_duke">The Duke</string>
     <string name="the_duke_address">8 Duke St, Dublin 2</string>
