@@ -13,8 +13,8 @@
     <string name="alfie_byrnes_directions">From College Green (Trinity College), turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. At the top of Dawson Street, turn left and walk around St. Stephen\'s Green. Then, turn left onto Lesson Street Lower. You will see Alfie Byrne\'s a few feet up this street on the right.</string>
 
     <string name="bad_bobs">Bad Bobs</string>
-    <string name="bad_bobs_address">35 Essex St East, Dublin 2</string>
-    <string name="bad_bobs_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street. You will see Bad Bob\'s on the left hand corner.</string>
+    <string name="bad_bobs_address">35 Essex Street East, Dublin 2</string>
+    <string name="bad_bobs_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street East. You will see Bad Bob\'s on the left hand corner.</string>
 
     <string name="bailey_bar">Bailey Bar</string>
     <string name="bailey_bar_address">2 Duke St, Dublin 2</string>
@@ -63,6 +63,10 @@
     <string name="fitzsimons">Fitzsimons</string>
     <string name="fitzsimons_address">21 Wellington Quay, Temple Bar, Dublin 2</string>
     <string name="fitzsimons_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Then, turn left and walk under Merchant Arch. You are now in Temple Bar, Fitzsimon\'s is down the cobblestones on the right.</string>
+
+    <string name="garage_bar">Garage Bar</string>
+    <string name="garage_bar_address">Essex St East, Dublin 2</string>
+    <string name="garage_bar_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street East. You will see the Garage Bar a few feet up on the right.</string>
 
     <string name="grafton_lounge">Grafton Lounge</string>
     <string name="grafton_lounge_address">2 Duke Lane Upper, Dublin 2</string>
@@ -136,6 +140,10 @@
     <string name="river_bar_address">1 Burgh Quay, Dublin 2</string>
     <string name="river_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and turn left onto Burgh Quay. You will see the River Bar on the right.</string>
 
+    <string name="south_william">South William</string>
+    <string name="south_william_address">52 South William Street, Dublin 2</string>
+    <string name="south_william_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk up this street and you will soon see the South William on the left.</string>
+
     <string name="synnotts">Synnotts</string>
     <string name="synnotts_address">South King Street, Dublin 2</string>
     <string name="synnotts_directions">From College Green (Trinity College), turn left and walk up Grafton Street. Take the last right turn onto South King Street. You will see Synnott\'s on the left.</string>
@@ -156,12 +164,20 @@
     <string name="the_long_hall_address">51 South Great George\'s Street, Dublin 2</string>
     <string name="the_long_hall_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn and walk up South Great George\'s Street. The Long Hall is just beyond Fade Street.</string>
 
+    <string name="the_norseman">The Norseman</string>
+    <string name="the_norseman_address">28 Essex Street East, Dublin 2</string>
+    <string name="the_norseman_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street. Walk up this street and you will see The Norseman on the left hand corner.</string>
+
     <string name="the_stags_head">The Stags Head</string>
     <string name="the_stags_head_address">1 Dame Court, Dublin 2</string>
     <string name="the_stags_head_directions">From O\'Connell Street, walk over O\'Connell bridge and continue straight onto D\'Olier Street. At the end of this street, take a right up to College Green. From there, walk up Dame Street and turn left onto Trinity Street. Turn right onto Dame Lane and you\'ll see The Stag\'s Head up on the left.</string>
 
     <string name="the_temple_bar">The Temple Bar</string>
-    <string name="the_temple_bar_address">47 Temple Bar, Dublin 2.</string>
+    <string name="the_temple_bar_address">47 Temple Bar, Dublin 2</string>
     <string name="the_temple_bar_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Then, turn left and walk under Merchant Arch. You are now in Temple Bar, the Temple Bar is down the cobblestones on the right.</string>
+
+    <string name="turks_head">Turks Head</string>
+    <string name="turks_head_address">27 Parliament Street, Dublin 2</string>
+    <string name="turks_head_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street East. Walk up this street and you will see The Turk\'s Head on the left hand corner.</string>
 
 </resources>
