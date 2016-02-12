@@ -49,10 +49,13 @@ public class DBManager extends SQLiteOpenHelper{
                                  context.getString(R.string.jw_sweetman),
                                  context.getString(R.string.lanigans),
                                  context.getString(R.string.lagoona),
-                                 context.getString(R.string.mercantile),
+                                 context.getString(R.string.mac_turcaills),
                                  context.getString(R.string.market_bar),
+                                 context.getString(R.string.mercantile),
                                  context.getString(R.string.nearys),
                                  context.getString(R.string.odonoghues),
+                                 context.getString(R.string.oliver_st_john_gogarty),
+                                 context.getString(R.string.palace_bar),
                                  context.getString(R.string.peters_pub),
                                  context.getString(R.string.porterhouse_central),
                                  context.getString(R.string.p_macs),
@@ -64,6 +67,7 @@ public class DBManager extends SQLiteOpenHelper{
                                  context.getString(R.string.the_duke),
                                  context.getString(R.string.the_globe),
                                  context.getString(R.string.the_long_hall),
+                                 context.getString(R.string.the_long_stone),
                                  context.getString(R.string.the_norseman),
                                  context.getString(R.string.the_stags_head),
                                  context.getString(R.string.the_temple_bar),
@@ -174,13 +178,17 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.lagoona_address),
                 context.getString(R.string.lagoona_directions));
 
-        insertData(context.getString(R.string.mercantile),
-                context.getString(R.string.mercantile_address),
-                context.getString(R.string.mercantile_directions));
+        insertData(context.getString(R.string.mac_turcaills),
+                context.getString(R.string.mac_turcaills_address),
+                context.getString(R.string.mac_turcaills_directions));
 
         insertData(context.getString(R.string.market_bar),
                 context.getString(R.string.market_bar_address),
                 context.getString(R.string.market_bar_directions));
+
+        insertData(context.getString(R.string.mercantile),
+                context.getString(R.string.mercantile_address),
+                context.getString(R.string.mercantile_directions));
 
         insertData(context.getString(R.string.nearys),
                 context.getString(R.string.nearys_address),
@@ -189,6 +197,14 @@ public class DBManager extends SQLiteOpenHelper{
         insertData(context.getString(R.string.odonoghues),
                 context.getString(R.string.odonoghues_address),
                 context.getString(R.string.odonoghues_directions));
+
+        insertData(context.getString(R.string.oliver_st_john_gogarty),
+                context.getString(R.string.oliver_st_john_gogarty_address),
+                context.getString(R.string.oliver_st_john_gogarty_directions));
+
+        insertData(context.getString(R.string.palace_bar),
+                context.getString(R.string.palace_bar_address),
+                context.getString(R.string.palace_bar_directions));
 
         insertData(context.getString(R.string.peters_pub),
                 context.getString(R.string.peters_pub_address),
@@ -233,6 +249,10 @@ public class DBManager extends SQLiteOpenHelper{
         insertData(context.getString(R.string.the_long_hall),
                 context.getString(R.string.the_long_hall_address),
                 context.getString(R.string.the_long_hall_directions));
+
+        insertData(context.getString(R.string.the_long_stone),
+                context.getString(R.string.the_long_stone_address),
+                context.getString(R.string.the_long_stone_directions));
 
         insertData(context.getString(R.string.the_norseman),
                 context.getString(R.string.the_norseman_address),
