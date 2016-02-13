@@ -37,6 +37,7 @@ public class DBManager extends SQLiteOpenHelper{
                                  context.getString(R.string.east_side_tavern),
                                  context.getString(R.string.fibber_magee),
                                  context.getString(R.string.fitzsimons),
+                                 context.getString(R.string.four_dame_lane),
                                  context.getString(R.string.garage_bar),
                                  context.getString(R.string.grafton_lounge),
                                  context.getString(R.string.grogans),
@@ -66,10 +67,12 @@ public class DBManager extends SQLiteOpenHelper{
                                  context.getString(R.string.the_brew_dock),
                                  context.getString(R.string.the_duke),
                                  context.getString(R.string.the_globe),
+                                 context.getString(R.string.the_lombard),
                                  context.getString(R.string.the_long_hall),
                                  context.getString(R.string.the_long_stone),
                                  context.getString(R.string.the_norseman),
                                  context.getString(R.string.the_stags_head),
+                                 context.getString(R.string.the_sweeney_mongrel),
                                  context.getString(R.string.the_temple_bar),
                                  context.getString(R.string.turks_head),
         };
@@ -129,6 +132,10 @@ public class DBManager extends SQLiteOpenHelper{
         insertData(context.getString(R.string.fitzsimons),
                 context.getString(R.string.fitzsimons_address),
                 context.getString(R.string.fitzsimons_directions));
+
+        insertData(context.getString(R.string.four_dame_lane),
+                context.getString(R.string.four_dame_lane_address),
+                context.getString(R.string.four_dame_lane_directions));
 
         insertData(context.getString(R.string.garage_bar),
                 context.getString(R.string.garage_bar_address),
@@ -246,6 +253,10 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.the_globe_address),
                 context.getString(R.string.the_globe_directions));
 
+        insertData(context.getString(R.string.the_lombard),
+                context.getString(R.string.the_lombard_address),
+                context.getString(R.string.the_lombard_directions));
+
         insertData(context.getString(R.string.the_long_hall),
                 context.getString(R.string.the_long_hall_address),
                 context.getString(R.string.the_long_hall_directions));
@@ -261,6 +272,10 @@ public class DBManager extends SQLiteOpenHelper{
         insertData(context.getString(R.string.the_stags_head),
                 context.getString(R.string.the_stags_head_address),
                 context.getString(R.string.the_stags_head_directions));
+
+        insertData(context.getString(R.string.the_sweeney_mongrel),
+                context.getString(R.string.the_sweeney_mongrel_address),
+                context.getString(R.string.the_sweeney_mongrel_directions));
 
         insertData(context.getString(R.string.the_temple_bar),
                    context.getString(R.string.the_temple_bar_address),
