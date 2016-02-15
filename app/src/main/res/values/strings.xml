@@ -8,6 +8,10 @@
     <string name="errorretrievingpubimage">"Error retrieving pub image"</string>
     <string name="directions">Directions</string>
 
+    <string name="against_the_grain">Against The Grain</string>
+    <string name="against_the_grain_address">11 Wexford St, Dublin 2</string>
+    <string name="against_the_grain_directions">From College Green (Trinity College), turn to face Dame Street. Walk straight up Dame Street and take the third left turn onto South Great George\'s Street. Walk straight up this street and continue onto Aungier Street. Walk straight up this street and continue onto Wexford Street. You will see Against The Grain a few feet up on the left corner.</string>
+
     <string name="alfie_byrnes">Alfie Byrnes</string>
     <string name="alfie_byrnes_address">Earlsfort Terrace, Dublin 2</string>
     <string name="alfie_byrnes_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. At the top of Dawson Street, turn left and walk around St. Stephen\'s Green. Then, turn left onto Lesson Street Lower. You will see Alfie Byrne\'s a few feet up this street on the right.</string>
@@ -39,6 +43,14 @@
     <string name="buskers">Buskers</string>
     <string name="buskers_address">13 Fleet St, Dublin 2</string>
     <string name="buskers_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight onto Westmoreland Street. Take the first right turn onto Fleet Street. Walk a few feet up this street and you will see Busker\'s on the right.</string>
+
+    <string name="café_en_seine">Café en Seine</string>
+    <string name="café_en_seine_address">40 Dawson Street, Dublin 2</string>
+    <string name="café_en_seine_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Nassau Street. Take the first right turn on Dawson Street. Walk up this street, past Duke Street and then past Anne Street South. You will see Café en Seine on the right.</string>
+
+    <string name="camden_exchange">Camden Exchange</string>
+    <string name="camden_exchange_address">72 Camden Street Lower, Dublin 2</string>
+    <string name="camden_exchange_directions">From College Green (Trinity College), turn to face Dame Street. Walk straight up Dame Street and take the third left turn onto South Great George\'s Street. Walk straight up this street and continue onto Aungier Street. Walk straight up this street and continue onto Wexford Street. Continue straight onto Camden Street and you will see The Camden Exchange on the right.</string>
 
     <string name="capitol_bar">Capitol Bar</string>
     <string name="capitol_bar_address">1 Aungier St, Dublin 2</string>

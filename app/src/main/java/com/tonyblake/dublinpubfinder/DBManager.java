@@ -23,7 +23,8 @@ public class DBManager extends SQLiteOpenHelper{
         super(context, DATABASE_NAME, null, 1);
         db = this.getWritableDatabase();
 
-        pub_names = new String[]{context.getString(R.string.alfie_byrnes),
+        pub_names = new String[]{context.getString(R.string.against_the_grain),
+                                 context.getString(R.string.alfie_byrnes),
                                  context.getString(R.string.anseo),
                                  context.getString(R.string.bad_bobs),
                                  context.getString(R.string.bailey_bar),
@@ -31,6 +32,8 @@ public class DBManager extends SQLiteOpenHelper{
                                  context.getString(R.string.break_for_the_border),
                                  context.getString(R.string.bruxelles),
                                  context.getString(R.string.buskers),
+                                 context.getString(R.string.café_en_seine),
+                                 context.getString(R.string.camden_exchange),
                                  context.getString(R.string.capitol_bar),
                                  context.getString(R.string.cassidys),
                                  context.getString(R.string.czech_inn),
@@ -81,6 +84,10 @@ public class DBManager extends SQLiteOpenHelper{
                                  context.getString(R.string.turks_head),
         };
 
+        insertData(context.getString(R.string.against_the_grain),
+                context.getString(R.string.against_the_grain_address),
+                context.getString(R.string.against_the_grain_directions));
+
         insertData(context.getString(R.string.alfie_byrnes),
                 context.getString(R.string.alfie_byrnes_address),
                 context.getString(R.string.alfie_byrnes_directions));
@@ -112,6 +119,14 @@ public class DBManager extends SQLiteOpenHelper{
         insertData(context.getString(R.string.buskers),
                 context.getString(R.string.buskers_address),
                 context.getString(R.string.buskers_directions));
+
+        insertData(context.getString(R.string.café_en_seine),
+                context.getString(R.string.café_en_seine_address),
+                context.getString(R.string.café_en_seine_directions));
+
+        insertData(context.getString(R.string.camden_exchange),
+                context.getString(R.string.camden_exchange_address),
+                context.getString(R.string.camden_exchange_directions));
 
         insertData(context.getString(R.string.capitol_bar),
                 context.getString(R.string.capitol_bar_address),
