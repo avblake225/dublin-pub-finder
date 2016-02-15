@@ -12,6 +12,10 @@
     <string name="alfie_byrnes_address">Earlsfort Terrace, Dublin 2</string>
     <string name="alfie_byrnes_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. At the top of Dawson Street, turn left and walk around St. Stephen\'s Green. Then, turn left onto Lesson Street Lower. You will see Alfie Byrne\'s a few feet up this street on the right.</string>
 
+    <string name="anseo">Anseo</string>
+    <string name="anseo_address">18 Camden Street Lower, Dublin 2</string>
+    <string name="anseo_directions">From College Green (Trinity College), turn to face Dame Street. Walk straight up Dame Street and take the third left turn onto South Great George\'s Street. Walk straight up this street and continue onto Aungier Street. Walk straight up this street and continue onto Wexford Street. Continue straight onto Camden Street and you will see Anseo on the left.</string>
+
     <string name="bad_bobs">Bad Bobs</string>
     <string name="bad_bobs_address">35 Essex Street East, Dublin 2</string>
     <string name="bad_bobs_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street East. You will see Bad Bob\'s on the left hand corner.</string>
@@ -19,6 +23,10 @@
     <string name="bailey_bar">Bailey Bar</string>
     <string name="bailey_bar_address">2 Duke St, Dublin 2</string>
     <string name="bailey_bar_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first left turn onto Duke Street. You will see the Bailey Bar on the left.</string>
+
+    <string name="bison_bar">Bison Bar</string>
+    <string name="bison_bar_address">11 Wellington Quay, Dublin 2</string>
+    <string name="bison_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and turn right onto Aston Quay. Walk straight along the Quays, past the Ha\'penny bridge. Continue on straight, past the Millenium bridge. You will soon see The Bison Bar on the left.</string>
 
     <string name="break_for_the_border">Break For The Border</string>
     <string name="break_for_the_border_address">Stephen Street Lower, Dublin 2</string>
@@ -164,6 +172,10 @@
     <string name="river_bar_address">1 Burgh Quay, Dublin 2</string>
     <string name="river_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and turn left onto Burgh Quay. You will see the River Bar on the right.</string>
 
+    <string name="sin_é">Sin É</string>
+    <string name="sin_é_address">15 Ormond Quay Upper, Dublin 1</string>
+    <string name="sin_é_directions">From O\' Connell Street, walk towards O\' Connell bridge and turn right onto Bachelors Walk. Walk straight up this street and continue on past the Ha\'penny bridge onto Ormond Quay Lower. Continue straight, past the Millenium bridge, then past Grattan bridge onto Ormond Quay Upper. You will see Sin É a few feet up on the right.</string>
+
     <string name="south_william">South William</string>
     <string name="south_william_address">52 South William Street, Dublin 2</string>
     <string name="south_william_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk up this street and you will soon see the South William on the left.</string>
@@ -211,6 +223,10 @@
     <string name="the_temple_bar">The Temple Bar</string>
     <string name="the_temple_bar_address">47 Temple Bar, Dublin 2</string>
     <string name="the_temple_bar_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Then, turn left and walk under Merchant Arch. You are now in Temple Bar, the Temple Bar is down the cobblestones on the right.</string>
+
+    <string name="the_workmans_club">The Workmans Club</string>
+    <string name="the_workmans_club_address">10 Wellington Quay, Dublin 2</string>
+    <string name="the_workmans_club_directions">From O\' Connell Street, walk over O\' Connell bridge and turn right onto Aston Quay. Walk straight along the Quays, past the Ha\'penny bridge. Continue on straight, past the Millenium bridge. You will soon see The Workman\'s Club on the left.</string>
 
     <string name="turks_head">Turks Head</string>
     <string name="turks_head_address">27 Parliament Street, Dublin 2</string>
