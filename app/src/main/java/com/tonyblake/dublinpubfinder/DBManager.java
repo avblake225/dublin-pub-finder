@@ -37,7 +37,6 @@ public class DBManager extends SQLiteOpenHelper{
                                  context.getString(R.string.capitol_bar),
                                  context.getString(R.string.cassidys),
                                  context.getString(R.string.czech_inn),
-                                 context.getString(R.string.dakota),
                                  context.getString(R.string.doyles),
                                  context.getString(R.string.east_side_tavern),
                                  context.getString(R.string.fibber_magee),
@@ -55,7 +54,6 @@ public class DBManager extends SQLiteOpenHelper{
                                  context.getString(R.string.jw_sweetman),
                                  context.getString(R.string.lanigans),
                                  context.getString(R.string.lagoona),
-                                 context.getString(R.string.mac_turcaills),
                                  context.getString(R.string.market_bar),
                                  context.getString(R.string.mercantile),
                                  context.getString(R.string.nearys),
@@ -140,10 +138,6 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.czech_inn_address),
                 context.getString(R.string.czech_inn_directions));
 
-        /*insertData(context.getString(R.string.dakota),
-                context.getString(R.string.dakota_address),
-                context.getString(R.string.dakota_directions));*/
-
         insertData(context.getString(R.string.doyles),
                 context.getString(R.string.doyles_address),
                 context.getString(R.string.doyles_directions));
@@ -211,10 +205,6 @@ public class DBManager extends SQLiteOpenHelper{
         insertData(context.getString(R.string.lagoona),
                 context.getString(R.string.lagoona_address),
                 context.getString(R.string.lagoona_directions));
-
-        insertData(context.getString(R.string.mac_turcaills),
-                context.getString(R.string.mac_turcaills_address),
-                context.getString(R.string.mac_turcaills_directions));
 
         insertData(context.getString(R.string.market_bar),
                 context.getString(R.string.market_bar_address),

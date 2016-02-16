@@ -64,10 +64,6 @@
     <string name="czech_inn_address">Essex gate, Temple Bar, Dublin 8</string>
     <string name="czech_inn_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street. Walk up this street and you will see The Czech Inn on the right hand corner.</string>
 
-    <string name="dakota">Dakota</string>
-    <string name="dakota_address">8 William Street South, Dublin 2</string>
-    <string name="dakota_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk a few feet up this street and you will see Dakota on the left.</string>
-
     <string name="doyles">Doyles</string>
     <string name="doyles_address">9 College St, Dublin 2</string>
     <string name="doyles_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight onto D\'Olier Street. Walk up to the top of this street and you will see Doyle\'s on the right.</string>
@@ -135,10 +131,6 @@
     <string name="lagoona">Lagoona</string>
     <string name="lagoona_address">Mayor Street Lower, IFSC, Dublin 1</string>
     <string name="lagoona_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk all the way up this street and around the bus garage (Busáras). Turn right and walk into the IFSC. Walk straight past the Harbourmaster and on to Mayor Street Lower. You will see Lagoona on the left.</string>
-
-    <string name="mac_turcaills">Mac Turcaills</string>
-    <string name="mac_turcaills_address">15 Townsend Street, Dublin 2</string>
-    <string name="mac_turcaills_directions">From O\'Connell Street, walk over O\'Connell bridge and continue straight onto D\' Olier Street. Walk up this street and turn left onto Townsend Street. Walk up this street and you will soon see Mac Turcaill\'s on the left.</string>
 
     <string name="market_bar">Market Bar</string>
     <string name="market_bar_address">14A Fade St, Dublin 2</string>
