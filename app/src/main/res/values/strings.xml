@@ -64,6 +64,10 @@
     <string name="czech_inn_address">Essex gate, Temple Bar, Dublin 8</string>
     <string name="czech_inn_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street. Walk up this street and you will see The Czech Inn on the right hand corner.</string>
 
+    <string name="dame_tavern">Dame Tavern</string>
+    <string name="dame_tavern_address">18 Dame Court, Dublin 2</string>
+    <string name="dame_tavern_directions">From College Green (Trinity College), turn to face Dame Street. Walk up this street and take the second left turn onto Trinity Street. Then, take the first right turn onto Dame Lane. Walk up this lane and you will see Dame Tavern on the left hand corner.</string>
+
     <string name="doyles">Doyles</string>
     <string name="doyles_address">9 College St, Dublin 2</string>
     <string name="doyles_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight onto D\'Olier Street. Walk up to the top of this street and you will see Doyle\'s on the right.</string>
@@ -133,12 +137,20 @@
     <string name="lagoona_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk all the way up this street and around the bus garage (Busáras). Turn right and walk into the IFSC. Walk straight past the Harbourmaster and on to Mayor Street Lower. You will see Lagoona on the left.</string>
 
     <string name="market_bar">Market Bar</string>
-    <string name="market_bar_address">14A Fade St, Dublin 2</string>
+    <string name="market_bar_address">14A Fade Street, Dublin 2</string>
     <string name="market_bar_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn and walk up South Great George\'s Street. Take the third left turn onto Fade Street. You will see The Market Bar a few feet away.</string>
 
     <string name="mercantile">Mercantile</string>
-    <string name="mercantile_address">28 Dame St, Dublin 2</string>
+    <string name="mercantile_address">28 Dame Street, Dublin 2</string>
     <string name="mercantile_directions">From College Green (Trinity College), walk straight up Dame Street. Continue on past Church Lane and Trinity Street. You will soon see the Mercantile on the left.</string>
+
+    <string name="morgan_bar">Morgan Bar</string>
+    <string name="morgan_bar_address">10 Fleet Street, Dublin 2</string>
+    <string name="morgan_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight onto Westmoreland Street. Take the first right turn onto Fleet Street. Walk a few feet up this street and you will see The Morgan Bar on the right.</string>
+
+    <string name="mulligans">Mulligans</string>
+    <string name="mulligans_address">8 Poolbeg Street, Dublin 2</string>
+    <string name="mulligans_directions">From O\' Connell Street, walk over O\' Connell bridge and turn left onto Burgh Quay. Walk up this street and take the first right turn onto Hawkins Street. Then, take the first left turn onto Poolbeg Street. You will see Mulligan\'s a few feet up this street on the left.</string>
 
     <string name="nearys">Nearys</string>
     <string name="nearys_address">1 Chatham Street, Dublin 2</string>

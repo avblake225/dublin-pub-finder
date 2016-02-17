@@ -15,15 +15,20 @@ public class Utilities {
 
     public static void populatePubImageMap(Context context){
 
+        getPubImage.put(context.getString(R.string.against_the_grain),context.getResources().getDrawable(R.drawable.against_the_grain));
         getPubImage.put(context.getString(R.string.alfie_byrnes),context.getResources().getDrawable(R.drawable.alfie_byrnes));
+        getPubImage.put(context.getString(R.string.anseo),context.getResources().getDrawable(R.drawable.anseo));
         getPubImage.put(context.getString(R.string.bad_bobs),context.getResources().getDrawable(R.drawable.bad_bobs));
         getPubImage.put(context.getString(R.string.bailey_bar),context.getResources().getDrawable(R.drawable.bailey_bar));
+        getPubImage.put(context.getString(R.string.bison_bar),context.getResources().getDrawable(R.drawable.bison_bar));
         getPubImage.put(context.getString(R.string.break_for_the_border),context.getResources().getDrawable(R.drawable.break_for_the_border));
         getPubImage.put(context.getString(R.string.bruxelles), context.getResources().getDrawable(R.drawable.bruxelles));
         getPubImage.put(context.getString(R.string.buskers), context.getResources().getDrawable(R.drawable.buskers));
+        getPubImage.put(context.getString(R.string.camden_exchange), context.getResources().getDrawable(R.drawable.camden_exchange));
         getPubImage.put(context.getString(R.string.capitol_bar),context.getResources().getDrawable(R.drawable.capitol_bar));
         getPubImage.put(context.getString(R.string.cassidys),context.getResources().getDrawable(R.drawable.cassidys));
         getPubImage.put(context.getString(R.string.czech_inn),context.getResources().getDrawable(R.drawable.czech_inn));
+        getPubImage.put(context.getString(R.string.dame_tavern),context.getResources().getDrawable(R.drawable.dame_tavern));
         getPubImage.put(context.getString(R.string.doyles),context.getResources().getDrawable(R.drawable.doyles));
         getPubImage.put(context.getString(R.string.east_side_tavern),context.getResources().getDrawable(R.drawable.east_side_tavern));
         getPubImage.put(context.getString(R.string.fibber_magee), context.getResources().getDrawable(R.drawable.fibber_magee));
@@ -40,6 +45,8 @@ public class Utilities {
         getPubImage.put(context.getString(R.string.lanigans), context.getResources().getDrawable(R.drawable.lanigans));
         getPubImage.put(context.getString(R.string.lagoona), context.getResources().getDrawable(R.drawable.lagoona));
         getPubImage.put(context.getString(R.string.mercantile), context.getResources().getDrawable(R.drawable.mercantile));
+        getPubImage.put(context.getString(R.string.morgan_bar), context.getResources().getDrawable(R.drawable.morgan_bar));
+        getPubImage.put(context.getString(R.string.mulligans), context.getResources().getDrawable(R.drawable.mulligans));
         getPubImage.put(context.getString(R.string.nearys), context.getResources().getDrawable(R.drawable.nearys));
         getPubImage.put(context.getString(R.string.market_bar), context.getResources().getDrawable(R.drawable.market_bar));
         getPubImage.put(context.getString(R.string.odonoghues), context.getResources().getDrawable(R.drawable.o_donoghues));
@@ -60,7 +67,9 @@ public class Utilities {
         getPubImage.put(context.getString(R.string.the_long_stone), context.getResources().getDrawable(R.drawable.the_long_stone));
         getPubImage.put(context.getString(R.string.the_norseman), context.getResources().getDrawable(R.drawable.the_norseman));
         getPubImage.put(context.getString(R.string.the_stags_head), context.getResources().getDrawable(R.drawable.the_stags_head));
+        getPubImage.put(context.getString(R.string.the_sweeney_mongrel), context.getResources().getDrawable(R.drawable.the_sweeney_mongrel));
         getPubImage.put(context.getString(R.string.the_temple_bar), context.getResources().getDrawable(R.drawable.the_temple_bar));
+        getPubImage.put(context.getString(R.string.the_workmans_club), context.getResources().getDrawable(R.drawable.the_workmans_club));
         getPubImage.put(context.getString(R.string.turks_head), context.getResources().getDrawable(R.drawable.turks_head));
     }
 
