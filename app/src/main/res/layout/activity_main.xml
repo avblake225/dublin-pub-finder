@@ -26,6 +26,7 @@
         android:hint="@string/qwhatpub"
         android:textColorHint="@color/white"
         android:layout_gravity="center"
+        android:background="@android:color/transparent"
         android:textColor="@color/white">
         <requestFocus />
     </AutoCompleteTextView>
