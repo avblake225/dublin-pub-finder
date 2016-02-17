@@ -57,6 +57,7 @@ public class Utilities {
         getPubImage.put(context.getString(R.string.the_globe), context.getResources().getDrawable(R.drawable.the_globe));
         getPubImage.put(context.getString(R.string.grafton_lounge), context.getResources().getDrawable(R.drawable.grafton_lounge));
         getPubImage.put(context.getString(R.string.the_long_hall), context.getResources().getDrawable(R.drawable.the_long_hall));
+        getPubImage.put(context.getString(R.string.the_long_stone), context.getResources().getDrawable(R.drawable.the_long_stone));
         getPubImage.put(context.getString(R.string.the_norseman), context.getResources().getDrawable(R.drawable.the_norseman));
         getPubImage.put(context.getString(R.string.the_stags_head), context.getResources().getDrawable(R.drawable.the_stags_head));
         getPubImage.put(context.getString(R.string.the_temple_bar), context.getResources().getDrawable(R.drawable.the_temple_bar));
