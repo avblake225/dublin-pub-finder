@@ -55,7 +55,6 @@ public class DBManager extends SQLiteOpenHelper{
                                  context.getString(R.string.jw_sweetman),
                                  context.getString(R.string.lanigans),
                                  context.getString(R.string.lagoona),
-                                 context.getString(R.string.market_bar),
                                  context.getString(R.string.mercantile),
                                  context.getString(R.string.morgan_bar),
                                  context.getString(R.string.mulligans),
@@ -77,6 +76,7 @@ public class DBManager extends SQLiteOpenHelper{
                                  context.getString(R.string.the_lombard),
                                  context.getString(R.string.the_long_hall),
                                  context.getString(R.string.the_long_stone),
+                                 context.getString(R.string.the_market_bar),
                                  context.getString(R.string.the_norseman),
                                  context.getString(R.string.the_stags_head),
                                  context.getString(R.string.the_sweeney_mongrel),
@@ -213,10 +213,6 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.lagoona_address),
                 context.getString(R.string.lagoona_directions));
 
-        insertData(context.getString(R.string.market_bar),
-                context.getString(R.string.market_bar_address),
-                context.getString(R.string.market_bar_directions));
-
         insertData(context.getString(R.string.mercantile),
                 context.getString(R.string.mercantile_address),
                 context.getString(R.string.mercantile_directions));
@@ -300,6 +296,10 @@ public class DBManager extends SQLiteOpenHelper{
         insertData(context.getString(R.string.the_long_stone),
                 context.getString(R.string.the_long_stone_address),
                 context.getString(R.string.the_long_stone_directions));
+
+        insertData(context.getString(R.string.the_market_bar),
+                context.getString(R.string.the_market_bar_address),
+                context.getString(R.string.the_market_bar_directions));
 
         insertData(context.getString(R.string.the_norseman),
                 context.getString(R.string.the_norseman_address),

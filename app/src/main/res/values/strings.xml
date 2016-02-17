@@ -136,10 +136,6 @@
     <string name="lagoona_address">Mayor Street Lower, IFSC, Dublin 1</string>
     <string name="lagoona_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk all the way up this street and around the bus garage (Busáras). Turn right and walk into the IFSC. Walk straight past the Harbourmaster and on to Mayor Street Lower. You will see Lagoona on the left.</string>
 
-    <string name="market_bar">Market Bar</string>
-    <string name="market_bar_address">14A Fade Street, Dublin 2</string>
-    <string name="market_bar_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn and walk up South Great George\'s Street. Take the third left turn onto Fade Street. You will see The Market Bar a few feet away.</string>
-
     <string name="mercantile">Mercantile</string>
     <string name="mercantile_address">28 Dame Street, Dublin 2</string>
     <string name="mercantile_directions">From College Green (Trinity College), walk straight up Dame Street. Continue on past Church Lane and Trinity Street. You will soon see the Mercantile on the left.</string>
@@ -223,6 +219,10 @@
     <string name="the_long_stone">The Long Stone</string>
     <string name="the_long_stone_address">11 Townsend Street, Dublin 2</string>
     <string name="the_long_stone_directions">From O\'Connell Street, walk over O\'Connell bridge and continue straight onto D\' Olier Street. Walk up this street and turn left onto Townsend Street. Walk up this street and you will soon see The Long Stone on the left.</string>
+
+    <string name="the_market_bar">The Market Bar</string>
+    <string name="the_market_bar_address">14A Fade Street, Dublin 2</string>
+    <string name="the_market_bar_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn and walk up South Great George\'s Street. Take the third left turn onto Fade Street. You will see The Market Bar a few feet away.</string>
 
     <string name="the_norseman">The Norseman</string>
     <string name="the_norseman_address">28 Essex Street East, Dublin 2</string>

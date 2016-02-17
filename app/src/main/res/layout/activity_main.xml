@@ -22,7 +22,6 @@
         android:id="@+id/tv_qwhatpub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/qwhatpub_margin_top"
         android:hint="@string/qwhatpub"
         android:textColorHint="@color/white"
         android:layout_gravity="center"
