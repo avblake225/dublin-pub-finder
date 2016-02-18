@@ -70,9 +70,14 @@ public class DBManager extends SQLiteOpenHelper{
                                  context.getString(R.string.sin_é),
                                  context.getString(R.string.the_south_william),
                                  context.getString(R.string.synnotts),
+                                 context.getString(R.string.the_auld_dubliner),
+                                 context.getString(R.string.the_bankers),
+                                 context.getString(R.string.the_bar_with_no_name),
                                  context.getString(R.string.the_brew_dock),
+                                 context.getString(R.string.the_drury_buildings),
                                  context.getString(R.string.the_duke),
                                  context.getString(R.string.the_globe),
+                                 context.getString(R.string.the_gypsy_rose),
                                  context.getString(R.string.the_lombard),
                                  context.getString(R.string.the_long_hall),
                                  context.getString(R.string.the_long_stone),
@@ -168,6 +173,10 @@ public class DBManager extends SQLiteOpenHelper{
         insertData(context.getString(R.string.the_garage_bar),
                 context.getString(R.string.the_garage_bar_address),
                 context.getString(R.string.the_garage_bar_directions));
+
+        insertData(context.getString(R.string.the_gypsy_rose),
+                context.getString(R.string.the_gypsy_rose_address),
+                context.getString(R.string.the_gypsy_rose_directions));
 
         insertData(context.getString(R.string.the_grafton_lounge),
                 context.getString(R.string.the_grafton_lounge_address),
@@ -273,9 +282,25 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.synnotts_address),
                 context.getString(R.string.synnotts_directions));
 
+        insertData(context.getString(R.string.the_auld_dubliner),
+                context.getString(R.string.the_auld_dubliner_address),
+                context.getString(R.string.the_auld_dubliner_directions));
+
+        insertData(context.getString(R.string.the_bankers),
+                context.getString(R.string.the_bankers_address),
+                context.getString(R.string.the_bankers_directions));
+
+        insertData(context.getString(R.string.the_bar_with_no_name),
+                context.getString(R.string.the_bar_with_no_name_address),
+                context.getString(R.string.the_bar_with_no_name_directions));
+
         insertData(context.getString(R.string.the_brew_dock),
                 context.getString(R.string.the_brew_dock_address),
                 context.getString(R.string.the_brew_dock_directions));
+
+        insertData(context.getString(R.string.the_drury_buildings),
+                context.getString(R.string.the_drury_buildings_address),
+                context.getString(R.string.the_drury_buildings_directions));
 
         insertData(context.getString(R.string.the_duke),
                 context.getString(R.string.the_duke_address),

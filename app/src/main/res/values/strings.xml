@@ -196,9 +196,25 @@
     <string name="synnotts_address">South King Street, Dublin 2</string>
     <string name="synnotts_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the last right turn onto South King Street. You will see Synnott\'s on the left.</string>
 
+    <string name="the_auld_dubliner">The Auld Dubliner</string>
+    <string name="the_auld_dubliner_address">24 Temple Bar, Dublin 2</string>
+    <string name="the_auld_dubliner_directions">From O\'Connell Street, walk over O\'Connell bridge and continue straight onto Westmoreland Street. Walk up this street and take the first right turn onto Fleet Street. Walk up this street and you will soon see The Auld Dubliner on the left hand corner.</string>
+
+    <string name="the_bankers">The Bankers</string>
+    <string name="the_bankers_address">Trinity Street, Dublin 2</string>
+    <string name="the_bankers_directions">From College Green (Trinity College), turn to face Dame Street. Walk up this street and take the second left turn onto Trinity Street. Walk a few feet up this street and you will see the Banker\'s on the right hand corner</string>
+
+    <string name="the_bar_with_no_name">The Bar With No Name</string>
+    <string name="the_bar_with_no_name_address">3 Fade Street, Dublin 2</string>
+    <string name="the_bar_with_no_name_directions">From College Green (Trinity College), turn to face Dame Street. Walk up this street and take the third left turn and walk up South Great George\'s Street. Take the third left turn onto Fade Street. You will see The Bar With No Name a few feet up on the right.</string>
+
     <string name="the_brew_dock">The Brew Dock</string>
     <string name="the_brew_dock_address">1 Amiens Street, Dublin 1</string>
-    <string name="the_brew_dock_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk all the way up this street and around the bus garage (Busáras). You will see The Brew Dock straight in front of you.</string>
+    <string name="the_brew_dock_directions">From O\' Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk all the way up this street and around the bus garage (Busáras). You will see The Brew Dock straight in front of you.</string>
+
+    <string name="the_drury_buildings">The Drury Buildings</string>
+    <string name="the_drury_buildings_address">55 Drury Street, Dublin 2</string>
+    <string name="the_drury_buildings_directions">From College Green (Trinity College), turn to face Dame Street. Walk up this street and take the third left turn and walk up South Great George\'s Street. Take the third left turn onto Fade Street. Walk to the end of this street and you will see The Drury Buildings across the road.</string>
 
     <string name="the_duke">The Duke</string>
     <string name="the_duke_address">8 Duke St, Dublin 2</string>
@@ -207,6 +223,10 @@
     <string name="the_globe">The Globe</string>
     <string name="the_globe_address">11 South Great George\'s Street, Dublin 2</string>
     <string name="the_globe_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn onto South Great George\'s Street. Walk a few feet up this street and you will see The Globe Bar on the left.</string>
+
+    <string name="the_gypsy_rose">The Gypsy Rose</string>
+    <string name="the_gypsy_rose_address">5 Aston Quay, Dublin 2</string>
+    <string name="the_gypsy_rose_directions">From O\' Connell Street, walk over O\' Connell bridge and turn right onto Aston Quay. Walk up this street towards the Ha\'penny bridge. You will soon see The Gypsy Rose on the left.</string>
 
     <string name="the_lombard">The Lombard</string>
     <string name="the_lombard_address">44 Pearse Street, Dublin 2</string>
@@ -222,7 +242,7 @@
 
     <string name="the_market_bar">The Market Bar</string>
     <string name="the_market_bar_address">14A Fade Street, Dublin 2</string>
-    <string name="the_market_bar_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn and walk up South Great George\'s Street. Take the third left turn onto Fade Street. You will see The Market Bar a few feet away.</string>
+    <string name="the_market_bar_directions">From College Green (Trinity College), turn to face Dame Street. Walk up this street and take the third left turn and walk up South Great George\'s Street. Take the third left turn onto Fade Street. You will see The Market Bar a few feet away.</string>
 
     <string name="the_norseman">The Norseman</string>
     <string name="the_norseman_address">28 Essex Street East, Dublin 2</string>
