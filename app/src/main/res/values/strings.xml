@@ -152,13 +152,17 @@
     <string name="nearys_address">1 Chatham Street, Dublin 2</string>
     <string name="nearys_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the fourth right turn onto Chatham Street. You will see Neary\'s on the left.</string>
 
-    <string name="odonoghues">O Donoghues</string>
-    <string name="odonoghues_address">15 Merrion Row, Dublin 2</string>
-    <string name="odonoghues_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. Then, turn left at St. Stephen\'s Green and continue on to Merrion Row. You will then see O\' Donoghue\'s on the right.</string>
+    <string name="o_donoghues">O Donoghues</string>
+    <string name="o_donoghues_address">15 Merrion Row, Dublin 2</string>
+    <string name="o_donoghues_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. Then, turn left at St. Stephen\'s Green and continue on to Merrion Row. You will then see O\' Donoghue\'s on the right.</string>
 
     <string name="the_oliver_st_john_gogarty">The Oliver St John Gogarty</string>
     <string name="the_oliver_st_john_gogarty_address">58 Fleet Street, Dublin 2</string>
     <string name="the_oliver_st_john_gogarty_directions">From O\'Connell Street, walk over O\'Connell bridge and continue straight onto Westmoreland Street. Walk up this street and take the first right turn onto Fleet Street. Walk up this street and you will soon see Oliver St. John Gogarty\'s on the left hand corner.</string>
+
+    <string name="o_reillys">O Reillys</string>
+    <string name="o_reillys_address">Tara Street Station, 2 Poolbeg Street, Dublin 2</string>
+    <string name="o_reillys_directions">From O\' Connell Street, walk over O\' Connell bridge and turn left onto Burgh Quay. Continue straight onto George\'s Quay. Walk past Tara Street Station and turn right onto Luke Street. You will see O\' Reillys a few feet down this street on the right.</string>
 
     <string name="the_palace_bar">The Palace Bar</string>
     <string name="the_palace_bar_address">21 Fleet Street, Dublin 2</string>
@@ -200,6 +204,10 @@
     <string name="the_auld_dubliner_address">24 Temple Bar, Dublin 2</string>
     <string name="the_auld_dubliner_directions">From O\'Connell Street, walk over O\'Connell bridge and continue straight onto Westmoreland Street. Walk up this street and take the first right turn onto Fleet Street. Walk up this street and you will soon see The Auld Dubliner on the left hand corner.</string>
 
+    <string name="the_bank">The Bank</string>
+    <string name="the_bank_address">20 College Green, Dublin 2</string>
+    <string name="the_bank_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight up Westmoreland Street. Walk to the end of this street and onto College Green (Trinity College). Turn to face Dame Street and you will see The Bank a few feet up on the left hand side.</string>
+
     <string name="the_bankers">The Bankers</string>
     <string name="the_bankers_address">Trinity Street, Dublin 2</string>
     <string name="the_bankers_directions">From College Green (Trinity College), turn to face Dame Street. Walk up this street and take the second left turn onto Trinity Street. Walk a few feet up this street and you will see the Banker\'s on the right hand corner</string>
@@ -220,9 +228,13 @@
     <string name="the_duke_address">8 Duke St, Dublin 2</string>
     <string name="the_duke_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first left turn onto Duke Street. You will see The Duke on the left.</string>
 
+    <string name="the_george">The George</string>
+    <string name="the_george_address">George\'s Street, Dublin 2</string>
+    <string name="the_george_directions">From College Green (Trinity College), turn to face Dame Street. Walk up this street and take the third left turn onto South Great George\'s Street. Walk a few feet up this street and you will see The George on the right.</string>
+
     <string name="the_globe">The Globe</string>
     <string name="the_globe_address">11 South Great George\'s Street, Dublin 2</string>
-    <string name="the_globe_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn onto South Great George\'s Street. Walk a few feet up this street and you will see The Globe Bar on the left.</string>
+    <string name="the_globe_directions">From College Green (Trinity College), turn to face Dame Street. Walk up this street and take the third left turn onto South Great George\'s Street. Walk a few feet up this street and you will see The Globe Bar on the left.</string>
 
     <string name="the_gypsy_rose">The Gypsy Rose</string>
     <string name="the_gypsy_rose_address">5 Aston Quay, Dublin 2</string>

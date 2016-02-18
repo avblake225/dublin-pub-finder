@@ -49,7 +49,8 @@ public class Utilities {
         getPubImage.put(context.getString(R.string.the_morgan_bar), context.getResources().getDrawable(R.drawable.the_morgan_bar));
         getPubImage.put(context.getString(R.string.mulligans), context.getResources().getDrawable(R.drawable.mulligans));
         getPubImage.put(context.getString(R.string.nearys), context.getResources().getDrawable(R.drawable.nearys));
-        getPubImage.put(context.getString(R.string.odonoghues), context.getResources().getDrawable(R.drawable.o_donoghues));
+        getPubImage.put(context.getString(R.string.o_donoghues), context.getResources().getDrawable(R.drawable.o_donoghues));
+        getPubImage.put(context.getString(R.string.o_reillys), context.getResources().getDrawable(R.drawable.o_reillys));
         getPubImage.put(context.getString(R.string.the_oliver_st_john_gogarty), context.getResources().getDrawable(R.drawable.the_oliver_st_john_gogarty));
         getPubImage.put(context.getString(R.string.the_palace_bar), context.getResources().getDrawable(R.drawable.the_palace_bar));
         getPubImage.put(context.getString(R.string.the_porterhouse_central), context.getResources().getDrawable(R.drawable.the_porterhouse_central));
@@ -64,6 +65,7 @@ public class Utilities {
         getPubImage.put(context.getString(R.string.the_bankers), context.getResources().getDrawable(R.drawable.the_bankers));
         getPubImage.put(context.getString(R.string.the_brew_dock), context.getResources().getDrawable(R.drawable.the_brew_dock));
         getPubImage.put(context.getString(R.string.the_duke), context.getResources().getDrawable(R.drawable.the_duke));
+        getPubImage.put(context.getString(R.string.the_george), context.getResources().getDrawable(R.drawable.the_george));
         getPubImage.put(context.getString(R.string.the_globe), context.getResources().getDrawable(R.drawable.the_globe));
         getPubImage.put(context.getString(R.string.the_grafton_lounge), context.getResources().getDrawable(R.drawable.the_grafton_lounge));
         getPubImage.put(context.getString(R.string.the_long_hall), context.getResources().getDrawable(R.drawable.the_long_hall));
