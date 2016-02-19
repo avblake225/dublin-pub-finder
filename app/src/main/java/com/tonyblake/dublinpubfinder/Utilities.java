@@ -64,6 +64,7 @@ public class Utilities {
         getPubImage.put(context.getString(R.string.the_grafton_lounge), context.getResources().getDrawable(R.drawable.the_grafton_lounge));
         getPubImage.put(context.getString(R.string.the_hairy_lemon),context.getResources().getDrawable(R.drawable.the_hairy_lemon));
         getPubImage.put(context.getString(R.string.the_harbourmaster), context.getResources().getDrawable(R.drawable.the_harbourmaster));
+        getPubImage.put(context.getString(R.string.the_liquor_rooms), context.getResources().getDrawable(R.drawable.the_liquor_rooms));
         getPubImage.put(context.getString(R.string.the_long_hall), context.getResources().getDrawable(R.drawable.the_long_hall));
         getPubImage.put(context.getString(R.string.the_long_stone), context.getResources().getDrawable(R.drawable.the_long_stone));
         getPubImage.put(context.getString(R.string.the_market_bar), context.getResources().getDrawable(R.drawable.the_market_bar));
@@ -80,6 +81,7 @@ public class Utilities {
         getPubImage.put(context.getString(R.string.the_temple_bar), context.getResources().getDrawable(R.drawable.the_temple_bar));
         getPubImage.put(context.getString(R.string.the_workmans_club), context.getResources().getDrawable(R.drawable.the_workmans_club));
         getPubImage.put(context.getString(R.string.the_turks_head), context.getResources().getDrawable(R.drawable.the_turks_head));
+        getPubImage.put(context.getString(R.string.whelans), context.getResources().getDrawable(R.drawable.whelans));
     }
 
     public static Drawable getPubImage(String name, Context context){
