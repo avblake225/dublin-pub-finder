@@ -65,20 +65,24 @@ public class DBManager extends SQLiteOpenHelper{
                                  context.getString(R.string.the_brew_dock),
                                  context.getString(R.string.the_camden_exchange),
                                  context.getString(R.string.the_capitol_bar),
+                                 context.getString(R.string.the_celt),
                                  context.getString(R.string.the_church),
                                  context.getString(R.string.the_czech_inn),
                                  context.getString(R.string.the_dame_tavern),
                                  context.getString(R.string.the_drury_buildings),
                                  context.getString(R.string.the_duke),
                                  context.getString(R.string.the_east_side_tavern),
+                                 context.getString(R.string.the_exchequer),
                                  context.getString(R.string.the_garage_bar),
                                  context.getString(R.string.the_george),
                                  context.getString(R.string.the_globe),
                                  context.getString(R.string.the_grafton_lounge),
+                                 context.getString(R.string.the_grand_social),
                                  context.getString(R.string.the_gypsy_rose),
                                  context.getString(R.string.the_hairy_lemon),
                                  context.getString(R.string.the_harbourmaster),
                                  context.getString(R.string.the_liquor_rooms),
+                                 context.getString(R.string.the_living_room),
                                  context.getString(R.string.the_lombard),
                                  context.getString(R.string.the_long_hall),
                                  context.getString(R.string.the_long_stone),
@@ -96,9 +100,12 @@ public class DBManager extends SQLiteOpenHelper{
                                  context.getString(R.string.the_sweeney_mongrel),
                                  context.getString(R.string.the_temple_bar),
                                  context.getString(R.string.the_turks_head),
-                                 context.getString(R.string.the_workmans_club),
                                  context.getString(R.string.whelans),
+                                 context.getString(R.string.the_woolshed),
+                                 context.getString(R.string.the_workmans_club)
         };
+
+        System.out.println("Number of pubs: " + pub_names.length);
 
         insertData(context.getString(R.string.against_the_grain),
                 context.getString(R.string.against_the_grain_address),
@@ -268,6 +275,10 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.the_capitol_bar_address),
                 context.getString(R.string.the_capitol_bar_directions));
 
+        insertData(context.getString(R.string.the_celt),
+                context.getString(R.string.the_celt_address),
+                context.getString(R.string.the_celt_directions));
+
         insertData(context.getString(R.string.the_church),
                 context.getString(R.string.the_church_address),
                 context.getString(R.string.the_church_directions));
@@ -292,6 +303,10 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.the_east_side_tavern_address),
                 context.getString(R.string.the_east_side_tavern_directions));
 
+        insertData(context.getString(R.string.the_exchequer),
+                context.getString(R.string.the_exchequer_address),
+                context.getString(R.string.the_exchequer_directions));
+
         insertData(context.getString(R.string.the_garage_bar),
                 context.getString(R.string.the_garage_bar_address),
                 context.getString(R.string.the_garage_bar_directions));
@@ -308,6 +323,10 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.the_grafton_lounge_address),
                 context.getString(R.string.the_grafton_lounge_directions));
 
+        insertData(context.getString(R.string.the_grand_social),
+                context.getString(R.string.the_grand_social_address),
+                context.getString(R.string.the_grand_social_directions));
+
         insertData(context.getString(R.string.the_gypsy_rose),
                 context.getString(R.string.the_gypsy_rose_address),
                 context.getString(R.string.the_gypsy_rose_directions));
@@ -323,6 +342,10 @@ public class DBManager extends SQLiteOpenHelper{
         insertData(context.getString(R.string.the_liquor_rooms),
                 context.getString(R.string.the_liquor_rooms_address),
                 context.getString(R.string.the_liquor_rooms_directions));
+
+        insertData(context.getString(R.string.the_living_room),
+                context.getString(R.string.the_living_room_address),
+                context.getString(R.string.the_living_room_directions));
 
         insertData(context.getString(R.string.the_lombard),
                 context.getString(R.string.the_lombard_address),
@@ -392,13 +415,17 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.the_turks_head_address),
                 context.getString(R.string.the_turks_head_directions));
 
-        insertData(context.getString(R.string.the_workmans_club),
-                context.getString(R.string.the_workmans_club_address),
-                context.getString(R.string.the_workmans_club_directions));
-
         insertData(context.getString(R.string.whelans),
                 context.getString(R.string.whelans_address),
                 context.getString(R.string.whelans_directions));
+
+        insertData(context.getString(R.string.the_woolshed),
+                context.getString(R.string.the_woolshed_address),
+                context.getString(R.string.the_woolshed_directions));
+
+        insertData(context.getString(R.string.the_workmans_club),
+                context.getString(R.string.the_workmans_club_address),
+                context.getString(R.string.the_workmans_club_directions));
     }
 
     @Override

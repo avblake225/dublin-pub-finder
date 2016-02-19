@@ -176,6 +176,10 @@
     <string name="the_capitol_bar_address">1 Aungier St, Dublin 2</string>
     <string name="the_capitol_bar_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn onto South Great George\'s Street. Walk up this street until you come to Aungier Street. You will see the Capitol Bar on the left corner.</string>
 
+    <string name="the_celt">The Celt</string>
+    <string name="the_celt_address">81 Talbot Street, Dublin 1</string>
+    <string name="the_celt_directions">From O\' Connell Street (the Spire), turn to face O\' Connell bridge and turn left onto Earl Street North. Walk up this street and continue on to Talbot Street. Walk down Talbot Street and you will soon see The Celt on the right.</string>
+
     <string name="the_church">The Church</string>
     <string name="the_church_address">Jervis Street, Dublin 1</string>
     <string name="the_church_directions">From O\' Connell Street (the Spire), turn to face O\' Connell bridge and turn right onto Henry Street. Walk all the way up this street and you will see The Church on the left hand corner.</string>
@@ -200,6 +204,10 @@
     <string name="the_east_side_tavern_address">104 Leeson Street Lower, Dublin 2</string>
     <string name="the_east_side_tavern_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. Then, turn left and walk around St. Stephen\'s Green. Turn left onto Leeson Street Lower and you will immediately see the East Side Tavern.</string>
 
+    <string name="the_exchequer">The Exchequer</string>
+    <string name="the_exchequer_address">3 Exchequer Street, Dublin 2</string>
+    <string name="the_exchequer_directions">From College Green (Trinity College), turn to face Dame Street. Then, turn left and walk straight towards Grafton Street. Walk a few feet up Grafton Street and take the first right turn onto Wicklow Street. Walk up this street continue onto Exchequer Street. You will see The Exchequer at the end of this street on the right hand corner.</string>
+
     <string name="the_garage_bar">The Garage Bar</string>
     <string name="the_garage_bar_address">Essex St East, Dublin 2</string>
     <string name="the_garage_bar_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street East. You will see the Garage Bar a few feet up on the right.</string>
@@ -216,6 +224,10 @@
     <string name="the_grafton_lounge_address">2 Duke Lane Upper, Dublin 2</string>
     <string name="the_grafton_lounge_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first left turn onto Duke Street. Then, take the first right turn onto Duke Lane Upper. You will see The Grafton Lounge a few feet down on the left.</string>
 
+    <string name="the_grand_social">The Grand Social</string>
+    <string name="the_grand_social_address">35 Lower Liffey Street, Dublin 1</string>
+    <string name="the_grand_social_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the first right turn onto Abbey Street Lower. Walk up this street and take the first left turn onto Liffey Street Lower. Walk up this street and you will see The Grand Social on the right.</string>
+
     <string name="the_gypsy_rose">The Gypsy Rose</string>
     <string name="the_gypsy_rose_address">5 Aston Quay, Dublin 2</string>
     <string name="the_gypsy_rose_directions">From O\' Connell Street, walk over O\' Connell bridge and turn right onto Aston Quay. Walk up this street towards the Ha\'penny bridge. You will soon see The Gypsy Rose on the left.</string>
@@ -231,6 +243,10 @@
     <string name="the_liquor_rooms">The Liquor Rooms</string>
     <string name="the_liquor_rooms_address">7 Wellington Quay, Dublin 2</string>
     <string name="the_liquor_rooms_directions">From O\' Connell Street, walk over O\' Connell bridge and turn right onto Aston Quay. Walk straight along the Quays, past the Ha\'penny bridge. Continue on straight, past the Millenium bridge. You will soon see The Liquor Room\'s on the left.</string>
+
+    <string name="the_living_room">The Living Room</string>
+    <string name="the_living_room_address">Cathal Brugha Street, Dublin 1</string>
+    <string name="the_living_room_directions">From O\'Connell Street (the Spire), turn away from O\' Connell bridge and walk straight. Take the second right turn onto Cathal Brugha Street and you will see The Living Room on the left.</string>
 
     <string name="the_lombard">The Lombard</string>
     <string name="the_lombard_address">44 Pearse Street, Dublin 2</string>
@@ -296,10 +312,6 @@
     <string name="the_temple_bar_address">47 Temple Bar, Dublin 2</string>
     <string name="the_temple_bar_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Then, turn left and walk under Merchant Arch. You are now in Temple Bar, the Temple Bar is down the cobblestones on the right.</string>
 
-    <string name="the_workmans_club">The Workmans Club</string>
-    <string name="the_workmans_club_address">10 Wellington Quay, Dublin 2</string>
-    <string name="the_workmans_club_directions">From O\' Connell Street, walk over O\' Connell bridge and turn right onto Aston Quay. Walk straight along the Quays, past the Ha\'penny bridge. Continue on straight, past the Millenium bridge. You will soon see The Workman\'s Club on the left.</string>
-
     <string name="the_turks_head">The Turks Head</string>
     <string name="the_turks_head_address">27 Parliament Street, Dublin 2</string>
     <string name="the_turks_head_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street East. Walk up this street and you will see The Turk\'s Head on the left hand corner.</string>
@@ -307,5 +319,13 @@
     <string name="whelans">Whelans</string>
     <string name="whelans_address">25 Wexford Street, Dublin 2</string>
     <string name="whelans_directions">From College Green (Trinity College), turn to face Dame Street. Walk straight up Dame Street and take the third left turn onto South Great George\'s Street. Walk straight up this street and continue onto Aungier Street. Walk straight up this street and continue onto Wexford Street. You will see Whelan\'s a few feet up on the right.</string>
+
+    <string name="the_woolshed">The Woolshed</string>
+    <string name="the_woolshed_address">The Parnell Centre, Parnell Street, Dublin 1</string>
+    <string name="the_woolshed_directions">From O\'Connell Street (the Spire), turn away from O\' Connell bridge and walk straight. At the end of the Street, turn left onto Parnell Street. Walk all the way up this street and you will see The Woolshed on the right</string>
+
+    <string name="the_workmans_club">The Workmans Club</string>
+    <string name="the_workmans_club_address">10 Wellington Quay, Dublin 2</string>
+    <string name="the_workmans_club_directions">From O\' Connell Street, walk over O\' Connell bridge and turn right onto Aston Quay. Walk straight along the Quays, past the Ha\'penny bridge. Continue on straight, past the Millenium bridge. You will soon see The Workman\'s Club on the left.</string>
 
 </resources>
