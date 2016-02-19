@@ -24,14 +24,6 @@
     <string name="bad_bobs_address">35 Essex Street East, Dublin 2</string>
     <string name="bad_bobs_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street East. You will see Bad Bob\'s on the left hand corner.</string>
 
-    <string name="the_bailey_bar">The Bailey Bar</string>
-    <string name="the_bailey_bar_address">2 Duke St, Dublin 2</string>
-    <string name="the_bailey_bar_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first left turn onto Duke Street. You will see the Bailey Bar on the left.</string>
-
-    <string name="the_bison_bar">The Bison Bar</string>
-    <string name="the_bison_bar_address">11 Wellington Quay, Dublin 2</string>
-    <string name="the_bison_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and turn right onto Aston Quay. Walk straight along the Quays, past the Ha\'penny bridge. Continue on straight, past the Millenium bridge. You will soon see The Bison Bar on the left.</string>
-
     <string name="break_for_the_border">Break For The Border</string>
     <string name="break_for_the_border_address">Stephen Street Lower, Dublin 2</string>
     <string name="break_for_the_border_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk all the way up this street and take the last right turn. You will see Break For The Border on the left.</string>
@@ -48,33 +40,17 @@
     <string name="café_en_seine_address">40 Dawson Street, Dublin 2</string>
     <string name="café_en_seine_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Nassau Street. Take the first right turn on Dawson Street. Walk up this street, past Duke Street and then past Anne Street South. You will see Café en Seine on the right.</string>
 
-    <string name="the_camden_exchange">The Camden Exchange</string>
-    <string name="the_camden_exchange_address">72 Camden Street Lower, Dublin 2</string>
-    <string name="the_camden_exchange_directions">From College Green (Trinity College), turn to face Dame Street. Walk straight up Dame Street and take the third left turn onto South Great George\'s Street. Walk straight up this street and continue onto Aungier Street. Walk straight up this street and continue onto Wexford Street. Continue straight onto Camden Street and you will see The Camden Exchange on the right.</string>
-
-    <string name="the_capitol_bar">The Capitol Bar</string>
-    <string name="the_capitol_bar_address">1 Aungier St, Dublin 2</string>
-    <string name="the_capitol_bar_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn onto South Great George\'s Street. Walk up this street until you come to Aungier Street. You will see the Capitol Bar on the left corner.</string>
-
     <string name="cassidys">Cassidys</string>
     <string name="cassidys_address">27 Westmoreland St, Dublin 2</string>
     <string name="cassidys_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight onto Westmoreland Street. You will see Cassidys a few feet up this street on the left.</string>
 
-    <string name="the_czech_inn">The Czech Inn</string>
-    <string name="the_czech_inn_address">Essex gate, Temple Bar, Dublin 8</string>
-    <string name="the_czech_inn_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street. Walk up this street and you will see The Czech Inn on the right hand corner.</string>
-
-    <string name="the_dame_tavern">The Dame Tavern</string>
-    <string name="the_dame_tavern_address">18 Dame Court, Dublin 2</string>
-    <string name="the_dame_tavern_directions">From College Green (Trinity College), turn to face Dame Street. Walk up this street and take the second left turn onto Trinity Street. Then, take the first right turn onto Dame Lane. Walk up this lane and you will see Dame Tavern on the left hand corner.</string>
+    <string name="devitts">Devitts</string>
+    <string name="devitts_address">78 Lower Camden Street, Dublin 2</string>
+    <string name="devitts_directions">From College Green (Trinity College), turn to face Dame Street. Walk straight up Dame Street and take the third left turn onto South Great George\'s Street. Walk straight up this street and continue onto Aungier Street. Walk straight up this street and continue onto Wexford Street. Continue straight onto Camden Street and you will see Devitt\'s on the right.</string>
 
     <string name="doyles">Doyles</string>
     <string name="doyles_address">9 College St, Dublin 2</string>
     <string name="doyles_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight onto D\'Olier Street. Walk up to the top of this street and you will see Doyle\'s on the right.</string>
-
-    <string name="the_east_side_tavern">The East Side Tavern</string>
-    <string name="the_east_side_tavern_address">104 Leeson Street Lower, Dublin 2</string>
-    <string name="the_east_side_tavern_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. Then, turn left and walk around St. Stephen\'s Green. Turn left onto Leeson Street Lower and you will immediately see the East Side Tavern.</string>
 
     <string name="fibber_magees">Fibber Magees</string>
     <string name="fibber_magees_address">80 Parnel Street, Dublin 1</string>
@@ -84,29 +60,17 @@
     <string name="fitzsimons_address">21 Wellington Quay, Temple Bar, Dublin 2</string>
     <string name="fitzsimons_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Then, turn left and walk under Merchant Arch. You are now in Temple Bar, Fitzsimon\'s is down the cobblestones on the right.</string>
 
+    <string name="flannerys">Flannerys</string>
+    <string name="flannerys_address">6 Camden Street Lower, Dublin 2</string>
+    <string name="flannerys_directions">From College Green (Trinity College), turn to face Dame Street. Walk straight up Dame Street and take the third left turn onto South Great George\'s Street. Walk straight up this street and continue onto Aungier Street. Walk straight up this street and continue onto Wexford Street. Continue straight onto Camden Street and you will see Flannery\'s on the left.</string>
+
     <string name="four_dame_lane">4 Dame Lane</string>
     <string name="four_dame_lane_address">4 Dame Lane, Dublin 2</string>
     <string name="four_dame_lane_directions">From College Green (Trinity College), turn to face Dame Street. Walk up Dame Street and take the second left turn onto Trinity Street. Take the first right turn onto Dame Lane. You will see 4 Dame Lane on the left.</string>
 
-    <string name="the_garage_bar">The Garage Bar</string>
-    <string name="the_garage_bar_address">Essex St East, Dublin 2</string>
-    <string name="the_garage_bar_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street East. You will see the Garage Bar a few feet up on the right.</string>
-
-    <string name="the_grafton_lounge">The Grafton Lounge</string>
-    <string name="the_grafton_lounge_address">2 Duke Lane Upper, Dublin 2</string>
-    <string name="the_grafton_lounge_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first left turn onto Duke Street. Then, take the first right turn onto Duke Lane Upper. You will see The Grafton Lounge a few feet down on the left.</string>
-
     <string name="grogans">Grogans</string>
     <string name="grogans_address">15 South William Street, Dublin 2</string>
     <string name="grogans_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk a few feet up this street and you will see Grogan\'s on the left.</string>
-
-    <string name="the_harbourmaster">The Harbourmaster</string>
-    <string name="the_harbourmaster_address">1 Custom House Quay, IFSC, Dublin 1</string>
-    <string name="the_harbourmaster_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk all the way up this street and around the bus garage (Busáras). Turn right and walk into the IFSC. You will see the Harbourmaster on the left corner.</string>
-
-    <string name="the_hairy_lemon">The Hairy Lemon</string>
-    <string name="the_hairy_lemon_address">Stephen Street Lower, Dublin 2</string>
-    <string name="the_hairy_lemon_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk all the way up this street and take the last right turn. You will see The Hairy Lemon on the right hand corner.</string>
 
     <string name="hartigans">Hartigans</string>
     <string name="hartigans_address">100 Leeson Street Lower, Dublin 2</string>
@@ -136,14 +100,6 @@
     <string name="lagoona_address">Mayor Street Lower, IFSC, Dublin 1</string>
     <string name="lagoona_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk all the way up this street and around the bus garage (Busáras). Turn right and walk into the IFSC. Walk straight past the Harbourmaster and on to Mayor Street Lower. You will see Lagoona on the left.</string>
 
-    <string name="the_mercantile">The Mercantile</string>
-    <string name="the_mercantile_address">28 Dame Street, Dublin 2</string>
-    <string name="the_mercantile_directions">From College Green (Trinity College), walk straight up Dame Street. Continue on past Church Lane and Trinity Street. You will soon see the Mercantile on the left.</string>
-
-    <string name="the_morgan_bar">The Morgan Bar</string>
-    <string name="the_morgan_bar_address">10 Fleet Street, Dublin 2</string>
-    <string name="the_morgan_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight onto Westmoreland Street. Take the first right turn onto Fleet Street. Walk a few feet up this street and you will see The Morgan Bar on the right.</string>
-
     <string name="mulligans">Mulligans</string>
     <string name="mulligans_address">8 Poolbeg Street, Dublin 2</string>
     <string name="mulligans_directions">From O\' Connell Street, walk over O\' Connell bridge and turn left onto Burgh Quay. Walk up this street and take the first right turn onto Hawkins Street. Then, take the first left turn onto Poolbeg Street. You will see Mulligan\'s a few feet up this street on the left.</string>
@@ -156,25 +112,13 @@
     <string name="o_donoghues_address">15 Merrion Row, Dublin 2</string>
     <string name="o_donoghues_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. Then, turn left at St. Stephen\'s Green and continue on to Merrion Row. You will then see O\' Donoghue\'s on the right.</string>
 
-    <string name="the_oliver_st_john_gogarty">The Oliver St John Gogarty</string>
-    <string name="the_oliver_st_john_gogarty_address">58 Fleet Street, Dublin 2</string>
-    <string name="the_oliver_st_john_gogarty_directions">From O\'Connell Street, walk over O\'Connell bridge and continue straight onto Westmoreland Street. Walk up this street and take the first right turn onto Fleet Street. Walk up this street and you will soon see Oliver St. John Gogarty\'s on the left hand corner.</string>
-
     <string name="o_reillys">O Reillys</string>
     <string name="o_reillys_address">Tara Street Station, 2 Poolbeg Street, Dublin 2</string>
     <string name="o_reillys_directions">From O\' Connell Street, walk over O\' Connell bridge and turn left onto Burgh Quay. Continue straight onto George\'s Quay. Walk past Tara Street Station and turn right onto Luke Street. You will see O\' Reillys a few feet down this street on the right.</string>
 
-    <string name="the_palace_bar">The Palace Bar</string>
-    <string name="the_palace_bar_address">21 Fleet Street, Dublin 2</string>
-    <string name="the_palace_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight onto Westmoreland Street. Take the first right turn onto Fleet Street. You will see The Palace Bar on the right.</string>
-
     <string name="peters_pub">Peters Pub</string>
     <string name="peters_pub_address">William Street South, Dublin 2</string>
     <string name="peters_pub_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk all the way up this street and you will see Peter\'s Pub on the left hand corner.</string>
-
-    <string name="the_porterhouse_central">The Porterhouse Central</string>
-    <string name="the_porterhouse_central_address">45 Nassau Street, Dublin 2</string>
-    <string name="the_porterhouse_central_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Nassau Street. You will see Porterhouse Central a few feet up on the right.</string>
 
     <string name="p_macs">P. Macs</string>
     <string name="p_macs_address">30 Stephen Street Lower, Dublin 2</string>
@@ -184,17 +128,13 @@
     <string name="robert_reids_address">19 Store St, Dublin 1</string>
     <string name="robert_reids_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk up this street and take the second left turn onto Gardiner Street South. Take the first right turn and walk down Frenchman\'s Lane. You will see Robert Reid\'s at the end on the left.</string>
 
-    <string name="the_river_bar">The River Bar</string>
-    <string name="the_river_bar_address">1 Burgh Quay, Dublin 2</string>
-    <string name="the_river_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and turn left onto Burgh Quay. You will see the River Bar on the right.</string>
+    <string name="ryans">Ryans</string>
+    <string name="ryans_address">92 Camden Street Lower, Dublin 2</string>
+    <string name="ryans_directions">From College Green (Trinity College), turn to face Dame Street. Walk straight up Dame Street and take the third left turn onto South Great George\'s Street. Walk straight up this street and continue onto Aungier Street. Walk straight up this street and continue onto Wexford Street. Continue straight onto Camden Street and you will see Ryan\'s on the right corner.</string>
 
     <string name="sin_é">Sin É</string>
     <string name="sin_é_address">15 Ormond Quay Upper, Dublin 1</string>
     <string name="sin_é_directions">From O\' Connell Street, walk towards O\' Connell bridge and turn right onto Bachelors Walk. Walk straight up this street and continue on past the Ha\'penny bridge onto Ormond Quay Lower. Continue straight, past the Millenium bridge, then past Grattan bridge onto Ormond Quay Upper. You will see Sin É a few feet up on the right.</string>
-
-    <string name="the_south_william">The South William</string>
-    <string name="the_south_william_address">52 South William Street, Dublin 2</string>
-    <string name="the_south_william_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk up this street and you will soon see the South William on the left.</string>
 
     <string name="synnotts">Synnotts</string>
     <string name="synnotts_address">South King Street, Dublin 2</string>
@@ -216,9 +156,33 @@
     <string name="the_bar_with_no_name_address">3 Fade Street, Dublin 2</string>
     <string name="the_bar_with_no_name_directions">From College Green (Trinity College), turn to face Dame Street. Walk up this street and take the third left turn and walk up South Great George\'s Street. Take the third left turn onto Fade Street. You will see The Bar With No Name a few feet up on the right.</string>
 
+    <string name="the_bailey_bar">The Bailey Bar</string>
+    <string name="the_bailey_bar_address">2 Duke St, Dublin 2</string>
+    <string name="the_bailey_bar_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first left turn onto Duke Street. You will see the Bailey Bar on the left.</string>
+
+    <string name="the_bison_bar">The Bison Bar</string>
+    <string name="the_bison_bar_address">11 Wellington Quay, Dublin 2</string>
+    <string name="the_bison_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and turn right onto Aston Quay. Walk straight along the Quays, past the Ha\'penny bridge. Continue on straight, past the Millenium bridge. You will soon see The Bison Bar on the left.</string>
+
     <string name="the_brew_dock">The Brew Dock</string>
     <string name="the_brew_dock_address">1 Amiens Street, Dublin 1</string>
     <string name="the_brew_dock_directions">From O\' Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk all the way up this street and around the bus garage (Busáras). You will see The Brew Dock straight in front of you.</string>
+
+    <string name="the_camden_exchange">The Camden Exchange</string>
+    <string name="the_camden_exchange_address">72 Camden Street Lower, Dublin 2</string>
+    <string name="the_camden_exchange_directions">From College Green (Trinity College), turn to face Dame Street. Walk straight up Dame Street and take the third left turn onto South Great George\'s Street. Walk straight up this street and continue onto Aungier Street. Walk straight up this street and continue onto Wexford Street. Continue straight onto Camden Street and you will see The Camden Exchange on the right.</string>
+
+    <string name="the_capitol_bar">The Capitol Bar</string>
+    <string name="the_capitol_bar_address">1 Aungier St, Dublin 2</string>
+    <string name="the_capitol_bar_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn onto South Great George\'s Street. Walk up this street until you come to Aungier Street. You will see the Capitol Bar on the left corner.</string>
+
+    <string name="the_czech_inn">The Czech Inn</string>
+    <string name="the_czech_inn_address">Essex gate, Temple Bar, Dublin 8</string>
+    <string name="the_czech_inn_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street. Walk up this street and you will see The Czech Inn on the right hand corner.</string>
+
+    <string name="the_dame_tavern">The Dame Tavern</string>
+    <string name="the_dame_tavern_address">18 Dame Court, Dublin 2</string>
+    <string name="the_dame_tavern_directions">From College Green (Trinity College), turn to face Dame Street. Walk up this street and take the second left turn onto Trinity Street. Then, take the first right turn onto Dame Lane. Walk up this lane and you will see Dame Tavern on the left hand corner.</string>
 
     <string name="the_drury_buildings">The Drury Buildings</string>
     <string name="the_drury_buildings_address">55 Drury Street, Dublin 2</string>
@@ -228,6 +192,14 @@
     <string name="the_duke_address">8 Duke St, Dublin 2</string>
     <string name="the_duke_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first left turn onto Duke Street. You will see The Duke on the left.</string>
 
+    <string name="the_east_side_tavern">The East Side Tavern</string>
+    <string name="the_east_side_tavern_address">104 Leeson Street Lower, Dublin 2</string>
+    <string name="the_east_side_tavern_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. Then, turn left and walk around St. Stephen\'s Green. Turn left onto Leeson Street Lower and you will immediately see the East Side Tavern.</string>
+
+    <string name="the_garage_bar">The Garage Bar</string>
+    <string name="the_garage_bar_address">Essex St East, Dublin 2</string>
+    <string name="the_garage_bar_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street East. You will see the Garage Bar a few feet up on the right.</string>
+
     <string name="the_george">The George</string>
     <string name="the_george_address">George\'s Street, Dublin 2</string>
     <string name="the_george_directions">From College Green (Trinity College), turn to face Dame Street. Walk up this street and take the third left turn onto South Great George\'s Street. Walk a few feet up this street and you will see The George on the right.</string>
@@ -236,9 +208,21 @@
     <string name="the_globe_address">11 South Great George\'s Street, Dublin 2</string>
     <string name="the_globe_directions">From College Green (Trinity College), turn to face Dame Street. Walk up this street and take the third left turn onto South Great George\'s Street. Walk a few feet up this street and you will see The Globe Bar on the left.</string>
 
+    <string name="the_grafton_lounge">The Grafton Lounge</string>
+    <string name="the_grafton_lounge_address">2 Duke Lane Upper, Dublin 2</string>
+    <string name="the_grafton_lounge_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first left turn onto Duke Street. Then, take the first right turn onto Duke Lane Upper. You will see The Grafton Lounge a few feet down on the left.</string>
+
     <string name="the_gypsy_rose">The Gypsy Rose</string>
     <string name="the_gypsy_rose_address">5 Aston Quay, Dublin 2</string>
     <string name="the_gypsy_rose_directions">From O\' Connell Street, walk over O\' Connell bridge and turn right onto Aston Quay. Walk up this street towards the Ha\'penny bridge. You will soon see The Gypsy Rose on the left.</string>
+
+    <string name="the_hairy_lemon">The Hairy Lemon</string>
+    <string name="the_hairy_lemon_address">Stephen Street Lower, Dublin 2</string>
+    <string name="the_hairy_lemon_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk all the way up this street and take the last right turn. You will see The Hairy Lemon on the right hand corner.</string>
+
+    <string name="the_harbourmaster">The Harbourmaster</string>
+    <string name="the_harbourmaster_address">1 Custom House Quay, IFSC, Dublin 1</string>
+    <string name="the_harbourmaster_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk all the way up this street and around the bus garage (Busáras). Turn right and walk into the IFSC. You will see the Harbourmaster on the left corner.</string>
 
     <string name="the_lombard">The Lombard</string>
     <string name="the_lombard_address">44 Pearse Street, Dublin 2</string>
@@ -256,9 +240,37 @@
     <string name="the_market_bar_address">14A Fade Street, Dublin 2</string>
     <string name="the_market_bar_directions">From College Green (Trinity College), turn to face Dame Street. Walk up this street and take the third left turn and walk up South Great George\'s Street. Take the third left turn onto Fade Street. You will see The Market Bar a few feet away.</string>
 
+    <string name="the_mercantile">The Mercantile</string>
+    <string name="the_mercantile_address">28 Dame Street, Dublin 2</string>
+    <string name="the_mercantile_directions">From College Green (Trinity College), walk straight up Dame Street. Continue on past Church Lane and Trinity Street. You will soon see the Mercantile on the left.</string>
+
+    <string name="the_morgan_bar">The Morgan Bar</string>
+    <string name="the_morgan_bar_address">10 Fleet Street, Dublin 2</string>
+    <string name="the_morgan_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight onto Westmoreland Street. Take the first right turn onto Fleet Street. Walk a few feet up this street and you will see The Morgan Bar on the right.</string>
+
     <string name="the_norseman">The Norseman</string>
     <string name="the_norseman_address">28 Essex Street East, Dublin 2</string>
     <string name="the_norseman_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street. Walk up this street and you will see The Norseman on the left hand corner.</string>
+
+    <string name="the_oliver_st_john_gogarty">The Oliver St John Gogarty</string>
+    <string name="the_oliver_st_john_gogarty_address">58 Fleet Street, Dublin 2</string>
+    <string name="the_oliver_st_john_gogarty_directions">From O\'Connell Street, walk over O\'Connell bridge and continue straight onto Westmoreland Street. Walk up this street and take the first right turn onto Fleet Street. Walk up this street and you will soon see Oliver St. John Gogarty\'s on the left hand corner.</string>
+
+    <string name="the_palace_bar">The Palace Bar</string>
+    <string name="the_palace_bar_address">21 Fleet Street, Dublin 2</string>
+    <string name="the_palace_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight onto Westmoreland Street. Take the first right turn onto Fleet Street. You will see The Palace Bar on the right.</string>
+
+    <string name="the_porterhouse_central">The Porterhouse Central</string>
+    <string name="the_porterhouse_central_address">45 Nassau Street, Dublin 2</string>
+    <string name="the_porterhouse_central_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Nassau Street. You will see Porterhouse Central a few feet up on the right.</string>
+
+    <string name="the_river_bar">The River Bar</string>
+    <string name="the_river_bar_address">1 Burgh Quay, Dublin 2</string>
+    <string name="the_river_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and turn left onto Burgh Quay. You will see the River Bar on the right.</string>
+
+    <string name="the_south_william">The South William</string>
+    <string name="the_south_william_address">52 South William Street, Dublin 2</string>
+    <string name="the_south_william_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk up this street and you will soon see the South William on the left.</string>
 
     <string name="the_stags_head">The Stags Head</string>
     <string name="the_stags_head_address">1 Dame Court, Dublin 2</string>
