@@ -48,6 +48,10 @@
     <string name="devitts_address">78 Lower Camden Street, Dublin 2</string>
     <string name="devitts_directions">From College Green (Trinity College), turn to face Dame Street. Walk straight up Dame Street and take the third left turn onto South Great George\'s Street. Walk straight up this street and continue onto Aungier Street. Walk straight up this street and continue onto Wexford Street. Continue straight onto Camden Street and you will see Devitt\'s on the right.</string>
 
+    <string name="doheny_and_nesbitts">Doheny And Nesbitts</string>
+    <string name="doheny_and_nesbitts_address">5 Baggot Street Lower, Dublin 2</string>
+    <string name="doheny_and_nesbitts_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk around Trinity College. Take the first right turn and walk all the way up Dawson Street. Then, turn left at St. Stephen\'s Green and continue on to Merrion Row. Walk up this street and continue onto Baggot Street Lower. You will see Doheny And Nesbitt\'s on the left.</string>
+
     <string name="doyles">Doyles</string>
     <string name="doyles_address">9 College St, Dublin 2</string>
     <string name="doyles_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight onto D\'Olier Street. Walk up to the top of this street and you will see Doyle\'s on the right.</string>
@@ -92,6 +96,10 @@
     <string name="jw_sweetmans_address">1 Burgh Quay, Dublin 2</string>
     <string name="jw_sweetmans_directions">From O\'Connell Street, walk over O\'Connell bridge and turn left onto Burgh Quay. J.W. Sweetman is just a few steps away.</string>
 
+    <string name="kennedys">Kennedys</string>
+    <string name="kennedys_address">31 Westland Row, Dublin 2</string>
+    <string name="kennedys_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk around Trinity College. Continue straight onto Nassau Street, then onto Leinster Street South. At the end of this street, turn left onto Lincoln Place. You will see Kennedy\'s at the end of this street on the corner.</string>
+
     <string name="lanigans">Lanigans</string>
     <string name="lanigans_address">10 Eden Quay, Dublin 1</string>
     <string name="lanigans_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the last left turn onto Eden Quay. Walk a few feet up this street and you will see Lanigan\'s on the left.</string>
@@ -110,7 +118,7 @@
 
     <string name="o_donoghues">O Donoghues</string>
     <string name="o_donoghues_address">15 Merrion Row, Dublin 2</string>
-    <string name="o_donoghues_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. Then, turn left at St. Stephen\'s Green and continue on to Merrion Row. You will then see O\' Donoghue\'s on the right.</string>
+    <string name="o_donoghues_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk around Trinity College. Take the first right turn and walk all the way up Dawson Street. Then, turn left at St. Stephen\'s Green and continue on to Merrion Row. You will then see O\' Donoghue\'s on the right.</string>
 
     <string name="o_reillys">O Reillys</string>
     <string name="o_reillys_address">Tara Street Station, 2 Poolbeg Street, Dublin 2</string>
@@ -167,6 +175,10 @@
     <string name="the_brew_dock">The Brew Dock</string>
     <string name="the_brew_dock_address">1 Amiens Street, Dublin 1</string>
     <string name="the_brew_dock_directions">From O\' Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk all the way up this street and around the bus garage (Busáras). You will see The Brew Dock straight in front of you.</string>
+
+    <string name="the_bull_and_castle">The Bull And Castle</string>
+    <string name="the_bull_and_castle_address">5 Lord Edward Street, Dublin 8</string>
+    <string name="the_bull_and_castle_directions">From College Green (Trinity College), turn to face Dame Street. Walk up the entire length of this street, past City Hall, and continue straight onto Lord Edward Street. You will see The Bull And Castle at the end of this street on the left corner.</string>
 
     <string name="the_camden_exchange">The Camden Exchange</string>
     <string name="the_camden_exchange_address">72 Camden Street Lower, Dublin 2</string>
@@ -275,6 +287,14 @@
     <string name="the_norseman">The Norseman</string>
     <string name="the_norseman_address">28 Essex Street East, Dublin 2</string>
     <string name="the_norseman_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street. Walk up this street and you will see The Norseman on the left hand corner.</string>
+
+    <string name="the_octagon_bar">The Octagon Bar</string>
+    <string name="the_octagon_bar_address">8 Wellington Quay, Dublin 2</string>
+    <string name="the_octagon_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and turn right onto Aston Quay. Walk straight along the Quays, past the Ha\'penny bridge. Continue on straight, past the Millenium bridge. You will soon see The Octagon Bar on the left.</string>
+
+    <string name="the_odeon">The Odeon</string>
+    <string name="the_odeon_address">Old Railway Station, 57 Harcourt Street, Dublin 2</string>
+    <string name="the_odeon_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk all the way up Grafton Street. Then, turn right and walk past St. Stephen\'s Green. Continue straight onto Harcourt Street. Walk all the way up this street and you will see The Odeon on the left.</string>
 
     <string name="the_old_stand">The Old Stand</string>
     <string name="the_old_stand_address">37 Exchequer Street, Dublin 2</string>
