@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity{
     protected void onResume(){
         super.onResume();
 
+        System.out.println("Number of pubs: " + DBManager.pub_names.length);
+
         name = null;
 
         tv_qwhatpub.setText("");
