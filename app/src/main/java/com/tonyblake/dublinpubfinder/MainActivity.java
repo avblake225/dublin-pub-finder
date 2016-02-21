@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity{
     AutoCompleteTextView tv_qwhatpub;
     String[] pubs;
     Button btn_findpub;
-    String name;
+    String name_entered, name_chosen, name_retrieved;
     String address;
     String directions;
 
@@ -47,9 +47,11 @@ public class MainActivity extends AppCompatActivity{
     protected void onResume(){
         super.onResume();
 
-        System.out.println("Number of pubs: " + DBManager.pub_names.length);
+        name_entered = null;
+        name_chosen = null;
+        name_retrieved = null;
 
-        name = null;
+        System.out.println("Number of pubs: " + DBManager.pub_names.length);
 
         tv_qwhatpub.setText("");
 
@@ -58,7 +60,7 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long rowId) {
 
-                name = (String) parent.getItemAtPosition(position);
+                name_chosen = (String) parent.getItemAtPosition(position);
             }
         });
 
@@ -67,23 +69,33 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
 
-                try {
-                    Cursor res = dbManager.getPub(name);
+                name_entered = tv_qwhatpub.getText().toString();
 
-                    while (res.moveToNext()) {
-                        name = res.getString(1);
-                        address = res.getString(2);
-                        directions = res.getString(3);
-                        break;
-                    }
+                if("".equals(name_entered)){
+                    showToastMessage(context.getString(R.string.enter_a_pub));
+                }
+                else {
+                    try {
+                        Cursor res = dbManager.getPub(name_chosen);
 
-                    if (name != null) {
-                        launchPubDetailsScreen();
-                    } else {
-                        showToastMessage(context.getString(R.string.pubnotfound));
+                        while (res.moveToNext()) {
+                            name_retrieved = res.getString(1);
+                            address = res.getString(2);
+                            directions = res.getString(3);
+                            break;
+                        }
+
+                        if (name_retrieved != null) {
+
+                            launchPubDetailsScreen();
+
+                        }
+                        else {
+                            showToastMessage(context.getString(R.string.pubnotfound));
+                        }
+                    } catch (Exception e) {
+                        showToastMessage(context.getString(R.string.errorfindingpub));
                     }
-                } catch (Exception e) {
-                    showToastMessage(context.getString(R.string.errorfindingpub));
                 }
             }
         });
@@ -91,7 +103,7 @@ public class MainActivity extends AppCompatActivity{
 
     private void launchPubDetailsScreen(){
         Intent intent = new Intent(this, PubDetailsScreen.class);
-        intent.putExtra("name", name);
+        intent.putExtra("name", name_retrieved);
         intent.putExtra("address", address);
         intent.putExtra("directions", directions);
         startActivity(intent);
@@ -107,6 +119,5 @@ public class MainActivity extends AppCompatActivity{
     public void onDestroy(){
         super.onDestroy();
 
-        name = null;
     }
 }
