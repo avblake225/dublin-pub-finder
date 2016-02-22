@@ -2,9 +2,12 @@ package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.support.v7.app.AppCompatActivity;
+import android.location.Location;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,7 +15,12 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity{
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
+
+public class MainActivity extends AppCompatActivity implements
+        GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
     Context context;
     DBManager dbManager;
@@ -23,6 +31,9 @@ public class MainActivity extends AppCompatActivity{
     String address;
     String directions;
 
+    private GoogleApiClient client;
+    String user_latitude, user_longitude;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,19 +43,26 @@ public class MainActivity extends AppCompatActivity{
 
         dbManager = new DBManager(this);
 
-        tv_qwhatpub = (AutoCompleteTextView)findViewById(R.id.tv_qwhatpub);
+        tv_qwhatpub = (AutoCompleteTextView) findViewById(R.id.tv_qwhatpub);
 
         pubs = dbManager.getPubNames();
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,pubs);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, pubs);
         tv_qwhatpub.setThreshold(1);
         tv_qwhatpub.setAdapter(adapter);
 
-        btn_findpub = (Button)findViewById(R.id.btn_findpub);
+        btn_findpub = (Button) findViewById(R.id.btn_findpub);
+
+        client = new GoogleApiClient.Builder(this)
+                    .addConnectionCallbacks(this)
+                    .addOnConnectionFailedListener(this)
+                    .addApi(LocationServices.API)
+                    .build();
+
     }
 
     @Override
-    protected void onResume(){
+    protected void onResume() {
         super.onResume();
 
         name_entered = null;
@@ -71,10 +89,9 @@ public class MainActivity extends AppCompatActivity{
 
                 name_entered = tv_qwhatpub.getText().toString();
 
-                if("".equals(name_entered)){
+                if ("".equals(name_entered)) {
                     showToastMessage(context.getString(R.string.enter_a_pub));
-                }
-                else {
+                } else {
                     try {
                         Cursor res = dbManager.getPub(name_chosen);
 
@@ -89,8 +106,7 @@ public class MainActivity extends AppCompatActivity{
 
                             launchPubDetailsScreen();
 
-                        }
-                        else {
+                        } else {
                             showToastMessage(context.getString(R.string.pubnotfound));
                         }
                     } catch (Exception e) {
@@ -101,7 +117,7 @@ public class MainActivity extends AppCompatActivity{
         });
     }
 
-    private void launchPubDetailsScreen(){
+    private void launchPubDetailsScreen() {
         Intent intent = new Intent(this, PubDetailsScreen.class);
         intent.putExtra("name", name_retrieved);
         intent.putExtra("address", address);
@@ -109,15 +125,51 @@ public class MainActivity extends AppCompatActivity{
         startActivity(intent);
     }
 
-    private void showToastMessage(CharSequence text){
+    private void showToastMessage(CharSequence text) {
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
     }
 
     @Override
-    public void onDestroy(){
+    public void onDestroy() {
         super.onDestroy();
+
+    }
+
+    @Override
+    public void onStart() {
+        client.connect();
+        super.onStart();
+    }
+
+    @Override
+    public void onStop() {
+        client.disconnect();
+        super.onStop();
+    }
+
+    @Override
+    public void onConnected(Bundle bundle) {
+
+        if(ContextCompat.checkSelfPermission(context, android.Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED){
+
+            Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(client);
+
+            if (mLastLocation != null) {
+                user_latitude = String.valueOf(mLastLocation.getLatitude());
+                user_longitude = String.valueOf(mLastLocation.getLongitude());
+            }
+        }
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
 
     }
 }
