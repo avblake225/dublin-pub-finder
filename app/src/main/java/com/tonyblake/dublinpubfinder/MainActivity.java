@@ -39,7 +39,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleApiClient client;
     private GoogleMap mMap;
-    String user_latitude, user_longitude;
+    double user_latitude, user_longitude;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -169,8 +169,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(client);
 
             if (mLastLocation != null) {
-                user_latitude = String.valueOf(mLastLocation.getLatitude());
-                user_longitude = String.valueOf(mLastLocation.getLongitude());
+                user_latitude = Double.valueOf(mLastLocation.getLatitude());
+                user_longitude = Double.valueOf(mLastLocation.getLongitude());
             }
         }
     }
@@ -179,7 +179,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        LatLng user_coordinates = new LatLng(53.368516, -6.177504); // my house
+        LatLng user_coordinates = new LatLng(user_latitude, user_longitude);
 
         LatLng pub_coordinates = new LatLng(53.345474, -6.264215);  // the temple bar
 
@@ -191,8 +191,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newCameraPosition(camera_position));
 
         Marker user_marker = mMap.addMarker(new MarkerOptions().position(user_coordinates)
-                                .title("You are here")
-                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
+                .title("You are here")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
 
         user_marker.showInfoWindow();
 
