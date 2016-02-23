@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/black">
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp">
 
             <TextView
                 android:id="@+id/tv_name"
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
                 android:text="testing"
                 android:textSize="25dp"
                 android:textColor="@color/white"
@@ -29,40 +25,36 @@
 
             <TextView
                 android:id="@+id/tv_address"
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_name"
                 android:text="testing"
                 android:textSize="20dp"
                 android:textColor="@color/white"/>
 
             <ImageView
                 android:id="@+id/iv_pub"
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_gravity="center"/>
+                android:layout_marginTop="2dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_address"/>
 
-            <TextView
-                android:layout_width="fill_parent"
+            <Button
+                android:id="@+id/btn_getMapLocation"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text = "@string/directions"
-                android:layout_marginTop="5dp"
-                android:textSize="20dp"
-                android:textColor="@color/white"/>
+                android:layout_gravity="center"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:background="@color/white"
+                android:text="@string/getMapLocation"
+                android:layout_below="@+id/iv_pub"/>
 
-            <TextView
-                android:id="@+id/tv_directions"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="testing"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="30dp"
-                android:textSize="20dp"
-                android:textColor="@color/white"/>
+        </RelativeLayout>
 
-        </LinearLayout>
-
-    </ScrollView>
-
-</LinearLayout>
+</RelativeLayout>

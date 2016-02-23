@@ -2,12 +2,12 @@
     <string name="app_name">Dublin Pub Finder</string>
     <string name="qwhatpub">What pub are you looking for?</string>
     <string name="findpub">Find pub</string>
+    <string name="getMapLocation">Get Map Location</string>
     <string name="copyright">© Tony Blake 2016</string>
     <string name="enter_a_pub">Enter a pub</string>
     <string name="pubnotfound">Pub not found</string>
     <string name="errorfindingpub">Error finding pub</string>
     <string name="errorretrievingpubimage">"Error retrieving pub image"</string>
-    <string name="directions">Directions</string>
 
     <string name="against_the_grain">Against The Grain</string>
     <string name="against_the_grain_address">11 Wexford St, Dublin 2</string>
