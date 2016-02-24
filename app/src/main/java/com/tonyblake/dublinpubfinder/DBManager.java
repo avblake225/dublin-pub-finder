@@ -418,22 +418,4 @@ public class DBManager extends SQLiteOpenHelper{
         Cursor res = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE NAME = '" + selected_pub + "'" ,null);
         return res;
     }
-
-    public String getQuery(boolean traditional_pub_chosen, boolean modern_pub_chosen, boolean north_side_chosen,
-                           boolean south_side_chosen, boolean yes_to_live_music_chosen, boolean no_to_live_music_chosen,
-                           boolean yes_to_late_pub_chosen, boolean no_to_late_pub_chosen){
-
-        String query = null;
-
-        if(traditional_pub_chosen && north_side_chosen && yes_to_live_music_chosen && yes_to_late_pub_chosen){
-
-            query = "SELECT * FROM " + TABLE_NAME + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'Yes', LATE_OPENING = 'Yes'";
-        }
-        else if(modern_pub_chosen && north_side_chosen && yes_to_live_music_chosen && yes_to_late_pub_chosen){
-
-            query = "SELECT * FROM " + TABLE_NAME + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'Yes', LATE_OPENING = 'Yes'";
-        }
-
-        return query;
-    }
 }

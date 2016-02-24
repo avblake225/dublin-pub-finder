@@ -59,26 +59,7 @@ public class HomeScreen extends AppCompatActivity {
 
                 checkIfAllSelectionsMade();
 
-                boolean traditional_pub_chosen = traditional_pub.isChecked();
-                boolean modern_pub_chosen = modern_pub.isChecked();
-
-                boolean north_side_chosen = north_side.isChecked();
-                boolean south_side_chosen = south_side.isChecked();
-
-                boolean yes_to_live_music_chosen = yes_to_live_music.isChecked();
-                boolean no_to_live_music_chosen = no_to_live_music.isChecked();
-
-                boolean yes_to_late_pub_chosen = yes_to_late_pub.isChecked();
-                boolean no_to_late_pub_chosen = no_to_late_pub.isChecked();
-
-                String dBquery = dbManager.getQuery(traditional_pub_chosen,
-                        modern_pub_chosen,
-                        north_side_chosen,
-                        south_side_chosen,
-                        yes_to_live_music_chosen,
-                        no_to_live_music_chosen,
-                        yes_to_late_pub_chosen,
-                        no_to_late_pub_chosen);
+                int selection_code = getSelectionCode();
 
                 String dummy = "dummy string";
 
@@ -132,5 +113,21 @@ public class HomeScreen extends AppCompatActivity {
         else if(!no_to_late_pub.isChecked() && !yes_to_late_pub.isChecked()){
             showToastMessage(context.getString(R.string.please_select_late_pub));
         }
+    }
+
+    private int getSelectionCode(){
+
+        int selection_code;
+
+        if(traditional_pub.isChecked() && north_side.isChecked() && yes_to_live_music.isChecked() && yes_to_late_pub.isChecked()){
+
+            selection_code = 0;
+        }
+        // else if...
+        else{
+            selection_code = 15;
+        }
+
+        return selection_code;
     }
 }
