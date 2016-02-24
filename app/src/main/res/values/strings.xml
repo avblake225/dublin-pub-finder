@@ -1,9 +1,19 @@
 <resources>
     <string name="app_name">Dublin Pub Finder</string>
-    <string name="qwhatpub">What pub are you looking for?</string>
-    <string name="findpub">Find pub</string>
-    <string name="getMapLocation">Get Map Location</string>
+    <string name="enter">Enter</string>
     <string name="copyright">© Tony Blake 2016</string>
+    <string name="find_pub">Find pub</string>
+    <string name="qtypepub">Q1: What type of pub are you looking for?</string>
+    <string name="traditional">Traditional Irish pub</string>
+    <string name="modern">Modern pub</string>
+    <string name="qsidecity">Q2: What side of the city are you on?</string>
+    <string name="northside">North side</string>
+    <string name="southside">South side</string>
+    <string name="qlivemusic">Q3: Are you looking for a pub with live music?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="qlatepub">Q4: Are you looking for a pub that stays open late?</string>
+    <string name="getMapLocation">Get Map Location</string>
     <string name="enter_a_pub">Enter a pub</string>
     <string name="pubnotfound">Pub not found</string>
     <string name="errorfindingpub">Error finding pub</string>

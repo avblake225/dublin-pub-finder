@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.tonyblake.dublinpubfinder.MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/qtypepub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/home_screen_margin"
+                android:layout_marginBottom="@dimen/home_screen_margin"
+                android:textColor="@color/white"
+                android:text="@string/qtypepub"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radiobutton_traditional"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/traditional"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/white"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:id="@+id/radiobutton_modern"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/modern"
+                    android:checked="false"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/white"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/qsidecity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/home_screen_margin"
+                android:layout_marginBottom="@dimen/home_screen_margin"
+                android:textColor="@color/white"
+                android:text="@string/qsidecity"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radiobutton_northside"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/northside"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/white"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:id="@+id/radiobutton_southside"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/southside"
+                    android:checked="false"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/white"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/qlivemusic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/home_screen_margin"
+                android:layout_marginBottom="@dimen/home_screen_margin"
+                android:textColor="@color/white"
+                android:text="@string/qlivemusic"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radiobutton_yestolivemusic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/white"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:id="@+id/radiobutton_notolivemusic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no"
+                    android:checked="false"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/white"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/qlatepub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/home_screen_margin"
+                android:layout_marginBottom="@dimen/home_screen_margin"
+                android:textColor="@color/white"
+                android:text="@string/qlatepub"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radiobutton_yestolatepub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/white"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:id="@+id/radiobutton_notolatepub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no"
+                    android:checked="false"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/white"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/home_screen_button_margin">
+
+            <Button
+                android:id="@+id/btn_findpub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/find_pub"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
