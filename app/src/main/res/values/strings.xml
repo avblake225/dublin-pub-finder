@@ -13,6 +13,12 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="qlatepub">Q4: Are you looking for a pub that stays open late?</string>
+
+    <string name="please_select_pub_type">Please select pub type</string>
+    <string name="please_select_your_location">Please select which side of the city you are on</string>
+    <string name="please_select_live_music">Please select whether or not you want live music</string>
+    <string name="please_select_late_pub">Please select whether or not you want a pub that stays open late</string>
+
     <string name="getMapLocation">Get Map Location</string>
     <string name="enter_a_pub">Enter a pub</string>
     <string name="pubnotfound">Pub not found</string>

@@ -57,6 +57,8 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                checkIfAllSelectionsMade();
+
                 boolean traditional_pub_chosen = traditional_pub.isChecked();
                 boolean modern_pub_chosen = modern_pub.isChecked();
 
@@ -68,6 +70,15 @@ public class HomeScreen extends AppCompatActivity {
 
                 boolean yes_to_late_pub_chosen = yes_to_late_pub.isChecked();
                 boolean no_to_late_pub_chosen = no_to_late_pub.isChecked();
+
+                String dBquery = dbManager.getQuery(traditional_pub_chosen,
+                        modern_pub_chosen,
+                        north_side_chosen,
+                        south_side_chosen,
+                        yes_to_live_music_chosen,
+                        no_to_live_music_chosen,
+                        yes_to_late_pub_chosen,
+                        no_to_late_pub_chosen);
 
                 String dummy = "dummy string";
 
@@ -105,5 +116,21 @@ public class HomeScreen extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
+    }
+
+    private void checkIfAllSelectionsMade(){
+
+        if(!traditional_pub.isChecked() && !modern_pub.isChecked()){
+            showToastMessage(context.getString(R.string.please_select_pub_type));
+        }
+        else if(!north_side.isChecked() && !south_side.isChecked()){
+            showToastMessage(context.getString(R.string.please_select_your_location));
+        }
+        else if(!yes_to_live_music.isChecked() && !no_to_live_music.isChecked()){
+            showToastMessage(context.getString(R.string.please_select_live_music));
+        }
+        else if(!no_to_late_pub.isChecked() && !yes_to_late_pub.isChecked()){
+            showToastMessage(context.getString(R.string.please_select_late_pub));
+        }
     }
 }
