@@ -1,17 +1,15 @@
 package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 
-import java.io.FileOutputStream;
-import java.io.OutputStream;
 import java.util.HashMap;
 
 public class Utilities {
 
     public static HashMap<String,Drawable> getPubImage = new HashMap<String,Drawable>();
+
+    public static HashMap<String,Integer> getSelectionCode = new HashMap<String,Integer>();
 
     public static void populatePubImageMap(Context context){
 
@@ -84,6 +82,42 @@ public class Utilities {
         getPubImage.put(context.getString(R.string.whelans), context.getResources().getDrawable(R.drawable.whelans));
     }
 
+    public static void populateSelectionCodeMap(){
+
+        getSelectionCode.put("00000",0);
+        getSelectionCode.put("00001",1);
+        getSelectionCode.put("00010",2);
+        getSelectionCode.put("00011",3);
+        getSelectionCode.put("00100",4);
+        getSelectionCode.put("00101",5);
+        getSelectionCode.put("00110",6);
+        getSelectionCode.put("00111",7);
+        getSelectionCode.put("01000",8);
+        getSelectionCode.put("01001",9);
+        getSelectionCode.put("01010",10);
+        getSelectionCode.put("01011",11);
+        getSelectionCode.put("01100",12);
+        getSelectionCode.put("01101",13);
+        getSelectionCode.put("01110",14);
+        getSelectionCode.put("01111",15);
+        getSelectionCode.put("10000",16);
+        getSelectionCode.put("10001",17);
+        getSelectionCode.put("10010",18);
+        getSelectionCode.put("10011",19);
+        getSelectionCode.put("10100",20);
+        getSelectionCode.put("10101",21);
+        getSelectionCode.put("10110",22);
+        getSelectionCode.put("10111",23);
+        getSelectionCode.put("11000",24);
+        getSelectionCode.put("11001",25);
+        getSelectionCode.put("11010",26);
+        getSelectionCode.put("11011",27);
+        getSelectionCode.put("11100",28);
+        getSelectionCode.put("11101",29);
+        getSelectionCode.put("11110",30);
+        getSelectionCode.put("11111",31);
+    }
+
     public static Drawable getPubImage(String name, Context context){
 
         Drawable image = null;
@@ -96,5 +130,10 @@ public class Utilities {
         }
 
         return image;
+    }
+
+    public static int getSelectionCode(String bit_combination){
+
+        return getSelectionCode.get(bit_combination);
     }
 }

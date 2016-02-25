@@ -15,8 +15,9 @@ public class HomeScreen extends AppCompatActivity {
     private DBManager dbManager;
     private RadioButton traditional_pub, modern_pub;
     private RadioButton north_side, south_side;
-    private RadioButton yes_to_live_music, no_to_live_music;
-    private RadioButton yes_to_late_pub, no_to_late_pub;
+    private RadioButton no_to_live_music, yes_to_live_music;
+    private RadioButton no_to_late_pub, yes_to_late_pub;
+    private RadioButton no_to_craft_beer, yes_to_craft_beer;
     private Button btn_findpub;
 
     private String name, address;
@@ -30,6 +31,9 @@ public class HomeScreen extends AppCompatActivity {
 
         dbManager = new DBManager(this);
 
+        Utilities.populatePubImageMap(context);
+        Utilities.populateSelectionCodeMap();
+
         traditional_pub =(RadioButton)findViewById(R.id.radiobutton_traditional);
         modern_pub =(RadioButton)findViewById(R.id.radiobutton_modern);
 
@@ -41,6 +45,9 @@ public class HomeScreen extends AppCompatActivity {
 
         no_to_late_pub =(RadioButton)findViewById(R.id.radiobutton_notolatepub);
         yes_to_late_pub =(RadioButton)findViewById(R.id.radiobutton_yestolatepub);
+
+        no_to_craft_beer =(RadioButton)findViewById(R.id.radiobutton_notocraftbeer);
+        yes_to_craft_beer =(RadioButton)findViewById(R.id.radiobutton_yestocraftbeer);
 
         btn_findpub = (Button) findViewById(R.id.btn_findpub);
     }
@@ -62,8 +69,6 @@ public class HomeScreen extends AppCompatActivity {
                 int selection_code = getSelectionCode();
 
                 String query = dbManager.getdBquery(selection_code);
-
-                //int traditional_pub_bit = (traditional_pub.isChecked()) ? 1 : 0;
 
                 String dummy = "dummy string";
 
@@ -121,72 +126,19 @@ public class HomeScreen extends AppCompatActivity {
 
     private int getSelectionCode(){
 
-        int selection_code;
+        int selection_code = 0;
 
-        if(traditional_pub.isChecked() && north_side.isChecked() && no_to_live_music.isChecked() && no_to_late_pub.isChecked()){
+        String traditional_pub_bit = String.valueOf(traditional_pub.isChecked() ? 1 : 0);
+        String northside_bit = String.valueOf(north_side.isChecked() ? 1 : 0);
+        String no_to_live_music_bit = String.valueOf(no_to_live_music.isChecked() ? 1 : 0);
+        String no_to_craft_beer_bit = String.valueOf(no_to_craft_beer.isChecked() ? 1 : 0);
+        String no_to_late_pub_bit = String.valueOf(no_to_late_pub.isChecked() ? 1 : 0);
 
-            selection_code = 0;
-        }
-        else if(traditional_pub.isChecked() && north_side.isChecked() && no_to_live_music.isChecked() && yes_to_late_pub.isChecked()){
+        String bit_combination = traditional_pub_bit + northside_bit + no_to_live_music_bit + no_to_craft_beer_bit + no_to_late_pub_bit;
 
-            selection_code = 1;
-        }
-        else if(traditional_pub.isChecked() && north_side.isChecked() && yes_to_live_music.isChecked() && no_to_late_pub.isChecked()){
-
-            selection_code = 2;
-        }
-        else if(traditional_pub.isChecked() && north_side.isChecked() && yes_to_live_music.isChecked() && yes_to_late_pub.isChecked()){
-
-            selection_code = 3;
-        }
-        else if(traditional_pub.isChecked() && south_side.isChecked() && no_to_live_music.isChecked() && no_to_late_pub.isChecked()){
-
-            selection_code = 4;
-        }
-        else if(traditional_pub.isChecked() && south_side.isChecked() && no_to_live_music.isChecked() && yes_to_late_pub.isChecked()){
-
-            selection_code = 5;
-        }
-        else if(traditional_pub.isChecked() && south_side.isChecked() && yes_to_live_music.isChecked() && no_to_late_pub.isChecked()){
-
-            selection_code = 6;
-        }
-        else if(traditional_pub.isChecked() && south_side.isChecked() && yes_to_live_music.isChecked() && yes_to_late_pub.isChecked()){
-
-            selection_code = 7;
-        }
-        else if(modern_pub.isChecked() && north_side.isChecked() && no_to_live_music.isChecked() && no_to_late_pub.isChecked()){
-
-            selection_code = 8;
-        }
-        else if(modern_pub.isChecked() && north_side.isChecked() && no_to_live_music.isChecked() && yes_to_late_pub.isChecked()){
-
-            selection_code = 9;
-        }
-        else if(modern_pub.isChecked() && north_side.isChecked() && yes_to_live_music.isChecked() && no_to_late_pub.isChecked()){
-
-            selection_code = 10;
-        }
-        else if(modern_pub.isChecked() && north_side.isChecked() && yes_to_live_music.isChecked() && yes_to_late_pub.isChecked()){
-
-            selection_code = 11;
-        }
-        else if(modern_pub.isChecked() && south_side.isChecked() && no_to_live_music.isChecked() && no_to_late_pub.isChecked()){
-
-            selection_code = 12;
-        }
-        else if(modern_pub.isChecked() && south_side.isChecked() && no_to_live_music.isChecked() && yes_to_late_pub.isChecked()){
-
-            selection_code = 13;
-        }
-        else if(modern_pub.isChecked() && south_side.isChecked() && yes_to_live_music.isChecked() && no_to_late_pub.isChecked()){
-
-            selection_code = 14;
-        }
-        else{
-            selection_code = 15;
-        }
+        selection_code = Utilities.getSelectionCode(bit_combination);
 
         return selection_code;
     }
+
 }

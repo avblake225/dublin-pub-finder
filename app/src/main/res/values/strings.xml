@@ -7,12 +7,13 @@
     <string name="traditional">Traditional Irish pub</string>
     <string name="modern">Modern pub</string>
     <string name="qsidecity">Q2: What side of the city are you on?</string>
-    <string name="northside">North side</string>
-    <string name="southside">South side</string>
+    <string name="northside">Northside</string>
+    <string name="southside">Southside</string>
     <string name="qlivemusic">Q3: Are you looking for a pub with live music?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="qlatepub">Q4: Are you looking for a pub that stays open late?</string>
+    <string name="qcraftbeer">Q4: Are you looking for a pub that serves craft beer?</string>
+    <string name="qlatepub">Q5: Are you looking for a pub that stays open late?</string>
 
     <string name="please_select_pub_type">Please select pub type</string>
     <string name="please_select_your_location">Please select which side of the city you are on</string>
@@ -27,7 +28,13 @@
 
     <string name="against_the_grain">Against The Grain</string>
     <string name="against_the_grain_address">11 Wexford St, Dublin 2</string>
-    <string name="against_the_grain_directions">From College Green (Trinity College), turn to face Dame Street. Walk straight up Dame Street and take the third left turn onto South Great George\'s Street. Walk straight up this street and continue onto Aungier Street. Walk straight up this street and continue onto Wexford Street. You will see Against The Grain a few feet up on the left corner.</string>
+    <string name="against_the_grain_side_of_city">Southside</string>
+    <string name="against_the_grain_latitude">53.337230</string>
+    <string name="against_the_grain_longitude">-6.265333</string>
+    <string name="against_the_grain_pub_type">Modern</string>
+    <string name="against_the_grain_live_music">No</string>
+    <string name="against_the_grain_craft_beer">Yes</string>
+    <string name="against_the_grain_late_pub">No</string>
 
     <string name="alfie_byrnes">Alfie Byrnes</string>
     <string name="alfie_byrnes_address">Earlsfort Terrace, Dublin 2</string>

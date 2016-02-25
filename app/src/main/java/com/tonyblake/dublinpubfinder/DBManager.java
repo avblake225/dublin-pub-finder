@@ -13,7 +13,13 @@ public class DBManager extends SQLiteOpenHelper{
     public static final String COL_1 = "ID";
     public static final String COL_2 = "NAME";
     public static final String COL_3 = "ADDRESS";
-    public static final String COL_4 = "DIRECTIONS";
+    public static final String COL_4 = "SIDE_OF_CITY";
+    public static final String COL_5 = "LATITUDE";
+    public static final String COL_6 = "LONGITUDE";
+    public static final String COL_7 = "PUB_TYPE";
+    public static final String COL_8 = "LIVE_MUSIC";
+    public static final String COL_9 = "CRAFT_BEER";
+    public static final String COL_10 = "LATE_PUB";
 
     public SQLiteDatabase db;
 
@@ -26,9 +32,15 @@ public class DBManager extends SQLiteOpenHelper{
 
         insertData(context.getString(R.string.against_the_grain),
                 context.getString(R.string.against_the_grain_address),
-                context.getString(R.string.against_the_grain_directions));
+                context.getString(R.string.against_the_grain_side_of_city),
+                context.getString(R.string.against_the_grain_latitude),
+                context.getString(R.string.against_the_grain_longitude),
+                context.getString(R.string.against_the_grain_pub_type),
+                context.getString(R.string.against_the_grain_live_music),
+                context.getString(R.string.against_the_grain_craft_beer),
+                context.getString(R.string.against_the_grain_late_pub));
 
-        insertData(context.getString(R.string.alfie_byrnes),
+        /*insertData(context.getString(R.string.alfie_byrnes),
                 context.getString(R.string.alfie_byrnes_address),
                 context.getString(R.string.alfie_byrnes_directions));
 
@@ -382,22 +394,31 @@ public class DBManager extends SQLiteOpenHelper{
 
         insertData(context.getString(R.string.the_workmans_club),
                 context.getString(R.string.the_workmans_club_address),
-                context.getString(R.string.the_workmans_club_directions));
+                context.getString(R.string.the_workmans_club_directions));*/
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_PUBS_TABLE = "CREATE TABLE " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, ADDRESS TEXT, DIRECTIONS INTEGER)";
+        String CREATE_PUBS_TABLE = "CREATE TABLE " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, ADDRESS TEXT, SIDE_OF_CITY TEXT, LATITUDE TEXT, LONGITUDE TEXT, PUB_TYPE TEXT, LIVE_MUSIC TEXT, CRAFT_BEER TEXT, LATE_PUB TEXT)";
         db.execSQL(CREATE_PUBS_TABLE);
     }
 
-    public boolean insertData(String name, String address, String directions){
+    public boolean insertData(String name, String address, String side_of_city, String latitude, String longitude, String pub_type, String live_music, String craft_beer, String late_pub){
 
         ContentValues contentValues = new ContentValues();
+
         contentValues.put(COL_2, name);
         contentValues.put(COL_3, address);
-        contentValues.put(COL_4, directions);
-        long result = db.insert(TABLE_NAME,null,contentValues);
+        contentValues.put(COL_4, side_of_city);
+        contentValues.put(COL_5, latitude);
+        contentValues.put(COL_6, longitude);
+        contentValues.put(COL_7, pub_type);
+        contentValues.put(COL_8, live_music);
+        contentValues.put(COL_9, craft_beer);
+        contentValues.put(COL_10, late_pub);
+
+        long result = db.insert(TABLE_NAME, null, contentValues);
+
         if(result == -1){
             return false;
         }
@@ -413,9 +434,9 @@ public class DBManager extends SQLiteOpenHelper{
 
     }
 
-    public Cursor getPub(String selected_pub){
+    public Cursor getPubs(String query){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE NAME = '" + selected_pub + "'" ,null);
+        Cursor res = db.rawQuery(query,null);
         return res;
     }
 
