@@ -36,11 +36,11 @@ public class HomeScreen extends AppCompatActivity {
         north_side =(RadioButton)findViewById(R.id.radiobutton_northside);
         south_side =(RadioButton)findViewById(R.id.radiobutton_southside);
 
-        yes_to_live_music =(RadioButton)findViewById(R.id.radiobutton_yestolivemusic);
         no_to_live_music =(RadioButton)findViewById(R.id.radiobutton_notolivemusic);
+        yes_to_live_music =(RadioButton)findViewById(R.id.radiobutton_yestolivemusic);
 
-        yes_to_late_pub =(RadioButton)findViewById(R.id.radiobutton_yestolatepub);
         no_to_late_pub =(RadioButton)findViewById(R.id.radiobutton_notolatepub);
+        yes_to_late_pub =(RadioButton)findViewById(R.id.radiobutton_yestolatepub);
 
         btn_findpub = (Button) findViewById(R.id.btn_findpub);
     }
@@ -60,6 +60,10 @@ public class HomeScreen extends AppCompatActivity {
                 checkIfAllSelectionsMade();
 
                 int selection_code = getSelectionCode();
+
+                String query = dbManager.getdBquery(selection_code);
+
+                //int traditional_pub_bit = (traditional_pub.isChecked()) ? 1 : 0;
 
                 String dummy = "dummy string";
 
@@ -119,11 +123,66 @@ public class HomeScreen extends AppCompatActivity {
 
         int selection_code;
 
-        if(traditional_pub.isChecked() && north_side.isChecked() && yes_to_live_music.isChecked() && yes_to_late_pub.isChecked()){
+        if(traditional_pub.isChecked() && north_side.isChecked() && no_to_live_music.isChecked() && no_to_late_pub.isChecked()){
 
             selection_code = 0;
         }
-        // else if...
+        else if(traditional_pub.isChecked() && north_side.isChecked() && no_to_live_music.isChecked() && yes_to_late_pub.isChecked()){
+
+            selection_code = 1;
+        }
+        else if(traditional_pub.isChecked() && north_side.isChecked() && yes_to_live_music.isChecked() && no_to_late_pub.isChecked()){
+
+            selection_code = 2;
+        }
+        else if(traditional_pub.isChecked() && north_side.isChecked() && yes_to_live_music.isChecked() && yes_to_late_pub.isChecked()){
+
+            selection_code = 3;
+        }
+        else if(traditional_pub.isChecked() && south_side.isChecked() && no_to_live_music.isChecked() && no_to_late_pub.isChecked()){
+
+            selection_code = 4;
+        }
+        else if(traditional_pub.isChecked() && south_side.isChecked() && no_to_live_music.isChecked() && yes_to_late_pub.isChecked()){
+
+            selection_code = 5;
+        }
+        else if(traditional_pub.isChecked() && south_side.isChecked() && yes_to_live_music.isChecked() && no_to_late_pub.isChecked()){
+
+            selection_code = 6;
+        }
+        else if(traditional_pub.isChecked() && south_side.isChecked() && yes_to_live_music.isChecked() && yes_to_late_pub.isChecked()){
+
+            selection_code = 7;
+        }
+        else if(modern_pub.isChecked() && north_side.isChecked() && no_to_live_music.isChecked() && no_to_late_pub.isChecked()){
+
+            selection_code = 8;
+        }
+        else if(modern_pub.isChecked() && north_side.isChecked() && no_to_live_music.isChecked() && yes_to_late_pub.isChecked()){
+
+            selection_code = 9;
+        }
+        else if(modern_pub.isChecked() && north_side.isChecked() && yes_to_live_music.isChecked() && no_to_late_pub.isChecked()){
+
+            selection_code = 10;
+        }
+        else if(modern_pub.isChecked() && north_side.isChecked() && yes_to_live_music.isChecked() && yes_to_late_pub.isChecked()){
+
+            selection_code = 11;
+        }
+        else if(modern_pub.isChecked() && south_side.isChecked() && no_to_live_music.isChecked() && no_to_late_pub.isChecked()){
+
+            selection_code = 12;
+        }
+        else if(modern_pub.isChecked() && south_side.isChecked() && no_to_live_music.isChecked() && yes_to_late_pub.isChecked()){
+
+            selection_code = 13;
+        }
+        else if(modern_pub.isChecked() && south_side.isChecked() && yes_to_live_music.isChecked() && no_to_late_pub.isChecked()){
+
+            selection_code = 14;
+        }
         else{
             selection_code = 15;
         }

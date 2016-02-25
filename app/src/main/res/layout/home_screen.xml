@@ -98,19 +98,19 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
-                    android:id="@+id/radiobutton_yestolivemusic"
+                    android:id="@+id/radiobutton_notolivemusic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/yes"
+                    android:text="@string/no"
                     android:textColor="@color/white"
                     android:buttonTint="@color/white"
                     android:checked="false" />
 
                 <RadioButton
-                    android:id="@+id/radiobutton_notolivemusic"
+                    android:id="@+id/radiobutton_yestolivemusic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/no"
+                    android:text="@string/yes"
                     android:checked="false"
                     android:textColor="@color/white"
                     android:buttonTint="@color/white"/>
@@ -131,19 +131,19 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
-                    android:id="@+id/radiobutton_yestolatepub"
+                    android:id="@+id/radiobutton_notolatepub"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/yes"
+                    android:text="@string/no"
                     android:textColor="@color/white"
                     android:buttonTint="@color/white"
                     android:checked="false" />
 
                 <RadioButton
-                    android:id="@+id/radiobutton_notolatepub"
+                    android:id="@+id/radiobutton_yestolatepub"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/no"
+                    android:text="@string/yes"
                     android:checked="false"
                     android:textColor="@color/white"
                     android:buttonTint="@color/white"/>

@@ -418,4 +418,78 @@ public class DBManager extends SQLiteOpenHelper{
         Cursor res = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE NAME = '" + selected_pub + "'" ,null);
         return res;
     }
+
+    public String getdBquery(int selection_code){
+
+        String query = null;
+
+        switch(selection_code){
+
+            case 0:
+                query = "SELECT * FROM " + TABLE_NAME + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'No', LATE_PUB = 'No'";
+                break;
+
+            case 1:
+                query = "SELECT * FROM " + TABLE_NAME + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'No', LATE_PUB = 'Yes'";
+                break;
+
+            case 2:
+                query = "SELECT * FROM " + TABLE_NAME + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'Yes', LATE_PUB = 'No'";
+                break;
+
+            case 3:
+                query = "SELECT * FROM " + TABLE_NAME + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'Yes', LATE_PUB = 'Yes'";
+                break;
+
+            case 4:
+                query = "SELECT * FROM " + TABLE_NAME + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'No', LATE_PUB = 'No'";
+                break;
+
+            case 5:
+                query = "SELECT * FROM " + TABLE_NAME + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'No', LATE_PUB = 'Yes'";
+                break;
+
+            case 6:
+                query = "SELECT * FROM " + TABLE_NAME + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'Yes', LATE_PUB = 'No'";
+                break;
+
+            case 7:
+                query = "SELECT * FROM " + TABLE_NAME + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'Yes', LATE_PUB = 'Yes'";
+                break;
+
+            case 8:
+                query = "SELECT * FROM " + TABLE_NAME + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'No', LATE_PUB = 'No'";
+                break;
+
+            case 9:
+                query = "SELECT * FROM " + TABLE_NAME + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'No', LATE_PUB = 'Yes'";
+                break;
+
+            case 10:
+                query = "SELECT * FROM " + TABLE_NAME + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'Yes', LATE_PUB = 'No'";
+                break;
+
+            case 11:
+                query = "SELECT * FROM " + TABLE_NAME + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'Yes', LATE_PUB = 'Yes'";
+                break;
+
+            case 12:
+                query = "SELECT * FROM " + TABLE_NAME + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'No', LATE_PUB = 'No'";
+                break;
+
+            case 13:
+                query = "SELECT * FROM " + TABLE_NAME + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'No', LATE_PUB = 'Yes'";
+                break;
+
+            case 14:
+                query = "SELECT * FROM " + TABLE_NAME + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'Yes', LATE_PUB = 'No'";
+                break;
+
+            case 15:
+                query = "SELECT * FROM " + TABLE_NAME + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'Yes', LATE_PUB = 'Yes'";
+                break;
+        }
+
+        return query;
+    }
 }
