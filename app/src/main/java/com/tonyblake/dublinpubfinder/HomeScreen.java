@@ -33,6 +33,7 @@ public class HomeScreen extends AppCompatActivity {
 
         Utilities.populatePubImageMap(context);
         Utilities.populateSelectionCodeMap();
+        Utilities.populateDBQueryMap(dbManager.getTableName());
 
         traditional_pub =(RadioButton)findViewById(R.id.radiobutton_traditional);
         modern_pub =(RadioButton)findViewById(R.id.radiobutton_modern);
@@ -68,7 +69,7 @@ public class HomeScreen extends AppCompatActivity {
 
                 int selection_code = getSelectionCode();
 
-                String query = dbManager.getdBquery(selection_code);
+                String query = Utilities.getDBQuery(selection_code);
 
                 String dummy = "dummy string";
 
@@ -126,19 +127,14 @@ public class HomeScreen extends AppCompatActivity {
 
     private int getSelectionCode(){
 
-        int selection_code = 0;
+        String bit_combination = String.valueOf(modern_pub.isChecked() ? 1 : 0)
+                + String.valueOf(south_side.isChecked() ? 1 : 0)
+                + String.valueOf(yes_to_live_music.isChecked() ? 1 : 0)
+                + String.valueOf(yes_to_craft_beer.isChecked() ? 1 : 0)
+                + String.valueOf(yes_to_late_pub.isChecked() ? 1 : 0);
 
-        String traditional_pub_bit = String.valueOf(traditional_pub.isChecked() ? 1 : 0);
-        String northside_bit = String.valueOf(north_side.isChecked() ? 1 : 0);
-        String no_to_live_music_bit = String.valueOf(no_to_live_music.isChecked() ? 1 : 0);
-        String no_to_craft_beer_bit = String.valueOf(no_to_craft_beer.isChecked() ? 1 : 0);
-        String no_to_late_pub_bit = String.valueOf(no_to_late_pub.isChecked() ? 1 : 0);
-
-        String bit_combination = traditional_pub_bit + northside_bit + no_to_live_music_bit + no_to_craft_beer_bit + no_to_late_pub_bit;
-
-        selection_code = Utilities.getSelectionCode(bit_combination);
+        int selection_code = Utilities.getSelectionCode(bit_combination);
 
         return selection_code;
     }
-
 }
