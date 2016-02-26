@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class HomeScreen extends AppCompatActivity {
 
     private Context context;
@@ -22,6 +24,10 @@ public class HomeScreen extends AppCompatActivity {
     private Button btn_findpub;
 
     private String name, address, side_of_city, latitude, longitude, pub_type, live_music, craft_beer, late_pub;
+
+    private ArrayList<Pub> pubs_found;
+
+    private int num_pubs_found;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,17 +88,25 @@ public class HomeScreen extends AppCompatActivity {
                 try {
                     Cursor res = dbManager.getPubs(query);
 
-                    while (res.moveToNext()) {
-                        name = res.getString(1);
-                        address = res.getString(2);
-                        latitude = res.getString(4);
-                        longitude = res.getString(5);
-                        break;
-                    }
+                    pubs_found = new ArrayList<Pub>();
+
+                    res.moveToFirst();
+
+                    do {
+                        Pub pub = new Pub();
+                        pub.name = res.getString(1);
+                        pub.address = res.getString(2);
+                        pub.latitude = res.getString(4);
+                        pub.longitude = res.getString(5);
+                        pubs_found.add(pub);
+
+                    } while (res.moveToNext());
+
+                    num_pubs_found = pubs_found.size();
 
                     launchPubDetailsScreen();
-                }
-                catch (Exception e) {
+
+                } catch (Exception e) {
                     showToastMessage(context.getString(R.string.no_pubs_match_your_search));
                 }
             }
@@ -100,11 +114,25 @@ public class HomeScreen extends AppCompatActivity {
     }
 
     private void launchPubDetailsScreen() {
+
         Intent intent = new Intent(this, PubDetailsScreen.class);
+
+        String[] name = new String[num_pubs_found];
+        String[] address = new String[num_pubs_found];
+        String[] latitude = new String[num_pubs_found];
+        String[] longitude = new String[num_pubs_found];
+
+        for(int i=0;i<num_pubs_found;i++){
+            name[i] = pubs_found.get(i).name;
+            address[i] = pubs_found.get(i).address;
+            latitude[i] = pubs_found.get(i).latitude;
+            longitude[i] = pubs_found.get(i).longitude;
+        }
         intent.putExtra("name", name);
         intent.putExtra("address", address);
         intent.putExtra("latitude", latitude);
         intent.putExtra("longitude", longitude);
+
         startActivity(intent);
     }
 
@@ -144,5 +172,13 @@ public class HomeScreen extends AppCompatActivity {
         int selection_code = Utilities.getSelectionCode(bit_combination);
 
         return selection_code;
+    }
+
+    private class Pub{
+
+        private String name;
+        private String address;
+        private String latitude;
+        private String longitude;
     }
 }

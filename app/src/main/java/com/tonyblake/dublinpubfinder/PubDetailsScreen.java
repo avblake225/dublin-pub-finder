@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class PubDetailsScreen extends Activity{
 
     private Context context;
-    private String name, address, latitude, longitude;
+    private String[] name, address, latitude, longitude;
 
     private TextView tv_name;
     private ImageView iv_pub;
@@ -28,10 +28,10 @@ public class PubDetailsScreen extends Activity{
         context = this;
 
         savedInstanceState = getIntent().getExtras();
-        name = savedInstanceState.getString("name");
-        address = savedInstanceState.getString("address");
-        latitude = savedInstanceState.getString("latitude");
-        longitude = savedInstanceState.getString("longitude");
+        name = savedInstanceState.getStringArray("name");
+        address = savedInstanceState.getStringArray("address");
+        latitude = savedInstanceState.getStringArray("latitude");
+        longitude = savedInstanceState.getStringArray("longitude");
 
         tv_name = (TextView)findViewById(R.id.tv_name);
         iv_pub = (ImageView)findViewById(R.id.iv_pub);
@@ -47,12 +47,12 @@ public class PubDetailsScreen extends Activity{
     public void onResume(){
         super.onResume();
 
-        tv_name.setText(name);
+        tv_name.setText(name[0]);
 
-        Drawable pub_pic = Utilities.getPubImage(name,context);
+        Drawable pub_pic = Utilities.getPubImage(name[0],context);
 
         iv_pub.setImageDrawable(pub_pic);
-        tv_address.setText(address);
+        tv_address.setText(address[0]);
 
         btn_getMapLocation.setOnClickListener(new View.OnClickListener() {
 

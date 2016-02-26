@@ -164,13 +164,19 @@ public class DBManager extends SQLiteOpenHelper{
 
         insertData(context.getString(R.string.peters_pub),
                 context.getString(R.string.peters_pub_address),
-                context.getString(R.string.peters_pub_directions));
+                context.getString(R.string.peters_pub_directions));*/
 
         insertData(context.getString(R.string.p_macs),
                 context.getString(R.string.p_macs_address),
-                context.getString(R.string.p_macs_directions));
+                context.getString(R.string.p_macs_side_of_city),
+                context.getString(R.string.p_macs_latitude),
+                context.getString(R.string.p_macs_longitude),
+                context.getString(R.string.p_macs_pub_type),
+                context.getString(R.string.p_macs_live_music),
+                context.getString(R.string.p_macs_craft_beer),
+                context.getString(R.string.p_macs_late_pub));
 
-        insertData(context.getString(R.string.robert_reids),
+        /*insertData(context.getString(R.string.robert_reids),
                 context.getString(R.string.robert_reids_address),
                 context.getString(R.string.robert_reids_directions));
 

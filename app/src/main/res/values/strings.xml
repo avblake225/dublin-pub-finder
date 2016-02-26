@@ -167,7 +167,13 @@
 
     <string name="p_macs">P. Macs</string>
     <string name="p_macs_address">30 Stephen Street Lower, Dublin 2</string>
-    <string name="p_macs_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk all the way up this street and take the last right turn. You will see P. Mac\'s on the left hand corner.</string>
+    <string name="p_macs_side_of_city">Southside</string>
+    <string name="p_macs_latitude">53.341122</string>
+    <string name="p_macs_longitude">-6.264388</string>
+    <string name="p_macs_pub_type">Modern</string>
+    <string name="p_macs_live_music">No</string>
+    <string name="p_macs_craft_beer">Yes</string>
+    <string name="p_macs_late_pub">No</string>
 
     <string name="robert_reids">Robert Reids</string>
     <string name="robert_reids_address">19 Store St, Dublin 1</string>
