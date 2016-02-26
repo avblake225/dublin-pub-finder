@@ -190,7 +190,7 @@
 
             </LinearLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -201,9 +201,20 @@
                     android:id="@+id/btn_findpub"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
                     android:text="@string/find_pub"/>
 
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/live_music_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/home_screen_margin"
+                    android:layout_marginBottom="@dimen/home_screen_margin"
+                    android:layout_below="@id/btn_findpub"
+                    android:textColor="@color/gray"
+                    android:text="@string/live_music_note"/>
+
+            </RelativeLayout>
 
         </LinearLayout>
 

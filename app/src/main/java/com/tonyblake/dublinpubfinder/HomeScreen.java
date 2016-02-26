@@ -90,15 +90,10 @@ public class HomeScreen extends AppCompatActivity {
                         break;
                     }
 
-                    if (name != null) {
-
-                        launchPubDetailsScreen();
-
-                    } else {
-                        showToastMessage(context.getString(R.string.no_pubs_match_your_search));
-                    }
-                } catch (Exception e) {
-                    showToastMessage(context.getString(R.string.errorfindingpub));
+                    launchPubDetailsScreen();
+                }
+                catch (Exception e) {
+                    showToastMessage(context.getString(R.string.no_pubs_match_your_search));
                 }
             }
         });
@@ -129,6 +124,9 @@ public class HomeScreen extends AppCompatActivity {
         }
         else if(!yes_to_live_music.isChecked() && !no_to_live_music.isChecked()){
             showToastMessage(context.getString(R.string.please_select_live_music));
+        }
+        else if(!yes_to_craft_beer.isChecked() && !no_to_craft_beer.isChecked()){
+            showToastMessage(context.getString(R.string.please_select_craft_beer));
         }
         else if(!no_to_late_pub.isChecked() && !yes_to_late_pub.isChecked()){
             showToastMessage(context.getString(R.string.please_select_late_pub));

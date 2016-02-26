@@ -1,23 +1,27 @@
 <resources>
+
     <string name="app_name">Dublin Pub Finder</string>
     <string name="enter">Enter</string>
     <string name="copyright">© Tony Blake 2016</string>
-    <string name="find_pub">Find pub</string>
+
     <string name="qtypepub">Q1: What type of pub are you looking for?</string>
     <string name="traditional">Traditional Irish pub</string>
     <string name="modern">Modern pub</string>
     <string name="qsidecity">Q2: What side of the city are you on?</string>
     <string name="northside">Northside</string>
     <string name="southside">Southside</string>
-    <string name="qlivemusic">Q3: Are you looking for a pub with live music?</string>
+    <string name="qlivemusic">Q3: Are you looking for a pub with live music?*</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="qcraftbeer">Q4: Are you looking for a pub that serves craft beer?</string>
     <string name="qlatepub">Q5: Are you looking for a pub that stays open late?</string>
+    <string name="find_pub">Find pub</string>
+    <string name="live_music_note"><i>*Live music only on certain nights</i></string>
 
     <string name="please_select_pub_type">Please select pub type</string>
     <string name="please_select_your_location">Please select which side of the city you are on</string>
     <string name="please_select_live_music">Please select whether or not you want live music</string>
+    <string name="please_select_craft_beer">Please select whether or not you want craft beer</string>
     <string name="please_select_late_pub">Please select whether or not you want a pub that stays open late</string>
 
     <string name="getMapLocation">Get Map Location</string>
@@ -26,7 +30,7 @@
     <string name="errorretrievingpubimage">"Error retrieving pub image"</string>
 
     <string name="against_the_grain">Against The Grain</string>
-    <string name="against_the_grain_address">11 Wexford St, Dublin 2</string>
+    <string name="against_the_grain_address">11 Wexford Street, Dublin 2</string>
     <string name="against_the_grain_side_of_city">Southside</string>
     <string name="against_the_grain_latitude">53.337230</string>
     <string name="against_the_grain_longitude">-6.265333</string>
@@ -41,7 +45,13 @@
 
     <string name="anseo">Anseo</string>
     <string name="anseo_address">18 Camden Street Lower, Dublin 2</string>
-    <string name="anseo_directions">From College Green (Trinity College), turn to face Dame Street. Walk straight up Dame Street and take the third left turn onto South Great George\'s Street. Walk straight up this street and continue onto Aungier Street. Walk straight up this street and continue onto Wexford Street. Continue straight onto Camden Street and you will see Anseo on the left.</string>
+    <string name="anseo_side_of_city">Southside</string>
+    <string name="anseo_latitude">53.335215</string>
+    <string name="anseo_longitude">-6.265121</string>
+    <string name="anseo_pub_type">Modern</string>
+    <string name="anseo_live_music">Yes</string>
+    <string name="anseo_craft_beer">Yes</string>
+    <string name="anseo_late_pub">No</string>
 
     <string name="bad_bobs">Bad Bobs</string>
     <string name="bad_bobs_address">35 Essex Street East, Dublin 2</string>
