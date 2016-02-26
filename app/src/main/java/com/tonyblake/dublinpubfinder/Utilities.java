@@ -122,38 +122,38 @@ public class Utilities {
 
     public static void populateDBQueryMap(String table_name){
 
-        getDBQuery.put(0,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'No', CRAFT_BEER = 'No', LATE_PUB = 'No'");
-        getDBQuery.put(1,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'No', CRAFT_BEER = 'No', LATE_PUB = 'Yes'");
-        getDBQuery.put(2,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'No', CRAFT_BEER = 'Yes', LATE_PUB = 'No'");
-        getDBQuery.put(3,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'No', CRAFT_BEER = 'Yes', LATE_PUB = 'Yes'");
-        getDBQuery.put(4,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'Yes', CRAFT_BEER = 'No', LATE_PUB = 'No'");
-        getDBQuery.put(5,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'Yes', CRAFT_BEER = 'No', LATE_PUB = 'Yes'");
-        getDBQuery.put(6,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'Yes', CRAFT_BEER = 'Yes', LATE_PUB = 'No'");
-        getDBQuery.put(7,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'Yes', CRAFT_BEER = 'Yes', LATE_PUB = 'Yes'");
-        getDBQuery.put(8,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'No', CRAFT_BEER = 'No', LATE_PUB = 'No'");
-        getDBQuery.put(9,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'No', CRAFT_BEER = 'No', LATE_PUB = 'Yes'");
-        getDBQuery.put(10,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'No', CRAFT_BEER = 'Yes', LATE_PUB = 'No'");
-        getDBQuery.put(11,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'No', CRAFT_BEER = 'Yes', LATE_PUB = 'Yes'");
-        getDBQuery.put(12,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'Yes', CRAFT_BEER = 'No', LATE_PUB = 'No'");
-        getDBQuery.put(13,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'Yes', CRAFT_BEER = 'No', LATE_PUB = 'Yes'");
-        getDBQuery.put(14,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'Yes', CRAFT_BEER = 'Yes', LATE_PUB = 'No'");
-        getDBQuery.put(15,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Traditional', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'Yes', CRAFT_BEER = 'Yes', LATE_PUB = 'Yes'");
-        getDBQuery.put(16,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'No', CRAFT_BEER = 'No', LATE_PUB = 'No'");
-        getDBQuery.put(17,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'No', CRAFT_BEER = 'No', LATE_PUB = 'Yes'");
-        getDBQuery.put(18,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'No', CRAFT_BEER = 'Yes', LATE_PUB = 'No'");
-        getDBQuery.put(19,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'No', CRAFT_BEER = 'Yes', LATE_PUB = 'Yes'");
-        getDBQuery.put(20,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'Yes', CRAFT_BEER = 'No', LATE_PUB = 'No'");
-        getDBQuery.put(21,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'Yes', CRAFT_BEER = 'No', LATE_PUB = 'Yes'");
-        getDBQuery.put(22,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'Yes', CRAFT_BEER = 'Yes', LATE_PUB = 'No'");
-        getDBQuery.put(23,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Northside', LIVE_MUSIC = 'Yes', CRAFT_BEER = 'Yes', LATE_PUB = 'Yes'");
-        getDBQuery.put(24,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'No', CRAFT_BEER = 'No', LATE_PUB = 'No'");
-        getDBQuery.put(25,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'No', CRAFT_BEER = 'No', LATE_PUB = 'Yes'");
+        getDBQuery.put(0,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'No' AND LATE_PUB = 'No')");
+        getDBQuery.put(1,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'No' AND LATE_PUB = 'Yes')");
+        getDBQuery.put(2,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'No'");
+        getDBQuery.put(3,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'Yes'");
+        getDBQuery.put(4,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'No' AND LATE_PUB = 'No'");
+        getDBQuery.put(5,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'No' AND LATE_PUB = 'Yes'");
+        getDBQuery.put(6,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'No'");
+        getDBQuery.put(7,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'Yes'");
+        getDBQuery.put(8,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'No' AND LATE_PUB = 'No'");
+        getDBQuery.put(9,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'No' AND LATE_PUB = 'Yes'");
+        getDBQuery.put(10,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'No'");
+        getDBQuery.put(11,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'Yes'");
+        getDBQuery.put(12,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'No' AND LATE_PUB = 'No'");
+        getDBQuery.put(13,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'No' AND LATE_PUB = 'Yes'");
+        getDBQuery.put(14,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'No'");
+        getDBQuery.put(15,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'Yes'");
+        getDBQuery.put(16,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'No' AND LATE_PUB = 'No'");
+        getDBQuery.put(17,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'No' AND LATE_PUB = 'Yes'");
+        getDBQuery.put(18,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'No'");
+        getDBQuery.put(19,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'Yes'");
+        getDBQuery.put(20,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'No' AND LATE_PUB = 'No'");
+        getDBQuery.put(21,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'No' AND LATE_PUB = 'Yes'");
+        getDBQuery.put(22,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'No'");
+        getDBQuery.put(23,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'Yes'");
+        getDBQuery.put(24,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'No' AND LATE_PUB = 'No'");
+        getDBQuery.put(25,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'No' AND LATE_PUB = 'Yes'");
         getDBQuery.put(26,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'No')");
-        getDBQuery.put(27,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'No', CRAFT_BEER = 'Yes', LATE_PUB = 'Yes'");
-        getDBQuery.put(28,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'Yes', CRAFT_BEER = 'No', LATE_PUB = 'No'");
-        getDBQuery.put(29,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'Yes', CRAFT_BEER = 'No', LATE_PUB = 'Yes'");
-        getDBQuery.put(30,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'Yes', CRAFT_BEER = 'Yes', LATE_PUB = 'No'");
-        getDBQuery.put(31,"SELECT * FROM " + table_name + " WHERE PUB_TYPE = 'Modern', SIDE_OF_CITY = 'Southside', LIVE_MUSIC = 'Yes', CRAFT_BEER = 'Yes', LATE_PUB = 'Yes'");
+        getDBQuery.put(27,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'Yes'");
+        getDBQuery.put(28,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'No' AND LATE_PUB = 'No'");
+        getDBQuery.put(29,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'No' AND LATE_PUB = 'Yes'");
+        getDBQuery.put(30,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'No'");
+        getDBQuery.put(31,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'Yes'");
     }
 
     public static Drawable getPubImage(String name, Context context){
