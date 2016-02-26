@@ -2,6 +2,7 @@ package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -20,7 +21,7 @@ public class HomeScreen extends AppCompatActivity {
     private RadioButton no_to_craft_beer, yes_to_craft_beer;
     private Button btn_findpub;
 
-    private String name, address;
+    private String name, address, side_of_city, latitude, longitude, pub_type, live_music, craft_beer, late_pub;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +60,13 @@ public class HomeScreen extends AppCompatActivity {
 
         name = null;
         address = null;
+        side_of_city = null;
+        latitude = null;
+        longitude = null;
+        pub_type = null;
+        live_music = null;
+        craft_beer = null;
+        late_pub = null;
 
         btn_findpub.setOnClickListener(new View.OnClickListener() {
 
@@ -71,14 +79,14 @@ public class HomeScreen extends AppCompatActivity {
 
                 String query = Utilities.getDBQuery(selection_code);
 
-                String dummy = "dummy string";
-
-                /*try {
-                    Cursor res = dbManager.getPub(name_chosen);
+                try {
+                    Cursor res = dbManager.getPubs(query);
 
                     while (res.moveToNext()) {
                         name = res.getString(1);
                         address = res.getString(2);
+                        latitude = res.getString(4);
+                        longitude = res.getString(5);
                         break;
                     }
 
@@ -87,11 +95,11 @@ public class HomeScreen extends AppCompatActivity {
                         launchPubDetailsScreen();
 
                     } else {
-                        showToastMessage(context.getString(R.string.pubnotfound));
+                        showToastMessage(context.getString(R.string.no_pubs_match_your_search));
                     }
                 } catch (Exception e) {
                     showToastMessage(context.getString(R.string.errorfindingpub));
-                }*/
+                }
             }
         });
     }
@@ -100,6 +108,8 @@ public class HomeScreen extends AppCompatActivity {
         Intent intent = new Intent(this, PubDetailsScreen.class);
         intent.putExtra("name", name);
         intent.putExtra("address", address);
+        intent.putExtra("latitude", latitude);
+        intent.putExtra("longitude", longitude);
         startActivity(intent);
     }
 

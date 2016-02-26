@@ -21,8 +21,7 @@
     <string name="please_select_late_pub">Please select whether or not you want a pub that stays open late</string>
 
     <string name="getMapLocation">Get Map Location</string>
-    <string name="enter_a_pub">Enter a pub</string>
-    <string name="pubnotfound">Pub not found</string>
+    <string name="no_pubs_match_your_search">No pubs match your search. Please try again</string>
     <string name="errorfindingpub">Error finding pub</string>
     <string name="errorretrievingpubimage">"Error retrieving pub image"</string>
 

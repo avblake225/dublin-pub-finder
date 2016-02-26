@@ -13,8 +13,7 @@ import android.widget.TextView;
 public class PubDetailsScreen extends Activity{
 
     private Context context;
-    private String name;
-    private String address;
+    private String name, address, latitude, longitude;
 
     private TextView tv_name;
     private ImageView iv_pub;
@@ -31,6 +30,8 @@ public class PubDetailsScreen extends Activity{
         savedInstanceState = getIntent().getExtras();
         name = savedInstanceState.getString("name");
         address = savedInstanceState.getString("address");
+        latitude = savedInstanceState.getString("latitude");
+        longitude = savedInstanceState.getString("longitude");
 
         tv_name = (TextView)findViewById(R.id.tv_name);
         iv_pub = (ImageView)findViewById(R.id.iv_pub);
@@ -58,7 +59,7 @@ public class PubDetailsScreen extends Activity{
             @Override
             public void onClick(View v) {
 
-                launchMapScreen();
+                //launchMapScreen();
             }
         });
     }
