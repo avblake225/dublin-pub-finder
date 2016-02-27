@@ -7,18 +7,17 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.LinearLayout;
+
+import java.util.ArrayList;
 
 public class PubDetailsScreen extends Activity{
 
     private Context context;
     private String[] name, address, latitude, longitude;
-
-    private TextView tv_name;
-    private ImageView iv_pub;
-    private TextView tv_address;
-    private Button btn_getMapLocation;
+    private LinearLayout parent_layout;
+    private PubLayout pub;
+    private ArrayList<Button> buttons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,35 +32,43 @@ public class PubDetailsScreen extends Activity{
         latitude = savedInstanceState.getStringArray("latitude");
         longitude = savedInstanceState.getStringArray("longitude");
 
-        tv_name = (TextView)findViewById(R.id.tv_name);
-        iv_pub = (ImageView)findViewById(R.id.iv_pub);
-
         Utilities.populatePubImageMap(context);
 
-        tv_address = (TextView)findViewById(R.id.tv_address);
+        parent_layout = (LinearLayout)findViewById(R.id.pub_details_parent_layout);
 
-        btn_getMapLocation = (Button)findViewById(R.id.btn_getMapLocation);
+        buttons = new ArrayList<Button>();
     }
 
     @Override
     public void onResume(){
         super.onResume();
 
-        tv_name.setText(name[0]);
+        for(int i=0;i<name.length;i++){
 
-        Drawable pub_pic = Utilities.getPubImage(name[0],context);
+            pub = new PubLayout(context, parent_layout);
 
-        iv_pub.setImageDrawable(pub_pic);
-        tv_address.setText(address[0]);
+            pub.setPubName(name[i]);
+            pub.setPubAddress(address[i]);
 
-        btn_getMapLocation.setOnClickListener(new View.OnClickListener() {
+            Drawable pub_pic = Utilities.getPubImage(name[i],context);
+            pub.setPubImage(pub_pic);
 
-            @Override
-            public void onClick(View v) {
+            pub.attachToParent();
 
-                //launchMapScreen();
-            }
-        });
+            buttons.add(pub.getButton());
+        }
+
+        for(int i=0;i<buttons.size();i++){
+
+            buttons.get(i).setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+
+                    //launchMapScreen();
+                }
+            });
+        }
     }
 
     private void launchMapScreen(){

@@ -6,4 +6,9 @@
     <dimen name="home_screen_margin">10dp</dimen>
     <dimen name="home_screen_button_margin">20dp</dimen>
     <dimen name="home_screen_top_margin">20dp</dimen>
+
+    <dimen name="pub_name_textsize">25dp</dimen>
+    <dimen name="pub_address_textsize">20dp</dimen>
+    <dimen name="pub_address_margin_top">5dp</dimen>
+
 </resources>
