@@ -11,37 +11,49 @@ import android.widget.TextView;
 public class PubLayout {
 
     private Context context;
-    private LinearLayout parent_layout;
+    private LinearLayout pub_details_container;
     private LinearLayout pub_layout;
     private TextView tv_name;
     private ImageView iv_pub;
     private TextView tv_address;
     private Button btn_getMapLocation;
 
-    public PubLayout(Context context, LinearLayout parent_layout){
+    public PubLayout(Context context, LinearLayout pub_details_container){
 
         this.context = context;
-        this.parent_layout = parent_layout;
+        this.pub_details_container = pub_details_container;
 
         pub_layout = new LinearLayout(context);
+        pub_layout.setOrientation(LinearLayout.VERTICAL);
 
-        LinearLayout.LayoutParams view_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        view_params.gravity = Gravity.CENTER_HORIZONTAL;
+        LinearLayout.LayoutParams tv_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        tv_params.gravity = Gravity.CENTER_HORIZONTAL;
+        tv_params.setMargins((int) context.getResources().getDimension(R.dimen.no_margin_left),
+                ((int) context.getResources().getDimension(R.dimen.tv_margin_top)),
+                ((int) context.getResources().getDimension(R.dimen.no_margin_right)),
+                ((int) context.getResources().getDimension(R.dimen.tv_margin_bottom)));
 
         tv_name = new TextView(context);
-        tv_name.setLayoutParams(view_params);
+        tv_name.setLayoutParams(tv_params);
         pub_layout.addView(tv_name);
 
-        iv_pub = new ImageView(context);
-        iv_pub.setLayoutParams(view_params);
-        pub_layout.addView(iv_pub);
-
         tv_address = new TextView(context);
-        tv_address.setLayoutParams(view_params);
+        tv_address.setLayoutParams(tv_params);
         pub_layout.addView(tv_address);
 
+        iv_pub = new ImageView(context);
+        iv_pub.setLayoutParams(tv_params);
+        pub_layout.addView(iv_pub);
+
+        LinearLayout.LayoutParams btn_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        btn_params.gravity = Gravity.CENTER_HORIZONTAL;
+        btn_params.setMargins((int) context.getResources().getDimension(R.dimen.no_margin_left),
+                ((int) context.getResources().getDimension(R.dimen.btn_margin_top)),
+                ((int) context.getResources().getDimension(R.dimen.no_margin_right)),
+                ((int) context.getResources().getDimension(R.dimen.btn_margin_bottom)));
+
         btn_getMapLocation = new Button(context);
-        btn_getMapLocation.setLayoutParams(view_params);
+        btn_getMapLocation.setLayoutParams(btn_params);
         pub_layout.addView(btn_getMapLocation);
     }
 
@@ -55,7 +67,7 @@ public class PubLayout {
     public void setPubAddress(String address){
 
         tv_address.setText(address);
-        tv_name.setTextAppearance(context, R.style.pub_address_style);
+        tv_address.setTextAppearance(context, R.style.pub_address_style);
     }
 
     public void setPubImage(Drawable image){
@@ -65,10 +77,13 @@ public class PubLayout {
 
     public void attachToParent(){
 
-        parent_layout.addView(pub_layout);
+        pub_details_container.addView(pub_layout);
     }
 
-    public Button getButton(){
+    public Button getMapButton(){
+
+        btn_getMapLocation.setText(context.getString(R.string.getMapLocation));
+        btn_getMapLocation.setTextAppearance(context, R.style.map_button_text_style);
 
         return btn_getMapLocation;
     }

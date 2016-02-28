@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -15,7 +16,7 @@ public class PubDetailsScreen extends Activity{
 
     private Context context;
     private String[] name, address, latitude, longitude;
-    private LinearLayout parent_layout;
+    private LinearLayout pub_details_container;
     private PubLayout pub;
     private ArrayList<Button> buttons;
 
@@ -34,18 +35,13 @@ public class PubDetailsScreen extends Activity{
 
         Utilities.populatePubImageMap(context);
 
-        parent_layout = (LinearLayout)findViewById(R.id.pub_details_parent_layout);
+        pub_details_container = (LinearLayout)findViewById(R.id.pub_details_container);
 
         buttons = new ArrayList<Button>();
-    }
-
-    @Override
-    public void onResume(){
-        super.onResume();
 
         for(int i=0;i<name.length;i++){
 
-            pub = new PubLayout(context, parent_layout);
+            pub = new PubLayout(context, pub_details_container);
 
             pub.setPubName(name[i]);
             pub.setPubAddress(address[i]);
@@ -55,8 +51,13 @@ public class PubDetailsScreen extends Activity{
 
             pub.attachToParent();
 
-            buttons.add(pub.getButton());
+            buttons.add(pub.getMapButton());
         }
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
 
         for(int i=0;i<buttons.size();i++){
 
@@ -66,6 +67,7 @@ public class PubDetailsScreen extends Activity{
                 public void onClick(View v) {
 
                     //launchMapScreen();
+                    showToastMessage("testing");
                 }
             });
         }
@@ -74,5 +76,11 @@ public class PubDetailsScreen extends Activity{
     private void launchMapScreen(){
         Intent intent = new Intent(this, MapScreen.class);
         startActivity(intent);
+    }
+
+    private void showToastMessage(CharSequence text) {
+        int duration = Toast.LENGTH_SHORT;
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
     }
 }

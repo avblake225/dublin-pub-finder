@@ -30,6 +30,7 @@
                     android:layout_marginTop="@dimen/home_screen_margin"
                     android:layout_marginBottom="@dimen/home_screen_margin"
                     android:textColor="@color/white"
+                    android:textSize="@dimen/question_text_size"
                     android:text="@string/qtypepub"/>
 
                 <RadioGroup
@@ -43,7 +44,8 @@
                         android:text="@string/traditional"
                         android:textColor="@color/white"
                         android:buttonTint="@color/white"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:visibility="visible"/>
 
                     <RadioButton
                         android:id="@+id/radiobutton_modern"
@@ -63,6 +65,7 @@
                     android:layout_marginTop="@dimen/home_screen_margin"
                     android:layout_marginBottom="@dimen/home_screen_margin"
                     android:textColor="@color/white"
+                    android:textSize="@dimen/question_text_size"
                     android:text="@string/qsidecity"/>
 
                 <RadioGroup
@@ -96,6 +99,7 @@
                     android:layout_marginTop="@dimen/home_screen_margin"
                     android:layout_marginBottom="@dimen/home_screen_margin"
                     android:textColor="@color/white"
+                    android:textSize="@dimen/question_text_size"
                     android:text="@string/qlivemusic"/>
 
                 <RadioGroup
@@ -129,6 +133,7 @@
                     android:layout_marginTop="@dimen/home_screen_margin"
                     android:layout_marginBottom="@dimen/home_screen_margin"
                     android:textColor="@color/white"
+                    android:textSize="@dimen/question_text_size"
                     android:text="@string/qcraftbeer"/>
 
                 <RadioGroup
@@ -162,6 +167,7 @@
                     android:layout_marginTop="@dimen/home_screen_margin"
                     android:layout_marginBottom="@dimen/home_screen_margin"
                     android:textColor="@color/white"
+                    android:textSize="@dimen/question_text_size"
                     android:text="@string/qlatepub"/>
 
                 <RadioGroup

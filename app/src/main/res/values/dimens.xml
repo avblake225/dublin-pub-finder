@@ -6,9 +6,17 @@
     <dimen name="home_screen_margin">10dp</dimen>
     <dimen name="home_screen_button_margin">20dp</dimen>
     <dimen name="home_screen_top_margin">20dp</dimen>
+    <dimen name="question_text_size">15dp</dimen>
+
+    <dimen name="no_margin_left">0dp</dimen>
+    <dimen name="tv_margin_top">2dp</dimen>
+    <dimen name="no_margin_right">0dp</dimen>
+    <dimen name="tv_margin_bottom">2dp</dimen>
+    <dimen name="btn_margin_top">2dp</dimen>
+    <dimen name="btn_margin_bottom">10dp</dimen>
 
     <dimen name="pub_name_textsize">25dp</dimen>
     <dimen name="pub_address_textsize">20dp</dimen>
-    <dimen name="pub_address_margin_top">5dp</dimen>
+    <dimen name="map_button_text_size">15dp</dimen>
 
 </resources>
