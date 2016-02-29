@@ -1,15 +1,13 @@
 package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 
 import java.util.HashMap;
 
 public class Utilities {
 
-    public static HashMap<String, Bitmap> getPubRating = new HashMap<String, Bitmap>();
+    public static HashMap<String, Drawable> getPubRating = new HashMap<String, Drawable>();
 
     public static HashMap<String, Drawable> getPubImage = new HashMap<String,Drawable>();
 
@@ -19,8 +17,8 @@ public class Utilities {
 
     public static void populatePubRatingMap(Context context){
 
-        getPubRating.put(context.getString(R.string.against_the_grain), BitmapFactory.decodeResource(context.getResources(),R.drawable.zero_star_rating));
-        getPubRating.put(context.getString(R.string.p_macs),BitmapFactory.decodeResource(context.getResources(), R.drawable.zero_star_rating));
+        getPubRating.put(context.getString(R.string.against_the_grain), context.getResources().getDrawable(R.drawable.zero_star_rating));
+        getPubRating.put(context.getString(R.string.p_macs),context.getResources().getDrawable(R.drawable.zero_star_rating));
     }
 
     public static void populatePubImageMap(Context context){
@@ -166,9 +164,9 @@ public class Utilities {
         getDBQuery.put(31,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'Yes'");
     }
 
-    public static Bitmap getPubRating(String name, Context context){
+    public static Drawable getPubRating(String name, Context context){
 
-        Bitmap rating = null;
+        Drawable rating = null;
 
         try{
             rating = getPubRating.get(name);

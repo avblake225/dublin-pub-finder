@@ -66,7 +66,7 @@ public class PubDetailsScreen extends Activity{
             pub.setPubName(name[i]);
             pub.setPubAddress(address[i]);
 
-            Bitmap pub_rating = Utilities.getPubRating(name[i], context);
+            Drawable pub_rating = Utilities.getPubRating(name[i], context);
             pub.setPubRating(pub_rating);
 
             Drawable pub_pic = Utilities.getPubImage(name[i], context);

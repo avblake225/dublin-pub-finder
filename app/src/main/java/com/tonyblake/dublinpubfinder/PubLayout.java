@@ -1,7 +1,6 @@
 package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.view.Gravity;
 import android.widget.Button;
@@ -44,6 +43,7 @@ public class PubLayout {
         pub_layout.addView(tv_address);
 
         iv_rating = new ImageView(context);
+        iv_rating.setLayoutParams(v_params);
         pub_layout.addView(iv_rating);
 
         iv_pub = new ImageView(context);
@@ -75,10 +75,9 @@ public class PubLayout {
         tv_address.setTextAppearance(context, R.style.pub_address_style);
     }
 
-    public void setPubRating(Bitmap rating){
+    public void setPubRating(Drawable rating){
 
-        Bitmap rating_resized = Bitmap.createScaledBitmap(rating, 50, 50, true);
-        iv_rating.setImageBitmap(rating);
+        iv_rating.setImageDrawable(rating);
     }
 
     public void setPubImage(Drawable image){
