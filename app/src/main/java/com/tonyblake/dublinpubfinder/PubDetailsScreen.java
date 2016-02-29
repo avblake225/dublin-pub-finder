@@ -69,7 +69,7 @@ public class PubDetailsScreen extends Activity{
 
             pub.attachToParent();
 
-            buttons.add(pub.getMapButton());
+            buttons.add(pub.getMapButton(name[i]));
         }
     }
 
@@ -79,20 +79,24 @@ public class PubDetailsScreen extends Activity{
 
         for(int i=0;i<buttons.size();i++){
 
+            final int j = i;
+
             buttons.get(i).setOnClickListener(new View.OnClickListener() {
 
                 @Override
                 public void onClick(View v) {
 
-                    //launchMapScreen();
-                    showToastMessage("testing");
+                    launchMapScreen(name[j], latitude[j], longitude[j]);
                 }
             });
         }
     }
 
-    private void launchMapScreen(){
+    private void launchMapScreen(String name, String latitude, String longitude){
         Intent intent = new Intent(this, MapScreen.class);
+        intent.putExtra("name", name);
+        intent.putExtra("latitude", latitude);
+        intent.putExtra("longitude", longitude);
         startActivity(intent);
     }
 

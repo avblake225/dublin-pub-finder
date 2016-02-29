@@ -23,6 +23,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapScreen extends FragmentActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
+    String name;
+    double latitude, longitude;
     Context context;
     private GoogleApiClient client;
     private GoogleMap mMap;
@@ -32,6 +34,11 @@ public class MapScreen extends FragmentActivity implements OnMapReadyCallback,
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.map_location);
+
+        savedInstanceState = getIntent().getExtras();
+        name = savedInstanceState.getString("name");
+        latitude = Double.valueOf(savedInstanceState.getString("latitude"));
+        longitude = Double.valueOf(savedInstanceState.getString("longitude"));
 
         context = this;
 
@@ -79,7 +86,7 @@ public class MapScreen extends FragmentActivity implements OnMapReadyCallback,
 
         LatLng user_coordinates = new LatLng(user_latitude, user_longitude);
 
-        LatLng pub_coordinates = new LatLng(53.345474, -6.264215);  // the temple bar
+        LatLng pub_coordinates = new LatLng(latitude, longitude);
 
         CameraPosition camera_position = new CameraPosition.Builder().target(pub_coordinates)
                 .zoom(17)
@@ -89,13 +96,13 @@ public class MapScreen extends FragmentActivity implements OnMapReadyCallback,
         mMap.moveCamera(CameraUpdateFactory.newCameraPosition(camera_position));
 
         Marker user_marker = mMap.addMarker(new MarkerOptions().position(user_coordinates)
-                .title("You are here")
+                .title(context.getString(R.string.you_are_here))
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
 
         user_marker.showInfoWindow();
 
         Marker pub_marker = mMap.addMarker(new MarkerOptions().position(pub_coordinates)
-                .title("The Temple Bar")
+                .title(name)
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
 
         pub_marker.showInfoWindow();

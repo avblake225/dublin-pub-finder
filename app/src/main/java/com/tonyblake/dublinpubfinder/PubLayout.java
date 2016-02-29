@@ -80,9 +80,10 @@ public class PubLayout {
         pub_details_container.addView(pub_layout);
     }
 
-    public Button getMapButton(){
+    public Button getMapButton(String name){
 
-        btn_getMapLocation.setText(context.getString(R.string.getMapLocation));
+        String find_pub_on_map = context.getString(R.string.find) + " " + name + " " + context.getString(R.string.on_map);
+        btn_getMapLocation.setText(find_pub_on_map);
         btn_getMapLocation.setTextAppearance(context, R.style.map_button_text_style);
 
         return btn_getMapLocation;
