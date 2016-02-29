@@ -5,6 +5,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/tv_num_pubs_found"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/num_pubs_found_padding_top"
+        android:paddingBottom="@dimen/num_pubs_found_padding_bottom"
+        android:gravity="center_horizontal"
+        android:text="testing"
+        android:fontFamily="sans-serif-medium"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:textSize="@dimen/num_pubs_found_textsize"/>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

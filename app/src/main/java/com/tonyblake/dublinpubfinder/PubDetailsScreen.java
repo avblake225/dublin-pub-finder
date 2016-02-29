@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -16,6 +17,8 @@ public class PubDetailsScreen extends Activity{
 
     private Context context;
     private String[] name, address, latitude, longitude;
+    private int num_pubs_returned;
+    private TextView tv_num_pubs_returned;
     private LinearLayout pub_details_container;
     private PubLayout pub;
     private ArrayList<Button> buttons;
@@ -35,11 +38,26 @@ public class PubDetailsScreen extends Activity{
 
         Utilities.populatePubImageMap(context);
 
+        num_pubs_returned = name.length;
+
+        tv_num_pubs_returned = (TextView)findViewById(R.id.tv_num_pubs_found);
+
+        String num_pubs_returned_str;
+
+        if(num_pubs_returned == 1){
+            num_pubs_returned_str = num_pubs_returned + " " + context.getString(R.string.pub_found);
+        }
+        else{
+            num_pubs_returned_str = num_pubs_returned + " " + context.getString(R.string.pubs_found);
+        }
+
+        tv_num_pubs_returned.setText(num_pubs_returned_str);
+
         pub_details_container = (LinearLayout)findViewById(R.id.pub_details_container);
 
         buttons = new ArrayList<Button>();
 
-        for(int i=0;i<name.length;i++){
+        for(int i=0;i<num_pubs_returned;i++){
 
             pub = new PubLayout(context, pub_details_container);
 

@@ -8,6 +8,9 @@
     <dimen name="home_screen_top_margin">20dp</dimen>
     <dimen name="question_text_size">15dp</dimen>
 
+    <dimen name="num_pubs_found_textsize">15dp</dimen>
+    <dimen name="num_pubs_found_padding_top">5dp</dimen>
+    <dimen name="num_pubs_found_padding_bottom">5dp</dimen>
     <dimen name="no_margin_left">0dp</dimen>
     <dimen name="tv_margin_top">2dp</dimen>
     <dimen name="no_margin_right">0dp</dimen>
