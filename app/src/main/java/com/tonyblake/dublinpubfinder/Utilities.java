@@ -17,8 +17,8 @@ public class Utilities {
 
     public static void populatePubRatingMap(Context context){
 
-        getPubRating.put(context.getString(R.string.against_the_grain), context.getResources().getDrawable(R.drawable.zero_star_rating));
-        getPubRating.put(context.getString(R.string.p_macs),context.getResources().getDrawable(R.drawable.zero_star_rating));
+        getPubRating.put(context.getString(R.string.against_the_grain), context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
+        getPubRating.put(context.getString(R.string.p_macs),context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
     }
 
     public static void populatePubImageMap(Context context){
