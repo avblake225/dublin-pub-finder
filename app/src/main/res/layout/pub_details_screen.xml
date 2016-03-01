@@ -11,6 +11,8 @@
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/num_pubs_found_padding_top"
         android:paddingBottom="@dimen/num_pubs_found_padding_bottom"
+        android:paddingLeft="@dimen/num_pubs_found_padding_left"
+        android:paddingRight="@dimen/num_pubs_found_padding_right"
         android:gravity="center_horizontal"
         android:text="testing"
         android:fontFamily="sans-serif-medium"
@@ -20,7 +22,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:id="@+id/pub_details_container"

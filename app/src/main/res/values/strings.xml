@@ -28,8 +28,8 @@
     <string name="errorretrievingpubrating">"Error retrieving pub rating"</string>
     <string name="errorretrievingpubimage">"Error retrieving pub image"</string>
 
-    <string name="pub_found">pub found...</string>
-    <string name="pubs_found">pubs found...</string>
+    <string name="pub_found">pub found. Rating and description taken from Google.</string>
+    <string name="pubs_found">pubs found. Ratings and descriptions taken from Google.</string>
     <string name="find">Find</string>
     <string name="on_map">On Map</string>
     <string name="you_are_here">You are here</string>
