@@ -16,9 +16,11 @@
     <dimen name="no_margin_left">0dp</dimen>
     <dimen name="tv_description_margin_left">10dp</dimen>
     <dimen name="tv_margin_top">2dp</dimen>
+    <dimen name="tv_description_margin_top">10dp</dimen>
     <dimen name="no_margin_right">0dp</dimen>
     <dimen name="tv_description_margin_right">10dp</dimen>
     <dimen name="tv_margin_bottom">2dp</dimen>
+    <dimen name="tv_description_margin_bottom">10dp</dimen>
     <dimen name="btn_margin_top">2dp</dimen>
     <dimen name="btn_margin_bottom">10dp</dimen>
 

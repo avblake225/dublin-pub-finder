@@ -2,6 +2,7 @@ package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.text.Html;
 import android.view.Gravity;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -54,9 +55,9 @@ public class PubLayout {
         LinearLayout.LayoutParams tv_description_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         tv_description_params.gravity = Gravity.CENTER_HORIZONTAL;
         tv_description_params.setMargins((int) context.getResources().getDimension(R.dimen.tv_description_margin_left),
-                ((int) context.getResources().getDimension(R.dimen.tv_margin_top)),
+                ((int) context.getResources().getDimension(R.dimen.tv_description_margin_top)),
                 ((int) context.getResources().getDimension(R.dimen.tv_description_margin_right)),
-                ((int) context.getResources().getDimension(R.dimen.tv_margin_bottom)));
+                ((int) context.getResources().getDimension(R.dimen.tv_description_margin_bottom)));
 
         tv_description = new TextView(context);
         tv_description.setLayoutParams(tv_description_params);
@@ -99,7 +100,7 @@ public class PubLayout {
 
     public void setPubDescription(String description){
 
-        tv_description.setText(description);
+        tv_description.setText(Html.fromHtml("<i>" + description + "</i>"));
         tv_description.setTextAppearance(context, R.style.pub_description_style);
     }
 
