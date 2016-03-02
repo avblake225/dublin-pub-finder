@@ -14,14 +14,17 @@
     <dimen name="num_pubs_found_padding_left">5dp</dimen>
     <dimen name="num_pubs_found_padding_right">5dp</dimen>
     <dimen name="no_margin_left">0dp</dimen>
+    <dimen name="tv_description_margin_left">10dp</dimen>
     <dimen name="tv_margin_top">2dp</dimen>
     <dimen name="no_margin_right">0dp</dimen>
+    <dimen name="tv_description_margin_right">10dp</dimen>
     <dimen name="tv_margin_bottom">2dp</dimen>
     <dimen name="btn_margin_top">2dp</dimen>
     <dimen name="btn_margin_bottom">10dp</dimen>
 
     <dimen name="pub_name_textsize">25dp</dimen>
     <dimen name="pub_address_textsize">20dp</dimen>
+    <dimen name="pub_description_textsize">15dp</dimen>
     <dimen name="map_button_text_size">15dp</dimen>
 
 </resources>

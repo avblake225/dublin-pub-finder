@@ -3,7 +3,6 @@ package com.tonyblake.dublinpubfinder;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +16,7 @@ import java.util.ArrayList;
 public class PubDetailsScreen extends Activity{
 
     private Context context;
-    private String[] name, address, latitude, longitude;
+    private String[] name, address, description, latitude, longitude;
     private int num_pubs_returned;
     private TextView tv_num_pubs_returned;
     private LinearLayout pub_details_container;
@@ -34,6 +33,7 @@ public class PubDetailsScreen extends Activity{
         savedInstanceState = getIntent().getExtras();
         name = savedInstanceState.getStringArray("name");
         address = savedInstanceState.getStringArray("address");
+        description = savedInstanceState.getStringArray("description");
         latitude = savedInstanceState.getStringArray("latitude");
         longitude = savedInstanceState.getStringArray("longitude");
 
@@ -71,6 +71,8 @@ public class PubDetailsScreen extends Activity{
 
             Drawable pub_pic = Utilities.getPubImage(name[i], context);
             pub.setPubImage(pub_pic);
+
+            pub.setPubDescription(description[i]);
 
             pub.attachToParent();
 

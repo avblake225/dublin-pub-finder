@@ -14,9 +14,10 @@ public class PubLayout {
     private LinearLayout pub_details_container;
     private LinearLayout pub_layout;
     private TextView tv_name;
+    private TextView tv_address;
     private ImageView iv_rating;
     private ImageView iv_pub;
-    private TextView tv_address;
+    private TextView tv_description;
     private Button btn_getMapLocation;
 
     public PubLayout(Context context, LinearLayout pub_details_container){
@@ -49,6 +50,17 @@ public class PubLayout {
         iv_pub = new ImageView(context);
         iv_pub.setLayoutParams(v_params);
         pub_layout.addView(iv_pub);
+
+        LinearLayout.LayoutParams tv_description_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        tv_description_params.gravity = Gravity.CENTER_HORIZONTAL;
+        tv_description_params.setMargins((int) context.getResources().getDimension(R.dimen.tv_description_margin_left),
+                ((int) context.getResources().getDimension(R.dimen.tv_margin_top)),
+                ((int) context.getResources().getDimension(R.dimen.tv_description_margin_right)),
+                ((int) context.getResources().getDimension(R.dimen.tv_margin_bottom)));
+
+        tv_description = new TextView(context);
+        tv_description.setLayoutParams(tv_description_params);
+        pub_layout.addView(tv_description);
 
         LinearLayout.LayoutParams btn_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         btn_params.gravity = Gravity.CENTER_HORIZONTAL;
@@ -83,6 +95,12 @@ public class PubLayout {
     public void setPubImage(Drawable image){
 
         iv_pub.setImageDrawable(image);
+    }
+
+    public void setPubDescription(String description){
+
+        tv_description.setText(description);
+        tv_description.setTextAppearance(context, R.style.pub_description_style);
     }
 
     public void attachToParent(){

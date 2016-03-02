@@ -13,13 +13,14 @@ public class DBManager extends SQLiteOpenHelper{
     public static final String COL_1 = "ID";
     public static final String COL_2 = "NAME";
     public static final String COL_3 = "ADDRESS";
-    public static final String COL_4 = "SIDE_OF_CITY";
-    public static final String COL_5 = "LATITUDE";
-    public static final String COL_6 = "LONGITUDE";
-    public static final String COL_7 = "PUB_TYPE";
-    public static final String COL_8 = "LIVE_MUSIC";
-    public static final String COL_9 = "CRAFT_BEER";
-    public static final String COL_10 = "LATE_PUB";
+    public static final String COL_4 = "DESCRIPTION";
+    public static final String COL_5 = "SIDE_OF_CITY";
+    public static final String COL_6 = "LATITUDE";
+    public static final String COL_7 = "LONGITUDE";
+    public static final String COL_8 = "PUB_TYPE";
+    public static final String COL_9 = "LIVE_MUSIC";
+    public static final String COL_10 = "CRAFT_BEER";
+    public static final String COL_11 = "LATE_PUB";
 
     public SQLiteDatabase db;
 
@@ -32,6 +33,7 @@ public class DBManager extends SQLiteOpenHelper{
 
         insertData(context.getString(R.string.against_the_grain),
                 context.getString(R.string.against_the_grain_address),
+                context.getString(R.string.against_the_grain_description),
                 context.getString(R.string.against_the_grain_side_of_city),
                 context.getString(R.string.against_the_grain_latitude),
                 context.getString(R.string.against_the_grain_longitude),
@@ -46,6 +48,7 @@ public class DBManager extends SQLiteOpenHelper{
 
         insertData(context.getString(R.string.anseo),
                 context.getString(R.string.anseo_address),
+                context.getString(R.string.anseo_description),
                 context.getString(R.string.anseo_side_of_city),
                 context.getString(R.string.anseo_latitude),
                 context.getString(R.string.anseo_longitude),
@@ -168,6 +171,7 @@ public class DBManager extends SQLiteOpenHelper{
 
         insertData(context.getString(R.string.p_macs),
                 context.getString(R.string.p_macs_address),
+                context.getString(R.string.p_macs_description),
                 context.getString(R.string.p_macs_side_of_city),
                 context.getString(R.string.p_macs_latitude),
                 context.getString(R.string.p_macs_longitude),
@@ -411,23 +415,24 @@ public class DBManager extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_PUBS_TABLE = "CREATE TABLE " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, ADDRESS TEXT, SIDE_OF_CITY TEXT, LATITUDE TEXT, LONGITUDE TEXT, PUB_TYPE TEXT, LIVE_MUSIC TEXT, CRAFT_BEER TEXT, LATE_PUB TEXT)";
+        String CREATE_PUBS_TABLE = "CREATE TABLE " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, ADDRESS TEXT, DESCRIPTION TEXT, SIDE_OF_CITY TEXT, LATITUDE TEXT, LONGITUDE TEXT, PUB_TYPE TEXT, LIVE_MUSIC TEXT, CRAFT_BEER TEXT, LATE_PUB TEXT)";
         db.execSQL(CREATE_PUBS_TABLE);
     }
 
-    public boolean insertData(String name, String address, String side_of_city, String latitude, String longitude, String pub_type, String live_music, String craft_beer, String late_pub){
+    public boolean insertData(String name, String address, String description, String side_of_city, String latitude, String longitude, String pub_type, String live_music, String craft_beer, String late_pub){
 
         ContentValues contentValues = new ContentValues();
 
         contentValues.put(COL_2, name);
         contentValues.put(COL_3, address);
-        contentValues.put(COL_4, side_of_city);
-        contentValues.put(COL_5, latitude);
-        contentValues.put(COL_6, longitude);
-        contentValues.put(COL_7, pub_type);
-        contentValues.put(COL_8, live_music);
-        contentValues.put(COL_9, craft_beer);
-        contentValues.put(COL_10, late_pub);
+        contentValues.put(COL_4, description);
+        contentValues.put(COL_5, side_of_city);
+        contentValues.put(COL_6, latitude);
+        contentValues.put(COL_7, longitude);
+        contentValues.put(COL_8, pub_type);
+        contentValues.put(COL_9, live_music);
+        contentValues.put(COL_10, craft_beer);
+        contentValues.put(COL_11, late_pub);
 
         long result = db.insert(TABLE_NAME, null, contentValues);
 

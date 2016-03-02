@@ -36,6 +36,7 @@
 
     <string name="against_the_grain">Against The Grain</string>
     <string name="against_the_grain_address">11 Wexford Street, Dublin 2</string>
+    <string name="against_the_grain_description"><i>Modern bar with a huge array of local and international craft beers on tap and big-screen TV sport</i></string>
     <string name="against_the_grain_side_of_city">Southside</string>
     <string name="against_the_grain_latitude">53.337230</string>
     <string name="against_the_grain_longitude">-6.265333</string>
@@ -50,6 +51,7 @@
 
     <string name="anseo">Anseo</string>
     <string name="anseo_address">18 Camden Street Lower, Dublin 2</string>
+    <string name="anseo_description"><i>No description available</i></string>
     <string name="anseo_side_of_city">Southside</string>
     <string name="anseo_latitude">53.335215</string>
     <string name="anseo_longitude">-6.265121</string>
@@ -172,6 +174,7 @@
 
     <string name="p_macs">P. Macs</string>
     <string name="p_macs_address">30 Stephen Street Lower, Dublin 2</string>
+    <string name="p_macs_description"><i>No description available</i></string>
     <string name="p_macs_side_of_city">Southside</string>
     <string name="p_macs_latitude">53.341122</string>
     <string name="p_macs_longitude">-6.264388</string>
