@@ -1,16 +1,27 @@
 package com.tonyblake.dublinpubfinder;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity{
 
+    private Context context;
+    public static DBManager dbManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        context = this;
+
+        dbManager = new DBManager(this);
+
+        Utilities.populatePubImageMap(context);
+        Utilities.populateSelectionCodeMap();
+        Utilities.populateDBQueryMap(dbManager.getTableName());
     }
 
     @Override

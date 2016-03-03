@@ -15,7 +15,6 @@ import java.util.ArrayList;
 public class HomeScreen extends AppCompatActivity {
 
     private Context context;
-    private DBManager dbManager;
     private RadioButton traditional_pub, modern_pub;
     private RadioButton north_side, south_side;
     private RadioButton no_to_live_music, yes_to_live_music;
@@ -36,12 +35,6 @@ public class HomeScreen extends AppCompatActivity {
 
         context = this;
 
-        dbManager = new DBManager(this);
-
-        Utilities.populatePubImageMap(context);
-        Utilities.populateSelectionCodeMap();
-        Utilities.populateDBQueryMap(dbManager.getTableName());
-
         traditional_pub =(RadioButton)findViewById(R.id.radiobutton_traditional);
         modern_pub =(RadioButton)findViewById(R.id.radiobutton_modern);
 
@@ -61,8 +54,8 @@ public class HomeScreen extends AppCompatActivity {
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
+    public void onStart(){
+        super.onStart();
 
         name = null;
         address = null;
@@ -75,6 +68,12 @@ public class HomeScreen extends AppCompatActivity {
         craft_beer = null;
         late_pub = null;
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
         btn_findpub.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -85,7 +84,7 @@ public class HomeScreen extends AppCompatActivity {
                 String query = Utilities.getDBQuery(selection_code);
 
                 try {
-                    Cursor res = dbManager.getPubs(query);
+                    Cursor res = MainActivity.dbManager.getPubs(query);
 
                     pubs_found = new ArrayList<Pub>();
 
@@ -111,6 +110,21 @@ public class HomeScreen extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
     }
 
     private void launchPubDetailsScreen() {
