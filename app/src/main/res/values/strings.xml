@@ -4,19 +4,19 @@
     <string name="enter">Enter</string>
     <string name="copyright">© Tony Blake 2016</string>
 
-    <string name="qtypepub">Q1: What type of pub are you looking for?</string>
+    <string name="qtypepub">What type of pub are you looking for?</string>
     <string name="traditional">Traditional Irish pub</string>
     <string name="modern">Modern pub</string>
-    <string name="qsidecity">Q2: What side of the city are you on?</string>
+    <string name="qsidecity">What side of the city are you on?</string>
     <string name="northside">Northside</string>
     <string name="southside">Southside</string>
-    <string name="qlivemusic">Q3: Are you looking for a pub with live music?*</string>
+    <string name="qlivemusic">Are you looking for a pub with live music?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="qcraftbeer">Q4: Are you looking for a pub that serves craft beer?</string>
-    <string name="qlatepub">Q5: Are you looking for a pub that stays open late?</string>
+    <string name="qcraftbeer">Are you looking for a pub that serves craft beer?</string>
+    <string name="qlatepub">Are you looking for a pub that stays open late?</string>
     <string name="find_pub">Find pub</string>
-    <string name="live_music_note"><i>*Live music only on certain nights</i></string>
+    <string name="disclaimer"><i>Disclaimer: Live music only on certain nights. Ratings and descriptions based on Google Reviews</i></string>
 
     <string name="please_select_pub_type">Please select pub type</string>
     <string name="please_select_your_location">Please select which side of the city you are on</string>
@@ -28,8 +28,8 @@
     <string name="errorretrievingpubrating">"Error retrieving pub rating"</string>
     <string name="errorretrievingpubimage">"Error retrieving pub image"</string>
 
-    <string name="pub_found">pub found. Rating and description taken from Google.</string>
-    <string name="pubs_found">pubs found. Ratings and descriptions taken from Google.</string>
+    <string name="pub_found">pub found...</string>
+    <string name="pubs_found">pubs found...</string>
     <string name="find">Find</string>
     <string name="on_map">On Map</string>
     <string name="you_are_here">You are here</string>

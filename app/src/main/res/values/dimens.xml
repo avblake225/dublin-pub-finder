@@ -5,7 +5,9 @@
     <dimen name="home_screen_margin">10dp</dimen>
     <dimen name="home_screen_button_margin">20dp</dimen>
     <dimen name="home_screen_top_margin">20dp</dimen>
-    <dimen name="question_text_size">15dp</dimen>
+    <dimen name="question_margin_left">5dp</dimen>
+    <dimen name="question_text_size">20dp</dimen>
+    <dimen name="option_text_size">18dp</dimen>
 
     <dimen name="num_pubs_found_textsize">15dp</dimen>
     <dimen name="num_pubs_found_padding_top">5dp</dimen>

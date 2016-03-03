@@ -16,6 +16,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/question_margin_left"
             android:orientation="vertical">
 
             <LinearLayout
@@ -43,8 +44,9 @@
                         android:layout_height="wrap_content"
                         android:text="@string/traditional"
                         android:textColor="@color/white"
+                        android:textSize="@dimen/option_text_size"
                         android:buttonTint="@color/white"
-                        android:checked="false"
+                        android:checked="true"
                         android:visibility="visible"/>
 
                     <RadioButton
@@ -53,6 +55,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/modern"
                         android:checked="false"
+                        android:textSize="@dimen/option_text_size"
                         android:textColor="@color/white"
                         android:buttonTint="@color/white"/>
 
@@ -78,8 +81,9 @@
                         android:layout_height="wrap_content"
                         android:text="@string/northside"
                         android:textColor="@color/white"
+                        android:textSize="@dimen/option_text_size"
                         android:buttonTint="@color/white"
-                        android:checked="false" />
+                        android:checked="true" />
 
                     <RadioButton
                         android:id="@+id/radiobutton_southside"
@@ -87,6 +91,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/southside"
                         android:checked="false"
+                        android:textSize="@dimen/option_text_size"
                         android:textColor="@color/white"
                         android:buttonTint="@color/white"/>
 
@@ -111,15 +116,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/no"
+                        android:textSize="@dimen/option_text_size"
                         android:textColor="@color/white"
                         android:buttonTint="@color/white"
-                        android:checked="false" />
+                        android:checked="true" />
 
                     <RadioButton
                         android:id="@+id/radiobutton_yestolivemusic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/yes"
+                        android:textSize="@dimen/option_text_size"
                         android:checked="false"
                         android:textColor="@color/white"
                         android:buttonTint="@color/white"/>
@@ -145,9 +152,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/no"
+                        android:textSize="@dimen/option_text_size"
                         android:textColor="@color/white"
                         android:buttonTint="@color/white"
-                        android:checked="false" />
+                        android:checked="true" />
 
                     <RadioButton
                         android:id="@+id/radiobutton_yestocraftbeer"
@@ -155,6 +163,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/yes"
                         android:checked="false"
+                        android:textSize="@dimen/option_text_size"
                         android:textColor="@color/white"
                         android:buttonTint="@color/white"/>
 
@@ -180,8 +189,9 @@
                         android:layout_height="wrap_content"
                         android:text="@string/no"
                         android:textColor="@color/white"
+                        android:textSize="@dimen/option_text_size"
                         android:buttonTint="@color/white"
-                        android:checked="false" />
+                        android:checked="true" />
 
                     <RadioButton
                         android:id="@+id/radiobutton_yestolatepub"
@@ -189,6 +199,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/yes"
                         android:checked="false"
+                        android:textSize="@dimen/option_text_size"
                         android:textColor="@color/white"
                         android:buttonTint="@color/white"/>
 
@@ -211,14 +222,13 @@
                     android:text="@string/find_pub"/>
 
                 <TextView
-                    android:id="@+id/live_music_note"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/home_screen_margin"
                     android:layout_marginBottom="@dimen/home_screen_margin"
                     android:layout_below="@id/btn_findpub"
                     android:textColor="@color/gray"
-                    android:text="@string/live_music_note"/>
+                    android:text="@string/disclaimer"/>
 
             </RelativeLayout>
 
