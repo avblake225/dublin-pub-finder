@@ -80,8 +80,6 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                checkIfAllSelectionsMade();
-
                 int selection_code = getSelectionCode();
 
                 String query = Utilities.getDBQuery(selection_code);
@@ -145,25 +143,6 @@ public class HomeScreen extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
-    }
-
-    private void checkIfAllSelectionsMade(){
-
-        if(!traditional_pub.isChecked() && !modern_pub.isChecked()){
-            showToastMessage(context.getString(R.string.please_select_pub_type));
-        }
-        else if(!north_side.isChecked() && !south_side.isChecked()){
-            showToastMessage(context.getString(R.string.please_select_your_location));
-        }
-        else if(!yes_to_live_music.isChecked() && !no_to_live_music.isChecked()){
-            showToastMessage(context.getString(R.string.please_select_live_music));
-        }
-        else if(!yes_to_craft_beer.isChecked() && !no_to_craft_beer.isChecked()){
-            showToastMessage(context.getString(R.string.please_select_craft_beer));
-        }
-        else if(!no_to_late_pub.isChecked() && !yes_to_late_pub.isChecked()){
-            showToastMessage(context.getString(R.string.please_select_late_pub));
-        }
     }
 
     private int getSelectionCode(){

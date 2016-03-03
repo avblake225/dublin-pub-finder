@@ -18,11 +18,6 @@
     <string name="find_pub">Find pub</string>
     <string name="disclaimer"><i>Disclaimer: Live music only on certain nights. Ratings and descriptions based on Google Reviews</i></string>
 
-    <string name="please_select_pub_type">Please select pub type</string>
-    <string name="please_select_your_location">Please select which side of the city you are on</string>
-    <string name="please_select_live_music">Please select whether or not you want live music</string>
-    <string name="please_select_craft_beer">Please select whether or not you want craft beer</string>
-    <string name="please_select_late_pub">Please select whether or not you want a pub that stays open late</string>
     <string name="no_pubs_match_your_search">No pubs match your search. Please try again</string>
     <string name="errorfindingpub">Error finding pub</string>
     <string name="errorretrievingpubrating">"Error retrieving pub rating"</string>
