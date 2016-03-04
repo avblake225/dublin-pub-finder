@@ -31,7 +31,7 @@ public class DBManager extends SQLiteOpenHelper{
 
         db = this.getWritableDatabase();
 
-        int i = 0;
+        int i = 0, j = 0;
 
         boolean against_the_grain = insertData(context.getString(R.string.against_the_grain),
                                                 context.getString(R.string.against_the_grain_address),
@@ -44,7 +44,8 @@ public class DBManager extends SQLiteOpenHelper{
                                                 context.getString(R.string.against_the_grain_craft_beer),
                                                 context.getString(R.string.against_the_grain_late_pub));
 
-        if(against_the_grain){ i++; }
+        i++;
+        if(against_the_grain){ j++; }
 
         boolean alfie_byrnes = insertData(context.getString(R.string.alfie_byrnes),
                                             context.getString(R.string.alfie_byrnes_address),
@@ -57,7 +58,8 @@ public class DBManager extends SQLiteOpenHelper{
                                             context.getString(R.string.alfie_byrnes_craft_beer),
                                             context.getString(R.string.alfie_byrnes_late_pub));
 
-        if(alfie_byrnes){ i++; }
+        i++;
+        if(alfie_byrnes){ j++; }
 
         boolean anseo = insertData(context.getString(R.string.anseo),
                                     context.getString(R.string.anseo_address),
@@ -70,7 +72,8 @@ public class DBManager extends SQLiteOpenHelper{
                                     context.getString(R.string.anseo_craft_beer),
                                     context.getString(R.string.anseo_late_pub));
 
-        if(anseo){ i++; }
+        i++;
+        if(anseo){ j++; }
 
         boolean bad_bobs = insertData(context.getString(R.string.bad_bobs),
                                         context.getString(R.string.bad_bobs_address),
@@ -83,21 +86,52 @@ public class DBManager extends SQLiteOpenHelper{
                                         context.getString(R.string.bad_bobs_craft_beer),
                                         context.getString(R.string.bad_bobs_late_pub));
 
-        if(bad_bobs){ i++; }
+        i++;
+        if(bad_bobs){ j++; }
 
-        /*insertData(context.getString(R.string.break_for_the_border),
-                context.getString(R.string.break_for_the_border_address),
-                context.getString(R.string.break_for_the_border_directions));
+        boolean break_for_the_border = insertData(context.getString(R.string.break_for_the_border),
+                                                    context.getString(R.string.break_for_the_border_address),
+                                                    context.getString(R.string.break_for_the_border_description),
+                                                    context.getString(R.string.break_for_the_border_side_of_city),
+                                                    context.getString(R.string.break_for_the_border_latitude),
+                                                    context.getString(R.string.break_for_the_border_longitude),
+                                                    context.getString(R.string.break_for_the_border_pub_type),
+                                                    context.getString(R.string.break_for_the_border_live_music),
+                                                    context.getString(R.string.break_for_the_border_craft_beer),
+                                                    context.getString(R.string.break_for_the_border_late_pub));
 
-        insertData(context.getString(R.string.bruxelles),
+        i++;
+        if(break_for_the_border){ j++; }
+
+        boolean bruxelles = insertData(context.getString(R.string.bruxelles),
                 context.getString(R.string.bruxelles_address),
-                context.getString(R.string.bruxelles_directions));
+                context.getString(R.string.bruxelles_description),
+                context.getString(R.string.bruxelles_side_of_city),
+                context.getString(R.string.bruxelles_latitude),
+                context.getString(R.string.bruxelles_longitude),
+                context.getString(R.string.bruxelles_pub_type),
+                context.getString(R.string.bruxelles_live_music),
+                context.getString(R.string.bruxelles_craft_beer),
+                context.getString(R.string.bruxelles_late_pub));
 
-        insertData(context.getString(R.string.buskers),
+        i++;
+        if(bruxelles){ j++; }
+
+        boolean buskers = insertData(context.getString(R.string.buskers),
                 context.getString(R.string.buskers_address),
-                context.getString(R.string.buskers_directions));
+                context.getString(R.string.buskers_description),
+                context.getString(R.string.buskers_side_of_city),
+                context.getString(R.string.buskers_latitude),
+                context.getString(R.string.buskers_longitude),
+                context.getString(R.string.buskers_pub_type),
+                context.getString(R.string.buskers_live_music),
+                context.getString(R.string.buskers_craft_beer),
+                context.getString(R.string.buskers_late_pub));
 
-        insertData(context.getString(R.string.café_en_seine),
+        i++;
+        if(buskers){ j++; }
+
+        /*insertData(context.getString(R.string.café_en_seine),
                 context.getString(R.string.café_en_seine_address),
                 context.getString(R.string.café_en_seine_directions));
 
@@ -204,7 +238,8 @@ public class DBManager extends SQLiteOpenHelper{
                                     context.getString(R.string.p_macs_craft_beer),
                                     context.getString(R.string.p_macs_late_pub));
 
-        if(p_macs){ i++; }
+        i++;
+        if(p_macs){ j++; }
 
         /*insertData(context.getString(R.string.robert_reids),
                 context.getString(R.string.robert_reids_address),
@@ -438,7 +473,7 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.the_workmans_club_address),
                 context.getString(R.string.the_workmans_club_directions));*/
 
-        System.out.println(i + " pubs in database");
+        System.out.println(i + " pubs listed, " + j + " pubs added to database");
     }
 
     @Override

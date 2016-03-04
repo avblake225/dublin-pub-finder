@@ -75,15 +75,36 @@
 
     <string name="break_for_the_border">Break For The Border</string>
     <string name="break_for_the_border_address">Stephen Street Lower, Dublin 2</string>
-    <string name="break_for_the_border_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk all the way up this street and take the last right turn. You will see Break For The Border on the left.</string>
+    <string name="break_for_the_border_description">No description available</string>
+    <string name="break_for_the_border_side_of_city">Southside</string>
+    <string name="break_for_the_border_latitude">53.341016</string>
+    <string name="break_for_the_border_longitude">-6.264030</string>
+    <string name="break_for_the_border_pub_type">Modern</string>
+    <string name="break_for_the_border_live_music">No</string>
+    <string name="break_for_the_border_craft_beer">No</string>
+    <string name="break_for_the_border_late_pub">Yes</string>
 
     <string name="bruxelles">Bruxelles</string>
     <string name="bruxelles_address">7 Harry St, Dublin 2</string>
-    <string name="bruxelles_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk over to Grafton Street. Walk up Grafton Street and take the third right turn onto Harry Street. You will see Bruxelles on the right.</string>
+    <string name="bruxelles_description">Bustling joint with an Irish heavy rock heritage, with 3 bars and live music, plus TV sports</string>
+    <string name="bruxelles_side_of_city">Southside</string>
+    <string name="bruxelles_latitude">53.341283</string>
+    <string name="bruxelles_longitude">-6.260940</string>
+    <string name="bruxelles_pub_type">Traditional</string>
+    <string name="bruxelles_live_music">Yes</string>
+    <string name="bruxelles_craft_beer">No</string>
+    <string name="bruxelles_late_pub">Yes</string>
 
     <string name="buskers">Buskers</string>
     <string name="buskers_address">13 Fleet St, Dublin 2</string>
-    <string name="buskers_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight onto Westmoreland Street. Take the first right turn onto Fleet Street. Walk a few feet up this street and you will see Busker\'s on the right.</string>
+    <string name="buskers_description">Vibrant modern bar with nightly live bands, TV sports, cocktail classes, stag and hen parties</string>
+    <string name="buskers_side_of_city">Southside</string>
+    <string name="buskers_latitude">53.345778</string>
+    <string name="buskers_longitude">-6.260475</string>
+    <string name="buskers_pub_type">Modern</string>
+    <string name="buskers_live_music">Yes</string>
+    <string name="buskers_craft_beer">No</string>
+    <string name="buskers_late_pub">Yes</string>
 
     <string name="café_en_seine">Café en Seine</string>
     <string name="café_en_seine_address">40 Dawson Street, Dublin 2</string>
