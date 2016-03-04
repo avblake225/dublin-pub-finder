@@ -16,7 +16,7 @@
     <string name="qcraftbeer">Are you looking for a pub that serves craft beer?</string>
     <string name="qlatepub">Are you looking for a pub that stays open late?</string>
     <string name="find_pub">Find pub</string>
-    <string name="disclaimer"><i>Disclaimer: Live music only on certain nights. Ratings and descriptions based on Google Reviews</i></string>
+    <string name="disclaimer"><i>Disclaimer: Live music and late opening only on certain nights. Ratings and descriptions based on Google Reviews</i></string>
 
     <string name="no_pubs_match_your_search">No pubs match your search. Please try again</string>
     <string name="errorfindingpub">Error finding pub</string>
@@ -42,7 +42,14 @@
 
     <string name="alfie_byrnes">Alfie Byrnes</string>
     <string name="alfie_byrnes_address">Earlsfort Terrace, Dublin 2</string>
-    <string name="alfie_byrnes_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. At the top of Dawson Street, turn left and walk around St. Stephen\'s Green. Then, turn left onto Lesson Street Lower. You will see Alfie Byrne\'s a few feet up this street on the right.</string>
+    <string name="alfie_byrnes_description">No description available</string>
+    <string name="alfie_byrnes_side_of_city">Southside</string>
+    <string name="alfie_byrnes_latitude">53.334672</string>
+    <string name="alfie_byrnes_longitude">-6.257553</string>
+    <string name="alfie_byrnes_pub_type">Modern</string>
+    <string name="alfie_byrnes_live_music">No</string>
+    <string name="alfie_byrnes_craft_beer">Yes</string>
+    <string name="alfie_byrnes_late_pub">No</string>
 
     <string name="anseo">Anseo</string>
     <string name="anseo_address">18 Camden Street Lower, Dublin 2</string>
@@ -57,7 +64,14 @@
 
     <string name="bad_bobs">Bad Bobs</string>
     <string name="bad_bobs_address">35 Essex Street East, Dublin 2</string>
-    <string name="bad_bobs_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street East. You will see Bad Bob\'s on the left hand corner.</string>
+    <string name="bad_bobs_description">Full of vintage ephemera, this large, lively bar, restaurant and nightclub includes a roof terrace</string>
+    <string name="bad_bobs_side_of_city">Southside</string>
+    <string name="bad_bobs_latitude">53.344993</string>
+    <string name="bad_bobs_longitude"> -6.266064</string>
+    <string name="bad_bobs_pub_type">Modern</string>
+    <string name="bad_bobs_live_music">Yes</string>
+    <string name="bad_bobs_craft_beer">No</string>
+    <string name="bad_bobs_late_pub">Yes</string>
 
     <string name="break_for_the_border">Break For The Border</string>
     <string name="break_for_the_border_address">Stephen Street Lower, Dublin 2</string>

@@ -31,37 +31,61 @@ public class DBManager extends SQLiteOpenHelper{
 
         db = this.getWritableDatabase();
 
-        insertData(context.getString(R.string.against_the_grain),
-                context.getString(R.string.against_the_grain_address),
-                context.getString(R.string.against_the_grain_description),
-                context.getString(R.string.against_the_grain_side_of_city),
-                context.getString(R.string.against_the_grain_latitude),
-                context.getString(R.string.against_the_grain_longitude),
-                context.getString(R.string.against_the_grain_pub_type),
-                context.getString(R.string.against_the_grain_live_music),
-                context.getString(R.string.against_the_grain_craft_beer),
-                context.getString(R.string.against_the_grain_late_pub));
+        int i = 0;
 
-        /*insertData(context.getString(R.string.alfie_byrnes),
-                context.getString(R.string.alfie_byrnes_address),
-                context.getString(R.string.alfie_byrnes_directions));*/
+        boolean against_the_grain = insertData(context.getString(R.string.against_the_grain),
+                                                context.getString(R.string.against_the_grain_address),
+                                                context.getString(R.string.against_the_grain_description),
+                                                context.getString(R.string.against_the_grain_side_of_city),
+                                                context.getString(R.string.against_the_grain_latitude),
+                                                context.getString(R.string.against_the_grain_longitude),
+                                                context.getString(R.string.against_the_grain_pub_type),
+                                                context.getString(R.string.against_the_grain_live_music),
+                                                context.getString(R.string.against_the_grain_craft_beer),
+                                                context.getString(R.string.against_the_grain_late_pub));
 
-        insertData(context.getString(R.string.anseo),
-                context.getString(R.string.anseo_address),
-                context.getString(R.string.anseo_description),
-                context.getString(R.string.anseo_side_of_city),
-                context.getString(R.string.anseo_latitude),
-                context.getString(R.string.anseo_longitude),
-                context.getString(R.string.anseo_pub_type),
-                context.getString(R.string.anseo_live_music),
-                context.getString(R.string.anseo_craft_beer),
-                context.getString(R.string.anseo_late_pub));
+        if(against_the_grain){ i++; }
 
-        /*insertData(context.getString(R.string.bad_bobs),
-                context.getString(R.string.bad_bobs_address),
-                context.getString(R.string.bad_bobs_directions));
+        boolean alfie_byrnes = insertData(context.getString(R.string.alfie_byrnes),
+                                            context.getString(R.string.alfie_byrnes_address),
+                                            context.getString(R.string.alfie_byrnes_description),
+                                            context.getString(R.string.alfie_byrnes_side_of_city),
+                                            context.getString(R.string.alfie_byrnes_latitude),
+                                            context.getString(R.string.alfie_byrnes_longitude),
+                                            context.getString(R.string.alfie_byrnes_pub_type),
+                                            context.getString(R.string.alfie_byrnes_live_music),
+                                            context.getString(R.string.alfie_byrnes_craft_beer),
+                                            context.getString(R.string.alfie_byrnes_late_pub));
 
-        insertData(context.getString(R.string.break_for_the_border),
+        if(alfie_byrnes){ i++; }
+
+        boolean anseo = insertData(context.getString(R.string.anseo),
+                                    context.getString(R.string.anseo_address),
+                                    context.getString(R.string.anseo_description),
+                                    context.getString(R.string.anseo_side_of_city),
+                                    context.getString(R.string.anseo_latitude),
+                                    context.getString(R.string.anseo_longitude),
+                                    context.getString(R.string.anseo_pub_type),
+                                    context.getString(R.string.anseo_live_music),
+                                    context.getString(R.string.anseo_craft_beer),
+                                    context.getString(R.string.anseo_late_pub));
+
+        if(anseo){ i++; }
+
+        boolean bad_bobs = insertData(context.getString(R.string.bad_bobs),
+                                        context.getString(R.string.bad_bobs_address),
+                                        context.getString(R.string.bad_bobs_description),
+                                        context.getString(R.string.bad_bobs_side_of_city),
+                                        context.getString(R.string.bad_bobs_latitude),
+                                        context.getString(R.string.bad_bobs_longitude),
+                                        context.getString(R.string.bad_bobs_pub_type),
+                                        context.getString(R.string.bad_bobs_live_music),
+                                        context.getString(R.string.bad_bobs_craft_beer),
+                                        context.getString(R.string.bad_bobs_late_pub));
+
+        if(bad_bobs){ i++; }
+
+        /*insertData(context.getString(R.string.break_for_the_border),
                 context.getString(R.string.break_for_the_border_address),
                 context.getString(R.string.break_for_the_border_directions));
 
@@ -169,16 +193,18 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.peters_pub_address),
                 context.getString(R.string.peters_pub_directions));*/
 
-        insertData(context.getString(R.string.p_macs),
-                context.getString(R.string.p_macs_address),
-                context.getString(R.string.p_macs_description),
-                context.getString(R.string.p_macs_side_of_city),
-                context.getString(R.string.p_macs_latitude),
-                context.getString(R.string.p_macs_longitude),
-                context.getString(R.string.p_macs_pub_type),
-                context.getString(R.string.p_macs_live_music),
-                context.getString(R.string.p_macs_craft_beer),
-                context.getString(R.string.p_macs_late_pub));
+        boolean p_macs = insertData(context.getString(R.string.p_macs),
+                                    context.getString(R.string.p_macs_address),
+                                    context.getString(R.string.p_macs_description),
+                                    context.getString(R.string.p_macs_side_of_city),
+                                    context.getString(R.string.p_macs_latitude),
+                                    context.getString(R.string.p_macs_longitude),
+                                    context.getString(R.string.p_macs_pub_type),
+                                    context.getString(R.string.p_macs_live_music),
+                                    context.getString(R.string.p_macs_craft_beer),
+                                    context.getString(R.string.p_macs_late_pub));
+
+        if(p_macs){ i++; }
 
         /*insertData(context.getString(R.string.robert_reids),
                 context.getString(R.string.robert_reids_address),
@@ -411,6 +437,8 @@ public class DBManager extends SQLiteOpenHelper{
         insertData(context.getString(R.string.the_workmans_club),
                 context.getString(R.string.the_workmans_club_address),
                 context.getString(R.string.the_workmans_club_directions));*/
+
+        System.out.println(i + " pubs in database");
     }
 
     @Override
