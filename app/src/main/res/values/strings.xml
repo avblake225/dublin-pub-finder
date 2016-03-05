@@ -4,19 +4,18 @@
     <string name="enter">Enter</string>
     <string name="copyright">© Tony Blake 2016</string>
 
-    <string name="qtypepub">What type of pub are you looking for?</string>
-    <string name="traditional">Traditional Irish pub</string>
-    <string name="modern">Modern pub</string>
-    <string name="qsidecity">What side of the city are you on?</string>
-    <string name="northside">Northside</string>
-    <string name="southside">Southside</string>
-    <string name="qlivemusic">Are you looking for a pub with live music?</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
-    <string name="qcraftbeer">Are you looking for a pub that serves craft beer?</string>
-    <string name="qlatepub">Are you looking for a pub that stays open late?</string>
+    <string name="make_selection">Select what you\'re looking for from the list below (multiple selections are allowed)...</string>
+    <string name="traditional_irish_pub">Traditional Irish pub</string>
+    <string name="modern_pub">Modern pub</string>
+    <string name="pub_on_north_side_of_city">Pub on the north side of the city</string>
+    <string name="pub_on_south_side_of_city">Pub on the south side of the city</string>
+    <string name="pub_with_live_music">Pub with live music</string>
+    <string name="pub_with_live_sports">Pub with live sports</string>
+    <string name="pub_that_serves_cocktails">Pub that serves cocktails</string>
+    <string name="pub_that_serves_craft_beer">Pub that serves craft beer</string>
+    <string name="pub_that_stays_open_late">Late pub</string>
     <string name="find_pub">Find pub</string>
-    <string name="disclaimer"><i>Disclaimer: Live music and late opening only on certain nights. Ratings and descriptions based on Google Reviews</i></string>
+    <string name="disclaimer"><i>Disclaimer: Live music, live sports and late opening only on certain nights. Ratings and descriptions based on Google Reviews</i></string>
 
     <string name="no_pubs_match_your_search">No pubs match your search. Please try again</string>
     <string name="errorfindingpub">Error finding pub</string>

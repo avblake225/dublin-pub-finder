@@ -25,185 +25,95 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/qtypepub"
+                    android:id="@+id/make_selection"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/home_screen_margin"
                     android:layout_marginBottom="@dimen/home_screen_margin"
                     android:textColor="@color/white"
                     android:textSize="@dimen/question_text_size"
-                    android:text="@string/qtypepub"/>
+                    android:text="@string/make_selection"/>
 
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <RadioButton
-                        android:id="@+id/radiobutton_traditional"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/traditional"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/option_text_size"
-                        android:buttonTint="@color/white"
-                        android:checked="true"
-                        android:visibility="visible"/>
-
-                    <RadioButton
-                        android:id="@+id/radiobutton_modern"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/modern"
-                        android:checked="false"
-                        android:textSize="@dimen/option_text_size"
-                        android:textColor="@color/white"
-                        android:buttonTint="@color/white"/>
-
-                </RadioGroup>
-
-                <TextView
-                    android:id="@+id/qsidecity"
+                <CheckBox
+                    android:id="@+id/cb_traditional_irish_pub"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/home_screen_margin"
-                    android:layout_marginBottom="@dimen/home_screen_margin"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/question_text_size"
-                    android:text="@string/qsidecity"/>
+                    android:textSize="@dimen/option_text_size"
+                    android:buttonTint="@color/white"
+                    android:text="@string/traditional_irish_pub"/>
 
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <RadioButton
-                        android:id="@+id/radiobutton_northside"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/northside"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/option_text_size"
-                        android:buttonTint="@color/white"
-                        android:checked="true" />
-
-                    <RadioButton
-                        android:id="@+id/radiobutton_southside"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/southside"
-                        android:checked="false"
-                        android:textSize="@dimen/option_text_size"
-                        android:textColor="@color/white"
-                        android:buttonTint="@color/white"/>
-
-                </RadioGroup>
-
-                <TextView
-                    android:id="@+id/qlivemusic"
+                <CheckBox
+                    android:id="@+id/cb_modern_pub"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/home_screen_margin"
-                    android:layout_marginBottom="@dimen/home_screen_margin"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/question_text_size"
-                    android:text="@string/qlivemusic"/>
+                    android:textSize="@dimen/option_text_size"
+                    android:buttonTint="@color/white"
+                    android:text="@string/modern_pub"/>
 
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <RadioButton
-                        android:id="@+id/radiobutton_notolivemusic"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/no"
-                        android:textSize="@dimen/option_text_size"
-                        android:textColor="@color/white"
-                        android:buttonTint="@color/white"
-                        android:checked="true" />
-
-                    <RadioButton
-                        android:id="@+id/radiobutton_yestolivemusic"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/yes"
-                        android:textSize="@dimen/option_text_size"
-                        android:checked="false"
-                        android:textColor="@color/white"
-                        android:buttonTint="@color/white"/>
-
-                </RadioGroup>
-
-                <TextView
-                    android:id="@+id/qcraftbeer"
+                <CheckBox
+                    android:id="@+id/cb_pub_on_north_side_of_city"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/home_screen_margin"
-                    android:layout_marginBottom="@dimen/home_screen_margin"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/question_text_size"
-                    android:text="@string/qcraftbeer"/>
+                    android:textSize="@dimen/option_text_size"
+                    android:buttonTint="@color/white"
+                    android:text="@string/pub_on_north_side_of_city"/>
 
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <RadioButton
-                        android:id="@+id/radiobutton_notocraftbeer"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/no"
-                        android:textSize="@dimen/option_text_size"
-                        android:textColor="@color/white"
-                        android:buttonTint="@color/white"
-                        android:checked="true" />
-
-                    <RadioButton
-                        android:id="@+id/radiobutton_yestocraftbeer"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/yes"
-                        android:checked="false"
-                        android:textSize="@dimen/option_text_size"
-                        android:textColor="@color/white"
-                        android:buttonTint="@color/white"/>
-
-                </RadioGroup>
-
-                <TextView
-                    android:id="@+id/qlatepub"
+                <CheckBox
+                    android:id="@+id/cb_pub_on_south_side_of_city"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/home_screen_margin"
-                    android:layout_marginBottom="@dimen/home_screen_margin"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/question_text_size"
-                    android:text="@string/qlatepub"/>
+                    android:textSize="@dimen/option_text_size"
+                    android:buttonTint="@color/white"
+                    android:text="@string/pub_on_south_side_of_city"/>
 
-                <RadioGroup
+                <CheckBox
+                    android:id="@+id/cb_pub_with_live_music"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/option_text_size"
+                    android:buttonTint="@color/white"
+                    android:text="@string/pub_with_live_music"/>
 
-                    <RadioButton
-                        android:id="@+id/radiobutton_notolatepub"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/no"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/option_text_size"
-                        android:buttonTint="@color/white"
-                        android:checked="true" />
+                <CheckBox
+                    android:id="@+id/cb_pub_with_live_sports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/option_text_size"
+                    android:buttonTint="@color/white"
+                    android:text="@string/pub_with_live_sports"/>
 
-                    <RadioButton
-                        android:id="@+id/radiobutton_yestolatepub"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/yes"
-                        android:checked="false"
-                        android:textSize="@dimen/option_text_size"
-                        android:textColor="@color/white"
-                        android:buttonTint="@color/white"/>
+                <CheckBox
+                    android:id="@+id/cb_pub_that_serves_cocktails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/option_text_size"
+                    android:buttonTint="@color/white"
+                    android:text="@string/pub_that_serves_cocktails"/>
 
-                </RadioGroup>
+                <CheckBox
+                    android:id="@+id/cb_pub_that_serves_craft_beer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/option_text_size"
+                    android:buttonTint="@color/white"
+                    android:text="@string/pub_that_serves_craft_beer"/>
+
+                <CheckBox
+                    android:id="@+id/cb_pub_that_stays_open_late"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/option_text_size"
+                    android:buttonTint="@color/white"
+                    android:text="@string/pub_that_stays_open_late"/>
 
             </LinearLayout>
 

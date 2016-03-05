@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
+import android.widget.CheckBox;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -15,12 +15,20 @@ import java.util.ArrayList;
 public class HomeScreen extends AppCompatActivity {
 
     private Context context;
-    private RadioButton traditional_pub, modern_pub;
-    private RadioButton north_side, south_side;
-    private RadioButton no_to_live_music, yes_to_live_music;
-    private RadioButton no_to_late_pub, yes_to_late_pub;
-    private RadioButton no_to_craft_beer, yes_to_craft_beer;
+
+    private CheckBox cb_traditional_irish_pub;
+    private CheckBox cb_modern_pub;
+    private CheckBox cb_pub_on_north_side_of_city;
+    private CheckBox cb_pub_on_south_side_of_city;
+    private CheckBox cb_pub_with_live_music;
+    private CheckBox cb_pub_with_live_sports;
+    private CheckBox cb_pub_that_serves_cocktails;
+    private CheckBox cb_pub_that_serves_craft_beer;
+    private CheckBox cb_pub_that_stays_open_late;
+
     private Button btn_findpub;
+
+    private String query;
 
     private String name, address, description, side_of_city, latitude, longitude, pub_type, live_music, craft_beer, late_pub;
 
@@ -35,20 +43,15 @@ public class HomeScreen extends AppCompatActivity {
 
         context = this;
 
-        traditional_pub =(RadioButton)findViewById(R.id.radiobutton_traditional);
-        modern_pub =(RadioButton)findViewById(R.id.radiobutton_modern);
-
-        north_side =(RadioButton)findViewById(R.id.radiobutton_northside);
-        south_side =(RadioButton)findViewById(R.id.radiobutton_southside);
-
-        no_to_live_music =(RadioButton)findViewById(R.id.radiobutton_notolivemusic);
-        yes_to_live_music =(RadioButton)findViewById(R.id.radiobutton_yestolivemusic);
-
-        no_to_late_pub =(RadioButton)findViewById(R.id.radiobutton_notolatepub);
-        yes_to_late_pub =(RadioButton)findViewById(R.id.radiobutton_yestolatepub);
-
-        no_to_craft_beer =(RadioButton)findViewById(R.id.radiobutton_notocraftbeer);
-        yes_to_craft_beer =(RadioButton)findViewById(R.id.radiobutton_yestocraftbeer);
+        cb_traditional_irish_pub = (CheckBox)findViewById(R.id.cb_traditional_irish_pub);
+        cb_modern_pub = (CheckBox)findViewById(R.id.cb_modern_pub);
+        cb_pub_on_north_side_of_city = (CheckBox)findViewById(R.id.cb_pub_on_north_side_of_city);
+        cb_pub_on_south_side_of_city = (CheckBox)findViewById(R.id.cb_pub_on_south_side_of_city);
+        cb_pub_with_live_music = (CheckBox)findViewById(R.id.cb_pub_with_live_music);
+        cb_pub_with_live_sports = (CheckBox)findViewById(R.id.cb_pub_with_live_sports);
+        cb_pub_that_serves_cocktails = (CheckBox)findViewById(R.id.cb_pub_that_serves_cocktails);
+        cb_pub_that_serves_craft_beer = (CheckBox)findViewById(R.id.cb_pub_that_serves_craft_beer);
+        cb_pub_that_stays_open_late = (CheckBox)findViewById(R.id.cb_pub_that_stays_open_late);
 
         btn_findpub = (Button) findViewById(R.id.btn_findpub);
     }
@@ -79,35 +82,36 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                int selection_code = getSelectionCode();
+                    if(cb_modern_pub.isChecked()){
 
-                String query = Utilities.getDBQuery(selection_code);
+                        query = "SELECT * FROM pubs_table WHERE (PUB_TYPE = 'Modern')";
+                    }
 
-                try {
-                    Cursor res = MainActivity.dbManager.getPubs(query);
+                    try {
+                        Cursor res = MainActivity.dbManager.getPubs(query);
 
-                    pubs_found = new ArrayList<Pub>();
+                        pubs_found = new ArrayList<Pub>();
 
-                    res.moveToFirst();
+                        res.moveToFirst();
 
-                    do {
-                        Pub pub = new Pub();
-                        pub.name = res.getString(1);
-                        pub.address = res.getString(2);
-                        pub.description = res.getString(3);
-                        pub.latitude = res.getString(5);
-                        pub.longitude = res.getString(6);
-                        pubs_found.add(pub);
+                        do {
+                            Pub pub = new Pub();
+                            pub.name = res.getString(1);
+                            pub.address = res.getString(2);
+                            pub.description = res.getString(3);
+                            pub.latitude = res.getString(5);
+                            pub.longitude = res.getString(6);
+                            pubs_found.add(pub);
 
-                    } while (res.moveToNext());
+                        } while (res.moveToNext());
 
-                    num_pubs_found = pubs_found.size();
+                        num_pubs_found = pubs_found.size();
 
-                    launchPubDetailsScreen();
+                        launchPubDetailsScreen();
 
-                } catch (Exception e) {
-                    showToastMessage(context.getString(R.string.no_pubs_match_your_search));
-                }
+                    } catch (Exception e) {
+                        showToastMessage(context.getString(R.string.no_pubs_match_your_search));
+                    }
             }
         });
     }
@@ -161,11 +165,8 @@ public class HomeScreen extends AppCompatActivity {
 
     private int getSelectionCode(){
 
-        String bit_combination = String.valueOf(modern_pub.isChecked() ? 1 : 0)
-                + String.valueOf(south_side.isChecked() ? 1 : 0)
-                + String.valueOf(yes_to_live_music.isChecked() ? 1 : 0)
-                + String.valueOf(yes_to_craft_beer.isChecked() ? 1 : 0)
-                + String.valueOf(yes_to_late_pub.isChecked() ? 1 : 0);
+        String bit_combination = String.valueOf(cb_modern_pub.isChecked() ? 1 : 0)
+                + String.valueOf(cb_pub_on_south_side_of_city.isChecked() ? 1 : 0);
 
         int selection_code = Utilities.getSelectionCode(bit_combination);
 
