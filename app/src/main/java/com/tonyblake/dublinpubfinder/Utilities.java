@@ -11,10 +11,6 @@ public class Utilities {
 
     public static HashMap<String, Drawable> getPubImage = new HashMap<String,Drawable>();
 
-    public static HashMap<String, Integer> getSelectionCode = new HashMap<String,Integer>();
-
-    public static HashMap<Integer, String> getDBQuery = new HashMap<Integer,String>();
-
     public static void populatePubRatingMap(Context context){
 
         getPubRating.put(context.getString(R.string.against_the_grain), context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
@@ -97,78 +93,6 @@ public class Utilities {
         getPubImage.put(context.getString(R.string.whelans), context.getResources().getDrawable(R.drawable.whelans));
     }
 
-    public static void populateSelectionCodeMap(){
-
-        getSelectionCode.put("00000",0);
-        getSelectionCode.put("00001",1);
-        getSelectionCode.put("00010",2);
-        getSelectionCode.put("00011",3);
-        getSelectionCode.put("00100",4);
-        getSelectionCode.put("00101",5);
-        getSelectionCode.put("00110",6);
-        getSelectionCode.put("00111",7);
-        getSelectionCode.put("01000",8);
-        getSelectionCode.put("01001",9);
-        getSelectionCode.put("01010",10);
-        getSelectionCode.put("01011",11);
-        getSelectionCode.put("01100",12);
-        getSelectionCode.put("01101",13);
-        getSelectionCode.put("01110",14);
-        getSelectionCode.put("01111",15);
-        getSelectionCode.put("10000",16);
-        getSelectionCode.put("10001",17);
-        getSelectionCode.put("10010",18);
-        getSelectionCode.put("10011",19);
-        getSelectionCode.put("10100",20);
-        getSelectionCode.put("10101",21);
-        getSelectionCode.put("10110",22);
-        getSelectionCode.put("10111",23);
-        getSelectionCode.put("11000",24);
-        getSelectionCode.put("11001",25);
-        getSelectionCode.put("11010",26);
-        getSelectionCode.put("11011",27);
-        getSelectionCode.put("11100",28);
-        getSelectionCode.put("11101",29);
-        getSelectionCode.put("11110",30);
-        getSelectionCode.put("11111",31);
-    }
-
-    public static void populateDBQueryMap(String table_name){
-
-        getDBQuery.put(0,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'No' AND LATE_PUB = 'No')");
-        getDBQuery.put(1,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'No' AND LATE_PUB = 'Yes')");
-        getDBQuery.put(2,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'No')");
-        getDBQuery.put(3,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'Yes')");
-        getDBQuery.put(4,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'No' AND LATE_PUB = 'No')");
-        getDBQuery.put(5,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'No' AND LATE_PUB = 'Yes')");
-        getDBQuery.put(6,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'No')");
-        getDBQuery.put(7,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'Yes')");
-        getDBQuery.put(8,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'No' AND LATE_PUB = 'No')");
-        getDBQuery.put(9,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'No' AND LATE_PUB = 'Yes')");
-        getDBQuery.put(10,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'No')");
-        getDBQuery.put(11,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'Yes')");
-        getDBQuery.put(12,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'No' AND LATE_PUB = 'No')");
-        getDBQuery.put(13,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'No' AND LATE_PUB = 'Yes')");
-        getDBQuery.put(14,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'No')");
-        getDBQuery.put(15,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Traditional' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'Yes')");
-        getDBQuery.put(16,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'No' AND LATE_PUB = 'No')");
-        getDBQuery.put(17,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'No' AND LATE_PUB = 'Yes')");
-        getDBQuery.put(18,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'No')");
-        getDBQuery.put(19,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'Yes')");
-        getDBQuery.put(20,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'No' AND LATE_PUB = 'No')");
-        getDBQuery.put(21,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'No' AND LATE_PUB = 'Yes')");
-        getDBQuery.put(22,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'No')");
-        getDBQuery.put(23,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Northside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'Yes')");
-        getDBQuery.put(24,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'No' AND LATE_PUB = 'No')");
-        getDBQuery.put(25,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'No' AND LATE_PUB = 'Yes')");
-        getDBQuery.put(26,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'No')");
-        getDBQuery.put(27,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'No' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'Yes')");
-        getDBQuery.put(28,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'No' AND LATE_PUB = 'No')");
-        getDBQuery.put(29,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'No' AND LATE_PUB = 'Yes')");
-        getDBQuery.put(30,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'No')");
-        getDBQuery.put(31,"SELECT * FROM " + table_name + " WHERE (PUB_TYPE = 'Modern' AND SIDE_OF_CITY = 'Southside' AND LIVE_MUSIC = 'Yes' AND CRAFT_BEER = 'Yes' AND LATE_PUB = 'Yes')");
-    }
-
     public static Drawable getPubRating(String name, Context context){
 
         Drawable rating = null;
@@ -195,15 +119,5 @@ public class Utilities {
         }
 
         return image;
-    }
-
-    public static int getSelectionCode(String bit_combination){
-
-        return getSelectionCode.get(bit_combination);
-    }
-
-    public static String getDBQuery(int selection_code){
-
-        return getDBQuery.get(selection_code);
     }
 }

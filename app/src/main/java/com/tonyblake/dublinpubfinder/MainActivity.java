@@ -19,9 +19,8 @@ public class MainActivity extends AppCompatActivity{
 
         dbManager = new DBManager(this);
 
+        Utilities.populatePubRatingMap(context);
         Utilities.populatePubImageMap(context);
-        Utilities.populateSelectionCodeMap();
-        Utilities.populateDBQueryMap(dbManager.getTableName());
     }
 
     @Override

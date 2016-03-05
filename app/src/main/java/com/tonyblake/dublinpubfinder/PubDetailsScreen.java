@@ -37,9 +37,6 @@ public class PubDetailsScreen extends Activity{
         latitude = savedInstanceState.getStringArray("latitude");
         longitude = savedInstanceState.getStringArray("longitude");
 
-        Utilities.populatePubRatingMap(context);
-        Utilities.populatePubImageMap(context);
-
         num_pubs_returned = name.length;
 
         tv_num_pubs_returned = (TextView)findViewById(R.id.tv_num_pubs_found);
