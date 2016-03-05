@@ -13,9 +13,12 @@
     <string name="pub_with_live_sports">Pub with live sports</string>
     <string name="pub_that_serves_cocktails">Pub that serves cocktails</string>
     <string name="pub_that_serves_craft_beer">Pub that serves craft beer</string>
-    <string name="pub_that_stays_open_late">Late pub</string>
+    <string name="pub_that_stays_open_late">Pub that stays open late</string>
     <string name="find_pub">Find pub</string>
     <string name="disclaimer"><i>Disclaimer: Live music, live sports and late opening only on certain nights. Ratings and descriptions based on Google Reviews</i></string>
+
+    <string name="invalid_selection_traditional_modern_pub">Invalid selection. Please select either a Traditional Irish pub OR a Modern pub</string>
+    <string name="invalid_selection_pub_on_north_side_south_side">Invalid selection. Please select either a Pub on the north side of the city OR a Pub on the south side of the city</string>
 
     <string name="no_pubs_match_your_search">No pubs match your search. Please try again</string>
     <string name="errorfindingpub">Error finding pub</string>

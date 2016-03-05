@@ -82,7 +82,17 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                    if(cb_modern_pub.isChecked()){
+                if(cb_traditional_irish_pub.isChecked() && cb_modern_pub.isChecked()){
+
+                    showToastMessage(context.getString(R.string.invalid_selection_traditional_modern_pub));
+                }
+                else if(cb_pub_on_north_side_of_city.isChecked() && cb_pub_on_south_side_of_city.isChecked()){
+
+                    showToastMessage(context.getString(R.string.invalid_selection_pub_on_north_side_south_side));
+                }
+                else {
+
+                    if (cb_modern_pub.isChecked()) {
 
                         query = "SELECT * FROM pubs_table WHERE (PUB_TYPE = 'Modern')";
                     }
@@ -112,6 +122,7 @@ public class HomeScreen extends AppCompatActivity {
                     } catch (Exception e) {
                         showToastMessage(context.getString(R.string.no_pubs_match_your_search));
                     }
+                }
             }
         });
     }
@@ -158,7 +169,7 @@ public class HomeScreen extends AppCompatActivity {
     }
 
     private void showToastMessage(CharSequence text) {
-        int duration = Toast.LENGTH_SHORT;
+        int duration = Toast.LENGTH_LONG;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
     }
