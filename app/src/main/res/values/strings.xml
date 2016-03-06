@@ -21,6 +21,7 @@
     <string name="invalid_selection_pub_on_north_side_south_side">Invalid selection. Please select either a Pub on the north side of the city OR a Pub on the south side of the city</string>
 
     <string name="pubTypeAndSideOfCity">Pub type and side of city</string>
+    <string name="extras">Extras</string>
 
     <string name="select_all_rows_from">SELECT * FROM</string>
     <string name="where">WHERE</string>
@@ -31,6 +32,10 @@
     <string name="pubTypeAndSideOfCity_1000">(PUB_TYPE = \'Traditional Irish\'</string>
     <string name="_0100">0100</string>
     <string name="pubTypeAndSideOfCity_0100">(PUB_TYPE = \'Modern\'</string>
+    <string name="_0010">0010</string>
+    <string name="pubTypeAndSideOfCity_0010">(SIDE_OF_CITY = \'Northside\'</string>
+    <string name="_0001">0001</string>
+    <string name="pubTypeAndSideOfCity_0001">(SIDE_OF_CITY = \'Southside\'</string>
     <string name="_1010">1010</string>
     <string name="pubTypeAndSideOfCity_1010">(PUB_TYPE = \'Traditional Irish\' AND SIDE_OF_CITY = \'Northside\'</string>
     <string name="_1001">1001</string>
@@ -40,12 +45,80 @@
     <string name="_0101">0101</string>
     <string name="pubTypeAndSideOfCity_0101">(PUB_TYPE = \'Modern\' AND SIDE_OF_CITY = \'Southside\'</string>
 
+    <string name="and">AND</string>
+    <string name="_00000">00000</string>
+    <string name="extras_00000"></string>
+    <string name="_00001">00001</string>
+    <string name="extras_00001">LATE_PUB = \'Yes\'</string>
+    <string name="_00010">00010</string>
+    <string name="extras_00010">CRAFT_BEER = \'Yes\'</string>
+    <string name="_00011">00011</string>
+    <string name="extras_00011">CRAFT_BEER = \'Yes\' AND LATE_PUB = \'Yes\'</string>
+    <string name="_00100">00100</string>
+    <string name="extras_00100">COCKTAILS = \'Yes\'</string>
+    <string name="_00101">00101</string>
+    <string name="extras_00101">COCKTAILS = \'Yes\' AND LATE_PUB = \'Yes\'</string>
+    <string name="_00110">00110</string>
+    <string name="extras_00110">COCKTAILS = \'Yes\' AND CRAFT_BEER = \'Yes\'</string>
+    <string name="_00111">00111</string>
+    <string name="extras_00111">COCKTAILS = \'Yes\' AND CRAFT_BEER = \'Yes\' AND LATE_PUB = \'Yes\'</string>
+    <string name="_01000">01000</string>
+    <string name="extras_01000">LIVE_SPORTS = \'Yes\'</string>
+    <string name="_01001">01001</string>
+    <string name="extras_01001">LIVE_SPORTS = \'Yes\' AND LATE_PUB = \'Yes\'</string>
+    <string name="_01010">01010</string>
+    <string name="extras_01010">LIVE_SPORTS = \'Yes\' AND CRAFT_BEER = \'Yes\'</string>
+    <string name="_01011">01011</string>
+    <string name="extras_01011">LIVE_SPORTS = \'Yes\' AND CRAFT_BEER = \'Yes\' AND LATE_PUB = \'Yes\'</string>
+    <string name="_01100">01100</string>
+    <string name="extras_01100">LIVE_SPORTS = \'Yes\' AND COCKTAILS = \'Yes\'</string>
+    <string name="_01101">01101</string>
+    <string name="extras_01101">LIVE_SPORTS = \'Yes\' AND COCKTAILS = \'Yes\' AND LATE_PUB = \'Yes\'</string>
+    <string name="_01110">01110</string>
+    <string name="extras_01110">LIVE_SPORTS = \'Yes\' AND CRAFT_BEER = \'Yes\' AND COCKTAILS = \'Yes\'</string>
+    <string name="_01111">01111</string>
+    <string name="extras_01111">LIVE_SPORTS = \'Yes\' AND CRAFT_BEER = \'Yes\' AND LATE_PUB = \'Yes\' AND LATE_PUB = \'Yes\'</string>
+    <string name="_10000">10000</string>
+    <string name="extras_10000">LIVE_MUSIC = \'Yes\'</string>
+    <string name="_10001">10001</string>
+    <string name="extras_10001">LIVE_MUSIC = \'Yes\' AND LATE_PUB = \'Yes\'</string>
+    <string name="_10010">10010</string>
+    <string name="extras_10010">LIVE_MUSIC = \'Yes\' AND CRAFT_BEER = \'Yes\'</string>
+    <string name="_10011">10011</string>
+    <string name="extras_10011">LIVE_MUSIC = \'Yes\' AND CRAFT_BEER = \'Yes\' AND LATE_PUB = \'Yes\'</string>
+    <string name="_10100">10100</string>
+    <string name="extras_10100">LIVE_MUSIC = \'Yes\' AND COCKTAILS = \'Yes\'</string>
+    <string name="_10101">10101</string>
+    <string name="extras_10101">LIVE_MUSIC = \'Yes\' AND COCKTAILS = \'Yes\' AND LATE_PUB = \'Yes\'</string>
+    <string name="_10110">10110</string>
+    <string name="extras_10110">LIVE_MUSIC = \'Yes\' AND COCKTAILS = \'Yes\' AND CRAFT_BEER = \'Yes\'</string>
+    <string name="_10111">10111</string>
+    <string name="extras_10111">LIVE_MUSIC = \'Yes\' AND COCKTAILS = \'Yes\' AND CRAFT_BEER = \'Yes\' AND LATE_PUB = \'Yes\'</string>
+    <string name="_11000">11000</string>
+    <string name="extras_11000">LIVE_MUSIC = \'Yes\' AND LIVE_SPORTS = \'Yes\'</string>
+    <string name="_11001">11001</string>
+    <string name="extras_11001">LIVE_MUSIC = \'Yes\' AND LIVE_SPORTS = \'Yes\' AND LATE_PUB = \'Yes\'</string>
+    <string name="_11010">11010</string>
+    <string name="extras_11010">LIVE_MUSIC = \'Yes\' AND LIVE_SPORTS = \'Yes\' AND CRAFT_BEER = \'Yes\'</string>
+    <string name="_11011">11011</string>
+    <string name="extras_11011">LIVE_MUSIC = \'Yes\' AND LIVE_SPORTS = \'Yes\' AND CRAFT_BEER = \'Yes\' AND LATE_PUB = \'Yes\'</string>
+    <string name="_11100">11100</string>
+    <string name="extras_11100">LIVE_MUSIC = \'Yes\' AND LIVE_SPORTS = \'Yes\' AND COCKTAILS = \'Yes\'</string>
+    <string name="_11101">11101</string>
+    <string name="extras_11101">LIVE_MUSIC = \'Yes\' AND LIVE_SPORTS = \'Yes\' AND COCKTAILS = \'Yes\' AND LATE_PUB = \'Yes\'</string>
+    <string name="_11110">11110</string>
+    <string name="extras_11110">LIVE_MUSIC = \'Yes\' AND LIVE_SPORTS = \'Yes\' AND COCKTAILS = \'Yes\' AND CRAFT_BEER = \'Yes\'</string>
+    <string name="_11111">11111</string>
+    <string name="extras_11111">LIVE_MUSIC = \'Yes\' AND LIVE_SPORTS = \'Yes\' AND COCKTAILS = \'Yes\' AND CRAFT_BEER = \'Yes\' AND LATE_PUB = \'Yes\'</string>
+
     <string name="end_query">);</string>
 
+    <string name="please_make_a_selection">Please make a selection</string>
     <string name="no_pubs_match_your_search">No pubs match your search. Please try again</string>
     <string name="error_retrieving_pub_rating">Error retrieving pub rating</string>
     <string name="error_retrieving_pub_image">Error retrieving pub image</string>
     <string name="error_retrieving_pub_type_and_side_of_city">Error retrieving pub type and side of city</string>
+    <string name="error_retrieving_extras">Error retrieving extras</string>
 
     <string name="pub_found">pub found...</string>
     <string name="pubs_found">pubs found...</string>
