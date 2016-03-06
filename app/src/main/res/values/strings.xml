@@ -20,20 +20,32 @@
     <string name="invalid_selection_traditional_modern_pub">Invalid selection. Please select either a Traditional Irish pub OR a Modern pub</string>
     <string name="invalid_selection_pub_on_north_side_south_side">Invalid selection. Please select either a Pub on the north side of the city OR a Pub on the south side of the city</string>
 
-    <string name="select_all_rows_from">SELECT * FROM </string>
-    <string name="where_pub_type_equals"> WHERE (PUB_TYPE = \'</string>
-    <string name="and_side_of_city_equals">\' AND SIDE_OF_CITY = \'</string>
-    <string name="and_live_music_equals">\' AND LIVE_MUSIC = \'</string>
-    <string name="and_live_sports_equals">\' AND LIVE_SPORTS = \'</string>
-    <string name="and_cocktails_equals">\' AND COCKTAILS = \'</string>
-    <string name="and_craft_beer_equals">\' AND CRAFT_BEER = \'</string>
-    <string name="and_late_pub_equals">\' AND LATE_PUB = \'</string>
-    <string name="end_query">\');</string>
+    <string name="pubTypeAndSideOfCity">Pub type and side of city</string>
+
+    <string name="select_all_rows_from">SELECT * FROM</string>
+    <string name="where">WHERE</string>
+
+    <string name="_0000">0000</string>
+    <string name="pubTypeAndSideOfCity_0000">(</string>
+    <string name="_1000">1000</string>
+    <string name="pubTypeAndSideOfCity_1000">(PUB_TYPE = \'Traditional Irish\'</string>
+    <string name="_0100">0100</string>
+    <string name="pubTypeAndSideOfCity_0100">(PUB_TYPE = \'Modern\'</string>
+    <string name="_1010">1010</string>
+    <string name="pubTypeAndSideOfCity_1010">(PUB_TYPE = \'Traditional Irish\' AND SIDE_OF_CITY = \'Northside\'</string>
+    <string name="_1001">1001</string>
+    <string name="pubTypeAndSideOfCity_1001">(PUB_TYPE = \'Traditional Irish\' AND SIDE_OF_CITY = \'Southside\'</string>
+    <string name="_0110">0110</string>
+    <string name="pubTypeAndSideOfCity_0110">(PUB_TYPE = \'Modern\' AND SIDE_OF_CITY = \'Northside\'</string>
+    <string name="_0101">0101</string>
+    <string name="pubTypeAndSideOfCity_0101">(PUB_TYPE = \'Modern\' AND SIDE_OF_CITY = \'Southside\'</string>
+
+    <string name="end_query">);</string>
 
     <string name="no_pubs_match_your_search">No pubs match your search. Please try again</string>
-    <string name="errorfindingpub">Error finding pub</string>
-    <string name="errorretrievingpubrating">"Error retrieving pub rating"</string>
-    <string name="errorretrievingpubimage">"Error retrieving pub image"</string>
+    <string name="error_retrieving_pub_rating">Error retrieving pub rating</string>
+    <string name="error_retrieving_pub_image">Error retrieving pub image</string>
+    <string name="error_retrieving_pub_type_and_side_of_city">Error retrieving pub type and side of city</string>
 
     <string name="pub_found">pub found...</string>
     <string name="pubs_found">pubs found...</string>

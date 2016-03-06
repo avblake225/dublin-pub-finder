@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity{
 
         Utilities.populatePubRatingMap(context);
         Utilities.populatePubImageMap(context);
+        Utilities.populatePubTypeAndSideOfCityMap(context);
     }
 
     @Override

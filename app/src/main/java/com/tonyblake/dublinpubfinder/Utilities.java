@@ -11,6 +11,8 @@ public class Utilities {
 
     public static HashMap<String, Drawable> getPubImage = new HashMap<String,Drawable>();
 
+    public static HashMap<String, String> getPubTypeAndSideOfCity = new HashMap<String, String>();
+
     public static void populatePubRatingMap(Context context){
 
         getPubRating.put(context.getString(R.string.against_the_grain), context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
@@ -93,6 +95,17 @@ public class Utilities {
         getPubImage.put(context.getString(R.string.whelans), context.getResources().getDrawable(R.drawable.whelans));
     }
 
+    public static void populatePubTypeAndSideOfCityMap(Context context){
+
+        getPubTypeAndSideOfCity.put(context.getString(R.string._0000), context.getString(R.string.pubTypeAndSideOfCity_0000));
+        getPubTypeAndSideOfCity.put(context.getString(R.string._1000), context.getString(R.string.pubTypeAndSideOfCity_1000));
+        getPubTypeAndSideOfCity.put(context.getString(R.string._0100), context.getString(R.string.pubTypeAndSideOfCity_0100));
+        getPubTypeAndSideOfCity.put(context.getString(R.string._1010), context.getString(R.string.pubTypeAndSideOfCity_1010));
+        getPubTypeAndSideOfCity.put(context.getString(R.string._1001), context.getString(R.string.pubTypeAndSideOfCity_1001));
+        getPubTypeAndSideOfCity.put(context.getString(R.string._0110), context.getString(R.string.pubTypeAndSideOfCity_0110));
+        getPubTypeAndSideOfCity.put(context.getString(R.string._0101), context.getString(R.string.pubTypeAndSideOfCity_0101));
+    }
+
     public static Drawable getPubRating(String name, Context context){
 
         Drawable rating = null;
@@ -101,7 +114,7 @@ public class Utilities {
             rating = getPubRating.get(name);
         }
         catch(Exception e){
-            System.out.println(context.getString(R.string.errorretrievingpubrating));
+            System.out.println(context.getString(R.string.error_retrieving_pub_rating));
         }
 
         return rating;
@@ -115,9 +128,23 @@ public class Utilities {
             image = getPubImage.get(name);
         }
         catch(Exception e){
-            System.out.println(context.getString(R.string.errorretrievingpubimage));
+            System.out.println(context.getString(R.string.error_retrieving_pub_image));
         }
 
         return image;
+    }
+
+    public static String getPubTypeAndSideOfCity(String logic_key, Context context){
+
+        String pubTypeAndSideOfCity = null;
+
+        try{
+            pubTypeAndSideOfCity = getPubTypeAndSideOfCity.get(logic_key);
+        }
+        catch(Exception e){
+            System.out.println(context.getString(R.string.error_retrieving_pub_type_and_side_of_city));
+        }
+
+        return pubTypeAndSideOfCity;
     }
 }

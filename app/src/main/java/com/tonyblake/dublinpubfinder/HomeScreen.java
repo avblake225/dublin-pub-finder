@@ -85,30 +85,20 @@ public class HomeScreen extends AppCompatActivity {
                 if (cb_traditional_irish_pub.isChecked() && cb_modern_pub.isChecked()) {
 
                     showToastMessage(context.getString(R.string.invalid_selection_traditional_modern_pub));
-                } else if (cb_pub_on_north_side_of_city.isChecked() && cb_pub_on_south_side_of_city.isChecked()) {
+                }
+                else if (cb_pub_on_north_side_of_city.isChecked() && cb_pub_on_south_side_of_city.isChecked()) {
 
                     showToastMessage(context.getString(R.string.invalid_selection_pub_on_north_side_south_side));
-                } else {
+                }
+                else {
 
-                    String pub_type_selection = "";
-                    String side_of_city_selection = "";
-                    String live_music_and_sports_selection = "";
-                    String cocktails_and_craft_beer_selection = "";
-                    String late_pub_selection = ")";
+                    String pubTypeAndSideOfCity_logic_key = getLogicKey(context.getString(R.string.pubTypeAndSideOfCity));
 
-                    if (cb_traditional_irish_pub.isChecked() | cb_modern_pub.isChecked()) {
-                        pub_type_selection = getPubTypeSelection(context);
-                    }
+                    String pubTypeAndSideOfCity = Utilities.getPubTypeAndSideOfCity(pubTypeAndSideOfCity_logic_key, context);
 
-                    //side_of_city_selection = getSideOfCitySelection();
-                    //live_music_and_sports_selection = getLiveMusicAndSportsSelection();
-                    //cocktails_and_craft_beer_selection = getCocktailsAndCraftBeerSelection();
-                    //late_pub_selection = getLatePubSelection();
-
-                    query = context.getString(R.string.select_all_rows_from) + " " + MainActivity.dbManager.getTableName() + " "
-                            + pub_type_selection
-                            + side_of_city_selection + live_music_and_sports_selection
-                            + cocktails_and_craft_beer_selection + late_pub_selection;
+                    query = context.getString(R.string.select_all_rows_from) + " " + MainActivity.dbManager.getTableName()
+                            + " " + context.getString(R.string.where) + " " + pubTypeAndSideOfCity
+                            + context.getString(R.string.end_query);
 
                     try {
                         Cursor res = MainActivity.dbManager.getPubs(query);
@@ -187,18 +177,19 @@ public class HomeScreen extends AppCompatActivity {
         toast.show();
     }
 
-    private String getPubTypeSelection(Context context){
+    private String getLogicKey(String selection){
 
-        String pub_type_selection = context.getString(R.string.where_pub_type_equals);
+        String pubTypeAndSideOfCity = "";
 
-        if(cb_traditional_irish_pub.isChecked()){
-            pub_type_selection += context.getString(R.string.traditional_irish_pub);
+        if(selection.equals(context.getString(R.string.pubTypeAndSideOfCity))){
+
+            pubTypeAndSideOfCity = String.valueOf(cb_traditional_irish_pub.isChecked() ? 1:0)
+                    + String.valueOf(cb_modern_pub.isChecked() ? 1:0)
+                    + String.valueOf(cb_pub_on_north_side_of_city.isChecked() ? 1:0)
+                    + String.valueOf(cb_pub_on_south_side_of_city.isChecked() ? 1:0);
         }
-        else{
-            pub_type_selection += context.getString(R.string.modern_pub);
-        }
 
-        return pub_type_selection;
+        return pubTypeAndSideOfCity;
     }
 
     private class Pub{
