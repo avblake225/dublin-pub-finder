@@ -28,12 +28,15 @@ public class DBManager extends SQLiteOpenHelper{
 
     public static String[] pub_names = null;
 
+    public int i, j;
+
     public DBManager(Context context) {
         super(context, DATABASE_NAME, null, 1);
 
         db = this.getWritableDatabase();
 
-        int i = 0, j = 0;
+        i = 0;
+        j = 0;
 
         boolean against_the_grain = insertData(context.getString(R.string.against_the_grain),
                                                 context.getString(R.string.against_the_grain_address),
@@ -490,13 +493,19 @@ public class DBManager extends SQLiteOpenHelper{
         insertData(context.getString(R.string.the_workmans_club),
                 context.getString(R.string.the_workmans_club_address),
                 context.getString(R.string.the_workmans_club_directions));*/
+    }
 
-        System.out.println(i + " pubs listed, " + j + " pubs added to database");
+    public int getNumPubsListed(){
+        return i;
+    }
+
+    public int getNumPubsAddedToDB(){
+        return j;
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_PUBS_TABLE = "CREATE TABLE " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, ADDRESS TEXT, DESCRIPTION TEXT, LATITUDE TEXT, LONGITUDE TEXT, PUB_TYPE TEXT, SIDE_OF_CITY TEXT, LIVE_MUSIC TEXT, LIVE_SPORTS TEXT, COCKTAILS_TEXT, CRAFT_BEER TEXT, LATE_PUB TEXT)";
+        String CREATE_PUBS_TABLE = "CREATE TABLE " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, ADDRESS TEXT, DESCRIPTION TEXT, LATITUDE TEXT, LONGITUDE TEXT, PUB_TYPE TEXT, SIDE_OF_CITY TEXT, LIVE_MUSIC TEXT, LIVE_SPORTS TEXT, COCKTAILS TEXT, CRAFT_BEER TEXT, LATE_PUB TEXT)";
         db.execSQL(CREATE_PUBS_TABLE);
     }
 

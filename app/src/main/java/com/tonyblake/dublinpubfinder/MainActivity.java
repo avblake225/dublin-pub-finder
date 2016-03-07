@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity{
 
         dbManager = new DBManager(this);
 
+        int num_pubs_listed = dbManager.getNumPubsListed();
+        int num_pubs_added_to_DB = dbManager.getNumPubsAddedToDB();
+
         Utilities.populatePubRatingMap(context);
         Utilities.populatePubImageMap(context);
         Utilities.populatePubTypeAndSideOfCityMap(context);
