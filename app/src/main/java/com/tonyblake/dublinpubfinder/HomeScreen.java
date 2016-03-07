@@ -30,8 +30,6 @@ public class HomeScreen extends AppCompatActivity {
 
     private String query;
 
-    private String name, address, description, side_of_city, latitude, longitude, pub_type, live_music, craft_beer, late_pub;
-
     private ArrayList<Pub> pubs_found;
 
     private int num_pubs_found;
@@ -59,18 +57,6 @@ public class HomeScreen extends AppCompatActivity {
     @Override
     public void onStart(){
         super.onStart();
-
-        name = null;
-        address = null;
-        description = null;
-        side_of_city = null;
-        latitude = null;
-        longitude = null;
-        pub_type = null;
-        live_music = null;
-        craft_beer = null;
-        late_pub = null;
-
     }
 
     @Override
@@ -138,8 +124,8 @@ public class HomeScreen extends AppCompatActivity {
                             pub.name = res.getString(1);
                             pub.address = res.getString(2);
                             pub.description = res.getString(3);
-                            pub.latitude = res.getString(5);
-                            pub.longitude = res.getString(6);
+                            pub.latitude = res.getString(4);
+                            pub.longitude = res.getString(5);
                             pubs_found.add(pub);
 
                         } while (res.moveToNext());

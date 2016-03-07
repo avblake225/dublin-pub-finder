@@ -14,13 +14,15 @@ public class DBManager extends SQLiteOpenHelper{
     public static final String COL_2 = "NAME";
     public static final String COL_3 = "ADDRESS";
     public static final String COL_4 = "DESCRIPTION";
-    public static final String COL_5 = "SIDE_OF_CITY";
-    public static final String COL_6 = "LATITUDE";
-    public static final String COL_7 = "LONGITUDE";
-    public static final String COL_8 = "PUB_TYPE";
+    public static final String COL_5 = "LATITUDE";
+    public static final String COL_6 = "LONGITUDE";
+    public static final String COL_7 = "PUB_TYPE";
+    public static final String COL_8 = "SIDE_OF_CITY";
     public static final String COL_9 = "LIVE_MUSIC";
-    public static final String COL_10 = "CRAFT_BEER";
-    public static final String COL_11 = "LATE_PUB";
+    public static final String COL_10 = "LIVE_SPORTS";
+    public static final String COL_11 = "COCKTAILS";
+    public static final String COL_12 = "CRAFT_BEER";
+    public static final String COL_13 = "LATE_PUB";
 
     public SQLiteDatabase db;
 
@@ -36,11 +38,13 @@ public class DBManager extends SQLiteOpenHelper{
         boolean against_the_grain = insertData(context.getString(R.string.against_the_grain),
                                                 context.getString(R.string.against_the_grain_address),
                                                 context.getString(R.string.against_the_grain_description),
-                                                context.getString(R.string.against_the_grain_side_of_city),
                                                 context.getString(R.string.against_the_grain_latitude),
                                                 context.getString(R.string.against_the_grain_longitude),
                                                 context.getString(R.string.against_the_grain_pub_type),
+                                                context.getString(R.string.against_the_grain_side_of_city),
                                                 context.getString(R.string.against_the_grain_live_music),
+                                                context.getString(R.string.against_the_grain_live_sports),
+                                                context.getString(R.string.against_the_grain_cocktails),
                                                 context.getString(R.string.against_the_grain_craft_beer),
                                                 context.getString(R.string.against_the_grain_late_pub));
 
@@ -50,11 +54,13 @@ public class DBManager extends SQLiteOpenHelper{
         boolean alfie_byrnes = insertData(context.getString(R.string.alfie_byrnes),
                                             context.getString(R.string.alfie_byrnes_address),
                                             context.getString(R.string.alfie_byrnes_description),
-                                            context.getString(R.string.alfie_byrnes_side_of_city),
                                             context.getString(R.string.alfie_byrnes_latitude),
                                             context.getString(R.string.alfie_byrnes_longitude),
                                             context.getString(R.string.alfie_byrnes_pub_type),
+                                            context.getString(R.string.alfie_byrnes_side_of_city),
                                             context.getString(R.string.alfie_byrnes_live_music),
+                                            context.getString(R.string.alfie_byrnes_live_sports),
+                                            context.getString(R.string.alfie_byrnes_cocktails),
                                             context.getString(R.string.alfie_byrnes_craft_beer),
                                             context.getString(R.string.alfie_byrnes_late_pub));
 
@@ -64,11 +70,13 @@ public class DBManager extends SQLiteOpenHelper{
         boolean anseo = insertData(context.getString(R.string.anseo),
                                     context.getString(R.string.anseo_address),
                                     context.getString(R.string.anseo_description),
-                                    context.getString(R.string.anseo_side_of_city),
                                     context.getString(R.string.anseo_latitude),
                                     context.getString(R.string.anseo_longitude),
                                     context.getString(R.string.anseo_pub_type),
+                                    context.getString(R.string.anseo_side_of_city),
                                     context.getString(R.string.anseo_live_music),
+                                    context.getString(R.string.anseo_live_sports),
+                                    context.getString(R.string.anseo_cocktails),
                                     context.getString(R.string.anseo_craft_beer),
                                     context.getString(R.string.anseo_late_pub));
 
@@ -78,11 +86,13 @@ public class DBManager extends SQLiteOpenHelper{
         boolean bad_bobs = insertData(context.getString(R.string.bad_bobs),
                                         context.getString(R.string.bad_bobs_address),
                                         context.getString(R.string.bad_bobs_description),
-                                        context.getString(R.string.bad_bobs_side_of_city),
                                         context.getString(R.string.bad_bobs_latitude),
                                         context.getString(R.string.bad_bobs_longitude),
                                         context.getString(R.string.bad_bobs_pub_type),
+                                        context.getString(R.string.bad_bobs_side_of_city),
                                         context.getString(R.string.bad_bobs_live_music),
+                                        context.getString(R.string.bad_bobs_live_sports),
+                                        context.getString(R.string.bad_bobs_cocktails),
                                         context.getString(R.string.bad_bobs_craft_beer),
                                         context.getString(R.string.bad_bobs_late_pub));
 
@@ -92,11 +102,13 @@ public class DBManager extends SQLiteOpenHelper{
         boolean break_for_the_border = insertData(context.getString(R.string.break_for_the_border),
                                                     context.getString(R.string.break_for_the_border_address),
                                                     context.getString(R.string.break_for_the_border_description),
-                                                    context.getString(R.string.break_for_the_border_side_of_city),
                                                     context.getString(R.string.break_for_the_border_latitude),
                                                     context.getString(R.string.break_for_the_border_longitude),
                                                     context.getString(R.string.break_for_the_border_pub_type),
+                                                    context.getString(R.string.break_for_the_border_side_of_city),
                                                     context.getString(R.string.break_for_the_border_live_music),
+                                                    context.getString(R.string.break_for_the_border_live_sports),
+                                                    context.getString(R.string.break_for_the_border_cocktails),
                                                     context.getString(R.string.break_for_the_border_craft_beer),
                                                     context.getString(R.string.break_for_the_border_late_pub));
 
@@ -106,11 +118,13 @@ public class DBManager extends SQLiteOpenHelper{
         boolean bruxelles = insertData(context.getString(R.string.bruxelles),
                 context.getString(R.string.bruxelles_address),
                 context.getString(R.string.bruxelles_description),
-                context.getString(R.string.bruxelles_side_of_city),
                 context.getString(R.string.bruxelles_latitude),
                 context.getString(R.string.bruxelles_longitude),
                 context.getString(R.string.bruxelles_pub_type),
+                context.getString(R.string.bruxelles_side_of_city),
                 context.getString(R.string.bruxelles_live_music),
+                context.getString(R.string.bruxelles_live_sports),
+                context.getString(R.string.bruxelles_cocktails),
                 context.getString(R.string.bruxelles_craft_beer),
                 context.getString(R.string.bruxelles_late_pub));
 
@@ -120,11 +134,13 @@ public class DBManager extends SQLiteOpenHelper{
         boolean buskers = insertData(context.getString(R.string.buskers),
                 context.getString(R.string.buskers_address),
                 context.getString(R.string.buskers_description),
-                context.getString(R.string.buskers_side_of_city),
                 context.getString(R.string.buskers_latitude),
                 context.getString(R.string.buskers_longitude),
                 context.getString(R.string.buskers_pub_type),
+                context.getString(R.string.buskers_side_of_city),
                 context.getString(R.string.buskers_live_music),
+                context.getString(R.string.buskers_live_sports),
+                context.getString(R.string.buskers_cocktails),
                 context.getString(R.string.buskers_craft_beer),
                 context.getString(R.string.buskers_late_pub));
 
@@ -230,11 +246,13 @@ public class DBManager extends SQLiteOpenHelper{
         boolean p_macs = insertData(context.getString(R.string.p_macs),
                                     context.getString(R.string.p_macs_address),
                                     context.getString(R.string.p_macs_description),
-                                    context.getString(R.string.p_macs_side_of_city),
                                     context.getString(R.string.p_macs_latitude),
                                     context.getString(R.string.p_macs_longitude),
                                     context.getString(R.string.p_macs_pub_type),
+                                    context.getString(R.string.p_macs_side_of_city),
                                     context.getString(R.string.p_macs_live_music),
+                                    context.getString(R.string.p_macs_live_sports),
+                                    context.getString(R.string.p_macs_cocktails),
                                     context.getString(R.string.p_macs_craft_beer),
                                     context.getString(R.string.p_macs_late_pub));
 
@@ -478,24 +496,26 @@ public class DBManager extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_PUBS_TABLE = "CREATE TABLE " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, ADDRESS TEXT, DESCRIPTION TEXT, SIDE_OF_CITY TEXT, LATITUDE TEXT, LONGITUDE TEXT, PUB_TYPE TEXT, LIVE_MUSIC TEXT, CRAFT_BEER TEXT, LATE_PUB TEXT)";
+        String CREATE_PUBS_TABLE = "CREATE TABLE " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, ADDRESS TEXT, DESCRIPTION TEXT, LATITUDE TEXT, LONGITUDE TEXT, PUB_TYPE TEXT, SIDE_OF_CITY TEXT, LIVE_MUSIC TEXT, LIVE_SPORTS TEXT, COCKTAILS_TEXT, CRAFT_BEER TEXT, LATE_PUB TEXT)";
         db.execSQL(CREATE_PUBS_TABLE);
     }
 
-    public boolean insertData(String name, String address, String description, String side_of_city, String latitude, String longitude, String pub_type, String live_music, String craft_beer, String late_pub){
+    public boolean insertData(String name, String address, String description, String latitude, String longitude, String pub_type, String side_of_city, String live_music, String live_sports, String cocktails, String craft_beer, String late_pub){
 
         ContentValues contentValues = new ContentValues();
 
         contentValues.put(COL_2, name);
         contentValues.put(COL_3, address);
         contentValues.put(COL_4, description);
-        contentValues.put(COL_5, side_of_city);
-        contentValues.put(COL_6, latitude);
-        contentValues.put(COL_7, longitude);
-        contentValues.put(COL_8, pub_type);
+        contentValues.put(COL_5, latitude);
+        contentValues.put(COL_6, longitude);
+        contentValues.put(COL_7, pub_type);
+        contentValues.put(COL_8, side_of_city);
         contentValues.put(COL_9, live_music);
-        contentValues.put(COL_10, craft_beer);
-        contentValues.put(COL_11, late_pub);
+        contentValues.put(COL_10, live_sports);
+        contentValues.put(COL_11, cocktails);
+        contentValues.put(COL_12, craft_beer);
+        contentValues.put(COL_13, late_pub);
 
         long result = db.insert(TABLE_NAME, null, contentValues);
 
