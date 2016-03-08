@@ -219,23 +219,68 @@
 
     <string name="café_en_seine">Café en Seine</string>
     <string name="café_en_seine_address">40 Dawson Street, Dublin 2</string>
-    <string name="café_en_seine_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk around Trinity College. Take the first right turn onto Dawson Street. Walk up this street, past Duke Street and then past Anne Street South. You will see Café en Seine on the right.</string>
+    <string name="café_en_seine_description">Elegant art nouveau bar spread over 3 floors with doric columns and glass panelled ceilings</string>
+    <string name="café_en_seine_latitude">53.340627</string>
+    <string name="café_en_seine_longitude">-6.258608</string>
+    <string name="café_en_seine_pub_type">Modern</string>
+    <string name="café_en_seine_side_of_city">Southside</string>
+    <string name="café_en_seine_live_music">No</string>
+    <string name="café_en_seine_live_sports">No</string>
+    <string name="café_en_seine_cocktails">Yes</string>
+    <string name="café_en_seine_craft_beer">No</string>
+    <string name="café_en_seine_late_pub">Yes</string>
 
     <string name="cassidys">Cassidys</string>
     <string name="cassidys_address">27 Westmoreland St, Dublin 2</string>
-    <string name="cassidys_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight onto Westmoreland Street. You will see Cassidys a few feet up this street on the left.</string>
+    <string name="cassidys_description">No description available</string>
+    <string name="cassidys_latitude">53.346289</string>
+    <string name="cassidys_longitude">-6.258785</string>
+    <string name="cassidys_pub_type">Modern</string>
+    <string name="cassidys_side_of_city">Southside</string>
+    <string name="cassidys_live_music">Yes</string>
+    <string name="cassidys_live_sports">No</string>
+    <string name="cassidys_cocktails">Yes</string>
+    <string name="cassidys_craft_beer">Yes</string>
+    <string name="cassidys_late_pub">No</string>
 
     <string name="devitts">Devitts</string>
     <string name="devitts_address">78 Lower Camden Street, Dublin 2</string>
-    <string name="devitts_directions">From College Green (Trinity College), turn to face Dame Street. Walk straight up Dame Street and take the third left turn onto South Great George\'s Street. Walk straight up this street and continue onto Aungier Street. Walk straight up this street and continue onto Wexford Street. Continue straight onto Camden Street and you will see Devitt\'s on the right.</string>
+    <string name="devitts_description">No description available</string>
+    <string name="devitts_latitude">53.335525</string>
+    <string name="devitts_longitude">-6.265668</string>
+    <string name="devitts_pub_type">Traditional Irish</string>
+    <string name="devitts_side_of_city">Southside</string>
+    <string name="devitts_live_music">Yes</string>
+    <string name="devitts_live_sports">No</string>
+    <string name="devitts_cocktails">No</string>
+    <string name="devitts_craft_beer">No</string>
+    <string name="devitts_late_pub">No</string>
 
     <string name="doheny_and_nesbitts">Doheny And Nesbitts</string>
     <string name="doheny_and_nesbitts_address">5 Baggot Street Lower, Dublin 2</string>
-    <string name="doheny_and_nesbitts_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk around Trinity College. Take the first right turn and walk all the way up Dawson Street. Then, turn left at St. Stephen\'s Green and continue on to Merrion Row. Walk up this street and continue onto Baggot Street Lower. You will see Doheny And Nesbitt\'s on the left.</string>
+    <string name="doheny_and_nesbitts_description">This classic pub houses 2 fine old snugs (small rooms for women in days of old) and an Irish menu</string>
+    <string name="doheny_and_nesbitts_latitude">53.338087</string>
+    <string name="doheny_and_nesbitts_longitude">-6.253142</string>
+    <string name="doheny_and_nesbitts_pub_type">Traditional Irish</string>
+    <string name="doheny_and_nesbitts_side_of_city">Southside</string>
+    <string name="doheny_and_nesbitts_live_music">No</string>
+    <string name="doheny_and_nesbitts_live_sports">Yes</string>
+    <string name="doheny_and_nesbitts_cocktails">No</string>
+    <string name="doheny_and_nesbitts_craft_beer">No</string>
+    <string name="doheny_and_nesbitts_late_pub">Yes</string>
 
     <string name="doyles">Doyles</string>
     <string name="doyles_address">9 College St, Dublin 2</string>
-    <string name="doyles_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight onto D\'Olier Street. Walk up to the top of this street and you will see Doyle\'s on the right.</string>
+    <string name="doyles_description">This 19th century bar with bare brick walls and stripped wood floors serves pub grub classics</string>
+    <string name="doyles_latitude">53.345786</string>
+    <string name="doyles_longitude">-6.257576</string>
+    <string name="doyles_pub_type">Modern</string>
+    <string name="doyles_side_of_city">Southside</string>
+    <string name="doyles_live_music">No</string>
+    <string name="doyles_live_sports">No</string>
+    <string name="doyles_cocktails">Yes</string>
+    <string name="doyles_craft_beer">Yes</string>
+    <string name="doyles_late_pub">Yes</string>
 
     <string name="fibber_magees">Fibber Magees</string>
     <string name="fibber_magees_address">80 Parnel Street, Dublin 1</string>

@@ -119,58 +119,118 @@ public class DBManager extends SQLiteOpenHelper{
         if(break_for_the_border){ j++; }
 
         boolean bruxelles = insertData(context.getString(R.string.bruxelles),
-                context.getString(R.string.bruxelles_address),
-                context.getString(R.string.bruxelles_description),
-                context.getString(R.string.bruxelles_latitude),
-                context.getString(R.string.bruxelles_longitude),
-                context.getString(R.string.bruxelles_pub_type),
-                context.getString(R.string.bruxelles_side_of_city),
-                context.getString(R.string.bruxelles_live_music),
-                context.getString(R.string.bruxelles_live_sports),
-                context.getString(R.string.bruxelles_cocktails),
-                context.getString(R.string.bruxelles_craft_beer),
-                context.getString(R.string.bruxelles_late_pub));
+                                        context.getString(R.string.bruxelles_address),
+                                        context.getString(R.string.bruxelles_description),
+                                        context.getString(R.string.bruxelles_latitude),
+                                        context.getString(R.string.bruxelles_longitude),
+                                        context.getString(R.string.bruxelles_pub_type),
+                                        context.getString(R.string.bruxelles_side_of_city),
+                                        context.getString(R.string.bruxelles_live_music),
+                                        context.getString(R.string.bruxelles_live_sports),
+                                        context.getString(R.string.bruxelles_cocktails),
+                                        context.getString(R.string.bruxelles_craft_beer),
+                                        context.getString(R.string.bruxelles_late_pub));
 
         i++;
         if(bruxelles){ j++; }
 
         boolean buskers = insertData(context.getString(R.string.buskers),
-                context.getString(R.string.buskers_address),
-                context.getString(R.string.buskers_description),
-                context.getString(R.string.buskers_latitude),
-                context.getString(R.string.buskers_longitude),
-                context.getString(R.string.buskers_pub_type),
-                context.getString(R.string.buskers_side_of_city),
-                context.getString(R.string.buskers_live_music),
-                context.getString(R.string.buskers_live_sports),
-                context.getString(R.string.buskers_cocktails),
-                context.getString(R.string.buskers_craft_beer),
-                context.getString(R.string.buskers_late_pub));
+                                        context.getString(R.string.buskers_address),
+                                        context.getString(R.string.buskers_description),
+                                        context.getString(R.string.buskers_latitude),
+                                        context.getString(R.string.buskers_longitude),
+                                        context.getString(R.string.buskers_pub_type),
+                                        context.getString(R.string.buskers_side_of_city),
+                                        context.getString(R.string.buskers_live_music),
+                                        context.getString(R.string.buskers_live_sports),
+                                        context.getString(R.string.buskers_cocktails),
+                                        context.getString(R.string.buskers_craft_beer),
+                                        context.getString(R.string.buskers_late_pub));
 
         i++;
         if(buskers){ j++; }
 
-        /*insertData(context.getString(R.string.café_en_seine),
-                context.getString(R.string.café_en_seine_address),
-                context.getString(R.string.café_en_seine_directions));
+        boolean cafe_en_seine = insertData(context.getString(R.string.café_en_seine),
+                                            context.getString(R.string.café_en_seine_address),
+                                            context.getString(R.string.café_en_seine_description),
+                                            context.getString(R.string.café_en_seine_latitude),
+                                            context.getString(R.string.café_en_seine_longitude),
+                                            context.getString(R.string.café_en_seine_pub_type),
+                                            context.getString(R.string.café_en_seine_side_of_city),
+                                            context.getString(R.string.café_en_seine_live_music),
+                                            context.getString(R.string.café_en_seine_live_sports),
+                                            context.getString(R.string.café_en_seine_cocktails),
+                                            context.getString(R.string.café_en_seine_craft_beer),
+                                            context.getString(R.string.café_en_seine_late_pub));
 
-        insertData(context.getString(R.string.cassidys),
-                context.getString(R.string.cassidys_address),
-                context.getString(R.string.cassidys_directions));
+        i++;
+        if(cafe_en_seine){ j++; }
 
-        insertData(context.getString(R.string.devitts),
-                context.getString(R.string.devitts_address),
-                context.getString(R.string.devitts_directions));
+        boolean cassidys = insertData(context.getString(R.string.cassidys),
+                                        context.getString(R.string.cassidys_address),
+                                        context.getString(R.string.cassidys_description),
+                                        context.getString(R.string.cassidys_latitude),
+                                        context.getString(R.string.cassidys_longitude),
+                                        context.getString(R.string.cassidys_pub_type),
+                                        context.getString(R.string.cassidys_side_of_city),
+                                        context.getString(R.string.cassidys_live_music),
+                                        context.getString(R.string.cassidys_live_sports),
+                                        context.getString(R.string.cassidys_cocktails),
+                                        context.getString(R.string.cassidys_craft_beer),
+                                        context.getString(R.string.cassidys_late_pub));
 
-        insertData(context.getString(R.string.doheny_and_nesbitts),
-                context.getString(R.string.doheny_and_nesbitts_address),
-                context.getString(R.string.doheny_and_nesbitts_directions));
+        i++;
+        if(cassidys){ j++; }
 
-        insertData(context.getString(R.string.doyles),
-                context.getString(R.string.doyles_address),
-                context.getString(R.string.doyles_directions));
+        boolean devitts = insertData(context.getString(R.string.devitts),
+                                        context.getString(R.string.devitts_address),
+                                        context.getString(R.string.devitts_description),
+                                        context.getString(R.string.devitts_latitude),
+                                        context.getString(R.string.devitts_longitude),
+                                        context.getString(R.string.devitts_pub_type),
+                                        context.getString(R.string.devitts_side_of_city),
+                                        context.getString(R.string.devitts_live_music),
+                                        context.getString(R.string.devitts_live_sports),
+                                        context.getString(R.string.devitts_cocktails),
+                                        context.getString(R.string.devitts_craft_beer),
+                                        context.getString(R.string.devitts_late_pub));
 
-        insertData(context.getString(R.string.fibber_magees),
+        i++;
+        if(devitts){ j++; }
+
+        boolean doheny_and_nesbitts = insertData(context.getString(R.string.doheny_and_nesbitts),
+                                                    context.getString(R.string.doheny_and_nesbitts_address),
+                                                    context.getString(R.string.doheny_and_nesbitts_description),
+                                                    context.getString(R.string.doheny_and_nesbitts_latitude),
+                                                    context.getString(R.string.doheny_and_nesbitts_longitude),
+                                                    context.getString(R.string.doheny_and_nesbitts_pub_type),
+                                                    context.getString(R.string.doheny_and_nesbitts_side_of_city),
+                                                    context.getString(R.string.doheny_and_nesbitts_live_music),
+                                                    context.getString(R.string.doheny_and_nesbitts_live_sports),
+                                                    context.getString(R.string.doheny_and_nesbitts_cocktails),
+                                                    context.getString(R.string.doheny_and_nesbitts_craft_beer),
+                                                    context.getString(R.string.doheny_and_nesbitts_late_pub));
+
+        i++;
+        if(doheny_and_nesbitts){ j++; }
+
+        boolean doyles = insertData(context.getString(R.string.doyles),
+                                    context.getString(R.string.doyles_address),
+                                    context.getString(R.string.doyles_description),
+                                    context.getString(R.string.doyles_latitude),
+                                    context.getString(R.string.doyles_longitude),
+                                    context.getString(R.string.doyles_pub_type),
+                                    context.getString(R.string.doyles_side_of_city),
+                                    context.getString(R.string.doyles_live_music),
+                                    context.getString(R.string.doyles_live_sports),
+                                    context.getString(R.string.doyles_cocktails),
+                                    context.getString(R.string.doyles_craft_beer),
+                                    context.getString(R.string.doyles_late_pub));
+
+        i++;
+        if(doyles){ j++; }
+
+        /*insertData(context.getString(R.string.fibber_magees),
                 context.getString(R.string.fibber_magees_address),
                 context.getString(R.string.fibber_magees_directions));
 
