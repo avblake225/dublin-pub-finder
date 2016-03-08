@@ -43,13 +43,13 @@ public class DBManager extends SQLiteOpenHelper{
                                                 context.getString(R.string.against_the_grain_description),
                                                 context.getString(R.string.against_the_grain_latitude),
                                                 context.getString(R.string.against_the_grain_longitude),
-                                                context.getString(R.string.against_the_grain_pub_type),
-                                                context.getString(R.string.against_the_grain_side_of_city),
-                                                context.getString(R.string.against_the_grain_live_music),
-                                                context.getString(R.string.against_the_grain_live_sports),
-                                                context.getString(R.string.against_the_grain_cocktails),
-                                                context.getString(R.string.against_the_grain_craft_beer),
-                                                context.getString(R.string.against_the_grain_late_pub));
+                                                context.getString(R.string.modern),
+                                                context.getString(R.string.southside),
+                                                context.getString(R.string.no),
+                                                context.getString(R.string.no),
+                                                context.getString(R.string.no),
+                                                context.getString(R.string.yes),
+                                                context.getString(R.string.no));
 
         i++;
         if(against_the_grain){ j++; }
@@ -59,13 +59,13 @@ public class DBManager extends SQLiteOpenHelper{
                                             context.getString(R.string.alfie_byrnes_description),
                                             context.getString(R.string.alfie_byrnes_latitude),
                                             context.getString(R.string.alfie_byrnes_longitude),
-                                            context.getString(R.string.alfie_byrnes_pub_type),
-                                            context.getString(R.string.alfie_byrnes_side_of_city),
-                                            context.getString(R.string.alfie_byrnes_live_music),
-                                            context.getString(R.string.alfie_byrnes_live_sports),
-                                            context.getString(R.string.alfie_byrnes_cocktails),
-                                            context.getString(R.string.alfie_byrnes_craft_beer),
-                                            context.getString(R.string.alfie_byrnes_late_pub));
+                                            context.getString(R.string.modern),
+                                            context.getString(R.string.southside),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.yes),
+                                            context.getString(R.string.no));
 
         i++;
         if(alfie_byrnes){ j++; }
@@ -75,13 +75,13 @@ public class DBManager extends SQLiteOpenHelper{
                                     context.getString(R.string.anseo_description),
                                     context.getString(R.string.anseo_latitude),
                                     context.getString(R.string.anseo_longitude),
-                                    context.getString(R.string.anseo_pub_type),
-                                    context.getString(R.string.anseo_side_of_city),
-                                    context.getString(R.string.anseo_live_music),
-                                    context.getString(R.string.anseo_live_sports),
-                                    context.getString(R.string.anseo_cocktails),
-                                    context.getString(R.string.anseo_craft_beer),
-                                    context.getString(R.string.anseo_late_pub));
+                                    context.getString(R.string.modern),
+                                    context.getString(R.string.southside),
+                                    context.getString(R.string.yes),
+                                    context.getString(R.string.no),
+                                    context.getString(R.string.yes),
+                                    context.getString(R.string.yes),
+                                    context.getString(R.string.no));
 
         i++;
         if(anseo){ j++; }
@@ -91,13 +91,13 @@ public class DBManager extends SQLiteOpenHelper{
                                         context.getString(R.string.bad_bobs_description),
                                         context.getString(R.string.bad_bobs_latitude),
                                         context.getString(R.string.bad_bobs_longitude),
-                                        context.getString(R.string.bad_bobs_pub_type),
-                                        context.getString(R.string.bad_bobs_side_of_city),
-                                        context.getString(R.string.bad_bobs_live_music),
-                                        context.getString(R.string.bad_bobs_live_sports),
-                                        context.getString(R.string.bad_bobs_cocktails),
-                                        context.getString(R.string.bad_bobs_craft_beer),
-                                        context.getString(R.string.bad_bobs_late_pub));
+                                        context.getString(R.string.modern),
+                                        context.getString(R.string.southside),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.yes));
 
         i++;
         if(bad_bobs){ j++; }
@@ -107,13 +107,13 @@ public class DBManager extends SQLiteOpenHelper{
                                                     context.getString(R.string.break_for_the_border_description),
                                                     context.getString(R.string.break_for_the_border_latitude),
                                                     context.getString(R.string.break_for_the_border_longitude),
-                                                    context.getString(R.string.break_for_the_border_pub_type),
-                                                    context.getString(R.string.break_for_the_border_side_of_city),
-                                                    context.getString(R.string.break_for_the_border_live_music),
-                                                    context.getString(R.string.break_for_the_border_live_sports),
-                                                    context.getString(R.string.break_for_the_border_cocktails),
-                                                    context.getString(R.string.break_for_the_border_craft_beer),
-                                                    context.getString(R.string.break_for_the_border_late_pub));
+                                                    context.getString(R.string.modern),
+                                                    context.getString(R.string.southside),
+                                                    context.getString(R.string.no),
+                                                    context.getString(R.string.no),
+                                                    context.getString(R.string.yes),
+                                                    context.getString(R.string.no),
+                                                    context.getString(R.string.yes));
 
         i++;
         if(break_for_the_border){ j++; }
@@ -123,13 +123,13 @@ public class DBManager extends SQLiteOpenHelper{
                                         context.getString(R.string.bruxelles_description),
                                         context.getString(R.string.bruxelles_latitude),
                                         context.getString(R.string.bruxelles_longitude),
-                                        context.getString(R.string.bruxelles_pub_type),
-                                        context.getString(R.string.bruxelles_side_of_city),
-                                        context.getString(R.string.bruxelles_live_music),
-                                        context.getString(R.string.bruxelles_live_sports),
-                                        context.getString(R.string.bruxelles_cocktails),
-                                        context.getString(R.string.bruxelles_craft_beer),
-                                        context.getString(R.string.bruxelles_late_pub));
+                                        context.getString(R.string.traditional_irish),
+                                        context.getString(R.string.southside),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.yes));
 
         i++;
         if(bruxelles){ j++; }
@@ -139,13 +139,13 @@ public class DBManager extends SQLiteOpenHelper{
                                         context.getString(R.string.buskers_description),
                                         context.getString(R.string.buskers_latitude),
                                         context.getString(R.string.buskers_longitude),
-                                        context.getString(R.string.buskers_pub_type),
-                                        context.getString(R.string.buskers_side_of_city),
-                                        context.getString(R.string.buskers_live_music),
-                                        context.getString(R.string.buskers_live_sports),
-                                        context.getString(R.string.buskers_cocktails),
-                                        context.getString(R.string.buskers_craft_beer),
-                                        context.getString(R.string.buskers_late_pub));
+                                        context.getString(R.string.modern),
+                                        context.getString(R.string.southside),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.yes));
 
         i++;
         if(buskers){ j++; }
@@ -155,13 +155,13 @@ public class DBManager extends SQLiteOpenHelper{
                                             context.getString(R.string.café_en_seine_description),
                                             context.getString(R.string.café_en_seine_latitude),
                                             context.getString(R.string.café_en_seine_longitude),
-                                            context.getString(R.string.café_en_seine_pub_type),
-                                            context.getString(R.string.café_en_seine_side_of_city),
-                                            context.getString(R.string.café_en_seine_live_music),
-                                            context.getString(R.string.café_en_seine_live_sports),
-                                            context.getString(R.string.café_en_seine_cocktails),
-                                            context.getString(R.string.café_en_seine_craft_beer),
-                                            context.getString(R.string.café_en_seine_late_pub));
+                                            context.getString(R.string.modern),
+                                            context.getString(R.string.southside),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.yes),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.yes));
 
         i++;
         if(cafe_en_seine){ j++; }
@@ -171,13 +171,13 @@ public class DBManager extends SQLiteOpenHelper{
                                         context.getString(R.string.cassidys_description),
                                         context.getString(R.string.cassidys_latitude),
                                         context.getString(R.string.cassidys_longitude),
-                                        context.getString(R.string.cassidys_pub_type),
-                                        context.getString(R.string.cassidys_side_of_city),
-                                        context.getString(R.string.cassidys_live_music),
-                                        context.getString(R.string.cassidys_live_sports),
-                                        context.getString(R.string.cassidys_cocktails),
-                                        context.getString(R.string.cassidys_craft_beer),
-                                        context.getString(R.string.cassidys_late_pub));
+                                        context.getString(R.string.modern),
+                                        context.getString(R.string.southside),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.no));
 
         i++;
         if(cassidys){ j++; }
@@ -187,13 +187,13 @@ public class DBManager extends SQLiteOpenHelper{
                                         context.getString(R.string.devitts_description),
                                         context.getString(R.string.devitts_latitude),
                                         context.getString(R.string.devitts_longitude),
-                                        context.getString(R.string.devitts_pub_type),
-                                        context.getString(R.string.devitts_side_of_city),
-                                        context.getString(R.string.devitts_live_music),
-                                        context.getString(R.string.devitts_live_sports),
-                                        context.getString(R.string.devitts_cocktails),
-                                        context.getString(R.string.devitts_craft_beer),
-                                        context.getString(R.string.devitts_late_pub));
+                                        context.getString(R.string.traditional_irish),
+                                        context.getString(R.string.southside),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.no));
 
         i++;
         if(devitts){ j++; }
@@ -203,13 +203,13 @@ public class DBManager extends SQLiteOpenHelper{
                                                     context.getString(R.string.doheny_and_nesbitts_description),
                                                     context.getString(R.string.doheny_and_nesbitts_latitude),
                                                     context.getString(R.string.doheny_and_nesbitts_longitude),
-                                                    context.getString(R.string.doheny_and_nesbitts_pub_type),
-                                                    context.getString(R.string.doheny_and_nesbitts_side_of_city),
-                                                    context.getString(R.string.doheny_and_nesbitts_live_music),
-                                                    context.getString(R.string.doheny_and_nesbitts_live_sports),
-                                                    context.getString(R.string.doheny_and_nesbitts_cocktails),
-                                                    context.getString(R.string.doheny_and_nesbitts_craft_beer),
-                                                    context.getString(R.string.doheny_and_nesbitts_late_pub));
+                                                    context.getString(R.string.traditional_irish),
+                                                    context.getString(R.string.southside),
+                                                    context.getString(R.string.no),
+                                                    context.getString(R.string.yes),
+                                                    context.getString(R.string.no),
+                                                    context.getString(R.string.no),
+                                                    context.getString(R.string.yes));
 
         i++;
         if(doheny_and_nesbitts){ j++; }
@@ -219,38 +219,98 @@ public class DBManager extends SQLiteOpenHelper{
                                     context.getString(R.string.doyles_description),
                                     context.getString(R.string.doyles_latitude),
                                     context.getString(R.string.doyles_longitude),
-                                    context.getString(R.string.doyles_pub_type),
-                                    context.getString(R.string.doyles_side_of_city),
-                                    context.getString(R.string.doyles_live_music),
-                                    context.getString(R.string.doyles_live_sports),
-                                    context.getString(R.string.doyles_cocktails),
-                                    context.getString(R.string.doyles_craft_beer),
-                                    context.getString(R.string.doyles_late_pub));
+                                    context.getString(R.string.modern),
+                                    context.getString(R.string.southside),
+                                    context.getString(R.string.no),
+                                    context.getString(R.string.no),
+                                    context.getString(R.string.yes),
+                                    context.getString(R.string.yes),
+                                    context.getString(R.string.yes));
 
         i++;
         if(doyles){ j++; }
 
-        /*insertData(context.getString(R.string.fibber_magees),
-                context.getString(R.string.fibber_magees_address),
-                context.getString(R.string.fibber_magees_directions));
+        boolean fibber_magees = insertData(context.getString(R.string.fibber_magees),
+                                            context.getString(R.string.fibber_magees_address),
+                                            context.getString(R.string.fibber_magees_description),
+                                            context.getString(R.string.fibber_magees_latitude),
+                                            context.getString(R.string.fibber_magees_longitude),
+                                            context.getString(R.string.modern),
+                                            context.getString(R.string.northside),
+                                            context.getString(R.string.yes),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.yes));
 
-        insertData(context.getString(R.string.fitzgeralds),
-                context.getString(R.string.fitzgeralds_address),
-                context.getString(R.string.fitzgeralds_directions));
+        i++;
+        if(fibber_magees){ j++; }
 
-        insertData(context.getString(R.string.fitzsimons),
+        boolean fitzgeralds = insertData(context.getString(R.string.fitzgeralds),
+                                            context.getString(R.string.fitzgeralds_address),
+                                            context.getString(R.string.fitzgeralds_description),
+                                            context.getString(R.string.fitzgeralds_latitude),
+                                            context.getString(R.string.fitzgeralds_longitude),
+                                            context.getString(R.string.traditional_irish),
+                                            context.getString(R.string.southside),
+                                            context.getString(R.string.yes),
+                                            context.getString(R.string.yes),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.yes));
+
+        i++;
+        if(fitzgeralds){ j++; }
+
+        boolean fitzsimons = insertData(context.getString(R.string.fitzsimons),
                 context.getString(R.string.fitzsimons_address),
-                context.getString(R.string.fitzsimons_directions));
+                context.getString(R.string.fitzsimons_description),
+                context.getString(R.string.fitzsimons_latitude),
+                context.getString(R.string.fitzsimons_longitude),
+                context.getString(R.string.modern),
+                context.getString(R.string.southside),
+                context.getString(R.string.yes),
+                context.getString(R.string.yes),
+                context.getString(R.string.yes),
+                context.getString(R.string.no),
+                context.getString(R.string.yes));
 
-        insertData(context.getString(R.string.flannerys),
-                context.getString(R.string.flannerys_address),
-                context.getString(R.string.flannerys_directions));
+        i++;
+        if(fitzsimons){ j++; }
 
-        insertData(context.getString(R.string.four_dame_lane),
-                context.getString(R.string.four_dame_lane_address),
-                context.getString(R.string.four_dame_lane_directions));
+        boolean flannerys = insertData(context.getString(R.string.flannerys),
+                                        context.getString(R.string.flannerys_address),
+                                        context.getString(R.string.flannerys_description),
+                                        context.getString(R.string.flannerys_latitude),
+                                        context.getString(R.string.flannerys_longitude),
+                                        context.getString(R.string.traditional_irish),
+                                        context.getString(R.string.southside),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.yes));
 
-        insertData(context.getString(R.string.grogans),
+        i++;
+        if(flannerys){ j++; }
+
+        boolean four_dame_lane = insertData(context.getString(R.string.four_dame_lane),
+                                            context.getString(R.string.four_dame_lane_address),
+                                            context.getString(R.string.four_dame_lane_description),
+                                            context.getString(R.string.four_dame_lane_latitude),
+                                            context.getString(R.string.four_dame_lane_longitude),
+                                            context.getString(R.string.modern),
+                                            context.getString(R.string.southside),
+                                            context.getString(R.string.yes),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.yes),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.yes));
+
+        i++;
+        if(four_dame_lane){ j++; }
+
+        /*insertData(context.getString(R.string.grogans),
                 context.getString(R.string.grogans_address),
                 context.getString(R.string.grogans_directions));
 
@@ -311,13 +371,13 @@ public class DBManager extends SQLiteOpenHelper{
                                     context.getString(R.string.p_macs_description),
                                     context.getString(R.string.p_macs_latitude),
                                     context.getString(R.string.p_macs_longitude),
-                                    context.getString(R.string.p_macs_pub_type),
-                                    context.getString(R.string.p_macs_side_of_city),
-                                    context.getString(R.string.p_macs_live_music),
-                                    context.getString(R.string.p_macs_live_sports),
-                                    context.getString(R.string.p_macs_cocktails),
-                                    context.getString(R.string.p_macs_craft_beer),
-                                    context.getString(R.string.p_macs_late_pub));
+                                    context.getString(R.string.modern),
+                                    context.getString(R.string.southside),
+                                    context.getString(R.string.no),
+                                    context.getString(R.string.no),
+                                    context.getString(R.string.no),
+                                    context.getString(R.string.yes),
+                                    context.getString(R.string.no));
 
         i++;
         if(p_macs){ j++; }

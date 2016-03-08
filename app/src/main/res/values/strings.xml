@@ -126,181 +126,114 @@
     <string name="on_map">On Map</string>
     <string name="you_are_here">You are here</string>
 
+    <string name="traditional_irish">Traditional Irish</string>
+    <string name="modern">Modern</string>
+    <string name="northside">Northside</string>
+    <string name="southside">Southside</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
     <string name="against_the_grain">Against The Grain</string>
     <string name="against_the_grain_address">11 Wexford Street, Dublin 2</string>
     <string name="against_the_grain_description">Modern bar with a huge array of local and international craft beers on tap and big-screen TV sport</string>
     <string name="against_the_grain_latitude">53.337230</string>
     <string name="against_the_grain_longitude">-6.265333</string>
-    <string name="against_the_grain_pub_type">Modern</string>
-    <string name="against_the_grain_side_of_city">Southside</string>
-    <string name="against_the_grain_live_music">No</string>
-    <string name="against_the_grain_live_sports">No</string>
-    <string name="against_the_grain_cocktails">No</string>
-    <string name="against_the_grain_craft_beer">Yes</string>
-    <string name="against_the_grain_late_pub">No</string>
 
     <string name="alfie_byrnes">Alfie Byrnes</string>
     <string name="alfie_byrnes_address">Earlsfort Terrace, Dublin 2</string>
     <string name="alfie_byrnes_description">No description available</string>
     <string name="alfie_byrnes_latitude">53.334672</string>
     <string name="alfie_byrnes_longitude">-6.257553</string>
-    <string name="alfie_byrnes_pub_type">Modern</string>
-    <string name="alfie_byrnes_side_of_city">Southside</string>
-    <string name="alfie_byrnes_live_music">No</string>
-    <string name="alfie_byrnes_live_sports">No</string>
-    <string name="alfie_byrnes_cocktails">No</string>
-    <string name="alfie_byrnes_craft_beer">Yes</string>
-    <string name="alfie_byrnes_late_pub">No</string>
 
     <string name="anseo">Anseo</string>
     <string name="anseo_address">18 Camden Street Lower, Dublin 2</string>
     <string name="anseo_description">No description available</string>
     <string name="anseo_latitude">53.335215</string>
     <string name="anseo_longitude">-6.265121</string>
-    <string name="anseo_pub_type">Modern</string>
-    <string name="anseo_side_of_city">Southside</string>
-    <string name="anseo_live_music">Yes</string>
-    <string name="anseo_live_sports">No</string>
-    <string name="anseo_cocktails">Yes</string>
-    <string name="anseo_craft_beer">Yes</string>
-    <string name="anseo_late_pub">No</string>
 
     <string name="bad_bobs">Bad Bobs</string>
     <string name="bad_bobs_address">35 Essex Street East, Dublin 2</string>
     <string name="bad_bobs_description">Full of vintage ephemera, this large, lively bar, restaurant and nightclub includes a roof terrace</string>
     <string name="bad_bobs_latitude">53.344993</string>
     <string name="bad_bobs_longitude"> -6.266064</string>
-    <string name="bad_bobs_pub_type">Modern</string>
-    <string name="bad_bobs_side_of_city">Southside</string>
-    <string name="bad_bobs_live_music">Yes</string>
-    <string name="bad_bobs_live_sports">No</string>
-    <string name="bad_bobs_cocktails">Yes</string>
-    <string name="bad_bobs_craft_beer">No</string>
-    <string name="bad_bobs_late_pub">Yes</string>
 
     <string name="break_for_the_border">Break For The Border</string>
     <string name="break_for_the_border_address">Stephen Street Lower, Dublin 2</string>
     <string name="break_for_the_border_description">No description available</string>
     <string name="break_for_the_border_latitude">53.341016</string>
     <string name="break_for_the_border_longitude">-6.264030</string>
-    <string name="break_for_the_border_pub_type">Modern</string>
-    <string name="break_for_the_border_side_of_city">Southside</string>
-    <string name="break_for_the_border_live_music">No</string>
-    <string name="break_for_the_border_live_sports">No</string>
-    <string name="break_for_the_border_cocktails">Yes</string>
-    <string name="break_for_the_border_craft_beer">No</string>
-    <string name="break_for_the_border_late_pub">Yes</string>
 
     <string name="bruxelles">Bruxelles</string>
     <string name="bruxelles_address">7 Harry St, Dublin 2</string>
     <string name="bruxelles_description">Bustling joint with an Irish heavy rock heritage, with 3 bars and live music, plus TV sports</string>
     <string name="bruxelles_latitude">53.341283</string>
     <string name="bruxelles_longitude">-6.260940</string>
-    <string name="bruxelles_pub_type">Traditional Irish</string>
-    <string name="bruxelles_side_of_city">Southside</string>
-    <string name="bruxelles_live_music">Yes</string>
-    <string name="bruxelles_live_sports">Yes</string>
-    <string name="bruxelles_cocktails">Yes</string>
-    <string name="bruxelles_craft_beer">No</string>
-    <string name="bruxelles_late_pub">Yes</string>
 
     <string name="buskers">Buskers</string>
     <string name="buskers_address">13 Fleet St, Dublin 2</string>
     <string name="buskers_description">Vibrant modern bar with nightly live bands, TV sports, cocktail classes, stag and hen parties</string>
     <string name="buskers_latitude">53.345778</string>
     <string name="buskers_longitude">-6.260475</string>
-    <string name="buskers_pub_type">Modern</string>
-    <string name="buskers_side_of_city">Southside</string>
-    <string name="buskers_live_music">Yes</string>
-    <string name="buskers_live_sports">Yes</string>
-    <string name="buskers_cocktails">Yes</string>
-    <string name="buskers_craft_beer">No</string>
-    <string name="buskers_late_pub">Yes</string>
 
     <string name="café_en_seine">Café en Seine</string>
     <string name="café_en_seine_address">40 Dawson Street, Dublin 2</string>
     <string name="café_en_seine_description">Elegant art nouveau bar spread over 3 floors with doric columns and glass panelled ceilings</string>
     <string name="café_en_seine_latitude">53.340627</string>
     <string name="café_en_seine_longitude">-6.258608</string>
-    <string name="café_en_seine_pub_type">Modern</string>
-    <string name="café_en_seine_side_of_city">Southside</string>
-    <string name="café_en_seine_live_music">No</string>
-    <string name="café_en_seine_live_sports">No</string>
-    <string name="café_en_seine_cocktails">Yes</string>
-    <string name="café_en_seine_craft_beer">No</string>
-    <string name="café_en_seine_late_pub">Yes</string>
 
     <string name="cassidys">Cassidys</string>
     <string name="cassidys_address">27 Westmoreland St, Dublin 2</string>
     <string name="cassidys_description">No description available</string>
     <string name="cassidys_latitude">53.346289</string>
     <string name="cassidys_longitude">-6.258785</string>
-    <string name="cassidys_pub_type">Modern</string>
-    <string name="cassidys_side_of_city">Southside</string>
-    <string name="cassidys_live_music">Yes</string>
-    <string name="cassidys_live_sports">No</string>
-    <string name="cassidys_cocktails">Yes</string>
-    <string name="cassidys_craft_beer">Yes</string>
-    <string name="cassidys_late_pub">No</string>
 
     <string name="devitts">Devitts</string>
     <string name="devitts_address">78 Lower Camden Street, Dublin 2</string>
     <string name="devitts_description">No description available</string>
     <string name="devitts_latitude">53.335525</string>
     <string name="devitts_longitude">-6.265668</string>
-    <string name="devitts_pub_type">Traditional Irish</string>
-    <string name="devitts_side_of_city">Southside</string>
-    <string name="devitts_live_music">Yes</string>
-    <string name="devitts_live_sports">No</string>
-    <string name="devitts_cocktails">No</string>
-    <string name="devitts_craft_beer">No</string>
-    <string name="devitts_late_pub">No</string>
 
     <string name="doheny_and_nesbitts">Doheny And Nesbitts</string>
     <string name="doheny_and_nesbitts_address">5 Baggot Street Lower, Dublin 2</string>
     <string name="doheny_and_nesbitts_description">This classic pub houses 2 fine old snugs (small rooms for women in days of old) and an Irish menu</string>
     <string name="doheny_and_nesbitts_latitude">53.338087</string>
     <string name="doheny_and_nesbitts_longitude">-6.253142</string>
-    <string name="doheny_and_nesbitts_pub_type">Traditional Irish</string>
-    <string name="doheny_and_nesbitts_side_of_city">Southside</string>
-    <string name="doheny_and_nesbitts_live_music">No</string>
-    <string name="doheny_and_nesbitts_live_sports">Yes</string>
-    <string name="doheny_and_nesbitts_cocktails">No</string>
-    <string name="doheny_and_nesbitts_craft_beer">No</string>
-    <string name="doheny_and_nesbitts_late_pub">Yes</string>
 
     <string name="doyles">Doyles</string>
     <string name="doyles_address">9 College St, Dublin 2</string>
     <string name="doyles_description">This 19th century bar with bare brick walls and stripped wood floors serves pub grub classics</string>
     <string name="doyles_latitude">53.345786</string>
     <string name="doyles_longitude">-6.257576</string>
-    <string name="doyles_pub_type">Modern</string>
-    <string name="doyles_side_of_city">Southside</string>
-    <string name="doyles_live_music">No</string>
-    <string name="doyles_live_sports">No</string>
-    <string name="doyles_cocktails">Yes</string>
-    <string name="doyles_craft_beer">Yes</string>
-    <string name="doyles_late_pub">Yes</string>
 
     <string name="fibber_magees">Fibber Magees</string>
     <string name="fibber_magees_address">80 Parnel Street, Dublin 1</string>
-    <string name="fibber_magees_directions">From O\'Connell Street, walk past the Savoy Cinema and continue on down to Parnell Street and turn right. Fibber Magees is just a few feet away.</string>
+    <string name="fibber_magees_description">Classic pub with a predilection for hard guitar music with brick walls, pool tables and beer garden</string>
+    <string name="fibber_magees_latitude">53.352780</string>
+    <string name="fibber_magees_longitude">-6.260630</string>
 
     <string name="fitzgeralds">Fitzgeralds</string>
     <string name="fitzgeralds_address">22 Aston Quay, Dublin 2</string>
-    <string name="fitzgeralds_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk a few feet up this street and you will see Fitzgerald\'s on the left.</string>
+    <string name="fitzgeralds_description">No description available</string>
+    <string name="fitzgeralds_latitude">53.346674</string>
+    <string name="fitzgeralds_longitude">-6.259770</string>
 
     <string name="fitzsimons">Fitzsimons</string>
     <string name="fitzsimons_address">21 Wellington Quay, Temple Bar, Dublin 2</string>
-    <string name="fitzsimons_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Then, turn left and walk under Merchant Arch. You are now in Temple Bar, Fitzsimon\'s is down the cobblestones on the right.</string>
+    <string name="fitzsimons_description">No description available</string>
+    <string name="fitzsimons_latitude">53.345533</string>
+    <string name="fitzsimons_longitude">-6.265244</string>
 
     <string name="flannerys">Flannerys</string>
     <string name="flannerys_address">6 Camden Street Lower, Dublin 2</string>
-    <string name="flannerys_directions">From College Green (Trinity College), turn to face Dame Street. Walk straight up Dame Street and take the third left turn onto South Great George\'s Street. Walk straight up this street and continue onto Aungier Street. Walk straight up this street and continue onto Wexford Street. Continue straight onto Camden Street and you will see Flannery\'s on the left.</string>
+    <string name="flannerys_description">A quaint pub facade gives way to a cavernous and wood-filled interior at this late opening pub/bar</string>
+    <string name="flannerys_latitude">53.336021</string>
+    <string name="flannerys_longitude">-6.265153</string>
 
     <string name="four_dame_lane">4 Dame Lane</string>
     <string name="four_dame_lane_address">4 Dame Lane, Dublin 2</string>
-    <string name="four_dame_lane_directions">From College Green (Trinity College), turn to face Dame Street. Walk up Dame Street and take the second left turn onto Trinity Street. Take the first right turn onto Dame Lane. You will see 4 Dame Lane on the left.</string>
+    <string name="four_dame_lane_description">Brick walled bar with high beamed ceilings creating large music venue with memorabilia-covered bar</string>
+    <string name="four_dame_lane_latitude">53.343737</string>
+    <string name="four_dame_lane_longitude">-6.262970</string>
 
     <string name="grogans">Grogans</string>
     <string name="grogans_address">15 South William Street, Dublin 2</string>
@@ -363,13 +296,6 @@
     <string name="p_macs_description">No description available</string>
     <string name="p_macs_latitude">53.341122</string>
     <string name="p_macs_longitude">-6.264388</string>
-    <string name="p_macs_pub_type">Modern</string>
-    <string name="p_macs_side_of_city">Southside</string>
-    <string name="p_macs_live_music">No</string>
-    <string name="p_macs_live_sports">No</string>
-    <string name="p_macs_cocktails">No</string>
-    <string name="p_macs_craft_beer">Yes</string>
-    <string name="p_macs_late_pub">No</string>
 
     <string name="robert_reids">Robert Reids</string>
     <string name="robert_reids_address">19 Store St, Dublin 1</string>
