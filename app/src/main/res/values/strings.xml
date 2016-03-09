@@ -267,27 +267,33 @@
 
     <string name="jw_sweetmans">J.W. Sweetmans</string>
     <string name="jw_sweetmans_address">1 Burgh Quay, Dublin 2</string>
-    <string name="jw_sweetmans_directions">From O\'Connell Street, walk over O\'Connell bridge and turn left onto Burgh Quay. J.W. Sweetman is just a few steps away.</string>
-
-    <string name="kennedys">Kennedys</string>
-    <string name="kennedys_address">31 Westland Row, Dublin 2</string>
-    <string name="kennedys_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk around Trinity College. Continue straight onto Nassau Street, then onto Leinster Street South. At the end of this street, turn left onto Lincoln Place. You will see Kennedy\'s at the end of this street on the corner.</string>
+    <string name="jw_sweetmans_description">No description available</string>
+    <string name="jw_sweetmans_latitude">53.346959</string>
+    <string name="jw_sweetmans_longitude">-6.258260</string>
 
     <string name="lanigans">Lanigans</string>
     <string name="lanigans_address">10 Eden Quay, Dublin 1</string>
-    <string name="lanigans_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the last left turn onto Eden Quay. Walk a few feet up this street and you will see Lanigan\'s on the left.</string>
+    <string name="lanigans_description">No description available</string>
+    <string name="lanigans_latitude">53.348020</string>
+    <string name="lanigans_longitude">-6.257769</string>
 
     <string name="lagoona">Lagoona</string>
     <string name="lagoona_address">Mayor Street Lower, IFSC, Dublin 1</string>
-    <string name="lagoona_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk all the way up this street and around the bus garage (Busáras). Turn right and walk into the IFSC. Walk straight past the Harbourmaster and on to Mayor Street Lower. You will see Lagoona on the left.</string>
+    <string name="lagoona_description">No description available</string>
+    <string name="lagoona_latitude">53.349615</string>
+    <string name="lagoona_longitude">-6.243107</string>
 
     <string name="mulligans">Mulligans</string>
     <string name="mulligans_address">8 Poolbeg Street, Dublin 2</string>
-    <string name="mulligans_directions">From O\' Connell Street, walk over O\' Connell bridge and turn left onto Burgh Quay. Walk up this street and take the first right turn onto Hawkins Street. Then, take the first left turn onto Poolbeg Street. You will see Mulligan\'s a few feet up this street on the left.</string>
+    <string name="mulligans_description">No nonsense 18th century pub with a cast of regulars and lack of modern pomposity</string>
+    <string name="mulligans_latitude">53.346900</string>
+    <string name="mulligans_longitude">-6.255585</string>
 
     <string name="nearys">Nearys</string>
     <string name="nearys_address">1 Chatham Street, Dublin 2</string>
-    <string name="nearys_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the fourth right turn onto Chatham Street. You will see Neary\'s on the left.</string>
+    <string name="nearys_description">Adjacent to the back door of the Gaiety Theatre, this is a favourite of stage folk and theatergoers</string>
+    <string name="nearys_latitude">53.340764</string>
+    <string name="nearys_longitude">-6.261343</string>
 
     <string name="o_donoghues">O Donoghues</string>
     <string name="o_donoghues_address">15 Merrion Row, Dublin 2</string>
