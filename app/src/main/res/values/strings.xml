@@ -237,23 +237,33 @@
 
     <string name="grogans">Grogans</string>
     <string name="grogans_address">15 South William Street, Dublin 2</string>
-    <string name="grogans_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk a few feet up this street and you will see Grogan\'s on the left.</string>
+    <string name="grogans_description">Higgledy piggledy artworks by local artists dot the walls of this local pub which hosts book events</string>
+    <string name="grogans_latitude">53.342134</string>
+    <string name="grogans_longitude">-6.262606</string>
 
     <string name="hartigans">Hartigans</string>
     <string name="hartigans_address">100 Leeson Street Lower, Dublin 2</string>
-    <string name="hartigans_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. Then, turn left and walk around St. Stephen\'s Green. Turn left onto Leeson Street Lower and you will see Hartigan\'s a few feet up the street.</string>
+    <string name="hartigans_description">No description available</string>
+    <string name="hartigans_latitude">53.336003</string>
+    <string name="hartigans_longitude">-6.256775</string>
 
     <string name="hogans">Hogans</string>
     <string name="hogans_address">35 South Great Georges Street, Dublin 2</string>
-    <string name="hogans_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn and walk up South Great George\'s Street. Continue on up this street, past Exchequer Street, and you\'ll soon see Hogan\'s on the left.</string>
+    <string name="hogans_description">Spacious bar with upstairs room for typical selection of beer in Victorian surroundings</string>
+    <string name="hogans_latitude">53.341903</string>
+    <string name="hogans_longitude">-6.264638</string>
 
     <string name="jj_smyths">J.J. Smyths</string>
     <string name="jj_smyths_address">12 Aungier St, Dublin 2</string>
-    <string name="jj_smyths_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn and walk up South Great George\'s Street. Continue on up this street and onto Aungier Street. J.J. Smyth\'s is on the first left corner of this street.</string>
+    <string name="jj_smyths_description">Typical Irish ground floor pub with 1st floor venue for the leading lights in live jazz and blues</string>
+    <string name="jj_smyths_latitude">53.340560</string>
+    <string name="jj_smyths_longitude">-6.265465</string>
 
     <string name="john_kehoes">John Kehoes</string>
     <string name="john_kehoes_address">9 South Anne Street, Dublin 2</string>
-    <string name="john_kehoes_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the third right turn onto South Anne Street. You will see John Kehoe\'s on the left corner.</string>
+    <string name="john_kehoes_description">Classic pub scattered with original features such as mahogany doors and wood partitioned snug areas</string>
+    <string name="john_kehoes_latitude">53.341091</string>
+    <string name="john_kehoes_longitude">-6.259419</string>
 
     <string name="jw_sweetmans">J.W. Sweetmans</string>
     <string name="jw_sweetmans_address">1 Burgh Quay, Dublin 2</string>

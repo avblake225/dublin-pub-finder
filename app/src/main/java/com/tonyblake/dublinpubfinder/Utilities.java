@@ -33,6 +33,11 @@ public class Utilities {
         getPubRating.put(context.getString(R.string.fitzsimons), context.getResources().getDrawable(R.drawable.three_and_a_half_star_rating));
         getPubRating.put(context.getString(R.string.flannerys), context.getResources().getDrawable(R.drawable.four_star_rating));
         getPubRating.put(context.getString(R.string.four_dame_lane), context.getResources().getDrawable(R.drawable.three_and_a_half_star_rating));
+        getPubRating.put(context.getString(R.string.grogans), context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
+        getPubRating.put(context.getString(R.string.hartigans), context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
+        getPubRating.put(context.getString(R.string.hogans), context.getResources().getDrawable(R.drawable.four_star_rating));
+        getPubRating.put(context.getString(R.string.jj_smyths), context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
+        getPubRating.put(context.getString(R.string.john_kehoes), context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
         getPubRating.put(context.getString(R.string.p_macs),context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
     }
 

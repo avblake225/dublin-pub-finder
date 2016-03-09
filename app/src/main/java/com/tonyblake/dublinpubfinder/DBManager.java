@@ -310,27 +310,87 @@ public class DBManager extends SQLiteOpenHelper{
         i++;
         if(four_dame_lane){ j++; }
 
-        /*insertData(context.getString(R.string.grogans),
-                context.getString(R.string.grogans_address),
-                context.getString(R.string.grogans_directions));
+        boolean grogans = insertData(context.getString(R.string.grogans),
+                            context.getString(R.string.grogans_address),
+                            context.getString(R.string.grogans_description),
+                            context.getString(R.string.grogans_latitude),
+                            context.getString(R.string.grogans_longitude),
+                            context.getString(R.string.traditional_irish),
+                            context.getString(R.string.southside),
+                            context.getString(R.string.no),
+                            context.getString(R.string.no),
+                            context.getString(R.string.no),
+                            context.getString(R.string.no),
+                            context.getString(R.string.no));
 
-        insertData(context.getString(R.string.hartigans),
-                context.getString(R.string.hartigans_address),
-                context.getString(R.string.hartigans_directions));
+        i++;
+        if(grogans){ j++; }
 
-        insertData(context.getString(R.string.hogans),
-                context.getString(R.string.hogans_address),
-                context.getString(R.string.hogans_directions));
+        boolean hartigans = insertData(context.getString(R.string.hartigans),
+                                        context.getString(R.string.hartigans_address),
+                                        context.getString(R.string.hartigans_description),
+                                        context.getString(R.string.hartigans_latitude),
+                                        context.getString(R.string.hartigans_longitude),
+                                        context.getString(R.string.traditional_irish),
+                                        context.getString(R.string.southside),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.no));
 
-        insertData(context.getString(R.string.jj_smyths),
-                context.getString(R.string.jj_smyths_address),
-                context.getString(R.string.jj_smyths_directions));
+        i++;
+        if(hartigans){ j++; }
 
-        insertData(context.getString(R.string.john_kehoes),
-                context.getString(R.string.john_kehoes_address),
-                context.getString(R.string.john_kehoes_directions));
+        boolean hogans = insertData(context.getString(R.string.hogans),
+                                    context.getString(R.string.hogans_address),
+                                    context.getString(R.string.hogans_description),
+                                    context.getString(R.string.hogans_latitude),
+                                    context.getString(R.string.hogans_longitude),
+                                    context.getString(R.string.traditional_irish),
+                                    context.getString(R.string.southside),
+                                    context.getString(R.string.no),
+                                    context.getString(R.string.no),
+                                    context.getString(R.string.no),
+                                    context.getString(R.string.no),
+                                    context.getString(R.string.yes));
 
-        insertData(context.getString(R.string.jw_sweetmans),
+        i++;
+        if(hogans){ j++; }
+
+        boolean jj_smyths = insertData(context.getString(R.string.jj_smyths),
+                                        context.getString(R.string.jj_smyths_address),
+                                        context.getString(R.string.jj_smyths_description),
+                                        context.getString(R.string.jj_smyths_latitude),
+                                        context.getString(R.string.jj_smyths_longitude),
+                                        context.getString(R.string.traditional_irish),
+                                        context.getString(R.string.southside),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.no));
+
+        i++;
+        if(jj_smyths){ j++; }
+
+        boolean john_kehoes = insertData(context.getString(R.string.john_kehoes),
+                                            context.getString(R.string.john_kehoes_address),
+                                            context.getString(R.string.john_kehoes_description),
+                                            context.getString(R.string.john_kehoes_latitude),
+                                            context.getString(R.string.john_kehoes_longitude),
+                                            context.getString(R.string.traditional_irish),
+                                            context.getString(R.string.southside),
+                                            context.getString(R.string.yes),
+                                            context.getString(R.string.yes),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.no));
+
+        i++;
+        if(john_kehoes){ j++; }
+
+        /*insertData(context.getString(R.string.jw_sweetmans),
                 context.getString(R.string.jw_sweetmans_address),
                 context.getString(R.string.jw_sweetmans_directions));
 
