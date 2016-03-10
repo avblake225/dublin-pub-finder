@@ -398,7 +398,7 @@ public class DBManager extends SQLiteOpenHelper{
                                         context.getString(R.string.traditional_irish),
                                         context.getString(R.string.southside),
                                         context.getString(R.string.yes),
-                                        context.getString(R.string.no),
+                                        context.getString(R.string.yes),
                                         context.getString(R.string.no),
                                         context.getString(R.string.no),
                                         context.getString(R.string.no));
