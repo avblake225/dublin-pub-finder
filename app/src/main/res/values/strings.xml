@@ -145,6 +145,12 @@
     <string name="alfie_byrnes_latitude">53.334672</string>
     <string name="alfie_byrnes_longitude">-6.257553</string>
 
+    <string name="alfies">Alfies</string>
+    <string name="alfies_address">10 South William Street, Dublin 2</string>
+    <string name="alfies_description">Glitter balls and chandeliers give a young edge to a simple menu of international dishes</string>
+    <string name="alfies_latitude">53.342506</string>
+    <string name="alfies_longitude">-6.262440</string>
+
     <string name="anseo">Anseo</string>
     <string name="anseo_address">18 Camden Street Lower, Dublin 2</string>
     <string name="anseo_description">No description available</string>
@@ -253,6 +259,12 @@
     <string name="hogans_latitude">53.341903</string>
     <string name="hogans_longitude">-6.264638</string>
 
+    <string name="james_toners">James Toners</string>
+    <string name="james_toners_address">139 Baggot Street Lower, Dublin 2</string>
+    <string name="james_toners_description">Long established, traditional pub with a dark wooden bar, picture framed snug and popular beer yard</string>
+    <string name="james_toners_latitude">53.337763</string>
+    <string name="james_toners_longitude">-6.252382</string>
+
     <string name="jj_smyths">J.J. Smyths</string>
     <string name="jj_smyths_address">12 Aungier St, Dublin 2</string>
     <string name="jj_smyths_description">Typical Irish ground floor pub with 1st floor venue for the leading lights in live jazz and blues</string>
@@ -313,6 +325,12 @@
     <string name="p_macs_latitude">53.341122</string>
     <string name="p_macs_longitude">-6.264388</string>
 
+    <string name="reillys">Reillys</string>
+    <string name="reillys_address">1 Merrion Row, Dublin 2</string>
+    <string name="reillys_description">No description available</string>
+    <string name="reillys_latitude">53.338303</string>
+    <string name="reillys_longitude">-6.253786</string>
+
     <string name="robert_reids">Robert Reids</string>
     <string name="robert_reids_address">19 Store St, Dublin 1</string>
     <string name="robert_reids_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk up this street and take the second left turn onto Gardiner Street South. Take the first right turn and walk down Frenchman\'s Lane. You will see Robert Reid\'s at the end on the left.</string>
@@ -320,6 +338,12 @@
     <string name="ryans">Ryans</string>
     <string name="ryans_address">92 Camden Street Lower, Dublin 2</string>
     <string name="ryans_directions">From College Green (Trinity College), turn to face Dame Street. Walk straight up Dame Street and take the third left turn onto South Great George\'s Street. Walk straight up this street and continue onto Aungier Street. Walk straight up this street and continue onto Wexford Street. Continue straight onto Camden Street and you will see Ryan\'s on the right corner.</string>
+
+    <string name="sams_bar">Sams bar</string>
+    <string name="sams_bar_address">36 Dawson Street, Dublin 2</string>
+    <string name="sams_bar_description">Funky murals and vintage accents adorn this chic, spacious bar for cocktails and sharing platters</string>
+    <string name="sams_bar_latitude">53.340335</string>
+    <string name="sams_bar_longitude">-6.258677</string>
 
     <string name="searsons">Searsons</string>
     <string name="searsons_address">44 Baggot Street Upper, Dublin 4</string>
@@ -351,7 +375,9 @@
 
     <string name="the_bar_with_no_name">The Bar With No Name</string>
     <string name="the_bar_with_no_name_address">3 Fade Street, Dublin 2</string>
-    <string name="the_bar_with_no_name_directions">From College Green (Trinity College), turn to face Dame Street. Walk up this street and take the third left turn and walk up South Great George\'s Street. Take the third left turn onto Fade Street. You will see The Bar With No Name a few feet up on the right.</string>
+    <string name="the_bar_with_no_name_description">Hip, bare bones hangout with art and sofas in a townhouse hotel, popular for brunch and mojitos</string>
+    <string name="the_bar_with_no_name_latitude">53.341910</string>
+    <string name="the_bar_with_no_name_longitude">-6.264176</string>
 
     <string name="the_bailey_bar">The Bailey Bar</string>
     <string name="the_bailey_bar_address">2 Duke St, Dublin 2</string>

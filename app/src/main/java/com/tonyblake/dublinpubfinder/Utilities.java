@@ -19,6 +19,7 @@ public class Utilities {
 
         getPubRating.put(context.getString(R.string.against_the_grain), context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
         getPubRating.put(context.getString(R.string.alfie_byrnes), context.getResources().getDrawable(R.drawable.four_star_rating));
+        getPubRating.put(context.getString(R.string.alfies), context.getResources().getDrawable(R.drawable.three_and_a_half_star_rating));
         getPubRating.put(context.getString(R.string.bad_bobs), context.getResources().getDrawable(R.drawable.four_star_rating));
         getPubRating.put(context.getString(R.string.break_for_the_border), context.getResources().getDrawable(R.drawable.three_and_a_half_star_rating));
         getPubRating.put(context.getString(R.string.bruxelles), context.getResources().getDrawable(R.drawable.four_star_rating));
@@ -36,6 +37,7 @@ public class Utilities {
         getPubRating.put(context.getString(R.string.grogans), context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
         getPubRating.put(context.getString(R.string.hartigans), context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
         getPubRating.put(context.getString(R.string.hogans), context.getResources().getDrawable(R.drawable.four_star_rating));
+        getPubRating.put(context.getString(R.string.james_toners), context.getResources().getDrawable(R.drawable.four_star_rating));
         getPubRating.put(context.getString(R.string.jj_smyths), context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
         getPubRating.put(context.getString(R.string.john_kehoes), context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
         getPubRating.put(context.getString(R.string.jw_sweetmans), context.getResources().getDrawable(R.drawable.four_star_rating));
@@ -44,12 +46,16 @@ public class Utilities {
         getPubRating.put(context.getString(R.string.mulligans), context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
         getPubRating.put(context.getString(R.string.nearys), context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
         getPubRating.put(context.getString(R.string.p_macs),context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
+        getPubRating.put(context.getString(R.string.reillys),context.getResources().getDrawable(R.drawable.three_and_a_half_star_rating));
+        getPubRating.put(context.getString(R.string.sams_bar),context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
+        getPubRating.put(context.getString(R.string.the_bar_with_no_name),context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
     }
 
     public static void populatePubImageMap(Context context){
 
         getPubImage.put(context.getString(R.string.against_the_grain),context.getResources().getDrawable(R.drawable.against_the_grain));
         getPubImage.put(context.getString(R.string.alfie_byrnes),context.getResources().getDrawable(R.drawable.alfie_byrnes));
+        getPubImage.put(context.getString(R.string.alfies),context.getResources().getDrawable(R.drawable.alfies));
         getPubImage.put(context.getString(R.string.anseo),context.getResources().getDrawable(R.drawable.anseo));
         getPubImage.put(context.getString(R.string.bad_bobs),context.getResources().getDrawable(R.drawable.bad_bobs));
         getPubImage.put(context.getString(R.string.break_for_the_border),context.getResources().getDrawable(R.drawable.break_for_the_border));
@@ -58,13 +64,16 @@ public class Utilities {
         getPubImage.put(context.getString(R.string.café_en_seine), context.getResources().getDrawable(R.drawable.cafe_en_seine));
         getPubImage.put(context.getString(R.string.cassidys),context.getResources().getDrawable(R.drawable.cassidys));
         getPubImage.put(context.getString(R.string.devitts),context.getResources().getDrawable(R.drawable.devitts));
-        getPubImage.put(context.getString(R.string.doyles),context.getResources().getDrawable(R.drawable.doyles));
+        getPubImage.put(context.getString(R.string.doheny_and_nesbitts),context.getResources().getDrawable(R.drawable.doheny_and_nesbitts));
+        getPubImage.put(context.getString(R.string.doyles), context.getResources().getDrawable(R.drawable.doyles));
         getPubImage.put(context.getString(R.string.fibber_magees), context.getResources().getDrawable(R.drawable.fibber_magees));
         getPubImage.put(context.getString(R.string.fitzsimons), context.getResources().getDrawable(R.drawable.fitzsimons));
         getPubImage.put(context.getString(R.string.flannerys), context.getResources().getDrawable(R.drawable.flannerys));
+        getPubImage.put(context.getString(R.string.four_dame_lane), context.getResources().getDrawable(R.drawable.four_dame_lane));
         getPubImage.put(context.getString(R.string.grogans), context.getResources().getDrawable(R.drawable.grogans));
         getPubImage.put(context.getString(R.string.hartigans),context.getResources().getDrawable(R.drawable.hartigans));
         getPubImage.put(context.getString(R.string.hogans),context.getResources().getDrawable(R.drawable.hogans));
+        getPubImage.put(context.getString(R.string.james_toners),context.getResources().getDrawable(R.drawable.james_toners));
         getPubImage.put(context.getString(R.string.jj_smyths),context.getResources().getDrawable(R.drawable.jj_smyths));
         getPubImage.put(context.getString(R.string.john_kehoes),context.getResources().getDrawable(R.drawable.john_kehoes));
         getPubImage.put(context.getString(R.string.jw_sweetmans), context.getResources().getDrawable(R.drawable.jw_sweetmans));
@@ -76,12 +85,15 @@ public class Utilities {
         getPubImage.put(context.getString(R.string.o_reillys), context.getResources().getDrawable(R.drawable.o_reillys));
         getPubImage.put(context.getString(R.string.p_macs), context.getResources().getDrawable(R.drawable.p_macs));
         getPubImage.put(context.getString(R.string.peters_pub), context.getResources().getDrawable(R.drawable.peters_pub));
+        getPubImage.put(context.getString(R.string.reillys), context.getResources().getDrawable(R.drawable.reillys));
         getPubImage.put(context.getString(R.string.robert_reids), context.getResources().getDrawable(R.drawable.robert_reids));
         getPubImage.put(context.getString(R.string.ryans), context.getResources().getDrawable(R.drawable.ryans));
+        getPubImage.put(context.getString(R.string.sams_bar), context.getResources().getDrawable(R.drawable.sams_bar));
         getPubImage.put(context.getString(R.string.sin_é), context.getResources().getDrawable(R.drawable.sin_e));
         getPubImage.put(context.getString(R.string.synnotts), context.getResources().getDrawable(R.drawable.sinnotts));
         getPubImage.put(context.getString(R.string.the_auld_dubliner), context.getResources().getDrawable(R.drawable.the_auld_dubliner));
         getPubImage.put(context.getString(R.string.the_bankers), context.getResources().getDrawable(R.drawable.the_bankers));
+        getPubImage.put(context.getString(R.string.the_bar_with_no_name), context.getResources().getDrawable(R.drawable.the_bar_with_no_name));
         getPubImage.put(context.getString(R.string.the_bailey_bar),context.getResources().getDrawable(R.drawable.the_bailey_bar));
         getPubImage.put(context.getString(R.string.the_bison_bar),context.getResources().getDrawable(R.drawable.the_bison_bar));
         getPubImage.put(context.getString(R.string.the_brew_dock), context.getResources().getDrawable(R.drawable.the_brew_dock));

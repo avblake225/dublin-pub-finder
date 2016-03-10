@@ -70,6 +70,22 @@ public class DBManager extends SQLiteOpenHelper{
         i++;
         if(alfie_byrnes){ j++; }
 
+        boolean alfies = insertData(context.getString(R.string.alfies),
+                                    context.getString(R.string.alfies_address),
+                                    context.getString(R.string.alfies_description),
+                                    context.getString(R.string.alfies_latitude),
+                                    context.getString(R.string.alfies_longitude),
+                                    context.getString(R.string.modern),
+                                    context.getString(R.string.southside),
+                                    context.getString(R.string.no),
+                                    context.getString(R.string.no),
+                                    context.getString(R.string.yes),
+                                    context.getString(R.string.no),
+                                    context.getString(R.string.no));
+
+        i++;
+        if(alfies){ j++; }
+
         boolean anseo = insertData(context.getString(R.string.anseo),
                                     context.getString(R.string.anseo_address),
                                     context.getString(R.string.anseo_description),
@@ -358,6 +374,22 @@ public class DBManager extends SQLiteOpenHelper{
         i++;
         if(hogans){ j++; }
 
+        boolean james_toners = insertData(context.getString(R.string.james_toners),
+                                            context.getString(R.string.james_toners_address),
+                                            context.getString(R.string.james_toners_description),
+                                            context.getString(R.string.james_toners_latitude),
+                                            context.getString(R.string.james_toners_longitude),
+                                            context.getString(R.string.traditional_irish),
+                                            context.getString(R.string.southside),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.no));
+
+        i++;
+        if(james_toners){ j++; }
+
         boolean jj_smyths = insertData(context.getString(R.string.jj_smyths),
                                         context.getString(R.string.jj_smyths_address),
                                         context.getString(R.string.jj_smyths_description),
@@ -498,15 +530,47 @@ public class DBManager extends SQLiteOpenHelper{
         i++;
         if(p_macs){ j++; }
 
+        boolean reillys = insertData(context.getString(R.string.reillys),
+                                        context.getString(R.string.reillys_address),
+                                        context.getString(R.string.reillys_description),
+                                        context.getString(R.string.reillys_latitude),
+                                        context.getString(R.string.reillys_longitude),
+                                        context.getString(R.string.traditional_irish),
+                                        context.getString(R.string.southside),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.no));
+
+        i++;
+        if(reillys){ j++; }
+
         /*insertData(context.getString(R.string.robert_reids),
                 context.getString(R.string.robert_reids_address),
                 context.getString(R.string.robert_reids_directions));
 
         insertData(context.getString(R.string.ryans),
                 context.getString(R.string.ryans_address),
-                context.getString(R.string.ryans_directions));
+                context.getString(R.string.ryans_directions));*/
 
-        insertData(context.getString(R.string.searsons),
+        boolean sams_bar = insertData(context.getString(R.string.sams_bar),
+                                        context.getString(R.string.sams_bar_address),
+                                        context.getString(R.string.sams_bar_description),
+                                        context.getString(R.string.sams_bar_latitude),
+                                        context.getString(R.string.sams_bar_longitude),
+                                        context.getString(R.string.modern),
+                                        context.getString(R.string.southside),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.yes));
+
+        i++;
+        if(sams_bar){ j++; }
+
+        /*insertData(context.getString(R.string.searsons),
                 context.getString(R.string.searsons_address),
                 context.getString(R.string.searsons_directions));
 
@@ -536,13 +600,25 @@ public class DBManager extends SQLiteOpenHelper{
 
         insertData(context.getString(R.string.the_bankers),
                 context.getString(R.string.the_bankers_address),
-                context.getString(R.string.the_bankers_directions));
+                context.getString(R.string.the_bankers_directions));*/
 
-        insertData(context.getString(R.string.the_bar_with_no_name),
-                context.getString(R.string.the_bar_with_no_name_address),
-                context.getString(R.string.the_bar_with_no_name_directions));
+        boolean the_bar_with_no_name = insertData(context.getString(R.string.the_bar_with_no_name),
+                                        context.getString(R.string.the_bar_with_no_name_address),
+                                        context.getString(R.string.the_bar_with_no_name_description),
+                                        context.getString(R.string.the_bar_with_no_name_latitude),
+                                        context.getString(R.string.the_bar_with_no_name_longitude),
+                                        context.getString(R.string.modern),
+                                        context.getString(R.string.southside),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.yes));
 
-        insertData(context.getString(R.string.the_bison_bar),
+        i++;
+        if(the_bar_with_no_name){ j++; }
+
+        /*insertData(context.getString(R.string.the_bison_bar),
                 context.getString(R.string.the_bison_bar_address),
                 context.getString(R.string.the_bison_bar_directions));
 
