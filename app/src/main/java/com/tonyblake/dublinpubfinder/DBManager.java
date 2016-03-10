@@ -502,17 +502,53 @@ public class DBManager extends SQLiteOpenHelper{
         i++;
         if(nearys){ j++; }
 
-        /*insertData(context.getString(R.string.o_donoghues),
-                context.getString(R.string.o_donoghues_address),
-                context.getString(R.string.o_donoghues_directions));
+        boolean o_donoghues = insertData(context.getString(R.string.o_donoghues),
+                                            context.getString(R.string.o_donoghues_address),
+                                            context.getString(R.string.o_donoghues_description),
+                                            context.getString(R.string.o_donoghues_latitude),
+                                            context.getString(R.string.o_donoghues_longitude),
+                                            context.getString(R.string.traditional_irish),
+                                            context.getString(R.string.southside),
+                                            context.getString(R.string.yes),
+                                            context.getString(R.string.yes),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.no));
 
-        insertData(context.getString(R.string.o_reillys),
-                context.getString(R.string.o_reillys_address),
-                context.getString(R.string.o_reillys_directions));
+        i++;
+        if(o_donoghues){ j++; }
 
-        insertData(context.getString(R.string.peters_pub),
-                context.getString(R.string.peters_pub_address),
-                context.getString(R.string.peters_pub_directions));*/
+        boolean o_reillys = insertData(context.getString(R.string.o_reillys),
+                                        context.getString(R.string.o_reillys_address),
+                                        context.getString(R.string.o_reillys_description),
+                                        context.getString(R.string.o_reillys_latitude),
+                                        context.getString(R.string.o_reillys_longitude),
+                                        context.getString(R.string.modern),
+                                        context.getString(R.string.northside),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.yes));
+
+        i++;
+        if(o_reillys){ j++; }
+
+        boolean peters_pub = insertData(context.getString(R.string.peters_pub),
+                                        context.getString(R.string.peters_pub_address),
+                                        context.getString(R.string.peters_pub_description),
+                                        context.getString(R.string.peters_pub_latitude),
+                                        context.getString(R.string.peters_pub_longitude),
+                                        context.getString(R.string.traditional_irish),
+                                        context.getString(R.string.southside),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.no),
+                                        context.getString(R.string.yes),
+                                        context.getString(R.string.no));
+
+        i++;
+        if(peters_pub){ j++; }
 
         boolean p_macs = insertData(context.getString(R.string.p_macs),
                                     context.getString(R.string.p_macs_address),
@@ -546,13 +582,37 @@ public class DBManager extends SQLiteOpenHelper{
         i++;
         if(reillys){ j++; }
 
-        /*insertData(context.getString(R.string.robert_reids),
-                context.getString(R.string.robert_reids_address),
-                context.getString(R.string.robert_reids_directions));
+        boolean robert_reades = insertData(context.getString(R.string.robert_reades),
+                                            context.getString(R.string.robert_reades_address),
+                                            context.getString(R.string.robert_reades_description),
+                                            context.getString(R.string.robert_reades_latitude),
+                                            context.getString(R.string.robert_reades_longitude),
+                                            context.getString(R.string.traditional_irish),
+                                            context.getString(R.string.northside),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.yes),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.no),
+                                            context.getString(R.string.no));
 
-        insertData(context.getString(R.string.ryans),
-                context.getString(R.string.ryans_address),
-                context.getString(R.string.ryans_directions));*/
+        i++;
+        if(robert_reades){ j++; }
+
+        boolean ryans = insertData(context.getString(R.string.ryans),
+                                    context.getString(R.string.ryans_address),
+                                    context.getString(R.string.ryans_description),
+                                    context.getString(R.string.ryans_latitude),
+                                    context.getString(R.string.ryans_longitude),
+                                    context.getString(R.string.traditional_irish),
+                                    context.getString(R.string.southside),
+                                    context.getString(R.string.yes),
+                                    context.getString(R.string.yes),
+                                    context.getString(R.string.no),
+                                    context.getString(R.string.yes),
+                                    context.getString(R.string.no));
+
+        i++;
+        if(ryans){ j++; }
 
         boolean sams_bar = insertData(context.getString(R.string.sams_bar),
                                         context.getString(R.string.sams_bar_address),

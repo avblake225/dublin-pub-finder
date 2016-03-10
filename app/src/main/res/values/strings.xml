@@ -309,15 +309,21 @@
 
     <string name="o_donoghues">O Donoghues</string>
     <string name="o_donoghues_address">15 Merrion Row, Dublin 2</string>
-    <string name="o_donoghues_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk around Trinity College. Take the first right turn and walk all the way up Dawson Street. Then, turn left at St. Stephen\'s Green and continue on to Merrion Row. You will then see O\' Donoghue\'s on the right.</string>
+    <string name="o_donoghues_description">No description available</string>
+    <string name="o_donoghues_latitude">53.338144</string>
+    <string name="o_donoghues_longitude">-6.254240</string>
 
     <string name="o_reillys">O Reillys</string>
-    <string name="o_reillys_address">Tara Street Station, 2 Poolbeg Street, Dublin 2</string>
-    <string name="o_reillys_directions">From O\' Connell Street, walk over O\' Connell bridge and turn left onto Burgh Quay. Continue straight onto George\'s Quay. Walk past Tara Street Station and turn right onto Luke Street. You will see O\' Reillys a few feet down this street on the right.</string>
+    <string name="o_reillys_address">2 Poolbeg Street, Dublin 2</string>
+    <string name="o_reillys_description">Large and lively Victorian era bar with iron chandeliers and church pews hosting Saturday rock club</string>
+    <string name="o_reillys_latitude">53.347145</string>
+    <string name="o_reillys_longitude">-6.254025</string>
 
     <string name="peters_pub">Peters Pub</string>
     <string name="peters_pub_address">William Street South, Dublin 2</string>
-    <string name="peters_pub_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk all the way up this street and you will see Peter\'s Pub on the left hand corner.</string>
+    <string name="peters_pub_description">Traditional, convivial and compact pub with white walls, serving whiskies, beers and sandwiches</string>
+    <string name="peters_pub_latitude">53.340831</string>
+    <string name="peters_pub_longitude">-6.263242</string>
 
     <string name="p_macs">P. Macs</string>
     <string name="p_macs_address">30 Stephen Street Lower, Dublin 2</string>
@@ -331,13 +337,17 @@
     <string name="reillys_latitude">53.338303</string>
     <string name="reillys_longitude">-6.253786</string>
 
-    <string name="robert_reids">Robert Reids</string>
-    <string name="robert_reids_address">19 Store St, Dublin 1</string>
-    <string name="robert_reids_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk up this street and take the second left turn onto Gardiner Street South. Take the first right turn and walk down Frenchman\'s Lane. You will see Robert Reid\'s at the end on the left.</string>
+    <string name="robert_reades">Robert Reades</string>
+    <string name="robert_reades_address">19 Store Street, Dublin 1</string>
+    <string name="robert_reades_description">No description available</string>
+    <string name="robert_reades_latitude">53.350234</string>
+    <string name="robert_reades_longitude">-6.253076</string>
 
     <string name="ryans">Ryans</string>
     <string name="ryans_address">92 Camden Street Lower, Dublin 2</string>
-    <string name="ryans_directions">From College Green (Trinity College), turn to face Dame Street. Walk straight up Dame Street and take the third left turn onto South Great George\'s Street. Walk straight up this street and continue onto Aungier Street. Walk straight up this street and continue onto Wexford Street. Continue straight onto Camden Street and you will see Ryan\'s on the right corner.</string>
+    <string name="ryans_description">No description available</string>
+    <string name="ryans_latitude">53.336345</string>
+    <string name="ryans_longitude">-6.265731</string>
 
     <string name="sams_bar">Sams bar</string>
     <string name="sams_bar_address">36 Dawson Street, Dublin 2</string>
