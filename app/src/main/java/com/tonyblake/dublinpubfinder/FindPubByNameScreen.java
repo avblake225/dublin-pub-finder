@@ -1,6 +1,8 @@
 package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
+import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -13,9 +15,12 @@ import android.widget.Toast;
 public class FindPubByNameScreen extends AppCompatActivity {
 
     private Context context;
+    private DBManager dbManager;
     private AutoCompleteTextView tv_pub_name;
     private Button btn_findpub;
     private String pub_name = "";
+
+    private String name, address, description, latitude, longitude;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +29,11 @@ public class FindPubByNameScreen extends AppCompatActivity {
 
         context = this;
 
+        dbManager = new DBManager(context);
+
         tv_pub_name = (AutoCompleteTextView) findViewById(R.id.tv_pub_name);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,DBManager.pub_names);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, dbManager.getPubNames());
         tv_pub_name.setAdapter(adapter);
         tv_pub_name.setThreshold(1);
 
@@ -52,12 +59,39 @@ public class FindPubByNameScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if("".equals(pub_name)){
+                String query = "SELECT * FROM " + dbManager.getTableName() + " WHERE (NAME = '" + pub_name + "')";
 
+                try {
+                    Cursor res = MainActivity.dbManager.getPubs(query);
+
+                    res.moveToFirst();
+
+                    name = res.getString(1);
+                    address = res.getString(2);
+                    description = res.getString(3);
+                    latitude = res.getString(4);
+                    longitude = res.getString(5);
+
+                    launchSinglePubDetailsScreen();
+
+                } catch (Exception e) {
                     showToastMessage(context.getString(R.string.pub_not_found));
                 }
             }
         });
+    }
+
+    private void launchSinglePubDetailsScreen() {
+
+        Intent intent = new Intent(this, SinglePubDetailsScreen.class);
+
+        intent.putExtra("name", name);
+        intent.putExtra("address", address);
+        intent.putExtra("description", description);
+        intent.putExtra("latitude", latitude);
+        intent.putExtra("longitude", longitude);
+
+        startActivity(intent);
     }
 
     private void showToastMessage(CharSequence text) {

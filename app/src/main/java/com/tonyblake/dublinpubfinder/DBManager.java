@@ -26,7 +26,7 @@ public class DBManager extends SQLiteOpenHelper{
 
     public SQLiteDatabase db;
 
-    public static String[] pub_names;
+    public String[] pub_names;
 
     public int i, j;
 
@@ -918,6 +918,8 @@ public class DBManager extends SQLiteOpenHelper{
     public int getNumPubsAddedToDB(){
         return j;
     }
+
+    public String[] getPubNames() { return pub_names; }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
