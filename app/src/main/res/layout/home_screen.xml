@@ -131,12 +131,20 @@
                     android:layout_centerHorizontal="true"
                     android:text="@string/find_pub"/>
 
+                <Button
+                    android:id="@+id/btn_findpubbyname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btn_findpub"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/find_pub_by_name"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/home_screen_margin"
                     android:layout_marginBottom="@dimen/home_screen_margin"
-                    android:layout_below="@id/btn_findpub"
+                    android:layout_below="@id/btn_findpubbyname"
                     android:textColor="@color/gray"
                     android:text="@string/disclaimer"/>
 
