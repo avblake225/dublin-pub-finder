@@ -29,7 +29,7 @@ public class FindPubByNameScreen extends AppCompatActivity {
 
         context = this;
 
-        dbManager = new DBManager(context);
+        dbManager = MainActivity.dbManager;
 
         tv_pub_name = (AutoCompleteTextView) findViewById(R.id.tv_pub_name);
 
