@@ -26,7 +26,7 @@ public class HomeScreen extends AppCompatActivity {
     private CheckBox cb_pub_that_serves_craft_beer;
     private CheckBox cb_pub_that_stays_open_late;
 
-    private Button btn_findpub;
+    private Button btn_findpub, btn_findpubbyname;
 
     private String query;
 
@@ -52,6 +52,8 @@ public class HomeScreen extends AppCompatActivity {
         cb_pub_that_stays_open_late = (CheckBox)findViewById(R.id.cb_pub_that_stays_open_late);
 
         btn_findpub = (Button) findViewById(R.id.btn_findpub);
+
+        btn_findpubbyname = (Button) findViewById(R.id.btn_findpubbyname);
     }
 
     @Override
@@ -68,20 +70,17 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(noSelectionMade()){
+                if (noSelectionMade()) {
 
                     showToastMessage(context.getString(R.string.please_make_a_selection));
 
-                }
-                else if (cb_traditional_irish_pub.isChecked() && cb_modern_pub.isChecked()) {
+                } else if (cb_traditional_irish_pub.isChecked() && cb_modern_pub.isChecked()) {
 
                     showToastMessage(context.getString(R.string.invalid_selection_traditional_modern_pub));
-                }
-                else if (cb_pub_on_north_side_of_city.isChecked() && cb_pub_on_south_side_of_city.isChecked()) {
+                } else if (cb_pub_on_north_side_of_city.isChecked() && cb_pub_on_south_side_of_city.isChecked()) {
 
                     showToastMessage(context.getString(R.string.invalid_selection_pub_on_north_side_south_side));
-                }
-                else {
+                } else {
 
                     String pubTypeAndSideOfCity_logic_key = getLogicKey(context.getString(R.string.pubTypeAndSideOfCity));
 
@@ -91,20 +90,18 @@ public class HomeScreen extends AppCompatActivity {
 
                     String extras = Utilities.getExtras(extras_logic_key, context);
 
-                    if(pubTypeAndSideOfCity_logic_key.equals(context.getString(R.string._0000))
-                            && !extras_logic_key.equals(context.getString(R.string._00000))){
+                    if (pubTypeAndSideOfCity_logic_key.equals(context.getString(R.string._0000))
+                            && !extras_logic_key.equals(context.getString(R.string._00000))) {
 
                         query = context.getString(R.string.select_all_rows_from) + " " + MainActivity.dbManager.getTableName()
                                 + " " + context.getString(R.string.where) + " " + pubTypeAndSideOfCity + extras
                                 + context.getString(R.string.end_query);
-                    }
-                    else if(extras_logic_key.equals(context.getString(R.string._00000))){
+                    } else if (extras_logic_key.equals(context.getString(R.string._00000))) {
 
                         query = context.getString(R.string.select_all_rows_from) + " " + MainActivity.dbManager.getTableName()
                                 + " " + context.getString(R.string.where) + " " + pubTypeAndSideOfCity + extras
                                 + context.getString(R.string.end_query);
-                    }
-                    else{
+                    } else {
 
                         query = context.getString(R.string.select_all_rows_from) + " " + MainActivity.dbManager.getTableName()
                                 + " " + context.getString(R.string.where) + " " + pubTypeAndSideOfCity
@@ -138,6 +135,16 @@ public class HomeScreen extends AppCompatActivity {
                         showToastMessage(context.getString(R.string.no_pubs_match_your_search));
                     }
                 }
+            }
+        });
+
+        btn_findpubbyname.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                launchFindPubByNameScreen();
+
             }
         });
     }
@@ -180,6 +187,12 @@ public class HomeScreen extends AppCompatActivity {
         intent.putExtra("latitude", latitude);
         intent.putExtra("longitude", longitude);
 
+        startActivity(intent);
+    }
+
+    private void launchFindPubByNameScreen() {
+
+        Intent intent = new Intent(this, FindPubByNameScreen.class);
         startActivity(intent);
     }
 

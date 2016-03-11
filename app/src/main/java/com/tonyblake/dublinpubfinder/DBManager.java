@@ -26,7 +26,7 @@ public class DBManager extends SQLiteOpenHelper{
 
     public SQLiteDatabase db;
 
-    public static String[] pub_names = null;
+    public static String[] pub_names;
 
     public int i, j;
 
@@ -34,6 +34,50 @@ public class DBManager extends SQLiteOpenHelper{
         super(context, DATABASE_NAME, null, 1);
 
         db = this.getWritableDatabase();
+
+        pub_names = new String[]{
+
+                context.getString(R.string.against_the_grain),
+                context.getString(R.string.alfie_byrnes),
+                context.getString(R.string.alfies),
+                context.getString(R.string.anseo),
+                context.getString(R.string.bad_bobs),
+                context.getString(R.string.break_for_the_border),
+                context.getString(R.string.bruxelles),
+                context.getString(R.string.buskers),
+                context.getString(R.string.café_en_seine),
+                context.getString(R.string.cassidys),
+                context.getString(R.string.devitts),
+                context.getString(R.string.doheny_and_nesbitts),
+                context.getString(R.string.doyles),
+                context.getString(R.string.fibber_magees),
+                context.getString(R.string.fitzgeralds),
+                context.getString(R.string.fitzsimons),
+                context.getString(R.string.flannerys),
+                context.getString(R.string.four_dame_lane),
+                context.getString(R.string.grogans),
+                context.getString(R.string.hartigans),
+                context.getString(R.string.hogans),
+                context.getString(R.string.james_toners),
+                context.getString(R.string.jj_smyths),
+                context.getString(R.string.john_kehoes),
+                context.getString(R.string.jw_sweetmans),
+                context.getString(R.string.lanigans),
+                context.getString(R.string.lagoona),
+                context.getString(R.string.mulligans),
+                context.getString(R.string.nearys),
+                context.getString(R.string.o_donoghues),
+                context.getString(R.string.o_reillys),
+                context.getString(R.string.peters_pub),
+                context.getString(R.string.p_macs),
+                context.getString(R.string.reillys),
+                context.getString(R.string.robert_reades),
+                context.getString(R.string.ryans),
+                context.getString(R.string.sams_bar),
+                context.getString(R.string.the_bar_with_no_name)
+        };
+
+        int num_pubs_in_autocomplete = pub_names.length;
 
         i = 0;
         j = 0;

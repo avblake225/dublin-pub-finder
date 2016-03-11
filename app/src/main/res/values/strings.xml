@@ -16,6 +16,8 @@
     <string name="pub_that_stays_open_late">Pub that stays open late</string>
     <string name="find_pub">Find pub</string>
     <string name="find_pub_by_name">Find pub by name</string>
+    <string name="qwhatpub">What pub are you looking for?</string>
+    <string name="pub_not_found">Pub not found</string>
     <string name="disclaimer"><i>Disclaimer: Live music, live sports and late opening only on certain nights. Ratings and descriptions based on Google Reviews</i></string>
 
     <string name="invalid_selection_traditional_modern_pub">Invalid selection. Please select either a Traditional Irish pub OR a Modern pub</string>
