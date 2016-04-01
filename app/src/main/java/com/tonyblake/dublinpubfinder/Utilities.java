@@ -11,10 +11,6 @@ public class Utilities {
 
     public static HashMap<String, Drawable> getPubImage = new HashMap<String,Drawable>();
 
-    public static HashMap<String, String> getPubTypeAndSideOfCity = new HashMap<String, String>();
-
-    public static HashMap<String, String> getExtras = new HashMap<String, String>();
-
     public static void populatePubRatingMap(Context context){
 
         getPubRating.put(context.getString(R.string.against_the_grain), context.getResources().getDrawable(R.drawable.four_and_a_half_star_rating));
@@ -135,55 +131,6 @@ public class Utilities {
         getPubImage.put(context.getString(R.string.whelans), context.getResources().getDrawable(R.drawable.whelans));
     }
 
-    public static void populatePubTypeAndSideOfCityMap(Context context){
-
-        getPubTypeAndSideOfCity.put(context.getString(R.string._0000), context.getString(R.string.pubTypeAndSideOfCity_0000));
-        getPubTypeAndSideOfCity.put(context.getString(R.string._1000), context.getString(R.string.pubTypeAndSideOfCity_1000));
-        getPubTypeAndSideOfCity.put(context.getString(R.string._0100), context.getString(R.string.pubTypeAndSideOfCity_0100));
-        getPubTypeAndSideOfCity.put(context.getString(R.string._0010), context.getString(R.string.pubTypeAndSideOfCity_0010));
-        getPubTypeAndSideOfCity.put(context.getString(R.string._0001), context.getString(R.string.pubTypeAndSideOfCity_0001));
-        getPubTypeAndSideOfCity.put(context.getString(R.string._1010), context.getString(R.string.pubTypeAndSideOfCity_1010));
-        getPubTypeAndSideOfCity.put(context.getString(R.string._1001), context.getString(R.string.pubTypeAndSideOfCity_1001));
-        getPubTypeAndSideOfCity.put(context.getString(R.string._0110), context.getString(R.string.pubTypeAndSideOfCity_0110));
-        getPubTypeAndSideOfCity.put(context.getString(R.string._0101), context.getString(R.string.pubTypeAndSideOfCity_0101));
-    }
-
-    public static void populateExtrasMap(Context context){
-
-        getExtras.put(context.getString(R.string._00000), context.getString(R.string.extras_00000));
-        getExtras.put(context.getString(R.string._00001), context.getString(R.string.extras_00001));
-        getExtras.put(context.getString(R.string._00010), context.getString(R.string.extras_00010));
-        getExtras.put(context.getString(R.string._00011), context.getString(R.string.extras_00011));
-        getExtras.put(context.getString(R.string._00100), context.getString(R.string.extras_00100));
-        getExtras.put(context.getString(R.string._00101), context.getString(R.string.extras_00101));
-        getExtras.put(context.getString(R.string._00110), context.getString(R.string.extras_00110));
-        getExtras.put(context.getString(R.string._00111), context.getString(R.string.extras_00111));
-        getExtras.put(context.getString(R.string._01000), context.getString(R.string.extras_01000));
-        getExtras.put(context.getString(R.string._01001), context.getString(R.string.extras_01001));
-        getExtras.put(context.getString(R.string._01010), context.getString(R.string.extras_01010));
-        getExtras.put(context.getString(R.string._01011), context.getString(R.string.extras_01011));
-        getExtras.put(context.getString(R.string._01100), context.getString(R.string.extras_01100));
-        getExtras.put(context.getString(R.string._01101), context.getString(R.string.extras_01101));
-        getExtras.put(context.getString(R.string._01110), context.getString(R.string.extras_01110));
-        getExtras.put(context.getString(R.string._01111), context.getString(R.string.extras_01111));
-        getExtras.put(context.getString(R.string._10000), context.getString(R.string.extras_10000));
-        getExtras.put(context.getString(R.string._10001), context.getString(R.string.extras_10001));
-        getExtras.put(context.getString(R.string._10010), context.getString(R.string.extras_10010));
-        getExtras.put(context.getString(R.string._10011), context.getString(R.string.extras_10011));
-        getExtras.put(context.getString(R.string._10100), context.getString(R.string.extras_10100));
-        getExtras.put(context.getString(R.string._10101), context.getString(R.string.extras_10101));
-        getExtras.put(context.getString(R.string._10110), context.getString(R.string.extras_10110));
-        getExtras.put(context.getString(R.string._10111), context.getString(R.string.extras_10111));
-        getExtras.put(context.getString(R.string._11000), context.getString(R.string.extras_11000));
-        getExtras.put(context.getString(R.string._11001), context.getString(R.string.extras_11001));
-        getExtras.put(context.getString(R.string._11010), context.getString(R.string.extras_11010));
-        getExtras.put(context.getString(R.string._11011), context.getString(R.string.extras_11011));
-        getExtras.put(context.getString(R.string._11100), context.getString(R.string.extras_11100));
-        getExtras.put(context.getString(R.string._11101), context.getString(R.string.extras_11101));
-        getExtras.put(context.getString(R.string._11110), context.getString(R.string.extras_11110));
-        getExtras.put(context.getString(R.string._11111), context.getString(R.string.extras_11111));
-    }
-
     public static Drawable getPubRating(String name, Context context){
 
         Drawable rating = null;
@@ -210,33 +157,5 @@ public class Utilities {
         }
 
         return image;
-    }
-
-    public static String getPubTypeAndSideOfCity(String logic_key, Context context){
-
-        String pubTypeAndSideOfCity = null;
-
-        try{
-            pubTypeAndSideOfCity = getPubTypeAndSideOfCity.get(logic_key);
-        }
-        catch(Exception e){
-            System.out.println(context.getString(R.string.error_retrieving_pub_type_and_side_of_city));
-        }
-
-        return pubTypeAndSideOfCity;
-    }
-
-    public static String getExtras(String logic_key, Context context){
-
-        String extras = null;
-
-        try{
-            extras = getExtras.get(logic_key);
-        }
-        catch(Exception e){
-            System.out.println(context.getString(R.string.error_retrieving_extras));
-        }
-
-        return extras;
     }
 }

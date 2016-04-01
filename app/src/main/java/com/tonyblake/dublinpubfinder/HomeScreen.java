@@ -73,41 +73,21 @@ public class HomeScreen extends AppCompatActivity {
                 if (noSelectionMade()) {
 
                     showToastMessage(context.getString(R.string.please_make_a_selection));
-
-                } else if (cb_traditional_irish_pub.isChecked() && cb_modern_pub.isChecked()) {
+                }
+                else if (cb_traditional_irish_pub.isChecked() && cb_modern_pub.isChecked()) {
 
                     showToastMessage(context.getString(R.string.invalid_selection_traditional_modern_pub));
-                } else if (cb_pub_on_north_side_of_city.isChecked() && cb_pub_on_south_side_of_city.isChecked()) {
+                }
+                else if (cb_pub_on_north_side_of_city.isChecked() && cb_pub_on_south_side_of_city.isChecked()) {
 
                     showToastMessage(context.getString(R.string.invalid_selection_pub_on_north_side_south_side));
-                } else {
+                }
+                else {
 
-                    String pubTypeAndSideOfCity_logic_key = getLogicKey(context.getString(R.string.pubTypeAndSideOfCity));
-
-                    String pubTypeAndSideOfCity = Utilities.getPubTypeAndSideOfCity(pubTypeAndSideOfCity_logic_key, context);
-
-                    String extras_logic_key = getLogicKey(context.getString(R.string.extras));
-
-                    String extras = Utilities.getExtras(extras_logic_key, context);
-
-                    if (pubTypeAndSideOfCity_logic_key.equals(context.getString(R.string._0000))
-                            && !extras_logic_key.equals(context.getString(R.string._00000))) {
-
-                        query = context.getString(R.string.select_all_rows_from) + " " + MainActivity.dbManager.getTableName()
-                                + " " + context.getString(R.string.where) + " " + pubTypeAndSideOfCity + extras
-                                + context.getString(R.string.end_query);
-                    } else if (extras_logic_key.equals(context.getString(R.string._00000))) {
-
-                        query = context.getString(R.string.select_all_rows_from) + " " + MainActivity.dbManager.getTableName()
-                                + " " + context.getString(R.string.where) + " " + pubTypeAndSideOfCity + extras
-                                + context.getString(R.string.end_query);
-                    } else {
-
-                        query = context.getString(R.string.select_all_rows_from) + " " + MainActivity.dbManager.getTableName()
-                                + " " + context.getString(R.string.where) + " " + pubTypeAndSideOfCity
-                                + " " + context.getString(R.string.and) + " " + extras
-                                + context.getString(R.string.end_query);
-                    }
+                    query = context.getString(R.string.select_all_rows_from) + MainActivity.dbManager.getTableName()
+                            + context.getString(R.string.where) + getPubTypeSelection() + getSideOfCitySelection()
+                            + getLiveMusicSelection() + getLiveSportsSelection() + getCocktailsSelection()
+                            + getCraftBeerSelection() + getLatePubSelection() + context.getString(R.string.end_query);
 
                     try {
                         Cursor res = MainActivity.dbManager.getPubs(query);
@@ -147,6 +127,59 @@ public class HomeScreen extends AppCompatActivity {
 
             }
         });
+    }
+
+    private String getPubTypeSelection(){
+
+        if(cb_traditional_irish_pub.isChecked()) return context.getString(R.string.pub_type_traditional_irish);
+
+        else if(cb_modern_pub.isChecked()) return context.getString(R.string.pub_type_modern);
+
+        else return context.getString(R.string.pub_type_traditional_irish_or_modern);
+    }
+
+    private String getSideOfCitySelection(){
+
+        if(cb_pub_on_north_side_of_city.isChecked()) return context.getString(R.string.north_side_of_city);
+
+        else if(cb_pub_on_south_side_of_city.isChecked()) return context.getString(R.string.south_side_of_city);
+
+        else return context.getString(R.string.north_or_south_side_of_city);
+    }
+
+    private String getLiveMusicSelection(){
+
+        if(cb_pub_with_live_music.isChecked()) return context.getString(R.string.live_music_yes);
+
+        else return context.getString(R.string.live_music_yes_or_no);
+    }
+
+    private String getLiveSportsSelection(){
+
+        if(cb_pub_with_live_sports.isChecked()) return context.getString(R.string.live_sports_yes);
+
+        else return context.getString(R.string.live_sports_yes_or_no);
+    }
+
+    private String getCocktailsSelection(){
+
+        if(cb_pub_that_serves_cocktails.isChecked()) return context.getString(R.string.cocktails_yes);
+
+        else return context.getString(R.string.cocktails_yes_or_no);
+    }
+
+    private String getCraftBeerSelection(){
+
+        if(cb_pub_that_serves_craft_beer.isChecked()) return context.getString(R.string.craft_beer_yes);
+
+        else return context.getString(R.string.craft_beer_yes_or_no);
+    }
+
+    private String getLatePubSelection(){
+
+        if(cb_pub_that_stays_open_late.isChecked()) return context.getString(R.string.late_pub_yes);
+
+        else return context.getString(R.string.late_pub_yes_or_no);
     }
 
     @Override
@@ -216,29 +249,6 @@ public class HomeScreen extends AppCompatActivity {
         int duration = Toast.LENGTH_LONG;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
-    }
-
-    private String getLogicKey(String selection){
-
-        String logic_key = "";
-
-        if(selection.equals(context.getString(R.string.pubTypeAndSideOfCity))){
-
-            logic_key = String.valueOf(cb_traditional_irish_pub.isChecked() ? 1:0)
-                    + String.valueOf(cb_modern_pub.isChecked() ? 1:0)
-                    + String.valueOf(cb_pub_on_north_side_of_city.isChecked() ? 1:0)
-                    + String.valueOf(cb_pub_on_south_side_of_city.isChecked() ? 1:0);
-        }
-        else if(selection.equals(context.getString(R.string.extras))){
-
-            logic_key = String.valueOf(cb_pub_with_live_music.isChecked() ? 1:0)
-                    + String.valueOf(cb_pub_with_live_sports.isChecked() ? 1:0)
-                    + String.valueOf(cb_pub_that_serves_cocktails.isChecked() ? 1:0)
-                    + String.valueOf(cb_pub_that_serves_craft_beer.isChecked() ? 1:0)
-                    + String.valueOf(cb_pub_that_stays_open_late.isChecked() ? 1:0);
-        }
-
-        return logic_key;
     }
 
     private class Pub{
