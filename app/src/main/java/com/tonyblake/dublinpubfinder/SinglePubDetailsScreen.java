@@ -45,8 +45,7 @@ public class SinglePubDetailsScreen extends AppCompatActivity {
         Drawable pub_rating = Utilities.getPubRating(name, context);
         pub.setPubRating(pub_rating);
 
-        Drawable pub_pic = Utilities.getPubImage(name, context);
-        pub.setPubImage(pub_pic);
+        //pub.setPubImage(pub_pic);
 
         pub.setPubDescription(description);
 

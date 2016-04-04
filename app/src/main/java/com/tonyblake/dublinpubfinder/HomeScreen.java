@@ -199,7 +199,7 @@ public class HomeScreen extends AppCompatActivity {
 
     private void launchPubDetailsScreen() {
 
-        Intent intent = new Intent(this, PubDetailsScreen.class);
+        Intent intent = new Intent(this, PubListScreen.class);
 
         String[] name = new String[num_pubs_found];
         String[] address = new String[num_pubs_found];

@@ -1,6 +1,7 @@
 package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.text.Html;
 import android.view.Gravity;
@@ -93,9 +94,9 @@ public class PubLayout {
         iv_rating.setImageDrawable(rating);
     }
 
-    public void setPubImage(Drawable image){
+    public void setPubImage(Bitmap image){
 
-        iv_pub.setImageDrawable(image);
+        iv_pub.setImageBitmap(image);
     }
 
     public void setPubDescription(String description){

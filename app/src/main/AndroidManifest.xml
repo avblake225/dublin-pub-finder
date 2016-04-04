@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomeScreen"></activity>
-        <activity android:name=".PubDetailsScreen"></activity>
+        <activity android:name=".PubListScreen"></activity>
         <activity android:name=".FindPubByNameScreen"></activity>
         <activity android:name=".SinglePubDetailsScreen"></activity>
         <activity android:name=".MapScreen"></activity>

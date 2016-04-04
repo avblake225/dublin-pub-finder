@@ -9,7 +9,11 @@ import android.support.v4.content.ContextCompat;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.PlaceBuffer;
+import com.google.android.gms.location.places.Places;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -20,15 +24,21 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapScreen extends FragmentActivity implements OnMapReadyCallback,
-        GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+import java.util.List;
+
+public class MapScreen extends FragmentActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, OnMapReadyCallback{
 
     String name;
     double latitude, longitude;
     Context context;
-    private GoogleApiClient client;
+
     private GoogleMap mMap;
     double user_latitude, user_longitude;
+
+    String place, place_address, place_attributions;
+    List<Integer> place_type;
+    float place_rating;
+    LatLng place_coordinates;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +52,6 @@ public class MapScreen extends FragmentActivity implements OnMapReadyCallback,
 
         context = this;
 
-        client = new GoogleApiClient.Builder(this)
-                .addConnectionCallbacks(this)
-                .addOnConnectionFailedListener(this)
-                .addApi(LocationServices.API)
-                .build();
-
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -56,28 +60,62 @@ public class MapScreen extends FragmentActivity implements OnMapReadyCallback,
 
     @Override
     public void onStart() {
-        client.connect();
+        PubListScreen.client.connect();
         super.onStart();
     }
 
     @Override
     public void onStop() {
-        client.disconnect();
+        PubListScreen.client.disconnect();
         super.onStop();
     }
 
     @Override
     public void onConnected(Bundle bundle) {
 
+        String placeId = "ChIJnUe-NZ0OZ0gRcURhnZCniJE"; // getPlaceId("Bsd Bobs")
+
+        Places.GeoDataApi.getPlaceById(PubListScreen.client, placeId).setResultCallback(new ResultCallback<PlaceBuffer>() {
+
+            @Override
+            public void onResult(PlaceBuffer places) {
+
+                if(places.getStatus().isSuccess() && places.getCount() > 0) {
+
+                    final Place myPlace = places.get(0);
+
+                    place = String.valueOf(myPlace.getName());
+
+                    place_address = String.valueOf(myPlace.getAddress());
+
+                    place_rating = myPlace.getRating();
+
+                    place_coordinates = myPlace.getLatLng();
+
+                    place_attributions = String.valueOf(myPlace.getAttributions());
+
+                    place_type = myPlace.getPlaceTypes();
+
+                }
+
+                places.release();
+            }
+        });
+
         if(ContextCompat.checkSelfPermission(context, android.Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED){
 
-            Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(client);
+            Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(PubListScreen.client);
 
             if (mLastLocation != null) {
                 user_latitude = Double.valueOf(mLastLocation.getLatitude());
                 user_longitude = Double.valueOf(mLastLocation.getLongitude());
             }
         }
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
     }
 
     @Override
@@ -106,11 +144,6 @@ public class MapScreen extends FragmentActivity implements OnMapReadyCallback,
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
 
         pub_marker.showInfoWindow();
-    }
-
-    @Override
-    public void onConnectionSuspended(int i) {
-
     }
 
     @Override

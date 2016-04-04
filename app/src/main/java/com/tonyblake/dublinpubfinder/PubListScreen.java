@@ -1,19 +1,26 @@
 package com.tonyblake.dublinpubfinder;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.places.Places;
 
 import java.util.ArrayList;
 
-public class PubDetailsScreen extends Activity{
+public class PubListScreen extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener{
+
+    public static GoogleApiClient client;
 
     private Context context;
     private String[] name, address, description, latitude, longitude;
@@ -21,12 +28,27 @@ public class PubDetailsScreen extends Activity{
     private TextView tv_num_pubs_returned;
     private LinearLayout pub_details_container;
     private PubLayout pub;
+    private Bitmap downloadedPhoto;
+    private int downloadedPhoto_width;
+    private int downloadedPhoto_height;
+    private ArrayList<PubLayout> pubs;
     private ArrayList<Button> buttons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pub_details_screen);
+
+        client = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .addApi(Places.GEO_DATA_API)
+                .addApi(Places.PLACE_DETECTION_API)
+                .enableAutoManage(this, this)
+                .build();
+
+        client.connect();
 
         context = this;
 
@@ -54,7 +76,11 @@ public class PubDetailsScreen extends Activity{
 
         pub_details_container = (LinearLayout)findViewById(R.id.pub_details_container);
 
+        pubs = new ArrayList<PubLayout>();
         buttons = new ArrayList<Button>();
+
+        downloadedPhoto_width = 300;
+        downloadedPhoto_height = 300;
 
         for(int i=0;i<num_pubs_returned;i++){
 
@@ -66,15 +92,22 @@ public class PubDetailsScreen extends Activity{
             Drawable pub_rating = Utilities.getPubRating(name[i], context);
             pub.setPubRating(pub_rating);
 
-            Drawable pub_pic = Utilities.getPubImage(name[i], context);
-            pub.setPubImage(pub_pic);
+            setPubImage(i, "ChIJnUe-NZ0OZ0gRcURhnZCniJE"); // Bad Bobs
 
             pub.setPubDescription(description[i]);
 
             pub.attachToParent();
 
+            pubs.add(pub);
             buttons.add(pub.getMapButton(name[i]));
         }
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        client.disconnect();
     }
 
     @Override
@@ -104,9 +137,36 @@ public class PubDetailsScreen extends Activity{
         startActivity(intent);
     }
 
-    private void showToastMessage(CharSequence text) {
-        int duration = Toast.LENGTH_SHORT;
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
+    @Override
+    public void onConnected(Bundle bundle) {
+
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+
+    }
+
+    private void setPubImage(final int pubIndex, String placeId) {
+
+        // Create a new AsyncTask that displays the bitmap once loaded.
+        new PhotoTask(downloadedPhoto_width, downloadedPhoto_height) {
+
+            @Override
+            protected void onPostExecute(AttributedPhoto attributedPhoto) {
+
+                if (attributedPhoto != null) {
+
+                    downloadedPhoto = attributedPhoto.bitmap;
+
+                    pubs.get(pubIndex).setPubImage(downloadedPhoto);
+                }
+            }
+        }.execute(placeId);
     }
 }
