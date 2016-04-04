@@ -28,6 +28,7 @@ public class PubListScreen extends AppCompatActivity implements GoogleApiClient.
     private TextView tv_num_pubs_returned;
     private LinearLayout pub_details_container;
     private PubLayout pub;
+    public static String placeId;
     private Bitmap downloadedPhoto;
     private int downloadedPhoto_width;
     private int downloadedPhoto_height;
@@ -92,7 +93,9 @@ public class PubListScreen extends AppCompatActivity implements GoogleApiClient.
             Drawable pub_rating = Utilities.getPubRating(name[i], context);
             pub.setPubRating(pub_rating);
 
-            setPubImage(i, "ChIJnUe-NZ0OZ0gRcURhnZCniJE"); // Bad Bobs
+            placeId = "ChIJnUe-NZ0OZ0gRcURhnZCniJE"; // Bad Bobs
+
+            setPubImage(i,placeId);
 
             pub.setPubDescription(description[i]);
 

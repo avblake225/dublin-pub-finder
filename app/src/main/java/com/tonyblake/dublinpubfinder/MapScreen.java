@@ -24,21 +24,14 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import java.util.List;
-
 public class MapScreen extends FragmentActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, OnMapReadyCallback{
 
-    String name;
+    private String name;
     double latitude, longitude;
-    Context context;
-
+    private Context context;
     private GoogleMap mMap;
     double user_latitude, user_longitude;
-
-    String place, place_address, place_attributions;
-    List<Integer> place_type;
-    float place_rating;
-    LatLng place_coordinates;
+    private LatLng pub_coordinates;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,35 +66,6 @@ public class MapScreen extends FragmentActivity implements GoogleApiClient.Conne
     @Override
     public void onConnected(Bundle bundle) {
 
-        String placeId = "ChIJnUe-NZ0OZ0gRcURhnZCniJE"; // getPlaceId("Bsd Bobs")
-
-        Places.GeoDataApi.getPlaceById(PubListScreen.client, placeId).setResultCallback(new ResultCallback<PlaceBuffer>() {
-
-            @Override
-            public void onResult(PlaceBuffer places) {
-
-                if(places.getStatus().isSuccess() && places.getCount() > 0) {
-
-                    final Place myPlace = places.get(0);
-
-                    place = String.valueOf(myPlace.getName());
-
-                    place_address = String.valueOf(myPlace.getAddress());
-
-                    place_rating = myPlace.getRating();
-
-                    place_coordinates = myPlace.getLatLng();
-
-                    place_attributions = String.valueOf(myPlace.getAttributions());
-
-                    place_type = myPlace.getPlaceTypes();
-
-                }
-
-                places.release();
-            }
-        });
-
         if(ContextCompat.checkSelfPermission(context, android.Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED){
 
             Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(PubListScreen.client);
@@ -120,30 +84,47 @@ public class MapScreen extends FragmentActivity implements GoogleApiClient.Conne
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+
         mMap = googleMap;
 
         LatLng user_coordinates = new LatLng(user_latitude, user_longitude);
 
-        LatLng pub_coordinates = new LatLng(latitude, longitude);
+        String placeId = PubListScreen.placeId; // Bad Bobs
 
-        CameraPosition camera_position = new CameraPosition.Builder().target(pub_coordinates)
-                .zoom(17)
-                .tilt(30)
-                .build();
+        Places.GeoDataApi.getPlaceById(PubListScreen.client, placeId).setResultCallback(new ResultCallback<PlaceBuffer>() {
 
-        mMap.moveCamera(CameraUpdateFactory.newCameraPosition(camera_position));
+            @Override
+            public void onResult(PlaceBuffer places) {
+
+                if (places.getStatus().isSuccess() && places.getCount() > 0) {
+
+                    final Place myPlace = places.get(0);
+
+                    pub_coordinates = myPlace.getLatLng();
+
+                    CameraPosition camera_position = new CameraPosition.Builder().target(pub_coordinates)
+                            .zoom(17)
+                            .tilt(30)
+                            .build();
+
+                    mMap.moveCamera(CameraUpdateFactory.newCameraPosition(camera_position));
+
+                    Marker pub_marker = mMap.addMarker(new MarkerOptions().position(pub_coordinates)
+                            .title(name)
+                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+
+                    pub_marker.showInfoWindow();
+                }
+
+                places.release();
+            }
+        });
 
         Marker user_marker = mMap.addMarker(new MarkerOptions().position(user_coordinates)
                 .title(context.getString(R.string.you_are_here))
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
 
         user_marker.showInfoWindow();
-
-        Marker pub_marker = mMap.addMarker(new MarkerOptions().position(pub_coordinates)
-                .title(name)
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-
-        pub_marker.showInfoWindow();
     }
 
     @Override
