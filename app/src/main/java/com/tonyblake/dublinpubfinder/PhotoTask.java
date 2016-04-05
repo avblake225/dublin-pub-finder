@@ -3,6 +3,7 @@ package com.tonyblake.dublinpubfinder;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
 
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.places.PlacePhotoMetadata;
 import com.google.android.gms.location.places.PlacePhotoMetadataBuffer;
 import com.google.android.gms.location.places.PlacePhotoMetadataResult;
@@ -11,12 +12,13 @@ import com.google.android.gms.location.places.Places;
 abstract class PhotoTask extends AsyncTask<String, Void, PhotoTask.AttributedPhoto> {
 
     private int mHeight;
-
     private int mWidth;
+    private GoogleApiClient client;
 
-    public PhotoTask(int width, int height) {
+    public PhotoTask(int width, int height, GoogleApiClient client) {
         mHeight = height;
         mWidth = width;
+        this.client = client;
     }
 
     /**
@@ -32,7 +34,7 @@ abstract class PhotoTask extends AsyncTask<String, Void, PhotoTask.AttributedPho
         AttributedPhoto attributedPhoto = null;
 
         PlacePhotoMetadataResult result = Places.GeoDataApi
-                .getPlacePhotos(PubListScreen.client, placeId).await();
+                .getPlacePhotos(client, placeId).await();
 
         if (result.getStatus().isSuccess()) {
             PlacePhotoMetadataBuffer photoMetadataBuffer = result.getPhotoMetadata();
@@ -42,7 +44,7 @@ abstract class PhotoTask extends AsyncTask<String, Void, PhotoTask.AttributedPho
                 CharSequence attribution = photo.getAttributions();
 
                 // Load a scaled bitmap for this photo.
-                Bitmap image = photo.getScaledPhoto(PubListScreen.client, mWidth, mHeight).await().getBitmap();
+                Bitmap image = photo.getScaledPhoto(client, mWidth, mHeight).await().getBitmap();
 
                 attributedPhoto = new AttributedPhoto(attribution, image);
             }

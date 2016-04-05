@@ -20,7 +20,8 @@ public class FindPubByNameScreen extends AppCompatActivity {
     private Button btn_findpub;
     private String pub_name = "";
 
-    private String name, address, description, latitude, longitude;
+    private String name, address, description, place_ID;
+    private int rating_resource_ID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,8 +70,8 @@ public class FindPubByNameScreen extends AppCompatActivity {
                     name = res.getString(1);
                     address = res.getString(2);
                     description = res.getString(3);
-                    latitude = res.getString(4);
-                    longitude = res.getString(5);
+                    place_ID = res.getString(4);
+                    rating_resource_ID = res.getInt(5);
 
                     launchSinglePubDetailsScreen();
 
@@ -88,8 +89,8 @@ public class FindPubByNameScreen extends AppCompatActivity {
         intent.putExtra("name", name);
         intent.putExtra("address", address);
         intent.putExtra("description", description);
-        intent.putExtra("latitude", latitude);
-        intent.putExtra("longitude", longitude);
+        intent.putExtra("place_ID", place_ID);
+        intent.putExtra("rating_resource_ID", rating_resource_ID);
 
         startActivity(intent);
     }

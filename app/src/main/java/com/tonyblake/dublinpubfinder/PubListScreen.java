@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class PubListScreen extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener{
 
-    public static GoogleApiClient client;
+    private GoogleApiClient client;
 
     private Context context;
     private String[] name, address, description, place_ID;
@@ -91,8 +91,7 @@ public class PubListScreen extends AppCompatActivity implements GoogleApiClient.
             pub.setPubName(name[i]);
             pub.setPubAddress(address[i]);
 
-            int pub_rating_ID = rating_resource_ID[i];
-            Drawable pub_rating = context.getResources().getDrawable(pub_rating_ID);
+            Drawable pub_rating = context.getResources().getDrawable(rating_resource_ID[i]);
             pub.setPubRating(pub_rating);
 
             setPubImage(i,place_ID[i]);
@@ -135,7 +134,7 @@ public class PubListScreen extends AppCompatActivity implements GoogleApiClient.
     private void launchMapScreen(String name, String place_ID){
         Intent intent = new Intent(this, MapScreen.class);
         intent.putExtra("name", name);
-        intent.putExtra("place_IF", place_ID);
+        intent.putExtra("place_ID", place_ID);
         startActivity(intent);
     }
 
@@ -157,7 +156,7 @@ public class PubListScreen extends AppCompatActivity implements GoogleApiClient.
     private void setPubImage(final int pubIndex, String placeId) {
 
         // Create a new AsyncTask that displays the bitmap once loaded.
-        new PhotoTask(downloadedPhoto_width, downloadedPhoto_height) {
+        new PhotoTask(downloadedPhoto_width, downloadedPhoto_height, client) {
 
             @Override
             protected void onPostExecute(AttributedPhoto attributedPhoto) {

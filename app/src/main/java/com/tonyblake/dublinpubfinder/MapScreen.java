@@ -26,6 +26,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapScreen extends FragmentActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, OnMapReadyCallback{
 
+    private GoogleApiClient client;
+
     private String name, place_ID;
     private Context context;
     private GoogleMap mMap;
@@ -36,6 +38,17 @@ public class MapScreen extends FragmentActivity implements GoogleApiClient.Conne
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.map_location);
+
+        client = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .addApi(Places.GEO_DATA_API)
+                .addApi(Places.PLACE_DETECTION_API)
+                .enableAutoManage(this, this)
+                .build();
+
+        client.connect();
 
         savedInstanceState = getIntent().getExtras();
         name = savedInstanceState.getString("name");
@@ -51,13 +64,13 @@ public class MapScreen extends FragmentActivity implements GoogleApiClient.Conne
 
     @Override
     public void onStart() {
-        PubListScreen.client.connect();
+        client.connect();
         super.onStart();
     }
 
     @Override
     public void onStop() {
-        PubListScreen.client.disconnect();
+        client.disconnect();
         super.onStop();
     }
 
@@ -66,7 +79,7 @@ public class MapScreen extends FragmentActivity implements GoogleApiClient.Conne
 
         if(ContextCompat.checkSelfPermission(context, android.Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED){
 
-            Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(PubListScreen.client);
+            Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(client);
 
             if (mLastLocation != null) {
                 user_latitude = Double.valueOf(mLastLocation.getLatitude());
@@ -87,7 +100,7 @@ public class MapScreen extends FragmentActivity implements GoogleApiClient.Conne
 
         LatLng user_coordinates = new LatLng(user_latitude, user_longitude);
 
-        Places.GeoDataApi.getPlaceById(PubListScreen.client, place_ID).setResultCallback(new ResultCallback<PlaceBuffer>() {
+        Places.GeoDataApi.getPlaceById(client, place_ID).setResultCallback(new ResultCallback<PlaceBuffer>() {
 
             @Override
             public void onResult(PlaceBuffer places) {
