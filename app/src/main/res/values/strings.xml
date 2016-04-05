@@ -84,86 +84,72 @@
     <string name="alfie_byrnes">Alfie Byrnes</string>
     <string name="alfie_byrnes_address">Earlsfort Terrace, Dublin 2</string>
     <string name="alfie_byrnes_description">No description available</string>
-    <string name="alfie_byrnes_latitude">53.334672</string>
-    <string name="alfie_byrnes_longitude">-6.257553</string>
+    <string name="alfie_byrnes_place_ID">ChIJO3QGC6IOZ0gR1kO_UzJmuOY</string>
 
     <string name="alfies">Alfies</string>
     <string name="alfies_address">10 South William Street, Dublin 2</string>
     <string name="alfies_description">Glitter balls and chandeliers give a young edge to a simple menu of international dishes</string>
-    <string name="alfies_latitude">53.342506</string>
-    <string name="alfies_longitude">-6.262440</string>
+    <string name="alfies_place_ID">ChIJVyyQX5wOZ0gRbKriCFNgWvk</string>
 
     <string name="anseo">Anseo</string>
     <string name="anseo_address">18 Camden Street Lower, Dublin 2</string>
     <string name="anseo_description">No description available</string>
-    <string name="anseo_latitude">53.335215</string>
-    <string name="anseo_longitude">-6.265121</string>
+    <string name="anseo_place_ID">ChIJK_hq758OZ0gRc-q7KyQHvqo</string>
 
     <string name="bad_bobs">Bad Bobs</string>
     <string name="bad_bobs_address">35 Essex Street East, Dublin 2</string>
     <string name="bad_bobs_description">Full of vintage ephemera, this large, lively bar, restaurant and nightclub includes a roof terrace</string>
-    <string name="bad_bobs_latitude">53.344993</string>
-    <string name="bad_bobs_longitude"> -6.266064</string>
+    <string name="bad_bobs_place_ID">ChIJnUe-NZ0OZ0gRcURhnZCniJE</string>
 
     <string name="break_for_the_border">Break For The Border</string>
     <string name="break_for_the_border_address">Stephen Street Lower, Dublin 2</string>
     <string name="break_for_the_border_description">No description available</string>
-    <string name="break_for_the_border_latitude">53.341016</string>
-    <string name="break_for_the_border_longitude">-6.264030</string>
+    <string name="break_for_the_border_place_ID">ChIJZ0zjyp0OZ0gRaqvpgBR0CNk</string>
 
     <string name="bruxelles">Bruxelles</string>
     <string name="bruxelles_address">7 Harry St, Dublin 2</string>
     <string name="bruxelles_description">Bustling joint with an Irish heavy rock heritage, with 3 bars and live music, plus TV sports</string>
-    <string name="bruxelles_latitude">53.341283</string>
-    <string name="bruxelles_longitude">-6.260940</string>
+    <string name="bruxelles_place_ID">ChIJEYHHDJwOZ0gRVbbA0NQyqRU</string>
 
     <string name="buskers">Buskers</string>
     <string name="buskers_address">13 Fleet St, Dublin 2</string>
     <string name="buskers_description">Vibrant modern bar with nightly live bands, TV sports, cocktail classes, stag and hen parties</string>
-    <string name="buskers_latitude">53.345778</string>
-    <string name="buskers_longitude">-6.260475</string>
+    <string name="buskers_place_ID">ChIJMQYhsoQOZ0gRQA9AVljYjPo</string>
 
     <string name="café_en_seine">Café en Seine</string>
     <string name="café_en_seine_address">40 Dawson Street, Dublin 2</string>
     <string name="café_en_seine_description">Elegant art nouveau bar spread over 3 floors with doric columns and glass panelled ceilings</string>
-    <string name="café_en_seine_latitude">53.340627</string>
-    <string name="café_en_seine_longitude">-6.258608</string>
+    <string name="café_en_seine_place_ID">ChIJC7OZ55sOZ0gRrO9y748QF9k</string>
 
     <string name="cassidys">Cassidys</string>
     <string name="cassidys_address">27 Westmoreland St, Dublin 2</string>
     <string name="cassidys_description">No description available</string>
-    <string name="cassidys_latitude">53.346289</string>
-    <string name="cassidys_longitude">-6.258785</string>
+    <string name="cassidys_place_ID">ChIJcZrG2oQOZ0gRDsK0hvBOw1g</string>
 
     <string name="devitts">Devitts</string>
     <string name="devitts_address">78 Lower Camden Street, Dublin 2</string>
     <string name="devitts_description">No description available</string>
-    <string name="devitts_latitude">53.335525</string>
-    <string name="devitts_longitude">-6.265668</string>
+    <string name="devitts_place_ID">ChIJA4Ky-p8OZ0gRhXikn1xYL6U</string>
 
     <string name="doheny_and_nesbitts">Doheny And Nesbitts</string>
     <string name="doheny_and_nesbitts_address">5 Baggot Street Lower, Dublin 2</string>
     <string name="doheny_and_nesbitts_description">This classic pub houses 2 fine old snugs (small rooms for women in days of old) and an Irish menu</string>
-    <string name="doheny_and_nesbitts_latitude">53.338087</string>
-    <string name="doheny_and_nesbitts_longitude">-6.253142</string>
+    <string name="doheny_and_nesbitts_place_ID">ChIJR1zDf5cOZ0gR5CT7Xyk8ERQ</string>
 
     <string name="doyles">Doyles</string>
     <string name="doyles_address">9 College St, Dublin 2</string>
     <string name="doyles_description">This 19th century bar with bare brick walls and stripped wood floors serves pub grub classics</string>
-    <string name="doyles_latitude">53.345786</string>
-    <string name="doyles_longitude">-6.257576</string>
+    <string name="doyles_place_ID">ChIJYUKVK4UOZ0gR7vvLW430XO8</string>
 
     <string name="fibber_magees">Fibber Magees</string>
     <string name="fibber_magees_address">80 Parnel Street, Dublin 1</string>
     <string name="fibber_magees_description">Classic pub with a predilection for hard guitar music with brick walls, pool tables and beer garden</string>
-    <string name="fibber_magees_latitude">53.352780</string>
-    <string name="fibber_magees_longitude">-6.260630</string>
+    <string name="fibber_magees_place_ID">ChIJL7OO74YOZ0gRNw4CmOJh5Kk</string>
 
     <string name="fitzgeralds">Fitzgeralds</string>
     <string name="fitzgeralds_address">22 Aston Quay, Dublin 2</string>
     <string name="fitzgeralds_description">No description available</string>
-    <string name="fitzgeralds_latitude">53.346674</string>
-    <string name="fitzgeralds_longitude">-6.259770</string>
+    <string name="fitzgeralds_place_ID">ChIJNVQTwIQOZ0gRikXC6r6VR_w</string>
 
     <string name="fitzsimons">Fitzsimons</string>
     <string name="fitzsimons_address">21 Wellington Quay, Temple Bar, Dublin 2</string>
