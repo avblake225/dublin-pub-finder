@@ -154,38 +154,32 @@
     <string name="fitzsimons">Fitzsimons</string>
     <string name="fitzsimons_address">21 Wellington Quay, Temple Bar, Dublin 2</string>
     <string name="fitzsimons_description">No description available</string>
-    <string name="fitzsimons_latitude">53.345533</string>
-    <string name="fitzsimons_longitude">-6.265244</string>
+    <string name="fitzsimons_place_ID">ChIJS5hU0YIOZ0gRLdi5U2EBI8M</string>
 
     <string name="flannerys">Flannerys</string>
     <string name="flannerys_address">6 Camden Street Lower, Dublin 2</string>
     <string name="flannerys_description">A quaint pub facade gives way to a cavernous and wood-filled interior at this late opening pub/bar</string>
-    <string name="flannerys_latitude">53.336021</string>
-    <string name="flannerys_longitude">-6.265153</string>
+    <string name="flannerys_place_ID">ChIJLw6exJ8OZ0gRZPe_OqqaKW4</string>
 
     <string name="four_dame_lane">4 Dame Lane</string>
     <string name="four_dame_lane_address">4 Dame Lane, Dublin 2</string>
     <string name="four_dame_lane_description">Brick walled bar with high beamed ceilings creating large music venue with memorabilia-covered bar</string>
-    <string name="four_dame_lane_latitude">53.343737</string>
-    <string name="four_dame_lane_longitude">-6.262970</string>
+    <string name="four_dame_lane_place_ID">ChIJtVgD65wOZ0gRU-Va5Q-sWxM</string>
 
     <string name="grogans">Grogans</string>
     <string name="grogans_address">15 South William Street, Dublin 2</string>
     <string name="grogans_description">Higgledy piggledy artworks by local artists dot the walls of this local pub which hosts book events</string>
-    <string name="grogans_latitude">53.342134</string>
-    <string name="grogans_longitude">-6.262606</string>
+    <string name="grogans_place_ID">ChIJMTezXZwOZ0gRcOVCwfcvvk8</string>
 
     <string name="hartigans">Hartigans</string>
     <string name="hartigans_address">100 Leeson Street Lower, Dublin 2</string>
     <string name="hartigans_description">No description available</string>
-    <string name="hartigans_latitude">53.336003</string>
-    <string name="hartigans_longitude">-6.256775</string>
+    <string name="hartigans_place_ID">ChIJMTFIkpgOZ0gRf0BlhsVzwwk</string>
 
     <string name="hogans">Hogans</string>
     <string name="hogans_address">35 South Great Georges Street, Dublin 2</string>
     <string name="hogans_description">Spacious bar with upstairs room for typical selection of beer in Victorian surroundings</string>
-    <string name="hogans_latitude">53.341903</string>
-    <string name="hogans_longitude">-6.264638</string>
+    <string name="hogans_place_ID">ChIJc_TIwFoJZ0gRX1BlS-bn5WA</string>
 
     <string name="james_toners">James Toners</string>
     <string name="james_toners_address">139 Baggot Street Lower, Dublin 2</string>
