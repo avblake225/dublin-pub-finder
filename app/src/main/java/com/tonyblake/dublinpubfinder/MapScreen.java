@@ -26,8 +26,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapScreen extends FragmentActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, OnMapReadyCallback{
 
-    private String name;
-    double latitude, longitude;
+    private String name, place_ID;
     private Context context;
     private GoogleMap mMap;
     double user_latitude, user_longitude;
@@ -40,8 +39,7 @@ public class MapScreen extends FragmentActivity implements GoogleApiClient.Conne
 
         savedInstanceState = getIntent().getExtras();
         name = savedInstanceState.getString("name");
-        latitude = Double.valueOf(savedInstanceState.getString("latitude"));
-        longitude = Double.valueOf(savedInstanceState.getString("longitude"));
+        place_ID = savedInstanceState.getString("place_ID");
 
         context = this;
 
@@ -89,9 +87,7 @@ public class MapScreen extends FragmentActivity implements GoogleApiClient.Conne
 
         LatLng user_coordinates = new LatLng(user_latitude, user_longitude);
 
-        String placeId = PubListScreen.placeId; // Bad Bobs
-
-        Places.GeoDataApi.getPlaceById(PubListScreen.client, placeId).setResultCallback(new ResultCallback<PlaceBuffer>() {
+        Places.GeoDataApi.getPlaceById(PubListScreen.client, place_ID).setResultCallback(new ResultCallback<PlaceBuffer>() {
 
             @Override
             public void onResult(PlaceBuffer places) {

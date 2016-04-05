@@ -23,7 +23,8 @@ public class PubListScreen extends AppCompatActivity implements GoogleApiClient.
     public static GoogleApiClient client;
 
     private Context context;
-    private String[] name, address, description, latitude, longitude;
+    private String[] name, address, description, place_ID;
+    private int[] rating_resource_ID;
     private int num_pubs_returned;
     private TextView tv_num_pubs_returned;
     private LinearLayout pub_details_container;
@@ -57,8 +58,8 @@ public class PubListScreen extends AppCompatActivity implements GoogleApiClient.
         name = savedInstanceState.getStringArray("name");
         address = savedInstanceState.getStringArray("address");
         description = savedInstanceState.getStringArray("description");
-        latitude = savedInstanceState.getStringArray("latitude");
-        longitude = savedInstanceState.getStringArray("longitude");
+        place_ID = savedInstanceState.getStringArray("place_ID");
+        rating_resource_ID = savedInstanceState.getIntArray("rating_resource_ID");
 
         num_pubs_returned = name.length;
 
@@ -90,12 +91,11 @@ public class PubListScreen extends AppCompatActivity implements GoogleApiClient.
             pub.setPubName(name[i]);
             pub.setPubAddress(address[i]);
 
-            Drawable pub_rating = Utilities.getPubRating(name[i], context);
+            int pub_rating_ID = rating_resource_ID[i];
+            Drawable pub_rating = context.getResources().getDrawable(pub_rating_ID);
             pub.setPubRating(pub_rating);
 
-            placeId = "ChIJnUe-NZ0OZ0gRcURhnZCniJE"; // Bad Bobs
-
-            setPubImage(i,placeId);
+            setPubImage(i,place_ID[i]);
 
             pub.setPubDescription(description[i]);
 
@@ -126,17 +126,16 @@ public class PubListScreen extends AppCompatActivity implements GoogleApiClient.
                 @Override
                 public void onClick(View v) {
 
-                    launchMapScreen(name[j], latitude[j], longitude[j]);
+                    launchMapScreen(name[j], place_ID[j]);
                 }
             });
         }
     }
 
-    private void launchMapScreen(String name, String latitude, String longitude){
+    private void launchMapScreen(String name, String place_ID){
         Intent intent = new Intent(this, MapScreen.class);
         intent.putExtra("name", name);
-        intent.putExtra("latitude", latitude);
-        intent.putExtra("longitude", longitude);
+        intent.putExtra("place_IF", place_ID);
         startActivity(intent);
     }
 

@@ -2,7 +2,6 @@ package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -41,9 +40,6 @@ public class SinglePubDetailsScreen extends AppCompatActivity {
 
         pub.setPubName(name);
         pub.setPubAddress(address);
-
-        Drawable pub_rating = Utilities.getPubRating(name, context);
-        pub.setPubRating(pub_rating);
 
         //pub.setPubImage(pub_pic);
 

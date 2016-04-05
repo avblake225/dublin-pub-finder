@@ -101,8 +101,8 @@ public class HomeScreen extends AppCompatActivity {
                             pub.name = res.getString(1);
                             pub.address = res.getString(2);
                             pub.description = res.getString(3);
-                            pub.latitude = res.getString(4);
-                            pub.longitude = res.getString(5);
+                            pub.place_ID = res.getString(4);
+                            pub.rating_resource_ID = res.getInt(5);
                             pubs_found.add(pub);
 
                         } while (res.moveToNext());
@@ -204,21 +204,21 @@ public class HomeScreen extends AppCompatActivity {
         String[] name = new String[num_pubs_found];
         String[] address = new String[num_pubs_found];
         String[] description = new String[num_pubs_found];
-        String[] latitude = new String[num_pubs_found];
-        String[] longitude = new String[num_pubs_found];
+        String[] place_ID = new String[num_pubs_found];
+        int[] rating_resource_ID = new int[num_pubs_found];
 
         for(int i=0;i<num_pubs_found;i++){
             name[i] = pubs_found.get(i).name;
             address[i] = pubs_found.get(i).address;
             description[i] = pubs_found.get(i).description;
-            latitude[i] = pubs_found.get(i).latitude;
-            longitude[i] = pubs_found.get(i).longitude;
+            place_ID[i] = pubs_found.get(i).place_ID;
+            rating_resource_ID[i] = pubs_found.get(i).rating_resource_ID;
         }
         intent.putExtra("name", name);
         intent.putExtra("address", address);
         intent.putExtra("description", description);
-        intent.putExtra("latitude", latitude);
-        intent.putExtra("longitude", longitude);
+        intent.putExtra("place_ID", place_ID);
+        intent.putExtra("rating_resource_ID", rating_resource_ID);
 
         startActivity(intent);
     }
@@ -256,7 +256,7 @@ public class HomeScreen extends AppCompatActivity {
         private String name;
         private String address;
         private String description;
-        private String latitude;
-        private String longitude;
+        private String place_ID;
+        private int rating_resource_ID;
     }
 }

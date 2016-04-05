@@ -79,8 +79,7 @@
     <string name="against_the_grain">Against The Grain</string>
     <string name="against_the_grain_address">11 Wexford Street, Dublin 2</string>
     <string name="against_the_grain_description">Modern bar with a huge array of local and international craft beers on tap and big-screen TV sport</string>
-    <string name="against_the_grain_latitude">53.337230</string>
-    <string name="against_the_grain_longitude">-6.265333</string>
+    <string name="against_the_grain_place_ID">ChIJBQqn0p8OZ0gR5uqZlXXpmnU</string>
 
     <string name="alfie_byrnes">Alfie Byrnes</string>
     <string name="alfie_byrnes_address">Earlsfort Terrace, Dublin 2</string>
