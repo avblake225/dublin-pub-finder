@@ -40,7 +40,7 @@ abstract class PhotoTask extends AsyncTask<String, Void, PhotoTask.AttributedPho
             PlacePhotoMetadataBuffer photoMetadataBuffer = result.getPhotoMetadata();
             if (photoMetadataBuffer.getCount() > 0 && !isCancelled()) {
                 // Get the first bitmap and its attributions.
-                PlacePhotoMetadata photo = photoMetadataBuffer.get(0);
+                    PlacePhotoMetadata photo = photoMetadataBuffer.get(0);
                 CharSequence attribution = photo.getAttributions();
 
                 // Load a scaled bitmap for this photo.

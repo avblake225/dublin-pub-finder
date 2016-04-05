@@ -184,38 +184,32 @@
     <string name="james_toners">James Toners</string>
     <string name="james_toners_address">139 Baggot Street Lower, Dublin 2</string>
     <string name="james_toners_description">Long established, traditional pub with a dark wooden bar, picture framed snug and popular beer yard</string>
-    <string name="james_toners_latitude">53.337763</string>
-    <string name="james_toners_longitude">-6.252382</string>
+    <string name="james_toners_place_ID">ChIJR1zDf5cOZ0gRmIywC_s8buc</string>
 
     <string name="jj_smyths">J.J. Smyths</string>
     <string name="jj_smyths_address">12 Aungier St, Dublin 2</string>
     <string name="jj_smyths_description">Typical Irish ground floor pub with 1st floor venue for the leading lights in live jazz and blues</string>
-    <string name="jj_smyths_latitude">53.340560</string>
-    <string name="jj_smyths_longitude">-6.265465</string>
+    <string name="jj_smyths_place_ID">ChIJ1-pT6J0OZ0gRR-iMd2c6nu4</string>
 
     <string name="john_kehoes">John Kehoes</string>
     <string name="john_kehoes_address">9 South Anne Street, Dublin 2</string>
     <string name="john_kehoes_description">Classic pub scattered with original features such as mahogany doors and wood partitioned snug areas</string>
-    <string name="john_kehoes_latitude">53.341091</string>
-    <string name="john_kehoes_longitude">-6.259419</string>
+    <string name="john_kehoes_place_ID">ChIJ8wUZ8psOZ0gRY_Z66tz8_OE</string>
 
     <string name="jw_sweetmans">J.W. Sweetmans</string>
     <string name="jw_sweetmans_address">1 Burgh Quay, Dublin 2</string>
     <string name="jw_sweetmans_description">No description available</string>
-    <string name="jw_sweetmans_latitude">53.346959</string>
-    <string name="jw_sweetmans_longitude">-6.258260</string>
+    <string name="jw_sweetmans_place_ID">ChIJVyv8H4UOZ0gREKGhgosrQy8</string>
 
     <string name="lanigans">Lanigans</string>
     <string name="lanigans_address">10 Eden Quay, Dublin 1</string>
     <string name="lanigans_description">No description available</string>
-    <string name="lanigans_latitude">53.348020</string>
-    <string name="lanigans_longitude">-6.257769</string>
+    <string name="lanigans_place_ID">ChIJK-E4BIUOZ0gRd-kUnF2f98U</string>
 
     <string name="lagoona">Lagoona</string>
     <string name="lagoona_address">Mayor Street Lower, IFSC, Dublin 1</string>
     <string name="lagoona_description">No description available</string>
-    <string name="lagoona_latitude">53.349615</string>
-    <string name="lagoona_longitude">-6.243107</string>
+    <string name="lagoona_place_ID">ChIJCVErT4wOZ0gRTb822t6ZGw4</string>
 
     <string name="mulligans">Mulligans</string>
     <string name="mulligans_address">8 Poolbeg Street, Dublin 2</string>

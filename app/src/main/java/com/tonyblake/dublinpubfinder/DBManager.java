@@ -428,113 +428,113 @@ public class DBManager extends SQLiteOpenHelper{
                 j++;
             }
 
-//            boolean james_toners = insertData(context.getString(R.string.james_toners),
-//                    context.getString(R.string.james_toners_address),
-//                    context.getString(R.string.james_toners_description),
-//                    context.getString(R.string.james_toners_latitude),
-//                    context.getString(R.string.james_toners_longitude),
-//                    context.getString(R.string.traditional_irish),
-//                    context.getString(R.string.southside),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no));
-//
-//            i++;
-//            if (james_toners) {
-//                j++;
-//            }
-//
-//            boolean jj_smyths = insertData(context.getString(R.string.jj_smyths),
-//                    context.getString(R.string.jj_smyths_address),
-//                    context.getString(R.string.jj_smyths_description),
-//                    context.getString(R.string.jj_smyths_latitude),
-//                    context.getString(R.string.jj_smyths_longitude),
-//                    context.getString(R.string.traditional_irish),
-//                    context.getString(R.string.southside),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no));
-//
-//            i++;
-//            if (jj_smyths) {
-//                j++;
-//            }
-//
-//            boolean john_kehoes = insertData(context.getString(R.string.john_kehoes),
-//                    context.getString(R.string.john_kehoes_address),
-//                    context.getString(R.string.john_kehoes_description),
-//                    context.getString(R.string.john_kehoes_latitude),
-//                    context.getString(R.string.john_kehoes_longitude),
-//                    context.getString(R.string.traditional_irish),
-//                    context.getString(R.string.southside),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no));
-//
-//            i++;
-//            if (john_kehoes) {
-//                j++;
-//            }
-//
-//            boolean jw_sweetmans = insertData(context.getString(R.string.jw_sweetmans),
-//                    context.getString(R.string.jw_sweetmans_address),
-//                    context.getString(R.string.jw_sweetmans_description),
-//                    context.getString(R.string.jw_sweetmans_latitude),
-//                    context.getString(R.string.jw_sweetmans_longitude),
-//                    context.getString(R.string.modern),
-//                    context.getString(R.string.southside),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.yes));
-//
-//            i++;
-//            if (jw_sweetmans) {
-//                j++;
-//            }
-//
-//            boolean lanigans = insertData(context.getString(R.string.lanigans),
-//                    context.getString(R.string.lanigans_address),
-//                    context.getString(R.string.lanigans_description),
-//                    context.getString(R.string.lanigans_latitude),
-//                    context.getString(R.string.lanigans_longitude),
-//                    context.getString(R.string.traditional_irish),
-//                    context.getString(R.string.northside),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.no));
-//
-//            i++;
-//            if (lanigans) {
-//                j++;
-//            }
-//
-//            boolean lagoona = insertData(context.getString(R.string.lagoona),
-//                    context.getString(R.string.lagoona_address),
-//                    context.getString(R.string.lagoona_description),
-//                    context.getString(R.string.lagoona_latitude),
-//                    context.getString(R.string.lagoona_longitude),
-//                    context.getString(R.string.modern),
-//                    context.getString(R.string.northside),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no));
-//
-//            i++;
-//            if (lagoona) {
-//                j++;
-//            }
+            boolean james_toners = insertData(context.getString(R.string.james_toners),
+                    context.getString(R.string.james_toners_address),
+                    context.getString(R.string.james_toners_description),
+                    context.getString(R.string.james_toners_place_ID),
+                    context.getResources().getIdentifier("four_star_rating","drawable",context.getPackageName()),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
+
+            i++;
+            if (james_toners) {
+                j++;
+            }
+
+            boolean jj_smyths = insertData(context.getString(R.string.jj_smyths),
+                    context.getString(R.string.jj_smyths_address),
+                    context.getString(R.string.jj_smyths_description),
+                    context.getString(R.string.jj_smyths_place_ID),
+                    context.getResources().getIdentifier("four_and_a_half_star_rating","drawable",context.getPackageName()),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
+
+            i++;
+            if (jj_smyths) {
+                j++;
+            }
+
+            boolean john_kehoes = insertData(context.getString(R.string.john_kehoes),
+                    context.getString(R.string.john_kehoes_address),
+                    context.getString(R.string.john_kehoes_description),
+                    context.getString(R.string.john_kehoes_place_ID),
+                    context.getResources().getIdentifier("four_star_rating","drawable",context.getPackageName()),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
+
+            i++;
+            if (john_kehoes) {
+                j++;
+            }
+
+            boolean jw_sweetmans = insertData(context.getString(R.string.jw_sweetmans),
+                    context.getString(R.string.jw_sweetmans_address),
+                    context.getString(R.string.jw_sweetmans_description),
+                    context.getString(R.string.jw_sweetmans_place_ID),
+                    context.getResources().getIdentifier("four_star_rating","drawable",context.getPackageName()),
+                    context.getString(R.string.modern),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes));
+
+            i++;
+            if (jw_sweetmans) {
+                j++;
+            }
+
+            boolean lanigans = insertData(context.getString(R.string.lanigans),
+                    context.getString(R.string.lanigans_address),
+                    context.getString(R.string.lanigans_description),
+                    context.getString(R.string.lanigans_place_ID),
+                    context.getResources().getIdentifier("four_star_rating","drawable",context.getPackageName()),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.northside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no));
+
+            i++;
+            if (lanigans) {
+                j++;
+            }
+
+            boolean lagoona = insertData(context.getString(R.string.lagoona),
+                    context.getString(R.string.lagoona_address),
+                    context.getString(R.string.lagoona_description),
+                    context.getString(R.string.lagoona_place_ID),
+                    context.getResources().getIdentifier("four_star_rating","drawable",context.getPackageName()),
+                    context.getString(R.string.modern),
+                    context.getString(R.string.northside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
+
+            i++;
+            if (lagoona) {
+                j++;
+            }
 
 //            boolean mulligans = insertData(context.getString(R.string.mulligans),
 //                    context.getString(R.string.mulligans_address),
