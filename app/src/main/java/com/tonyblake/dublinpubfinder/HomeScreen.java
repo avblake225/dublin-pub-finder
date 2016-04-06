@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class HomeScreen extends AppCompatActivity {
+public class HomeScreen extends AppCompatActivity{
 
     private Context context;
 
@@ -41,19 +41,7 @@ public class HomeScreen extends AppCompatActivity {
 
         context = this;
 
-        cb_traditional_irish_pub = (CheckBox)findViewById(R.id.cb_traditional_irish_pub);
-        cb_modern_pub = (CheckBox)findViewById(R.id.cb_modern_pub);
-        cb_pub_on_north_side_of_city = (CheckBox)findViewById(R.id.cb_pub_on_north_side_of_city);
-        cb_pub_on_south_side_of_city = (CheckBox)findViewById(R.id.cb_pub_on_south_side_of_city);
-        cb_pub_with_live_music = (CheckBox)findViewById(R.id.cb_pub_with_live_music);
-        cb_pub_with_live_sports = (CheckBox)findViewById(R.id.cb_pub_with_live_sports);
-        cb_pub_that_serves_cocktails = (CheckBox)findViewById(R.id.cb_pub_that_serves_cocktails);
-        cb_pub_that_serves_craft_beer = (CheckBox)findViewById(R.id.cb_pub_that_serves_craft_beer);
-        cb_pub_that_stays_open_late = (CheckBox)findViewById(R.id.cb_pub_that_stays_open_late);
-
-        btn_findpub = (Button) findViewById(R.id.btn_findpub);
-
-        btn_findpubbyname = (Button) findViewById(R.id.btn_findpubbyname);
+        initializeViews();
     }
 
     @Override
@@ -64,6 +52,16 @@ public class HomeScreen extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
+        findViewById(R.id.btn_search).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                SearchDialog searchDialog = new SearchDialog(HomeScreen.this);
+                searchDialog.show();
+            }
+        });
 
         btn_findpub.setOnClickListener(new View.OnClickListener() {
 
@@ -249,6 +247,23 @@ public class HomeScreen extends AppCompatActivity {
         int duration = Toast.LENGTH_LONG;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
+    }
+
+    private void initializeViews(){
+
+        cb_traditional_irish_pub = (CheckBox)findViewById(R.id.cb_traditional_irish_pub);
+        cb_modern_pub = (CheckBox)findViewById(R.id.cb_modern_pub);
+        cb_pub_on_north_side_of_city = (CheckBox)findViewById(R.id.cb_pub_on_north_side_of_city);
+        cb_pub_on_south_side_of_city = (CheckBox)findViewById(R.id.cb_pub_on_south_side_of_city);
+        cb_pub_with_live_music = (CheckBox)findViewById(R.id.cb_pub_with_live_music);
+        cb_pub_with_live_sports = (CheckBox)findViewById(R.id.cb_pub_with_live_sports);
+        cb_pub_that_serves_cocktails = (CheckBox)findViewById(R.id.cb_pub_that_serves_cocktails);
+        cb_pub_that_serves_craft_beer = (CheckBox)findViewById(R.id.cb_pub_that_serves_craft_beer);
+        cb_pub_that_stays_open_late = (CheckBox)findViewById(R.id.cb_pub_that_stays_open_late);
+
+        btn_findpub = (Button) findViewById(R.id.btn_findpub);
+
+        btn_findpubbyname = (Button) findViewById(R.id.btn_findpubbyname);
     }
 
     private class Pub{

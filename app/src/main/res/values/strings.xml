@@ -3,6 +3,7 @@
     <string name="app_name">Dublin Pub Finder</string>
     <string name="enter">Enter</string>
     <string name="copyright">© Tony Blake 2016</string>
+    <string name="search">SEARCH</string>
 
     <string name="make_selection">Select what you\'re looking for from the list below (multiple selections are allowed)...</string>
     <string name="traditional_irish_pub">Traditional Irish pub</string>
