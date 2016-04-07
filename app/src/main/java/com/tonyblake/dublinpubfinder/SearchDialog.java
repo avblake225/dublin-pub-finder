@@ -43,7 +43,7 @@ public class SearchDialog extends DialogFragment{
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
 
-                        mListener.onDialogSearchButtonClick(SearchDialog.this);
+                        mListener.onSearchDialogSearchClick(SearchDialog.this);
                     }
                 })
                  .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
@@ -60,7 +60,7 @@ public class SearchDialog extends DialogFragment{
 
     public interface SearchDialogListener {
 
-        void onDialogSearchButtonClick(DialogFragment dialog);
+        void onSearchDialogSearchClick(DialogFragment dialog);
     }
 
     SearchDialogListener mListener;

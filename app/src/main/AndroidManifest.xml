@@ -19,7 +19,11 @@
         </activity>
         <activity android:name=".HomeScreen"></activity>
         <activity android:name=".PubListScreen"></activity>
-        <activity android:name=".FindPubByNameScreen"></activity>
+        <activity
+           android:name=".SearchByNameDialog"
+           android:label="@string/enter_pub_name"
+           android:theme="@style/AppDialogTheme">
+        </activity>
         <activity android:name=".SinglePubDetailsScreen"></activity>
         <activity android:name=".MapScreen"></activity>
 

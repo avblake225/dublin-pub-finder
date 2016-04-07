@@ -9,18 +9,36 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:background="?attr/colorPrimary">
 
-        <Button
-            android:id="@+id/btn_search"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/search"
-            android:padding="12dp"
-            android:gravity="left"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:background="?attr/colorPrimary"
-            android:textStyle="bold" />
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/search"
+                android:padding="12dp"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:background="?attr/colorPrimary"/>
+
+            <Button
+                android:id="@+id/btn_search_by_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_by_name"
+                android:padding="12dp"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:background="?attr/colorPrimary"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -38,20 +56,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <Button
-                    android:id="@+id/btn_findpubbyname"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/btn_findpub"
-                    android:layout_centerHorizontal="true"
-                    android:text="@string/find_pub_by_name"/>
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/home_screen_margin"
                     android:layout_marginBottom="@dimen/home_screen_margin"
-                    android:layout_below="@id/btn_findpubbyname"
                     android:textColor="@color/gray"
                     android:text="@string/disclaimer"/>
 

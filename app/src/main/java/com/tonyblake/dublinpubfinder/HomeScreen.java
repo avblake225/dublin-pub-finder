@@ -8,7 +8,6 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -21,8 +20,6 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
     private boolean north_side_of_city, south_side_of_city;
     private boolean live_music, live_sports, cocktails, craft_beer, late_pub;
 
-    private Button btn_findpubbyname;
-
     private String query;
 
     private ArrayList<Pub> pubs_found;
@@ -33,6 +30,8 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
 
     private ArrayList<Integer> options_selected;
 
+    private String pub_name;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,9 +39,7 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
 
         context = this;
 
-        btn_findpubbyname = (Button) findViewById(R.id.btn_findpubbyname);
-
-        clearSelections();
+        clearAllSelections();
     }
 
     @Override
@@ -64,6 +61,16 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
                 searchDialog.show(fm, "search_dialog_fragment");
 
 
+            }
+        });
+
+        findViewById(R.id.btn_search_by_name).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(context, SearchByNameDialog.class);
+                startActivity(intent);
             }
         });
     }
@@ -105,16 +112,6 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
         } catch (Exception e) {
             showToastMessage(context.getString(R.string.no_pubs_match_your_search));
         }
-
-        btn_findpubbyname.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                launchFindPubByNameScreen();
-
-            }
-        });
     }
 
     private String getPubTypeSelection(){
@@ -211,12 +208,6 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
         startActivity(intent);
     }
 
-    private void launchFindPubByNameScreen() {
-
-        Intent intent = new Intent(this, FindPubByNameScreen.class);
-        startActivity(intent);
-    }
-
     private boolean noSelectionMade(){
 
         boolean no_selection_made = false;
@@ -240,7 +231,7 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
     }
 
     @Override
-    public void onDialogSearchButtonClick(DialogFragment dialog) {
+    public void onSearchDialogSearchClick(DialogFragment dialog) {
 
         options_selected = SearchDialog.search_options;
 
@@ -298,7 +289,7 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
         private int rating_resource_ID;
     }
 
-    private void clearSelections(){
+    private void clearAllSelections(){
 
         traditional_irish_pub = false;
         modern_pub = false;

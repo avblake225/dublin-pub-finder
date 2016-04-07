@@ -3,7 +3,7 @@
     <string name="app_name">Dublin Pub Finder</string>
     <string name="copyright">© Tony Blake 2016</string>
 
-    <string name="make_selections">Make selections</string>
+    <string name="make_selections">Make selections:</string>
     <string-array
         name="search_options">
         <item>Traditional Irish pub</item>
@@ -16,21 +16,11 @@
         <item>Craft beer</item>
         <item>Late pub</item>
     </string-array>
+    <string name="enter_pub_name">Enter pub name:</string>
     <string name="search">Search</string>
+    <string name="search_by_name">Search by name</string>
     <string name="cancel">Cancel</string>
 
-    <string name="make_selection">Select what you\'re looking for from the list below (multiple selections are allowed)...</string>
-    <string name="traditional_irish_pub">Traditional Irish pub</string>
-    <string name="modern_pub">Modern pub</string>
-    <string name="pub_on_north_side_of_city">Pub on the north side of the city</string>
-    <string name="pub_on_south_side_of_city">Pub on the south side of the city</string>
-    <string name="pub_with_live_music">Pub with live music</string>
-    <string name="pub_with_live_sports">Pub with live sports</string>
-    <string name="pub_that_serves_cocktails">Pub that serves cocktails</string>
-    <string name="pub_that_serves_craft_beer">Pub that serves craft beer</string>
-    <string name="pub_that_stays_open_late">Pub that stays open late</string>
-    <string name="find_pub">Find pub</string>
-    <string name="find_pub_by_name">Find pub by name</string>
     <string name="qwhatpub">What pub are you looking for?</string>
     <string name="pub_not_found">Pub not found</string>
     <string name="disclaimer"><i>Disclaimer: Live music, live sports and late opening only on certain nights. Ratings and descriptions based on Google Reviews</i></string>
