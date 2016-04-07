@@ -1,9 +1,23 @@
 <resources>
 
     <string name="app_name">Dublin Pub Finder</string>
-    <string name="enter">Enter</string>
     <string name="copyright">© Tony Blake 2016</string>
-    <string name="search">SEARCH</string>
+
+    <string name="make_selections">Make selections</string>
+    <string-array
+        name="search_options">
+        <item>Traditional Irish pub</item>
+        <item>Modern pub</item>
+        <item>North side of city</item>
+        <item>South side of city</item>
+        <item>Live music</item>
+        <item>Live sports</item>
+        <item>Cocktails</item>
+        <item>Craft beer</item>
+        <item>Late pub</item>
+    </string-array>
+    <string name="search">Search</string>
+    <string name="cancel">Cancel</string>
 
     <string name="make_selection">Select what you\'re looking for from the list below (multiple selections are allowed)...</string>
     <string name="traditional_irish_pub">Traditional Irish pub</string>

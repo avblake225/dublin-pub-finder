@@ -2,43 +2,78 @@ package com.tonyblake.dublinpubfinder;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.View;
-import android.view.Window;
-import android.widget.Button;
-import android.widget.CheckBox;
+import android.support.v4.app.DialogFragment;
+import android.support.v7.app.AlertDialog;
 
-public class SearchDialog extends Dialog implements View.OnClickListener {
+import java.util.ArrayList;
 
-    public Activity c;
-    public Dialog d;
-    public CheckBox cb_traditional_irish_pub, cb_modern_pub;
-    public Button btn_go;
+public class SearchDialog extends DialogFragment{
 
-    public SearchDialog(Activity a) {
-        super(a);
-
-        this.c = a;
-    }
+    public static ArrayList<Integer> search_options;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        search_options = new ArrayList();
 
-        setContentView(R.layout.search_dialog);
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-        cb_traditional_irish_pub = (CheckBox) findViewById(R.id.cb_traditional_irish_pub);
-        cb_modern_pub = (CheckBox) findViewById(R.id.cb_modern_pub);
-        btn_go = (Button) findViewById(R.id.btn_go);
+         builder.setTitle(R.string.make_selections)
+                .setMultiChoiceItems(R.array.search_options, null,
+                        new DialogInterface.OnMultiChoiceClickListener() {
 
-        btn_go.setOnClickListener(this);
+                            @Override
+                            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+
+                                if (isChecked) {
+
+                                    search_options.add(which);
+
+                                } else if (search_options.contains(which)) {
+
+                                    search_options.remove(Integer.valueOf(which));
+                                }
+                            }
+                        })
+
+                .setPositiveButton(R.string.search, new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+
+                        mListener.onDialogSearchButtonClick(SearchDialog.this);
+                    }
+                })
+                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+
+                     @Override
+                     public void onClick(DialogInterface dialog, int id) {
+
+                         dismiss();
+                     }
+                 });
+
+        return builder.create();
     }
 
-    @Override
-    public void onClick(View v) {
+    public interface SearchDialogListener {
 
-        dismiss();
+        void onDialogSearchButtonClick(DialogFragment dialog);
+    }
+
+    SearchDialogListener mListener;
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+
+        try {
+            mListener = (SearchDialogListener) activity;
+        }
+        catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString() + " must implement NoticeDialogListener");
+        }
     }
 }

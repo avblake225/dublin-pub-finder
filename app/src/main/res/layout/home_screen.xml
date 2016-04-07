@@ -26,7 +26,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@color/black">
 
         <ScrollView
@@ -36,140 +36,24 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/question_margin_left"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
-                <LinearLayout
+                <Button
+                    android:id="@+id/btn_findpubbyname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_below="@id/btn_findpub"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/find_pub_by_name"/>
 
-                    <TextView
-                        android:id="@+id/make_selection"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="@dimen/home_screen_margin"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/question_text_size"
-                        android:text="@string/make_selection"/>
-
-                    <CheckBox
-                        android:id="@+id/cb_traditional_irish_pub"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/option_text_size"
-                        android:buttonTint="@color/white"
-                        android:text="@string/traditional_irish_pub"/>
-
-                    <CheckBox
-                        android:id="@+id/cb_modern_pub"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/option_text_size"
-                        android:buttonTint="@color/white"
-                        android:text="@string/modern_pub"/>
-
-                    <CheckBox
-                        android:id="@+id/cb_pub_on_north_side_of_city"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/option_text_size"
-                        android:buttonTint="@color/white"
-                        android:text="@string/pub_on_north_side_of_city"/>
-
-                    <CheckBox
-                        android:id="@+id/cb_pub_on_south_side_of_city"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/option_text_size"
-                        android:buttonTint="@color/white"
-                        android:text="@string/pub_on_south_side_of_city"/>
-
-                    <CheckBox
-                        android:id="@+id/cb_pub_with_live_music"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/option_text_size"
-                        android:buttonTint="@color/white"
-                        android:text="@string/pub_with_live_music"/>
-
-                    <CheckBox
-                        android:id="@+id/cb_pub_with_live_sports"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/option_text_size"
-                        android:buttonTint="@color/white"
-                        android:text="@string/pub_with_live_sports"/>
-
-                    <CheckBox
-                        android:id="@+id/cb_pub_that_serves_cocktails"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/option_text_size"
-                        android:buttonTint="@color/white"
-                        android:text="@string/pub_that_serves_cocktails"/>
-
-                    <CheckBox
-                        android:id="@+id/cb_pub_that_serves_craft_beer"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/option_text_size"
-                        android:buttonTint="@color/white"
-                        android:text="@string/pub_that_serves_craft_beer"/>
-
-                    <CheckBox
-                        android:id="@+id/cb_pub_that_stays_open_late"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/option_text_size"
-                        android:buttonTint="@color/white"
-                        android:text="@string/pub_that_stays_open_late"/>
-
-                </LinearLayout>
-
-                <RelativeLayout
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="@dimen/home_screen_button_margin">
-
-                    <Button
-                        android:id="@+id/btn_findpub"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:text="@string/find_pub"/>
-
-                    <Button
-                        android:id="@+id/btn_findpubbyname"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/btn_findpub"
-                        android:layout_centerHorizontal="true"
-                        android:text="@string/find_pub_by_name"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/home_screen_margin"
-                        android:layout_marginBottom="@dimen/home_screen_margin"
-                        android:layout_below="@id/btn_findpubbyname"
-                        android:textColor="@color/gray"
-                        android:text="@string/disclaimer"/>
-
-                </RelativeLayout>
+                    android:layout_marginTop="@dimen/home_screen_margin"
+                    android:layout_marginBottom="@dimen/home_screen_margin"
+                    android:layout_below="@id/btn_findpubbyname"
+                    android:textColor="@color/gray"
+                    android:text="@string/disclaimer"/>
 
             </LinearLayout>
 
