@@ -3,16 +3,27 @@ package com.tonyblake.dublinpubfinder;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.places.Places;
 
 import java.util.ArrayList;
 
-public class HomeScreen extends FragmentActivity implements SearchDialog.SearchDialogListener{
+public class HomeScreen extends FragmentActivity implements SearchDialog.SearchDialogListener,
+                                                 GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener{
 
     private Context context;
 
@@ -32,6 +43,18 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
 
     private String pub_name_entered;
 
+    private GoogleApiClient client;
+
+    private Bitmap downloadedPhoto;
+    private int downloadedPhoto_width;
+    private int downloadedPhoto_height;
+    private ArrayList<PubLayout> pubs;
+    private ArrayList<Button> buttons;
+
+    private TextView tv_num_pubs_found;
+    private LinearLayout pub_details_container;
+    private PubLayout pub;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +63,24 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
         context = this;
 
         clearAllSelections();
+
+        pub_details_container = (LinearLayout) findViewById(R.id.pub_details_container);
+
+        tv_num_pubs_found = (TextView)findViewById(R.id.tv_num_pubs_found);
+
+        pubs = new ArrayList<>();
+        buttons = new ArrayList<>();
+
+        client = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .addApi(Places.GEO_DATA_API)
+                .addApi(Places.PLACE_DETECTION_API)
+                .enableAutoManage(this, this)
+                .build();
+
+        client.connect();
     }
 
     @Override
@@ -73,6 +114,36 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
                 startActivity(intent);
             }
         });
+
+        for(int i=0;i<buttons.size();i++){
+
+            final int j = i;
+
+            buttons.get(i).setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+
+                    launchMapScreen(pubs_found.get(j).name, pubs_found.get(j).place_ID);
+                }
+            });
+        }
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        client.disconnect();
+    }
+
+
+
+    private void launchMapScreen(String name, String place_ID){
+        Intent intent = new Intent(this, MapScreen.class);
+        intent.putExtra("name", name);
+        intent.putExtra("place_ID", place_ID);
+        startActivity(intent);
     }
 
     private void search(){
@@ -107,11 +178,66 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
 
             num_pubs_found = pubs_found.size();
 
-            launchPubDetailsScreen();
+            displayPubs();
 
         } catch (Exception e) {
             showToastMessage(context.getString(R.string.no_pubs_match_your_search));
         }
+    }
+
+    private void displayPubs(){
+
+        downloadedPhoto_width = 300;
+        downloadedPhoto_height = 300;
+
+        for(int i=0;i<num_pubs_found;i++){
+
+            pub = new PubLayout(context, pub_details_container);
+
+            pub.setPubName(pubs_found.get(i).name);
+            pub.setPubAddress(pubs_found.get(i).address);
+
+            Drawable pub_rating = context.getResources().getDrawable(pubs_found.get(i).rating_resource_ID);
+            pub.setPubRating(pub_rating);
+
+            setPubImage(i,pubs_found.get(i).place_ID);
+
+            pub.setPubDescription(pubs_found.get(i).description);
+
+            pub.attachToParent();
+
+            pubs.add(pub);
+            buttons.add(pub.getMapButton(pubs_found.get(i).name));
+        }
+
+        String num_pubs_returned_str;
+
+        if(num_pubs_found == 1){
+            num_pubs_returned_str = num_pubs_found + " " + context.getString(R.string.pub_found);
+        }
+        else{
+            num_pubs_returned_str = num_pubs_found + " " + context.getString(R.string.pubs_found);
+        }
+
+        tv_num_pubs_found.setText(num_pubs_returned_str);
+    }
+
+    private void setPubImage(final int pubIndex, String placeId) {
+
+        // Create a new AsyncTask that displays the bitmap once loaded.
+        new PhotoTask(downloadedPhoto_width, downloadedPhoto_height, client) {
+
+            @Override
+            protected void onPostExecute(AttributedPhoto attributedPhoto) {
+
+                if (attributedPhoto != null) {
+
+                    downloadedPhoto = attributedPhoto.bitmap;
+
+                    pubs.get(pubIndex).setPubImage(downloadedPhoto);
+                }
+            }
+        }.execute(placeId);
     }
 
     private String getPubTypeSelection(){
@@ -173,39 +299,8 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
     }
 
     @Override
-    public void onStop(){
-        super.onStop();
-    }
-
-    @Override
     public void onDestroy(){
         super.onDestroy();
-    }
-
-    private void launchPubDetailsScreen() {
-
-        Intent intent = new Intent(this, PubListScreen.class);
-
-        String[] name = new String[num_pubs_found];
-        String[] address = new String[num_pubs_found];
-        String[] description = new String[num_pubs_found];
-        String[] place_ID = new String[num_pubs_found];
-        int[] rating_resource_ID = new int[num_pubs_found];
-
-        for(int i=0;i<num_pubs_found;i++){
-            name[i] = pubs_found.get(i).name;
-            address[i] = pubs_found.get(i).address;
-            description[i] = pubs_found.get(i).description;
-            place_ID[i] = pubs_found.get(i).place_ID;
-            rating_resource_ID[i] = pubs_found.get(i).rating_resource_ID;
-        }
-        intent.putExtra("name", name);
-        intent.putExtra("address", address);
-        intent.putExtra("description", description);
-        intent.putExtra("place_ID", place_ID);
-        intent.putExtra("rating_resource_ID", rating_resource_ID);
-
-        startActivity(intent);
     }
 
     private boolean noSelectionMade(){
@@ -291,5 +386,20 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
         cocktails = false;
         craft_beer = false;
         late_pub = false;
+    }
+
+    @Override
+    public void onConnected(Bundle bundle) {
+
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+
     }
 }

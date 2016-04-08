@@ -12,8 +12,6 @@
     <dimen name="num_pubs_found_textsize">15dp</dimen>
     <dimen name="num_pubs_found_padding_top">5dp</dimen>
     <dimen name="num_pubs_found_padding_bottom">5dp</dimen>
-    <dimen name="num_pubs_found_padding_left">5dp</dimen>
-    <dimen name="num_pubs_found_padding_right">5dp</dimen>
     <dimen name="no_margin_left">0dp</dimen>
     <dimen name="tv_description_margin_left">10dp</dimen>
     <dimen name="tv_margin_top">2dp</dimen>
