@@ -30,7 +30,7 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
 
     private ArrayList<Integer> options_selected;
 
-    private String pub_name;
+    private String pub_name_entered;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -278,15 +278,6 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
         }
 
         search();
-    }
-
-    private class Pub{
-
-        private String name;
-        private String address;
-        private String description;
-        private String place_ID;
-        private int rating_resource_ID;
     }
 
     private void clearAllSelections(){

@@ -43,6 +43,7 @@
 
     <string name="select_all_rows_from">"SELECT * FROM "</string>
     <string name="where">" WHERE("</string>
+    <string name="name_equals">NAME = \'</string>
     <string name="end_query">");"</string>
 
     <string name="pub_type_traditional_irish">"PUB_TYPE = 'Traditional Irish'"</string>
