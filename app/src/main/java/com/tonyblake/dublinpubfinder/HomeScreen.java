@@ -48,12 +48,12 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
     private Bitmap downloadedPhoto;
     private int downloadedPhoto_width;
     private int downloadedPhoto_height;
-    private ArrayList<PubLayout> pubs;
+    private ArrayList<PubItemLayout> pubs;
     private ArrayList<Button> buttons;
 
     private TextView tv_num_pubs_found;
-    private LinearLayout pub_details_container;
-    private PubLayout pub;
+    private LinearLayout pub_item_container;
+    private PubItemLayout pub;
     private String num_pubs_returned_str;
 
     @Override
@@ -67,7 +67,7 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
 
         tv_num_pubs_found = (TextView)findViewById(R.id.tv_num_pubs_found);
 
-        pub_details_container = (LinearLayout) findViewById(R.id.pub_details_container);
+        pub_item_container = (LinearLayout) findViewById(R.id.pub_item_container);
 
         pubs_found = new ArrayList<>();
 
@@ -119,19 +119,19 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
             }
         });
 
-        for(int i=0;i<buttons.size();i++){
-
-            final int j = i;
-
-            buttons.get(i).setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-
-                    launchMapScreen(pubs_found.get(j).name, pubs_found.get(j).place_ID);
-                }
-            });
-        }
+//        for(int i=0;i<buttons.size();i++){
+//
+//            final int j = i;
+//
+//            buttons.get(i).setOnClickListener(new View.OnClickListener() {
+//
+//                @Override
+//                public void onClick(View v) {
+//
+//                    launchMapScreen(pubs_found.get(j).name, pubs_found.get(j).place_ID);
+//                }
+//            });
+//        }
     }
 
     @Override
@@ -165,7 +165,7 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
         if(pubs_found.size() != 0){
 
             pubs_found.removeAll(pubs_found);
-            pub_details_container.removeAllViews();
+            pub_item_container.removeAllViews();
         }
 
         num_pubs_returned_str = "";
@@ -206,12 +206,12 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
 
     private void displayPubs(){
 
-        downloadedPhoto_width = 300;
-        downloadedPhoto_height = 300;
+        downloadedPhoto_width = 80;
+        downloadedPhoto_height = 80;
 
         for(int i=0;i<num_pubs_found;i++){
 
-            pub = new PubLayout(context, pub_details_container);
+            pub = new PubItemLayout(context, pub_item_container);
 
             pub.setPubName(pubs_found.get(i).name);
             pub.setPubAddress(pubs_found.get(i).address);
@@ -219,14 +219,11 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
             Drawable pub_rating = context.getResources().getDrawable(pubs_found.get(i).rating_resource_ID);
             pub.setPubRating(pub_rating);
 
-            setPubImage(i,pubs_found.get(i).place_ID);
-
-            pub.setPubDescription(pubs_found.get(i).description);
+            setPubImage(i, pubs_found.get(i).place_ID);
 
             pub.attachToParent();
 
             pubs.add(pub);
-            buttons.add(pub.getMapButton(pubs_found.get(i).name));
         }
     }
 

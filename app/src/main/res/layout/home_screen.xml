@@ -64,7 +64,7 @@
             android:layout_centerInParent="true">
 
             <LinearLayout
-                android:id="@+id/pub_details_container"
+                android:id="@+id/pub_item_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"

@@ -19,13 +19,26 @@
     <dimen name="no_margin_right">0dp</dimen>
     <dimen name="tv_description_margin_right">10dp</dimen>
     <dimen name="tv_margin_bottom">2dp</dimen>
+    <dimen name="no_margin_bottom">0dp</dimen>
     <dimen name="tv_description_margin_bottom">10dp</dimen>
     <dimen name="btn_margin_top">2dp</dimen>
     <dimen name="btn_margin_bottom">10dp</dimen>
 
     <dimen name="pub_name_textsize">25dp</dimen>
+    <dimen name="pub_item_name_textsize">20dp</dimen>
     <dimen name="pub_address_textsize">20dp</dimen>
+    <dimen name="pub_item_address_textsize">15dp</dimen>
     <dimen name="pub_description_textsize">15dp</dimen>
     <dimen name="map_button_text_size">15dp</dimen>
+
+    <dimen name="pub_item_image_margin_left">2dp</dimen>
+    <dimen name="pub_item_image_margin_top">15dp</dimen>
+    <dimen name="tv_pub_item_margin_left">2dp</dimen>
+    <dimen name="tv_pub_item_margin_top">2dp</dimen>
+    <dimen name="tv_pub_item_margin_bottom">2dp</dimen>
+
+    <dimen name="pub_item_name_margin_left">2dp</dimen>
+    <dimen name="pub_item_name_margin_top">10dp</dimen>
+    <dimen name="pub_item_name_margin_bottom">10dp</dimen>
 
 </resources>
