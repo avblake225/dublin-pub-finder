@@ -64,11 +64,14 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
 
         clearAllSelections();
 
-        pub_details_container = (LinearLayout) findViewById(R.id.pub_details_container);
-
         tv_num_pubs_found = (TextView)findViewById(R.id.tv_num_pubs_found);
 
+        pub_details_container = (LinearLayout) findViewById(R.id.pub_details_container);
+
+        pubs_found = new ArrayList<>();
+
         pubs = new ArrayList<>();
+
         buttons = new ArrayList<>();
 
         client = new GoogleApiClient.Builder(this)
@@ -158,10 +161,14 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
                             + getLiveMusicSelection() + getLiveSportsSelection() + getCocktailsSelection()
                             + getCraftBeerSelection() + getLatePubSelection() + context.getString(R.string.end_query);
 
+        if(pubs_found.size() != 0){
+
+            pubs_found.removeAll(pubs_found);
+            pub_details_container.removeAllViews();
+        }
+
         try {
             Cursor res = MainActivity.dbManager.getPubs(query);
-
-            pubs_found = new ArrayList<Pub>();
 
             res.moveToFirst();
 
