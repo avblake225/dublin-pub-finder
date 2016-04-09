@@ -54,6 +54,7 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
     private TextView tv_num_pubs_found;
     private LinearLayout pub_details_container;
     private PubLayout pub;
+    private String num_pubs_returned_str;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -167,6 +168,8 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
             pub_details_container.removeAllViews();
         }
 
+        num_pubs_returned_str = "";
+
         try {
             Cursor res = MainActivity.dbManager.getPubs(query);
 
@@ -185,11 +188,20 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
 
             num_pubs_found = pubs_found.size();
 
-            displayPubs();
+            if(num_pubs_found == 1){
+                num_pubs_returned_str = num_pubs_found + " " + context.getString(R.string.pub_found);
+            }
+            else if(num_pubs_found > 1){
+                num_pubs_returned_str = num_pubs_found + " " + context.getString(R.string.pubs_found);
+            }
 
-        } catch (Exception e) {
+            displayPubs();
+        }
+        catch (Exception e) {
             showToastMessage(context.getString(R.string.no_pubs_match_your_search));
         }
+
+        tv_num_pubs_found.setText(num_pubs_returned_str);
     }
 
     private void displayPubs(){
@@ -216,22 +228,10 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
             pubs.add(pub);
             buttons.add(pub.getMapButton(pubs_found.get(i).name));
         }
-
-        String num_pubs_returned_str;
-
-        if(num_pubs_found == 1){
-            num_pubs_returned_str = num_pubs_found + " " + context.getString(R.string.pub_found);
-        }
-        else{
-            num_pubs_returned_str = num_pubs_found + " " + context.getString(R.string.pubs_found);
-        }
-
-        tv_num_pubs_found.setText(num_pubs_returned_str);
     }
 
     private void setPubImage(final int pubIndex, String placeId) {
 
-        // Create a new AsyncTask that displays the bitmap once loaded.
         new PhotoTask(downloadedPhoto_width, downloadedPhoto_height, client) {
 
             @Override
