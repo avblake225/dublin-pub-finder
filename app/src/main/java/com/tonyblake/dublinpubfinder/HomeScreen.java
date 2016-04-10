@@ -63,8 +63,6 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
 
         context = this;
 
-        clearAllSelections();
-
         tv_num_pubs_found = (TextView)findViewById(R.id.tv_num_pubs_found);
 
         pub_item_container = (LinearLayout) findViewById(R.id.pub_item_container);
@@ -331,6 +329,8 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
 
     @Override
     public void onSearchDialogSearchClick(DialogFragment dialog) {
+
+        clearAllSelections();
 
         options_selected = SearchDialog.search_options;
 
