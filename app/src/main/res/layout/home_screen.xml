@@ -58,34 +58,10 @@
             android:textSize="@dimen/num_pubs_found_textsize"
             android:textColor="@color/white"/>
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true">
-
-            <LinearLayout
-                android:id="@+id/pub_item_container"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:background="@color/black">
-
-            </LinearLayout>
-
-        </ScrollView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/yellow">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/gray"
-            android:text="@string/disclaimer"/>
+            <ListView
+                android:id="@+id/pub_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
 
     </LinearLayout>
 

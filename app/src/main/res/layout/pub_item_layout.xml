@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/pub_name"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/pub_item_name_textsize"
+        android:textColor="@color/white"
+        android:layout_marginLeft="@dimen/pub_item_name_margin_left"
+        android:layout_marginTop="@dimen/pub_item_name_margin_top"
+        android:layout_marginBottom="@dimen/pub_item_name_margin_bottom"/>
+
+    <TextView
+        android:id="@+id/pub_address"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/pub_item_address_textsize"
+        android:textColor="@color/white"
+        android:layout_marginLeft="@dimen/pub_item_address_margin_left"
+        android:layout_marginTop="@dimen/pub_item_address_margin_top"
+        android:layout_marginBottom="@dimen/pub_item_address_margin_bottom"/>
+
+</LinearLayout>

@@ -2,16 +2,15 @@ package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,13 +47,14 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
     private Bitmap downloadedPhoto;
     private int downloadedPhoto_width;
     private int downloadedPhoto_height;
-    private ArrayList<PubItemLayout> pubs;
-    private ArrayList<Button> buttons;
 
     private TextView tv_num_pubs_found;
-    private LinearLayout pub_item_container;
-    private PubItemLayout pub;
     private String num_pubs_returned_str;
+
+    ListView list;
+    PubAdapter adapter;
+    public  HomeScreen homeScreen;
+    public ArrayList<PubItem> pubItems = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,13 +65,7 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
 
         tv_num_pubs_found = (TextView)findViewById(R.id.tv_num_pubs_found);
 
-        pub_item_container = (LinearLayout) findViewById(R.id.pub_item_container);
-
         pubs_found = new ArrayList<>();
-
-        pubs = new ArrayList<>();
-
-        buttons = new ArrayList<>();
 
         client = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
@@ -83,11 +77,8 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
                 .build();
 
         client.connect();
-    }
 
-    @Override
-    public void onStart(){
-        super.onStart();
+        homeScreen = this;
     }
 
     @Override
@@ -116,20 +107,6 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
                 startActivity(intent);
             }
         });
-
-//        for(int i=0;i<buttons.size();i++){
-//
-//            final int j = i;
-//
-//            buttons.get(i).setOnClickListener(new View.OnClickListener() {
-//
-//                @Override
-//                public void onClick(View v) {
-//
-//                    launchMapScreen(pubs_found.get(j).name, pubs_found.get(j).place_ID);
-//                }
-//            });
-//        }
     }
 
     @Override
@@ -137,15 +114,6 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
         super.onStop();
 
         client.disconnect();
-    }
-
-
-
-    private void launchMapScreen(String name, String place_ID){
-        Intent intent = new Intent(this, MapScreen.class);
-        intent.putExtra("name", name);
-        intent.putExtra("place_ID", place_ID);
-        startActivity(intent);
     }
 
     private void search(){
@@ -163,7 +131,7 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
         if(pubs_found.size() != 0){
 
             pubs_found.removeAll(pubs_found);
-            pub_item_container.removeAllViews();
+            //list.removeAllViews();
         }
 
         num_pubs_returned_str = "";
@@ -209,20 +177,22 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
 
         for(int i=0;i<num_pubs_found;i++){
 
-            pub = new PubItemLayout(context, pub_item_container);
+            PubItem pubItem = new PubItem();
 
-            pub.setPubName(pubs_found.get(i).name);
-            pub.setPubAddress(pubs_found.get(i).address);
+            pubItem.setPubName(pubs_found.get(i).name);
 
-            Drawable pub_rating = context.getResources().getDrawable(pubs_found.get(i).rating_resource_ID);
-            pub.setPubRating(pub_rating);
+            pubItem.setPubAddress(pubs_found.get(i).address);
 
-            setPubImage(i, pubs_found.get(i).place_ID);
-
-            pub.attachToParent();
-
-            pubs.add(pub);
+            pubItems.add(pubItem);
         }
+
+        Resources res =getResources();
+
+        list= ( ListView )findViewById( R.id.pub_list );
+
+        adapter=new PubAdapter( homeScreen, pubItems, res);
+
+        list.setAdapter(adapter);
     }
 
     private void setPubImage(final int pubIndex, String placeId) {
@@ -236,10 +206,17 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
 
                     downloadedPhoto = attributedPhoto.bitmap;
 
-                    pubs.get(pubIndex).setPubImage(downloadedPhoto);
+                    //pubs.get(pubIndex).setPubImage(downloadedPhoto);
                 }
             }
         }.execute(placeId);
+    }
+
+    public void onItemClick(int mPosition){
+
+        PubItem pubItem = ( PubItem ) pubItems.get(mPosition);
+
+        Toast.makeText(homeScreen, pubItem.getPubName(), Toast.LENGTH_LONG).show();
     }
 
     private String getPubTypeSelection(){
