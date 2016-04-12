@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
@@ -179,9 +180,15 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
 
             PubItem pubItem = new PubItem();
 
+            setPubImage(pubItem, pubs_found.get(i).place_ID);
+
             pubItem.setPubName(pubs_found.get(i).name);
 
             pubItem.setPubAddress(pubs_found.get(i).address);
+
+            Drawable pub_rating = context.getResources().getDrawable(pubs_found.get(i).rating_resource_ID);
+
+            pubItem.setPubRating(pub_rating);
 
             pubItems.add(pubItem);
         }
@@ -195,7 +202,7 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
         list.setAdapter(adapter);
     }
 
-    private void setPubImage(final int pubIndex, String placeId) {
+    private void setPubImage(final PubItem pubItem, String placeId) {
 
         new PhotoTask(downloadedPhoto_width, downloadedPhoto_height, client) {
 
@@ -206,7 +213,7 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
 
                     downloadedPhoto = attributedPhoto.bitmap;
 
-                    //pubs.get(pubIndex).setPubImage(downloadedPhoto);
+                    pubItem.setPubImage(downloadedPhoto);
                 }
             }
         }.execute(placeId);

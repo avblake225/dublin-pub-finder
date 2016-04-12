@@ -1,27 +1,44 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:background="@color/black">
+    
+    <ImageView
+        android:id="@+id/pub_image"
+        android:layout_width="@dimen/pub_item_image_width"
+        android:layout_height="@dimen/pub_item_image_height"
+        android:layout_marginLeft="@dimen/pub_item_image_margin_left"
+        android:layout_marginTop="@dimen/pub_item_image_margin_top"/>
 
-    <TextView
-        android:id="@+id/pub_name"
-        android:layout_height="wrap_content"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:textSize="@dimen/pub_item_name_textsize"
-        android:textColor="@color/white"
-        android:layout_marginLeft="@dimen/pub_item_name_margin_left"
-        android:layout_marginTop="@dimen/pub_item_name_margin_top"
-        android:layout_marginBottom="@dimen/pub_item_name_margin_bottom"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/pub_address"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:textSize="@dimen/pub_item_address_textsize"
-        android:textColor="@color/white"
-        android:layout_marginLeft="@dimen/pub_item_address_margin_left"
-        android:layout_marginTop="@dimen/pub_item_address_margin_top"
-        android:layout_marginBottom="@dimen/pub_item_address_margin_bottom"/>
+        <TextView
+            android:id="@+id/pub_name"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/pub_item_name_textsize"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/pub_item_name_margin_left"
+            android:layout_marginTop="@dimen/pub_item_name_margin_top"/>
+
+        <TextView
+            android:id="@+id/pub_address"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/pub_item_address_textsize"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/pub_item_address_margin_left"
+            android:layout_marginTop="@dimen/pub_item_address_margin_top"/>
+
+        <ImageView
+            android:id="@+id/pub_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
 </LinearLayout>
