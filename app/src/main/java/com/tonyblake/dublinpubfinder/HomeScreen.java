@@ -65,8 +65,6 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
 
         tv_num_pubs_found = (TextView)findViewById(R.id.tv_num_pubs_found);
 
-        pubs_found = new ArrayList<>();
-
         client = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
@@ -118,6 +116,8 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
 
     private void search(){
 
+        pubs_found = new ArrayList<>();
+
         if (noSelectionMade()) {
 
             showToastMessage(context.getString(R.string.please_make_a_selection));
@@ -128,10 +128,10 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
                             + getLiveMusicSelection() + getLiveSportsSelection() + getCocktailsSelection()
                             + getCraftBeerSelection() + getLatePubSelection() + context.getString(R.string.end_query);
 
-        if(pubs_found.size() != 0){
+        if(pubItems.size() != 0){
 
-            pubs_found.removeAll(pubs_found);
-            //list.removeAllViews();
+            pubItems.removeAll(pubItems);
+            adapter.notifyDataSetChanged();
         }
 
         num_pubs_returned_str = "";
