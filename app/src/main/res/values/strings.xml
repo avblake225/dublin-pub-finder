@@ -3,6 +3,8 @@
     <string name="app_name">Dublin Pub Finder</string>
     <string name="copyright">© Tony Blake 2016</string>
 
+    <string name="no_favourites">No favourites</string>
+
     <string-array name="menu_items">
         <item>Search</item>
         <item>Search By Name</item>
@@ -45,8 +47,8 @@
     <string name="error_retrieving_pub_type_and_side_of_city">Error retrieving pub type and side of city</string>
     <string name="error_retrieving_extras">Error retrieving extras</string>
 
-    <string name="pub_found">pub found...</string>
-    <string name="pubs_found">pubs found...</string>
+    <string name="pub_found">pub found</string>
+    <string name="pubs_found">pubs found</string>
     <string name="find">Find</string>
     <string name="on_map">On Map</string>
     <string name="you_are_here">You are here</string>

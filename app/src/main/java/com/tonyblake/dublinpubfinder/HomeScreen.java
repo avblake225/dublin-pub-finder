@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -90,6 +91,16 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         dList.setAdapter(drawerAdapter);
 
         tv_num_pubs_found = (TextView)findViewById(R.id.tv_num_pubs_found);
+
+        tv_num_pubs_found.setText(context.getString(R.string.no_favourites));
+
+        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT);
+
+        lp.addRule(RelativeLayout.CENTER_IN_PARENT);
+
+        tv_num_pubs_found.setLayoutParams(lp);
 
         client = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
