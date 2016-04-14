@@ -32,6 +32,11 @@
     <dimen name="pub_description_textsize">15dp</dimen>
     <dimen name="map_button_text_size">15dp</dimen>
 
+    <dimen name="drawer_item_text_size">20dp</dimen>
+    <dimen name="drawer_item_padding_left">5dp</dimen>
+    <dimen name="drawer_item_padding_top">10dp</dimen>
+    <dimen name="drawer_item_padding_bottom">10dp</dimen>
+
     <!-- Pub Item -->
     <dimen name="pub_item_image_width">80dp</dimen>
     <dimen name="pub_item_image_height">80dp</dimen>

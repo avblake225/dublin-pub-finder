@@ -1,16 +1,18 @@
 package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,10 +24,16 @@ import com.google.android.gms.location.places.Places;
 
 import java.util.ArrayList;
 
-public class HomeScreen extends FragmentActivity implements SearchDialog.SearchDialogListener,
+public class HomeScreen extends AppCompatActivity implements SearchDialog.SearchDialogListener,
                                                  GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener{
 
     private Context context;
+
+    private Toolbar actionBar;
+
+    DrawerLayout dLayout;
+    ListView dList;
+    ArrayAdapter<String> drawerAdapter;
 
     private boolean traditional_irish_pub, modern_pub;
     private boolean north_side_of_city, south_side_of_city;
@@ -64,6 +72,23 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
 
         context = this;
 
+        actionBar = (Toolbar) findViewById(R.id.toolbar);
+
+        setSupportActionBar(actionBar);
+
+        actionBar.setNavigationIcon(context.getResources().getDrawable(R.drawable.ic_menu_white_24dp));
+
+        actionBar.setTitle(context.getString(R.string.app_name));
+        actionBar.setTitleTextColor(context.getResources().getColor(R.color.white));
+
+        dLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        dList = (ListView) findViewById(R.id.left_drawer);
+
+        drawerAdapter = new ArrayAdapter<String>(this,R.layout.drawer_item_layout,context.getResources().getStringArray(R.array.menu_items));
+
+        dList.setAdapter(drawerAdapter);
+
         tv_num_pubs_found = (TextView)findViewById(R.id.tv_num_pubs_found);
 
         client = new GoogleApiClient.Builder(this)
@@ -84,28 +109,51 @@ public class HomeScreen extends FragmentActivity implements SearchDialog.SearchD
     protected void onResume() {
         super.onResume();
 
-        findViewById(R.id.btn_search).setOnClickListener(new View.OnClickListener() {
+        actionBar.setNavigationOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
-                FragmentManager fm = getSupportFragmentManager();
-                searchDialog = new SearchDialog();
-                searchDialog.show(fm, "search_dialog_fragment");
-
-
+                dLayout.openDrawer(dList);
             }
         });
 
-        findViewById(R.id.btn_search_by_name).setOnClickListener(new View.OnClickListener() {
+        dList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
-            public void onClick(View view) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent intent = new Intent(context, SearchByNameDialog.class);
-                startActivity(intent);
+                switch (position) {
+
+                    case 0:
+                        dLayout.closeDrawer(dList);
+                        break;
+                }
             }
         });
+
+//        findViewById(R.id.btn_search).setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View view) {
+//
+//                FragmentManager fm = getSupportFragmentManager();
+//                searchDialog = new SearchDialog();
+//                searchDialog.show(fm, "search_dialog_fragment");
+//
+//
+//            }
+//        });
+
+//        findViewById(R.id.btn_search_by_name).setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View view) {
+//
+//                Intent intent = new Intent(context, SearchByNameDialog.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
     @Override
