@@ -10,6 +10,9 @@
         <item>About Author</item>
     </string-array>
 
+    <drawable name="clr_normal">#FFFFFF</drawable>
+    <drawable name="clr_pressed">#FFD700</drawable>
+
     <string name="make_selections">Make selections:</string>
     <string-array
         name="search_options">
