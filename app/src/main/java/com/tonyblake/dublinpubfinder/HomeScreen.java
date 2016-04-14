@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -30,11 +31,18 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private Context context;
 
+    public  HomeScreen homeScreen;
+
     private Toolbar actionBar;
 
-    DrawerLayout dLayout;
-    ListView dList;
-    ArrayAdapter<String> drawerAdapter;
+    private DrawerLayout dLayout;
+    private ListView dList;
+    private ArrayAdapter<String> drawerAdapter;
+
+    private RelativeLayout.LayoutParams tv_home_screen_params;
+    private TextView tv_home_screen;
+
+    private GoogleApiClient client;
 
     private boolean traditional_irish_pub, modern_pub;
     private boolean north_side_of_city, south_side_of_city;
@@ -52,18 +60,15 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private String pub_name_entered;
 
-    private GoogleApiClient client;
-
     private Bitmap downloadedPhoto;
     private int downloadedPhoto_width;
     private int downloadedPhoto_height;
 
-    private TextView tv_num_pubs_found;
     private String num_pubs_returned_str;
 
-    ListView list;
-    PubAdapter adapter;
-    public  HomeScreen homeScreen;
+    private ListView list;
+    private PubAdapter adapter;
+
     public ArrayList<PubItem> pubItems = new ArrayList<>();
 
     @Override
@@ -73,35 +78,29 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         context = this;
 
+        homeScreen = this;
+
+        // Set up Action Bar
         actionBar = (Toolbar) findViewById(R.id.toolbar);
-
         setSupportActionBar(actionBar);
-
         actionBar.setNavigationIcon(context.getResources().getDrawable(R.drawable.ic_menu_white_24dp));
-
         actionBar.setTitle(context.getString(R.string.app_name));
         actionBar.setTitleTextColor(context.getResources().getColor(R.color.white));
 
+        // Set up Navigation Drawer
         dLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-
         dList = (ListView) findViewById(R.id.left_drawer);
-
         drawerAdapter = new ArrayAdapter<String>(this,R.layout.drawer_item_layout,context.getResources().getStringArray(R.array.menu_items));
-
         dList.setAdapter(drawerAdapter);
 
-        tv_num_pubs_found = (TextView)findViewById(R.id.tv_num_pubs_found);
+        // Set up Home Screen TextView
+        tv_home_screen = (TextView)findViewById(R.id.tv_home_screen);
+        tv_home_screen.setText(context.getString(R.string.no_favourites));
+        tv_home_screen_params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+        tv_home_screen_params.addRule(RelativeLayout.CENTER_IN_PARENT);
+        tv_home_screen.setLayoutParams(tv_home_screen_params);
 
-        tv_num_pubs_found.setText(context.getString(R.string.no_favourites));
-
-        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.WRAP_CONTENT,
-                RelativeLayout.LayoutParams.WRAP_CONTENT);
-
-        lp.addRule(RelativeLayout.CENTER_IN_PARENT);
-
-        tv_num_pubs_found.setLayoutParams(lp);
-
+        // Set up Google API Client
         client = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
@@ -112,8 +111,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                 .build();
 
         client.connect();
-
-        homeScreen = this;
     }
 
     @Override
@@ -136,25 +133,23 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                 switch (position) {
 
+                    // Search
                     case 0:
+
                         dLayout.closeDrawer(dList);
+
+                        tv_home_screen.setText("");
+                        tv_home_screen_params.addRule(RelativeLayout.CENTER_IN_PARENT, 0);
+                        tv_home_screen.setLayoutParams(tv_home_screen_params);
+
+                        FragmentManager fm = getSupportFragmentManager();
+                        searchDialog = new SearchDialog();
+                        searchDialog.show(fm, "search_dialog_fragment");
+
                         break;
                 }
             }
         });
-
-//        findViewById(R.id.btn_search).setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View view) {
-//
-//                FragmentManager fm = getSupportFragmentManager();
-//                searchDialog = new SearchDialog();
-//                searchDialog.show(fm, "search_dialog_fragment");
-//
-//
-//            }
-//        });
 
 //        findViewById(R.id.btn_search_by_name).setOnClickListener(new View.OnClickListener() {
 //
@@ -227,7 +222,9 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             showToastMessage(context.getString(R.string.no_pubs_match_your_search));
         }
 
-        tv_num_pubs_found.setText(num_pubs_returned_str);
+        tv_home_screen_params.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        tv_home_screen.setLayoutParams(tv_home_screen_params);
+        tv_home_screen.setText(num_pubs_returned_str);
     }
 
     private void displayPubs(){

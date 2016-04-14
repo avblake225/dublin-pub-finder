@@ -23,19 +23,17 @@
         android:background="@color/black">
 
         <TextView
-            android:id="@+id/tv_num_pubs_found"
+            android:id="@+id/tv_home_screen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/num_pubs_found_padding_top"
             android:paddingBottom="@dimen/num_pubs_found_padding_bottom"
-            android:layout_centerHorizontal="true"
-            android:text="testing"
             android:textSize="@dimen/num_pubs_found_textsize"
             android:textColor="@color/white"/>
 
         <ListView
             android:id="@+id/pub_list"
-            android:layout_below="@id/tv_num_pubs_found"
+            android:layout_below="@id/tv_home_screen"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"/>
 

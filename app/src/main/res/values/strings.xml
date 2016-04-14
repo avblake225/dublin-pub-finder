@@ -15,7 +15,7 @@
     <drawable name="clr_normal">#FFFFFF</drawable>
     <drawable name="clr_pressed">#FFD700</drawable>
 
-    <string name="make_selections">Make selections:</string>
+    <string name="make_selections">Select Criteria...</string>
     <string-array
         name="search_options">
         <item>Traditional Irish pub</item>
@@ -47,8 +47,8 @@
     <string name="error_retrieving_pub_type_and_side_of_city">Error retrieving pub type and side of city</string>
     <string name="error_retrieving_extras">Error retrieving extras</string>
 
-    <string name="pub_found">pub found</string>
-    <string name="pubs_found">pubs found</string>
+    <string name="pub_found">pub found...</string>
+    <string name="pubs_found">pubs found...</string>
     <string name="find">Find</string>
     <string name="on_map">On Map</string>
     <string name="you_are_here">You are here</string>
