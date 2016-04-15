@@ -15,7 +15,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,8 +38,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     private ListView dList;
     private ArrayAdapter<String> drawerAdapter;
 
-    public static RelativeLayout.LayoutParams tv_home_screen_params;
-    public static TextView tv_home_screen;
+    private TextView tv_home_screen;
 
     private GoogleApiClient client;
 
@@ -95,10 +93,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         // Set up Home Screen TextView
         tv_home_screen = (TextView)findViewById(R.id.tv_home_screen);
-        tv_home_screen.setText(context.getString(R.string.no_favourites));
-        tv_home_screen_params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-        tv_home_screen_params.addRule(RelativeLayout.CENTER_IN_PARENT);
-        tv_home_screen.setLayoutParams(tv_home_screen_params);
 
         // Set up Google API Client
         client = new GoogleApiClient.Builder(this)
@@ -137,10 +131,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                     case 0:
 
                         dLayout.closeDrawer(dList);
-
-                        tv_home_screen.setText("");
-                        tv_home_screen_params.addRule(RelativeLayout.CENTER_IN_PARENT, 0);
-                        tv_home_screen.setLayoutParams(tv_home_screen_params);
 
                         FragmentManager fm = getSupportFragmentManager();
                         searchDialog = new SearchDialog();
@@ -217,8 +207,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             showToastMessage(context.getString(R.string.no_pubs_match_your_search));
         }
 
-        tv_home_screen_params.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        tv_home_screen.setLayoutParams(tv_home_screen_params);
         tv_home_screen.setText(num_pubs_returned_str);
     }
 

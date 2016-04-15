@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
@@ -57,10 +56,6 @@ public class SearchDialog extends DialogFragment{
                      public void onClick(DialogInterface dialog, int id) {
 
                          dismiss();
-
-                         HomeScreen.tv_home_screen.setText(getResources().getString(R.string.no_favourites));
-                         HomeScreen.tv_home_screen_params.addRule(RelativeLayout.CENTER_IN_PARENT);
-                         HomeScreen.tv_home_screen.setLayoutParams(HomeScreen.tv_home_screen_params);
                      }
                  });
 
