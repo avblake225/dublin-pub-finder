@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -131,6 +132,9 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                     case 0:
 
                         dLayout.closeDrawer(dList);
+
+                        RelativeLayout tv_home_screen_parent = (RelativeLayout) findViewById(R.id.tv_home_screen_parent);
+                        tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
 
                         FragmentManager fm = getSupportFragmentManager();
                         searchDialog = new SearchDialog();
