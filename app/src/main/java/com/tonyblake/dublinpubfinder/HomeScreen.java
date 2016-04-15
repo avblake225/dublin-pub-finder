@@ -39,8 +39,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     private ListView dList;
     private ArrayAdapter<String> drawerAdapter;
 
-    private RelativeLayout.LayoutParams tv_home_screen_params;
-    private TextView tv_home_screen;
+    public static RelativeLayout.LayoutParams tv_home_screen_params;
+    public static TextView tv_home_screen;
 
     private GoogleApiClient client;
 
@@ -172,11 +172,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     private void search(){
 
         pubs_found = new ArrayList<>();
-
-        if (noSelectionMade()) {
-
-            showToastMessage(context.getString(R.string.please_make_a_selection));
-        }
 
         query = context.getString(R.string.select_all_rows_from) + MainActivity.dbManager.getTableName()
                             + context.getString(R.string.where) + getPubTypeSelection() + getSideOfCitySelection()
@@ -343,22 +338,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     @Override
     public void onDestroy(){
         super.onDestroy();
-    }
-
-    private boolean noSelectionMade(){
-
-        boolean no_selection_made = false;
-
-        if(!traditional_irish_pub && !modern_pub
-                && !north_side_of_city && !south_side_of_city
-                && !live_music && !live_sports
-                && !cocktails && !craft_beer
-                && !late_pub){
-
-            no_selection_made = true;
-        }
-
-        return no_selection_made;
     }
 
     private void showToastMessage(CharSequence text) {
