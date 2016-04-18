@@ -38,17 +38,11 @@
     <dimen name="drawer_item_padding_bottom">15dp</dimen>
 
     <!-- Pub Item -->
+    <dimen name="pub_item_layout_margin_bottom">1dp</dimen>
+    <dimen name="pub_item_padding_top">5dp</dimen>
+    <dimen name="pub_item_padding_bottom">5dp</dimen>
     <dimen name="pub_item_image_width">80dp</dimen>
-    <dimen name="pub_item_image_height">80dp</dimen>
-    <dimen name="pub_item_image_margin_left">2dp</dimen>
-    <dimen name="pub_item_image_margin_top">5dp</dimen>
-
-    <dimen name="pub_item_details_width">200dp</dimen>
-
-    <dimen name="pub_item_name_margin_left">5dp</dimen>
-    <dimen name="pub_item_name_margin_top">5dp</dimen>
-
-    <dimen name="pub_item_address_margin_left">5dp</dimen>
-    <dimen name="pub_item_address_margin_top">2dp</dimen>
+    <dimen name="pub_details_max_width">210dp</dimen>
+    <dimen name="pub_details_padding_left">5dp</dimen>
 
 </resources>

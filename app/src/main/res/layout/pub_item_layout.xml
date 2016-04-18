@@ -1,57 +1,62 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:background="@color/black">
-    
-    <ImageView
-        android:id="@+id/pub_image"
-        android:layout_width="@dimen/pub_item_image_width"
-        android:layout_height="@dimen/pub_item_image_height"
-        android:layout_marginLeft="@dimen/pub_item_image_margin_left"
-        android:layout_marginTop="@dimen/pub_item_image_margin_top"/>
+    android:orientation="vertical"
+    android:background="?attr/colorPrimaryDark">
 
     <LinearLayout
-        android:layout_width="@dimen/pub_item_details_width"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/pub_name"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="@dimen/pub_item_name_textsize"
-            android:textColor="@color/white"
-            android:layout_marginLeft="@dimen/pub_item_name_margin_left"
-            android:layout_marginTop="@dimen/pub_item_name_margin_top"/>
-
-        <TextView
-            android:id="@+id/pub_address"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="@dimen/pub_item_address_textsize"
-            android:textColor="@color/white"
-            android:layout_marginLeft="@dimen/pub_item_address_margin_left"
-            android:layout_marginTop="@dimen/pub_item_address_margin_top"/>
-
-        <ImageView
-            android:id="@+id/pub_rating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-    </LinearLayout>
-
-    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/pub_item_layout_margin_bottom"
+        android:paddingTop="@dimen/pub_item_padding_top"
+        android:paddingBottom="@dimen/pub_item_padding_bottom"
+        android:orientation="horizontal"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/pub_image"
+            android:layout_width="@dimen/pub_item_image_width"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/pub_details"
+            android:layout_width="@dimen/pub_details_max_width"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pub_name"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingLeft="@dimen/pub_details_padding_left"
+                android:text="Pub Name"
+                android:textSize="@dimen/pub_item_name_textsize"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/pub_address"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingLeft="@dimen/pub_details_padding_left"
+                android:text="Pub Address"
+                android:textSize="@dimen/pub_item_address_textsize"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:id="@+id/pub_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/four_and_a_half_star_rating"/>
+
+        </LinearLayout>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
             android:layout_centerVertical="true"
             android:src="@drawable/ic_chevron_right_white_24dp"/>
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>
