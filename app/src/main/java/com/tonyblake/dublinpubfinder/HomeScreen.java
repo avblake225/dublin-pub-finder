@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
@@ -255,9 +256,13 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                 if (attributedPhoto != null) {
 
                     downloadedPhoto = attributedPhoto.bitmap;
-
-                    pubItem.setPubImage(downloadedPhoto);
                 }
+                else{
+
+                    downloadedPhoto = BitmapFactory.decodeResource(getResources(), R.drawable.image_unavailable);
+                }
+
+                pubItem.setPubImage(downloadedPhoto);
             }
         }.execute(placeId);
     }
