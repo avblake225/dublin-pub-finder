@@ -129,11 +129,11 @@ public class MapScreen extends FragmentActivity implements GoogleApiClient.Conne
             }
         });
 
-        Marker user_marker = mMap.addMarker(new MarkerOptions().position(user_coordinates)
-                .title(context.getString(R.string.you_are_here))
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
-
-        user_marker.showInfoWindow();
+//        Marker user_marker = mMap.addMarker(new MarkerOptions().position(user_coordinates)
+//                .title(context.getString(R.string.you_are_here))
+//                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
+//
+//        user_marker.showInfoWindow();
     }
 
     @Override

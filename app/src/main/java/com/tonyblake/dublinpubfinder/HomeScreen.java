@@ -1,6 +1,7 @@
 package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -230,7 +231,13 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
             pubItem.setPubAddress(pubs_found.get(i).address);
 
-            Drawable pub_rating = context.getResources().getDrawable(pubs_found.get(i).rating_resource_ID);
+            pubItem.setPubDescription(pubs_found.get(i).description);
+
+            pubItem.setPubPlaceId(pubs_found.get(i).place_ID);
+
+            pubItem.setPubRatingResourceId(pubs_found.get(i).rating_resource_ID);
+
+            Drawable pub_rating = context.getResources().getDrawable(pubItem.getPubRatingResourceId());
 
             pubItem.setPubRating(pub_rating);
 
@@ -269,9 +276,18 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     public void onItemClick(int mPosition){
 
-        PubItem pubItem = ( PubItem ) pubItems.get(mPosition);
+        PubItem pubItem = pubItems.get(mPosition);
 
-        Toast.makeText(homeScreen, pubItem.getPubName(), Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, SinglePubDetailsScreen.class);
+
+        intent.putExtra("name",pubItem.getPubName());
+        intent.putExtra("address",pubItem.getPubAddress());
+        intent.putExtra("description",pubItem.getPubDescription());
+        intent.putExtra("place_ID", pubItem.getPubPlaceId());
+        intent.putExtra("rating_resource_ID",pubItem.getPubRatingResourceId());
+
+        startActivity(intent);
+
     }
 
     private String getPubTypeSelection(){

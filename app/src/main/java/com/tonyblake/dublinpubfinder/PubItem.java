@@ -8,6 +8,9 @@ public class PubItem {
     private Bitmap pub_image = null;
     private String pub_name = "";
     private String pub_address = "";
+    private String pub_description = "";
+    private String pub_placeId = "";
+    private int pub_rating_resourceId;
     private Drawable pub_rating = null;
 
     // Setter methods
@@ -24,6 +27,21 @@ public class PubItem {
     public void setPubAddress(String pub_address){
 
         this.pub_address = pub_address;
+    }
+
+    public void setPubDescription(String pub_description){
+
+        this.pub_description = pub_description;
+    }
+
+    public void setPubPlaceId(String pub_placeId){
+
+        this.pub_placeId = pub_placeId;
+    }
+
+    public void setPubRatingResourceId(int pub_rating_resourceId){
+
+        this.pub_rating_resourceId = pub_rating_resourceId;
     }
 
     public void setPubRating(Drawable pub_rating){
@@ -45,6 +63,21 @@ public class PubItem {
     public String getPubAddress(){
 
         return pub_address;
+    }
+
+    public String getPubDescription(){
+
+        return pub_description;
+    }
+
+    public String getPubPlaceId(){
+
+        return pub_placeId;
+    }
+
+    public int getPubRatingResourceId(){
+
+        return pub_rating_resourceId;
     }
 
     public Drawable getPubRating(){

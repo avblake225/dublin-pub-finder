@@ -108,7 +108,6 @@ public class PubAdapter extends BaseAdapter implements View.OnClickListener {
         @Override
         public void onClick(View arg0) {
 
-
             HomeScreen homeScreen = (HomeScreen)activity;
 
             homeScreen.onItemClick(mPosition);
