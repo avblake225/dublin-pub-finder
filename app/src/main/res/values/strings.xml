@@ -30,10 +30,8 @@
     </string-array>
     <string name="enter_pub_name">Enter pub name:</string>
     <string name="search">Search</string>
-    <string name="search_by_name">Search by name</string>
     <string name="cancel">Cancel</string>
 
-    <string name="qwhatpub">What pub are you looking for?</string>
     <string name="pub_not_found">Pub not found</string>
     <string name="disclaimer"><i>Disclaimer: Live music, live sports and late opening only on certain nights. Ratings and descriptions based on Google Reviews</i></string>
 
@@ -49,8 +47,6 @@
 
     <string name="pub_found">pub found...</string>
     <string name="pubs_found">pubs found...</string>
-    <string name="find">Find</string>
-    <string name="on_map">On Map</string>
     <string name="you_are_here">You are here</string>
 
     <string name="select_all_rows_from">"SELECT * FROM "</string>

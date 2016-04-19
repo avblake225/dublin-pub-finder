@@ -5,7 +5,6 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.text.Html;
 import android.view.Gravity;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -20,7 +19,6 @@ public class PubLayout {
     private ImageView iv_rating;
     private ImageView iv_pub;
     private TextView tv_description;
-    private Button btn_getMapLocation;
 
     public PubLayout(Context context, LinearLayout pub_details_container){
 
@@ -70,10 +68,6 @@ public class PubLayout {
                 ((int) context.getResources().getDimension(R.dimen.btn_margin_top)),
                 ((int) context.getResources().getDimension(R.dimen.no_margin_right)),
                 ((int) context.getResources().getDimension(R.dimen.btn_margin_bottom)));
-
-        btn_getMapLocation = new Button(context);
-        btn_getMapLocation.setLayoutParams(btn_params);
-        pub_layout.addView(btn_getMapLocation);
     }
 
     public void setPubName(String name){
@@ -108,14 +102,5 @@ public class PubLayout {
     public void attachToParent(){
 
         pub_details_container.addView(pub_layout);
-    }
-
-    public Button getMapButton(String name){
-
-        String find_pub_on_map = context.getString(R.string.find) + " " + name + " " + context.getString(R.string.on_map);
-        btn_getMapLocation.setText(find_pub_on_map);
-        btn_getMapLocation.setTextAppearance(context, R.style.map_button_text_style);
-
-        return btn_getMapLocation;
     }
 }

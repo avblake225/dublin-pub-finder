@@ -7,8 +7,8 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -22,14 +22,14 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
 
     private Context context;
 
+    private Toolbar actionBar;
+
     private String name, address, description, place_ID;
     private int rating_resource_ID;
 
     private LinearLayout single_pub_details_container;
 
     private PubLayout pub;
-
-    private Button map_button;
 
     private Bitmap downloadedPhoto;
     private int downloadedPhoto_width, downloadedPhoto_height;
@@ -38,6 +38,14 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.single_pub_details_screen);
+
+        context = this;
+
+        // Set up Action Bar
+        actionBar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(actionBar);
+        actionBar.setNavigationIcon(context.getResources().getDrawable(R.drawable.ic_map_white_24dp));
+        actionBar.setTitleTextColor(context.getResources().getColor(R.color.white));
 
         client = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
@@ -49,8 +57,6 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
                 .build();
 
         client.connect();
-
-        context = this;
 
         downloadedPhoto_width = 300;
         downloadedPhoto_height = 300;
@@ -77,15 +83,13 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
         pub.setPubDescription(description);
 
         pub.attachToParent();
-
-        map_button = pub.getMapButton(name);
     }
 
     @Override
     public void onResume(){
         super.onResume();
 
-        map_button.setOnClickListener(new View.OnClickListener() {
+        actionBar.setNavigationOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
