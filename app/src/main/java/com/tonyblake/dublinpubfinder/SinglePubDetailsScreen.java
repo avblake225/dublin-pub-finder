@@ -3,6 +3,7 @@ package com.tonyblake.dublinpubfinder;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -119,9 +120,14 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
                 if (attributedPhoto != null) {
 
                     downloadedPhoto = attributedPhoto.bitmap;
-
-                    pub.setPubImage(downloadedPhoto);
                 }
+                else{
+
+                    downloadedPhoto = BitmapFactory.decodeResource(getResources(), R.drawable.image_unavailable);
+                }
+
+                pub.setPubImage(downloadedPhoto);
+
             }
         }.execute(placeId);
     }
