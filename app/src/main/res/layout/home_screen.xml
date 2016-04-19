@@ -38,9 +38,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_centerInParent="true"
-                    android:paddingTop="@dimen/num_pubs_found_padding_top"
-                    android:paddingBottom="@dimen/num_pubs_found_padding_bottom"
-                    android:textSize="@dimen/num_pubs_found_textsize"
+                    android:paddingTop="@dimen/tv_home_screen_padding_top"
+                    android:paddingBottom="@dimen/tv_home_screen_padding_bottom"
+                    android:textSize="@dimen/tv_home_screen_textsize"
                     android:textColor="@color/white"
                     android:text="@string/no_favourites"/>
 

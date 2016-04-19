@@ -10,7 +10,10 @@
         <item>Search For Pub Name</item>
         <item>Favourites</item>
         <item>About Author</item>
+        <item>Disclaimer</item>
     </string-array>
+
+    <string name="feature_unavailable">This feature is currently unavailable</string>
 
     <drawable name="clr_normal">#FFFFFF</drawable>
     <drawable name="clr_pressed">#FFD700</drawable>
@@ -33,7 +36,7 @@
     <string name="cancel">Cancel</string>
 
     <string name="pub_not_found">Pub not found</string>
-    <string name="disclaimer"><i>Disclaimer: Live music, live sports and late opening only on certain nights. Ratings and descriptions based on Google Reviews</i></string>
+    <string name="disclaimer">Disclaimer: Live music, live sports and late opening only on certain nights. Ratings and descriptions based on Google Reviews</string>
 
     <string name="invalid_selection_traditional_modern_pub">Invalid selection. Please select either a Traditional Irish pub OR a Modern pub</string>
     <string name="invalid_selection_pub_on_north_side_south_side">Invalid selection. Please select either a Pub on the north side of the city OR a Pub on the south side of the city</string>

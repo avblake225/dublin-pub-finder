@@ -13,6 +13,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -42,6 +43,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     private ArrayAdapter<String> drawerAdapter;
 
     private TextView tv_home_screen;
+    private RelativeLayout tv_home_screen_parent;
 
     private GoogleApiClient client;
 
@@ -96,6 +98,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         // Set up Home Screen TextView
         tv_home_screen = (TextView)findViewById(R.id.tv_home_screen);
+        tv_home_screen_parent = (RelativeLayout) findViewById(R.id.tv_home_screen_parent);
 
         // Set up Google API Client
         client = new GoogleApiClient.Builder(this)
@@ -135,7 +138,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         dLayout.closeDrawer(dList);
 
-                        RelativeLayout tv_home_screen_parent = (RelativeLayout) findViewById(R.id.tv_home_screen_parent);
                         tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
 
                         FragmentManager fm = getSupportFragmentManager();
@@ -151,6 +153,33 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         Intent intent = new Intent(context, SearchByNameDialog.class);
                         startActivity(intent);
+
+                        break;
+
+                    // Favourites
+                    case 2:
+
+                        showToastMessage(context.getString(R.string.feature_unavailable));
+
+                        break;
+
+                    // About Author
+                    case 3:
+
+                        showToastMessage(context.getString(R.string.feature_unavailable));
+
+                        break;
+
+                    // Disclaimer
+                    case 4:
+
+                        dLayout.closeDrawer(dList);
+
+                        String disclaimer = "<i>" + context.getString(R.string.disclaimer) + "</i>";
+
+                        tv_home_screen.setPadding((int)context.getResources().getDimension(R.dimen.tv_home_screen_padding_left),0,0,0);
+
+                        tv_home_screen.setText((Html.fromHtml(disclaimer)));
 
                         break;
                 }

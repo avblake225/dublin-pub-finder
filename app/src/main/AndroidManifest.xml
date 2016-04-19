@@ -23,7 +23,14 @@
            android:label="@string/enter_pub_name"
            android:theme="@style/AppDialogTheme">
         </activity>
-        <activity android:name=".SinglePubDetailsScreen"></activity>
+        <activity
+            android:name=".SinglePubDetailsScreen"
+            android:parentActivityName=".HomeScreen">
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeScreen" />
+        </activity>
         <activity android:name=".MapScreen"></activity>
 
         <meta-data
