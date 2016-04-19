@@ -130,7 +130,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                 switch (position) {
 
-                    // Search
+                    // Find A Pub
                     case 0:
 
                         dLayout.closeDrawer(dList);
@@ -143,19 +143,19 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                         searchDialog.show(fm, "search_dialog_fragment");
 
                         break;
+
+                    // Search For Pub Name
+                    case 1:
+
+                        dLayout.closeDrawer(dList);
+
+                        Intent intent = new Intent(context, SearchByNameDialog.class);
+                        startActivity(intent);
+
+                        break;
                 }
             }
         });
-
-//        findViewById(R.id.btn_search_by_name).setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View view) {
-//
-//                Intent intent = new Intent(context, SearchByNameDialog.class);
-//                startActivity(intent);
-//            }
-//        });
     }
 
     @Override
