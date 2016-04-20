@@ -44,7 +44,7 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
         // Set up Action Bar
         actionBar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(actionBar);
-        actionBar.setNavigationIcon(context.getResources().getDrawable(R.drawable.ic_map_white_24dp));
+        actionBar.setNavigationIcon(context.getResources().getDrawable(R.drawable.ic_place_white_24dp));
         actionBar.setTitleTextColor(context.getResources().getColor(R.color.white));
 
         client = new GoogleApiClient.Builder(this)

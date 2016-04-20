@@ -17,6 +17,7 @@ import android.text.Html;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -45,6 +46,11 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     private TextView tv_home_screen;
     private RelativeLayout tv_home_screen_parent;
 
+    private RelativeLayout single_pub_details_container_parent;
+    private LinearLayout single_pub_details_container;
+
+    private PubLayout featured_pub;
+
     private GoogleApiClient client;
 
     private boolean traditional_irish_pub, modern_pub;
@@ -56,6 +62,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     private ArrayList<Pub> pubs_found;
 
     private int num_pubs_found;
+
+    private PubItem pubItem;
 
     private SearchDialog searchDialog;
 
@@ -111,6 +119,15 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                 .build();
 
         client.connect();
+
+        downloadedPhoto_width = (int)context.getResources().getDimension(R.dimen.pub_image_width);
+        downloadedPhoto_height = (int)context.getResources().getDimension(R.dimen.pub_image_height);
+
+        // Set up Featured Pub
+        single_pub_details_container_parent = (RelativeLayout) findViewById(R.id.single_pub_details_container_parent);
+        single_pub_details_container = (LinearLayout) findViewById(R.id.single_pub_details_container);
+        featured_pub = new PubLayout(context, single_pub_details_container);
+        addFeaturedPub();
     }
 
     @Override
@@ -138,8 +155,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         dLayout.closeDrawer(dList);
 
-                        tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
-
                         FragmentManager fm = getSupportFragmentManager();
                         searchDialog = new SearchDialog();
                         searchDialog.show(fm, "search_dialog_fragment");
@@ -159,6 +174,12 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                     // Favourites
                     case 2:
 
+                        dLayout.closeDrawer(dList);
+
+                        tv_home_screen.setText(context.getString(R.string.no_favourites));
+
+                        tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
+
                         showToastMessage(context.getString(R.string.feature_unavailable));
 
                         break;
@@ -177,7 +198,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         String disclaimer = "<i>" + context.getString(R.string.disclaimer) + "</i>";
 
-                        tv_home_screen.setPadding((int)context.getResources().getDimension(R.dimen.tv_home_screen_padding_left),0,0,0);
+                        tv_home_screen.setPadding((int) context.getResources().getDimension(R.dimen.tv_home_screen_padding_left), 0, 0, 0);
 
                         tv_home_screen.setText((Html.fromHtml(disclaimer)));
 
@@ -185,6 +206,25 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                 }
             }
         });
+    }
+
+    private void addFeaturedPub(){
+
+        tv_home_screen.setText(context.getString(R.string.featured_pub));
+
+        featured_pub.setPubName(context.getString(R.string.o_donoghues));
+
+        featured_pub.setPubAddress(context.getString(R.string.o_donoghues_address));
+
+        Drawable pub_rating = context.getResources().getDrawable(R.drawable.four_star_rating);
+
+        featured_pub.setPubRating(pub_rating);
+
+        getPubImage(featured_pub, context.getString(R.string.o_donoghues_place_ID));
+
+        featured_pub.setPubDescription(context.getString(R.string.o_donoghues_description));
+
+        featured_pub.attachToParent();
     }
 
     @Override
@@ -247,22 +287,17 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private void displayPubs(){
 
-        downloadedPhoto_width = 80;
-        downloadedPhoto_height = 80;
+        downloadedPhoto = null;
+        downloadedPhoto_width = (int)context.getResources().getDimension(R.dimen.pub_item_image_width);
+        downloadedPhoto_height = (int)context.getResources().getDimension(R.dimen.pub_item_image_height);
 
         for(int i=0;i<num_pubs_found;i++){
 
-            PubItem pubItem = new PubItem();
-
-            setPubImage(pubItem, pubs_found.get(i).place_ID);
+            pubItem = new PubItem();
 
             pubItem.setPubName(pubs_found.get(i).name);
 
             pubItem.setPubAddress(pubs_found.get(i).address);
-
-            pubItem.setPubDescription(pubs_found.get(i).description);
-
-            pubItem.setPubPlaceId(pubs_found.get(i).place_ID);
 
             pubItem.setPubRatingResourceId(pubs_found.get(i).rating_resource_ID);
 
@@ -270,19 +305,25 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
             pubItem.setPubRating(pub_rating);
 
+            pubItem.setPubPlaceId(pubs_found.get(i).place_ID);
+
+            getPubImage(pubItem, pubItem.getPubPlaceId());
+
+            pubItem.setPubDescription(pubs_found.get(i).description);
+
             pubItems.add(pubItem);
         }
 
-        Resources res =getResources();
+        Resources res = getResources();
 
         list= ( ListView )findViewById( R.id.pub_list );
 
-        adapter=new PubAdapter( homeScreen, pubItems, res);
+        adapter = new PubAdapter( homeScreen, pubItems, res);
 
         list.setAdapter(adapter);
     }
 
-    private void setPubImage(final PubItem pubItem, String placeId) {
+    private void getPubImage(final PubItem pubItem, String placeId) {
 
         new PhotoTask(downloadedPhoto_width, downloadedPhoto_height, client) {
 
@@ -299,6 +340,27 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                 }
 
                 pubItem.setPubImage(downloadedPhoto);
+            }
+        }.execute(placeId);
+    }
+
+    private void getPubImage(final PubLayout featured_pub, String placeId) {
+
+        new PhotoTask(downloadedPhoto_width, downloadedPhoto_height, client) {
+
+            @Override
+            protected void onPostExecute(AttributedPhoto attributedPhoto) {
+
+                if (attributedPhoto != null) {
+
+                    downloadedPhoto = attributedPhoto.bitmap;
+                }
+                else{
+
+                    downloadedPhoto = BitmapFactory.decodeResource(getResources(), R.drawable.image_unavailable);
+                }
+
+                featured_pub.setPubImage(downloadedPhoto);
             }
         }.execute(placeId);
     }
@@ -392,6 +454,11 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     public void onSearchDialogSearchClick(DialogFragment dialog) {
 
         clearAllSelections();
+
+        single_pub_details_container.removeAllViews();
+        single_pub_details_container_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
+        single_pub_details_container_parent.getLayoutParams().width = RelativeLayout.LayoutParams.WRAP_CONTENT;
+        tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
 
         options_selected = SearchDialog.search_options;
 

@@ -30,8 +30,9 @@
     <dimen name="pub_item_name_textsize">20dp</dimen>
     <dimen name="pub_address_textsize">20dp</dimen>
     <dimen name="pub_item_address_textsize">15dp</dimen>
+    <dimen name="pub_image_width">300dp</dimen>
+    <dimen name="pub_image_height">300dp</dimen>
     <dimen name="pub_description_textsize">15dp</dimen>
-    <dimen name="map_button_text_size">15dp</dimen>
 
     <dimen name="drawer_item_text_size">20dp</dimen>
     <dimen name="drawer_item_padding_left">10dp</dimen>
@@ -43,6 +44,7 @@
     <dimen name="pub_item_padding_top">5dp</dimen>
     <dimen name="pub_item_padding_bottom">5dp</dimen>
     <dimen name="pub_item_image_width">80dp</dimen>
+    <dimen name="pub_item_image_height">80dp</dimen>
     <dimen name="pub_details_max_width">205dp</dimen>
     <dimen name="pub_details_padding_left">5dp</dimen>
 

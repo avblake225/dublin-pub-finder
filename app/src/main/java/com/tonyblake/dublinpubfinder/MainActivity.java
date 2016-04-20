@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity{
             public void run() {
 
                 try{
-                    Thread.sleep(3000);
+                    Thread.sleep(2000);
                     launchHomeScreen();
                 }
                 catch(InterruptedException e){

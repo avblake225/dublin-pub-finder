@@ -3,6 +3,9 @@
     <string name="app_name">Dublin Pub Finder</string>
     <string name="copyright">© Tony Blake 2016</string>
 
+    <string name="featured_pub">Featured pub...</string>
+    <string name="o_donoghues_place_ID">"ChIJw-DhupkOZ0gRzPibivFAces"</string>
+
     <string name="no_favourites">No favourites</string>
 
     <string-array name="menu_items">
