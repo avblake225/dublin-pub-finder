@@ -9,13 +9,28 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/btn_search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
-        android:text="@string/search"
-        android:textColor="@color/black"
-        android:background="@color/white"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:background="@color/white"/>
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:background="@color/white"/>
+
+    </LinearLayout>
 
 </LinearLayout>

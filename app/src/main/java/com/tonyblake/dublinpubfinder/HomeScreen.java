@@ -67,6 +67,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private SearchDialog searchDialog;
 
+    private SearchByNameDialog searchByNameDialog;
+
     private ArrayList<Integer> options_selected;
 
     private String pub_name_entered;
@@ -148,6 +150,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                FragmentManager fm = getSupportFragmentManager();
+
                 switch (position) {
 
                     // Find A Pub
@@ -155,7 +159,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         dLayout.closeDrawer(dList);
 
-                        FragmentManager fm = getSupportFragmentManager();
                         searchDialog = new SearchDialog();
                         searchDialog.show(fm, "search_dialog_fragment");
 
@@ -166,8 +169,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         dLayout.closeDrawer(dList);
 
-                        Intent intent = new Intent(context, SearchByNameDialog.class);
-                        startActivity(intent);
+                        searchByNameDialog = new SearchByNameDialog();
+                        searchByNameDialog.show(fm, "search_by_name_dialog_fragment");
 
                         break;
 

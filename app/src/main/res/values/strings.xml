@@ -34,7 +34,7 @@
         <item>Craft beer</item>
         <item>Late pub</item>
     </string-array>
-    <string name="enter_pub_name">Enter pub name:</string>
+    <string name="enter_pub_name">Enter pub name...</string>
     <string name="search">Search</string>
     <string name="cancel">Cancel</string>
 

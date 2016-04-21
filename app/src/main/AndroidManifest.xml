@@ -19,11 +19,6 @@
         </activity>
         <activity android:name=".HomeScreen"></activity>
         <activity
-           android:name=".SearchByNameDialog"
-           android:label="@string/enter_pub_name"
-           android:theme="@style/AppDialogTheme">
-        </activity>
-        <activity
             android:name=".SinglePubDetailsScreen"
             android:parentActivityName=".HomeScreen">
             <!-- The meta-data element is needed for versions lower than 4.1 -->

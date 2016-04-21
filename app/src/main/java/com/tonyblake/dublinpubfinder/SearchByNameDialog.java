@@ -1,10 +1,16 @@
 package com.tonyblake.dublinpubfinder;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.DialogFragment;
+import android.support.v7.app.AlertDialog;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,35 +18,109 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class SearchByNameDialog extends AppCompatActivity {
+public class SearchByNameDialog extends DialogFragment {
 
     private Context context;
     private DBManager dbManager;
+    private View view;
     private AutoCompleteTextView tv_pub_name;
-    private Button btn_search;
     public static String pub_name = "";
     private Pub pub;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.search_by_name_dialog);
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
 
-        context = this;
+        context = getActivity();
 
         dbManager = MainActivity.dbManager;
 
-        tv_pub_name = (AutoCompleteTextView) findViewById(R.id.tv_pub_name);
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-        btn_search = (Button) findViewById(R.id.btn_search);
+        LayoutInflater inflater = getActivity().getLayoutInflater();
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, dbManager.getPubNames());
+        view = inflater.inflate(R.layout.search_by_name_dialog, null);
+
+        builder.setTitle(R.string.enter_pub_name)
+                .setView(view)
+                .setPositiveButton(R.string.search, new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+
+                        String query = context.getString(R.string.select_all_rows_from) + MainActivity.dbManager.getTableName()
+                                + context.getString(R.string.where) + context.getString(R.string.name_equals)
+                                + pub_name + "'" + context.getString(R.string.end_query);
+
+                        try {
+                            Cursor res = MainActivity.dbManager.getPubs(query);
+
+                            res.moveToFirst();
+
+                            do {
+                                pub = new Pub();
+                                pub.name = res.getString(1);
+                                pub.address = res.getString(2);
+                                pub.description = res.getString(3);
+                                pub.place_ID = res.getString(4);
+                                pub.rating_resource_ID = res.getInt(5);
+
+                            } while (res.moveToNext());
+
+                            launchSinglePubDetailsScreen();
+
+                        } catch (Exception e) {
+                            showToastMessage(context.getString(R.string.no_pubs_match_your_search));
+                        }
+
+                    }
+                })
+
+                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+
+                        dismiss();
+                    }
+                });
+
+        final AlertDialog dialog = builder.create();
+
+        dialog.setOnShowListener(new DialogInterface.OnShowListener() {
+
+            @Override
+            public void onShow(final DialogInterface dialog) {
+
+                Button cancelButton = ((AlertDialog) dialog).getButton(DialogInterface.BUTTON_NEGATIVE);
+                Button searchButton = ((AlertDialog) dialog).getButton(DialogInterface.BUTTON_POSITIVE);
+
+                cancelButton.setTextColor(Color.BLACK);
+                searchButton.setTextColor(Color.BLACK);
+
+                final Drawable cancelButtonBackground = getResources().getDrawable(R.drawable.background_color);
+                cancelButton.setBackground(cancelButtonBackground);
+
+                final Drawable searchButtonBackground = getResources().getDrawable(R.drawable.background_color);
+                searchButton.setBackground(searchButtonBackground);
+            }
+        });
+
+        return dialog;
+    }
+
+    @Override
+    public void onActivityCreated (Bundle savedInstanceState){
+        super.onActivityCreated(savedInstanceState);
+
+        tv_pub_name = (AutoCompleteTextView) view.findViewById(R.id.tv_pub_name);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(context,android.R.layout.simple_list_item_1, dbManager.getPubNames());
         tv_pub_name.setAdapter(adapter);
         tv_pub_name.setThreshold(1);
     }
 
     @Override
-    protected void onResume() {
+    public void onResume(){
         super.onResume();
 
         tv_pub_name.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -52,43 +132,11 @@ public class SearchByNameDialog extends AppCompatActivity {
 
             }
         });
-
-        btn_search.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                String query = context.getString(R.string.select_all_rows_from) + MainActivity.dbManager.getTableName()
-                        + context.getString(R.string.where) + context.getString(R.string.name_equals)
-                        + pub_name + "'" + context.getString(R.string.end_query);
-
-                try {
-                    Cursor res = MainActivity.dbManager.getPubs(query);
-
-                    res.moveToFirst();
-
-                    do {
-                        pub = new Pub();
-                        pub.name = res.getString(1);
-                        pub.address = res.getString(2);
-                        pub.description = res.getString(3);
-                        pub.place_ID = res.getString(4);
-                        pub.rating_resource_ID = res.getInt(5);
-
-                    } while (res.moveToNext());
-
-                    launchSinglePubDetailsScreen();
-
-                } catch (Exception e) {
-                    showToastMessage(context.getString(R.string.no_pubs_match_your_search));
-                }
-            }
-        });
     }
 
     private void launchSinglePubDetailsScreen(){
 
-        Intent intent = new Intent(this, SinglePubDetailsScreen.class);
+        Intent intent = new Intent(context, SinglePubDetailsScreen.class);
 
         intent.putExtra("name", pub.name);
         intent.putExtra("address", pub.address);
