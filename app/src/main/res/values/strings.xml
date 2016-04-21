@@ -18,7 +18,9 @@
 
     <string name="feature_unavailable">This feature is currently unavailable</string>
 
-    <drawable name="clr_normal">#FFFFFF</drawable>
+    <drawable name="clr_normal_white">#FFFFFF</drawable>
+    <drawable name="clr_normal_black">#000000</drawable>
+    <drawable name="clr_focused">#FF6600</drawable>
     <drawable name="clr_pressed">#FFD700</drawable>
 
     <string name="make_selections">Select Criteria...</string>
@@ -53,6 +55,9 @@
 
     <string name="pub_found">pub found...</string>
     <string name="pubs_found">pubs found...</string>
+    <string name="find_on_map">Find on Map</string>
+    <string name="add_to_favourites">Add to Favourites</string>
+    <string name="remove_from_favourites">Remove from favourites</string>
     <string name="you_are_here">You are here</string>
 
     <string name="select_all_rows_from">"SELECT * FROM "</string>

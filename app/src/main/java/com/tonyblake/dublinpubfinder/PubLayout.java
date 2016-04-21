@@ -61,13 +61,6 @@ public class PubLayout {
         tv_description = new TextView(context);
         tv_description.setLayoutParams(tv_description_params);
         pub_layout.addView(tv_description);
-
-        LinearLayout.LayoutParams btn_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        btn_params.gravity = Gravity.CENTER_HORIZONTAL;
-        btn_params.setMargins((int) context.getResources().getDimension(R.dimen.no_margin_left),
-                ((int) context.getResources().getDimension(R.dimen.btn_margin_top)),
-                ((int) context.getResources().getDimension(R.dimen.no_margin_right)),
-                ((int) context.getResources().getDimension(R.dimen.btn_margin_bottom)));
     }
 
     public void setPubName(String name){

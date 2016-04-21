@@ -2,7 +2,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="?attr/colorPrimaryDark">
+    android:background="@drawable/pub_item_background_color">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -10,8 +10,7 @@
         android:layout_marginBottom="@dimen/pub_item_layout_margin_bottom"
         android:paddingTop="@dimen/pub_item_padding_top"
         android:paddingBottom="@dimen/pub_item_padding_bottom"
-        android:orientation="horizontal"
-        android:background="@color/black">
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/pub_image"
