@@ -55,9 +55,10 @@ public class PubLayout{
         tv_pub_address.setText(name);
     }
 
-    public void setPubRating(float rating, int numStars){
+    public void setPubRating(float rating, int numStars, float stepSize){
 
         rating_bar.setNumStars(numStars);
+        rating_bar.setStepSize(stepSize);
         rating_bar.setRating(rating);
     }
 

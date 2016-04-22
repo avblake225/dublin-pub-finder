@@ -253,7 +253,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         featured_pub.setPubAddress(context.getString(R.string.o_donoghues_address));
 
         featured_pub.setPubRating(Float.valueOf(context.getString(R.string.four_stars)),
-                                  Integer.valueOf(context.getString(R.string.five_stars)));
+                                  Integer.valueOf(context.getString(R.string.five_stars)),
+                                  Float.valueOf(context.getString(R.string.half_a_star)));
 
         getPubImage(featured_pub, context.getString(R.string.o_donoghues_place_ID));
 
