@@ -70,7 +70,7 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
 
         single_pub_details_container = (LinearLayout)findViewById(R.id.single_pub_details_container);
 
-        pub = new PubLayout(context, single_pub_details_container);
+        pub = new PubLayout(context,single_pub_details_container);
 
         pub.setPubName(name);
         pub.setPubAddress(address);
