@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -18,6 +19,8 @@ public class PubLayout{
     public ImageView iv_rating;
     public ImageView iv_pub;
     public TextView tv_pub_description;
+    public Button btn_find_on_map;
+    public Button btn_add_to_favourites;
 
     public PubLayout(Context context, LinearLayout pub_layout_container){
 
@@ -36,6 +39,10 @@ public class PubLayout{
         iv_pub = (ImageView) pub_layout.findViewById(R.id.iv_pub);
 
         tv_pub_description = (TextView) pub_layout.findViewById(R.id.tv_pub_description);
+
+        btn_find_on_map = (Button) pub_layout.findViewById(R.id.btn_find_on_map);
+
+        btn_add_to_favourites = (Button) pub_layout.findViewById(R.id.btn_add_to_favourites);
     }
 
     public void setPubName(String name){
@@ -66,5 +73,15 @@ public class PubLayout{
     public void attachToParent(){
 
         pub_layout_container.addView(pub_layout);
+    }
+
+    public Button getFindOnMapButton(){
+
+        return btn_find_on_map;
+    }
+
+    public Button getAddToFavouritesButton(){
+
+        return btn_add_to_favourites;
     }
 }

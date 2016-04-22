@@ -17,6 +17,7 @@ import android.text.Html;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -51,6 +52,9 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private PubLayout featured_pub;
 
+    private Button findOnMapButton;
+    private Button addToFavouritesButton;
+
     private GoogleApiClient client;
 
     private boolean traditional_irish_pub, modern_pub;
@@ -70,8 +74,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     private SearchByNameDialog searchByNameDialog;
 
     private ArrayList<Integer> options_selected;
-
-    private String pub_name_entered;
 
     private Bitmap downloadedPhoto;
     private int downloadedPhoto_width;
@@ -130,6 +132,9 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         single_pub_details_container = (LinearLayout) findViewById(R.id.single_pub_details_container);
         featured_pub = new PubLayout(context, single_pub_details_container);
         addFeaturedPub();
+
+        findOnMapButton = featured_pub.getFindOnMapButton();
+        addToFavouritesButton = featured_pub.getAddToFavouritesButton();
     }
 
     @Override
@@ -177,7 +182,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                     // Favourites
                     case 2:
 
-                        dLayout.closeDrawer(dList);
+                        //dLayout.closeDrawer(dList);
 
                         //tv_home_screen.setText(context.getString(R.string.no_favourites));
 
@@ -213,6 +218,31 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                 }
             }
         });
+
+        findOnMapButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                launchMapScreen(context.getString(R.string.o_donoghues), context.getString(R.string.o_donoghues_place_ID));
+            }
+        });
+
+        addToFavouritesButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                showToastMessage(context.getString(R.string.feature_unavailable));
+            }
+        });
+    }
+
+    private void launchMapScreen(String name, String place_ID){
+        Intent intent = new Intent(this, MapScreen.class);
+        intent.putExtra("name", name);
+        intent.putExtra("place_ID", place_ID);
+        startActivity(intent);
     }
 
     private void addFeaturedPub(){

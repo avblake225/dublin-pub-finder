@@ -9,7 +9,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -33,6 +35,9 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
 
     private Bitmap downloadedPhoto;
     private int downloadedPhoto_width, downloadedPhoto_height;
+
+    private Button findOnMapButton;
+    private Button addToFavouritesButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +88,9 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
         pub.setPubDescription(description);
 
         pub.attachToParent();
+
+        findOnMapButton = pub.getFindOnMapButton();
+        addToFavouritesButton = pub.getAddToFavouritesButton();
     }
 
     @Override
@@ -94,9 +102,33 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
             @Override
             public void onClick(View v) {
 
-                //launchMapScreen(name, place_ID);
+                // back to previous screen...
             }
         });
+
+        findOnMapButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                launchMapScreen(name, place_ID);
+            }
+        });
+
+        addToFavouritesButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                showToastMessage(context.getString(R.string.feature_unavailable));
+            }
+        });
+    }
+
+    private void showToastMessage(CharSequence text) {
+        int duration = Toast.LENGTH_LONG;
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
     }
 
     @Override
