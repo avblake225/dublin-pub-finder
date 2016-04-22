@@ -49,6 +49,7 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
         // Set up Action Bar
         actionBar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(actionBar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         actionBar.setNavigationIcon(context.getResources().getDrawable(R.drawable.ic_arrow_back_white_24dp));
         actionBar.setTitleTextColor(context.getResources().getColor(R.color.white));
 
@@ -102,7 +103,7 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
             @Override
             public void onClick(View v) {
 
-                // back to previous screen...
+                onBackPressed();
             }
         });
 
