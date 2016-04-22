@@ -1,7 +1,6 @@
 package com.tonyblake.dublinpubfinder;
 
 import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
 
 public class PubItem {
 
@@ -10,8 +9,7 @@ public class PubItem {
     private String pub_address = "";
     private String pub_description = "";
     private String pub_placeId = "";
-    private int pub_rating_resourceId;
-    private Drawable pub_rating = null;
+    private float pub_rating;
 
     // Setter methods
     public void setPubImage(Bitmap pub_image){
@@ -39,12 +37,7 @@ public class PubItem {
         this.pub_placeId = pub_placeId;
     }
 
-    public void setPubRatingResourceId(int pub_rating_resourceId){
-
-        this.pub_rating_resourceId = pub_rating_resourceId;
-    }
-
-    public void setPubRating(Drawable pub_rating){
+    public void setPubRating(float pub_rating){
 
         this.pub_rating = pub_rating;
     }
@@ -75,12 +68,7 @@ public class PubItem {
         return pub_placeId;
     }
 
-    public int getPubRatingResourceId(){
-
-        return pub_rating_resourceId;
-    }
-
-    public Drawable getPubRating(){
+    public float getPubRating(){
 
         return pub_rating;
     }

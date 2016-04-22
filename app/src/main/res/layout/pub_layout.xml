@@ -32,13 +32,14 @@
                 android:layout_marginTop="@dimen/tv_margin_top"
                 android:layout_marginBottom="@dimen/tv_margin_bottom"/>
 
-            <ImageView
-                android:id="@+id/iv_rating"
+            <RatingBar
+                android:id="@+id/rating_bar"
+                style="?android:attr/ratingBarStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/tv_margin_top"
-                android:layout_marginBottom="@dimen/tv_margin_bottom"/>
+                android:progressBackgroundTint="@color/white"
+                android:progressTint="@color/yellow"/>
 
             <ImageView
                 android:id="@+id/iv_pub"

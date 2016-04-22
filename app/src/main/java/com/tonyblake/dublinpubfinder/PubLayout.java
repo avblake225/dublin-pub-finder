@@ -2,12 +2,12 @@ package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 public class PubLayout{
@@ -16,7 +16,7 @@ public class PubLayout{
     private View pub_layout;
     public TextView tv_pub_name;
     public TextView tv_pub_address;
-    public ImageView iv_rating;
+    public RatingBar rating_bar;
     public ImageView iv_pub;
     public TextView tv_pub_description;
     public Button btn_find_on_map;
@@ -34,7 +34,7 @@ public class PubLayout{
 
         tv_pub_address = (TextView) pub_layout.findViewById(R.id.tv_pub_address);
 
-        iv_rating = (ImageView) pub_layout.findViewById(R.id.iv_rating);
+        rating_bar = (RatingBar) pub_layout.findViewById(R.id.rating_bar);
 
         iv_pub = (ImageView) pub_layout.findViewById(R.id.iv_pub);
 
@@ -55,9 +55,10 @@ public class PubLayout{
         tv_pub_address.setText(name);
     }
 
-    public void setPubRating(Drawable rating){
+    public void setPubRating(float rating, int numStars){
 
-        iv_rating.setImageDrawable(rating);
+        rating_bar.setNumStars(numStars);
+        rating_bar.setRating(rating);
     }
 
     public void setPubImage(Bitmap image){

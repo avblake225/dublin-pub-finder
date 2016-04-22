@@ -6,7 +6,6 @@ import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
@@ -253,9 +252,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         featured_pub.setPubAddress(context.getString(R.string.o_donoghues_address));
 
-        Drawable pub_rating = context.getResources().getDrawable(R.drawable.four_star_rating);
-
-        featured_pub.setPubRating(pub_rating);
+        featured_pub.setPubRating(Float.valueOf(context.getString(R.string.four_stars)),
+                                  Integer.valueOf(context.getString(R.string.five_stars)));
 
         getPubImage(featured_pub, context.getString(R.string.o_donoghues_place_ID));
 
@@ -299,7 +297,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                 pub.address = res.getString(2);
                 pub.description = res.getString(3);
                 pub.place_ID = res.getString(4);
-                pub.rating_resource_ID = res.getInt(5);
+                pub.rating = res.getInt(5);
                 pubs_found.add(pub);
 
             } while (res.moveToNext());
@@ -336,11 +334,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
             pubItem.setPubAddress(pubs_found.get(i).address);
 
-            pubItem.setPubRatingResourceId(pubs_found.get(i).rating_resource_ID);
-
-            Drawable pub_rating = context.getResources().getDrawable(pubItem.getPubRatingResourceId());
-
-            pubItem.setPubRating(pub_rating);
+            pubItem.setPubRating(pubs_found.get(i).rating);
 
             pubItem.setPubPlaceId(pubs_found.get(i).place_ID);
 
@@ -412,7 +406,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         intent.putExtra("address",pubItem.getPubAddress());
         intent.putExtra("description",pubItem.getPubDescription());
         intent.putExtra("place_ID", pubItem.getPubPlaceId());
-        intent.putExtra("rating_resource_ID",pubItem.getPubRatingResourceId());
+        intent.putExtra("rating",pubItem.getPubRating());
 
         startActivity(intent);
 

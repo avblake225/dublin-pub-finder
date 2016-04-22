@@ -62,7 +62,7 @@ public class SearchByNameDialog extends DialogFragment {
                                 pub.address = res.getString(2);
                                 pub.description = res.getString(3);
                                 pub.place_ID = res.getString(4);
-                                pub.rating_resource_ID = res.getInt(5);
+                                pub.rating = res.getInt(5);
 
                             } while (res.moveToNext());
 
@@ -142,7 +142,7 @@ public class SearchByNameDialog extends DialogFragment {
         intent.putExtra("address", pub.address);
         intent.putExtra("description", pub.description);
         intent.putExtra("place_ID", pub.place_ID);
-        intent.putExtra("rating_resource_ID", pub.rating_resource_ID);
+        intent.putExtra("rating", pub.rating);
 
         startActivity(intent);
     }

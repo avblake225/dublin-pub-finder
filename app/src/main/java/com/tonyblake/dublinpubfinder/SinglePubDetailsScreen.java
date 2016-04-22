@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -27,7 +26,7 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
     private Toolbar actionBar;
 
     private String name, address, description, place_ID;
-    private int rating_resource_ID;
+    private int rating;
 
     private LinearLayout single_pub_details_container;
 
@@ -72,7 +71,7 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
         address = savedInstanceState.getString("address");
         description = savedInstanceState.getString("description");
         place_ID = savedInstanceState.getString("place_ID");
-        rating_resource_ID = savedInstanceState.getInt("rating_resource_ID");
+        rating = savedInstanceState.getInt("rating");
 
         single_pub_details_container = (LinearLayout)findViewById(R.id.single_pub_details_container);
 
@@ -81,8 +80,7 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
         pub.setPubName(name);
         pub.setPubAddress(address);
 
-        Drawable pub_rating = context.getResources().getDrawable(rating_resource_ID);
-        pub.setPubRating(pub_rating);
+        pub.setPubRating(rating, Integer.valueOf(context.getString(R.string.five_stars)));
 
         setPubImage(place_ID);
 

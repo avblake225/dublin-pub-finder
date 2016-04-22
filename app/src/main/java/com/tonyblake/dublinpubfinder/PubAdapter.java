@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -55,7 +56,7 @@ public class PubAdapter extends BaseAdapter implements View.OnClickListener {
         public ImageView pub_image;
         public TextView pub_name;
         public TextView pub_address;
-        public ImageView pub_rating;
+        public RatingBar pub_rating;
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -71,7 +72,7 @@ public class PubAdapter extends BaseAdapter implements View.OnClickListener {
             holder.pub_image = (ImageView) v.findViewById(R.id.pub_image);
             holder.pub_name = (TextView) v.findViewById(R.id.pub_name);
             holder.pub_address=(TextView)v.findViewById(R.id.pub_address);
-            holder.pub_rating=(ImageView)v.findViewById(R.id.pub_rating);
+            holder.pub_rating=(RatingBar)v.findViewById(R.id.rating_bar);
 
             v.setTag( holder );
         }
@@ -90,7 +91,7 @@ public class PubAdapter extends BaseAdapter implements View.OnClickListener {
             holder.pub_image.setImageBitmap(pubItem.getPubImage());
             holder.pub_name.setText( pubItem.getPubName() );
             holder.pub_address.setText( pubItem.getPubAddress() );
-            holder.pub_rating.setImageDrawable( pubItem.getPubRating() );
+            holder.pub_rating.setRating( pubItem.getPubRating() );
 
             v.setOnClickListener(new OnItemClickListener( position ));
         }

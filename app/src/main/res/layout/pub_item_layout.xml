@@ -21,13 +21,13 @@
             android:id="@+id/pub_details"
             android:layout_width="@dimen/pub_details_max_width"
             android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/pub_details_padding_left"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/pub_name"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:paddingLeft="@dimen/pub_details_padding_left"
                 android:text="Pub Name"
                 android:textSize="@dimen/pub_item_name_textsize"
                 android:textColor="@color/white"/>
@@ -36,16 +36,18 @@
                 android:id="@+id/pub_address"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:paddingLeft="@dimen/pub_details_padding_left"
                 android:text="Pub Address"
                 android:textSize="@dimen/pub_item_address_textsize"
                 android:textColor="@color/white"/>
 
-            <ImageView
-                android:id="@+id/pub_rating"
+            <RatingBar
+                android:id="@+id/rating_bar"
+                style="?android:attr/ratingBarStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/four_and_a_half_star_rating"/>
+                android:isIndicator="true"
+                android:progressBackgroundTint="@color/white"
+                android:progressTint="@color/yellow"/>
 
         </LinearLayout>
 

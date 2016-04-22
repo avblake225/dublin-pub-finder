@@ -40,6 +40,18 @@
     <string name="search">Search</string>
     <string name="cancel">Cancel</string>
 
+    <!-- Rating Bar -->
+    <string name="half_a_star">0.5</string>
+    <string name="one_star">1</string>
+    <string name="one_and_a_half_stars">1.5</string>
+    <string name="two_stars">2</string>
+    <string name="two_and_a_half_stars">2.5</string>
+    <string name="three_stars">3</string>
+    <string name="three_and_a_half_stars">3.5</string>
+    <string name="four_stars">4</string>
+    <string name="four_and_a_half_stars">4.5</string>
+    <string name="five_stars">5</string>
+
     <string name="pub_not_found">Pub not found</string>
     <string name="disclaimer">Disclaimer: Live music, live sports and late opening only on certain nights. Ratings and descriptions based on Google Reviews</string>
 
@@ -250,7 +262,7 @@
 
     <string name="o_donoghues">O Donoghues</string>
     <string name="o_donoghues_address">15 Merrion Row, Dublin 2</string>
-    <string name="o_donoghues_description">No description available</string>
+    <string name="o_donoghues_description">Renowned traditional music pub with packed nightly live sessions and simple en suite bedrooms</string>
     <string name="o_donoghues_latitude">53.338144</string>
     <string name="o_donoghues_longitude">-6.254240</string>
 
