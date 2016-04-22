@@ -62,7 +62,7 @@ public class SearchByNameDialog extends DialogFragment {
                                 pub.address = res.getString(2);
                                 pub.description = res.getString(3);
                                 pub.place_ID = res.getString(4);
-                                pub.rating = res.getInt(5);
+                                pub.rating = res.getString(5);
 
                             } while (res.moveToNext());
 

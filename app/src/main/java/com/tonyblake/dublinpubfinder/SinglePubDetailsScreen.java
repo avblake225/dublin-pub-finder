@@ -26,7 +26,7 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
     private Toolbar actionBar;
 
     private String name, address, description, place_ID;
-    private int rating;
+    private String rating;
 
     private LinearLayout single_pub_details_container;
 
@@ -71,7 +71,7 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
         address = savedInstanceState.getString("address");
         description = savedInstanceState.getString("description");
         place_ID = savedInstanceState.getString("place_ID");
-        rating = savedInstanceState.getInt("rating");
+        rating = savedInstanceState.getString("rating");
 
         single_pub_details_container = (LinearLayout)findViewById(R.id.single_pub_details_container);
 

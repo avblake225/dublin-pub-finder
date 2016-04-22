@@ -9,7 +9,7 @@ public class PubItem {
     private String pub_address = "";
     private String pub_description = "";
     private String pub_placeId = "";
-    private float pub_rating;
+    private String pub_rating;
 
     // Setter methods
     public void setPubImage(Bitmap pub_image){
@@ -37,7 +37,7 @@ public class PubItem {
         this.pub_placeId = pub_placeId;
     }
 
-    public void setPubRating(float pub_rating){
+    public void setPubRating(String pub_rating){
 
         this.pub_rating = pub_rating;
     }
@@ -68,7 +68,7 @@ public class PubItem {
         return pub_placeId;
     }
 
-    public float getPubRating(){
+    public String getPubRating(){
 
         return pub_rating;
     }

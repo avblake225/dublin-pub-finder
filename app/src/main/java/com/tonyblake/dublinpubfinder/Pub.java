@@ -6,5 +6,5 @@ public class Pub {
     String address;
     String description;
     String place_ID;
-    float rating;
+    String rating;
 }

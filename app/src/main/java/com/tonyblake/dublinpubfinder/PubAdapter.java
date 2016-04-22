@@ -91,7 +91,7 @@ public class PubAdapter extends BaseAdapter implements View.OnClickListener {
             holder.pub_image.setImageBitmap(pubItem.getPubImage());
             holder.pub_name.setText( pubItem.getPubName() );
             holder.pub_address.setText( pubItem.getPubAddress() );
-            holder.pub_rating.setRating( pubItem.getPubRating() );
+            holder.pub_rating.setRating(Float.valueOf(pubItem.getPubRating()));
 
             v.setOnClickListener(new OnItemClickListener( position ));
         }

@@ -252,7 +252,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         featured_pub.setPubAddress(context.getString(R.string.o_donoghues_address));
 
-        featured_pub.setPubRating(Float.valueOf(context.getString(R.string.four_stars)),
+        featured_pub.setPubRating(context.getString(R.string.four_stars),
                                   Integer.valueOf(context.getString(R.string.five_stars)),
                                   Float.valueOf(context.getString(R.string.half_a_star)));
 
@@ -298,7 +298,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                 pub.address = res.getString(2);
                 pub.description = res.getString(3);
                 pub.place_ID = res.getString(4);
-                pub.rating = res.getInt(5);
+                pub.rating = res.getString(5);
                 pubs_found.add(pub);
 
             } while (res.moveToNext());
