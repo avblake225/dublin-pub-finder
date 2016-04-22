@@ -57,6 +57,19 @@
                 android:layout_marginTop="@dimen/tv_margin_top"
                 android:layout_marginBottom="@dimen/tv_margin_bottom"/>
 
+            <Button
+                android:id="@+id/btn_find_on_map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/btn_find_on_map_margin_top"
+                android:text="@string/find_on_map"/>
+
+            <Button
+                android:id="@+id/btn_add_to_favourites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_to_favourites"/>
+
         </LinearLayout>
 
     </ScrollView>

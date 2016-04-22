@@ -15,37 +15,19 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-    <ScrollView
+    <RelativeLayout
+        android:id="@+id/single_pub_details_container_parent"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="vertical"
+            android:id="@+id/single_pub_details_container"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/single_pub_details_container_margin_top"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"/>
 
-            <LinearLayout
-                android:id="@+id/single_pub_details_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/single_pub_details_container_margin_top"
-                android:orientation="vertical"/>
-
-            <Button
-                android:id="@+id/btn_find_on_map"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/btn_find_on_map_margin_top"
-                android:text="@string/find_on_map"/>
-
-            <Button
-                android:id="@+id/btn_add_to_favourites"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/add_to_favourites"/>
-
-        </LinearLayout>
-
-    </ScrollView>
+    </RelativeLayout>
 
 </LinearLayout>
