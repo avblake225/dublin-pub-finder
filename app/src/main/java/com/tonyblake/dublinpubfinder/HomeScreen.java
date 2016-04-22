@@ -179,9 +179,9 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         dLayout.closeDrawer(dList);
 
-                        tv_home_screen.setText(context.getString(R.string.no_favourites));
+                        //tv_home_screen.setText(context.getString(R.string.no_favourites));
 
-                        tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
+                        //tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
 
                         showToastMessage(context.getString(R.string.feature_unavailable));
 
@@ -199,11 +199,15 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         dLayout.closeDrawer(dList);
 
+                        single_pub_details_container.removeAllViews();
+
                         String disclaimer = "<i>" + context.getString(R.string.disclaimer) + "</i>";
 
                         tv_home_screen.setPadding((int) context.getResources().getDimension(R.dimen.tv_home_screen_padding_left), 0, 0, 0);
 
                         tv_home_screen.setText((Html.fromHtml(disclaimer)));
+
+                        tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
 
                         break;
                 }
