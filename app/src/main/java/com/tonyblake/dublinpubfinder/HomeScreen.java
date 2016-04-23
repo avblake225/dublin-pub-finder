@@ -13,6 +13,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -194,7 +195,17 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                     // About Author
                     case 3:
 
-                        showToastMessage(context.getString(R.string.feature_unavailable));
+                        dLayout.closeDrawer(dList);
+
+                        tv_home_screen.setText(context.getString(R.string.author));
+
+                        single_pub_details_container.removeAllViews();
+
+                        LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+                        View about_author_layout = inflater.inflate(R.layout.about_author_layout, null);
+
+                        single_pub_details_container.addView(about_author_layout);
 
                         break;
 

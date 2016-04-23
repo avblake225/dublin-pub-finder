@@ -26,7 +26,7 @@
     <dimen name="no_padding">0dp</dimen>
 
     <dimen name="single_pub_details_container_margin_top">5dp</dimen>
-    <dimen name="btn_find_on_map_margin_top">10dp</dimen>
+    <dimen name="btn_find_on_map_margin_top">5dp</dimen>
     <dimen name="btn_add_to_favourites_margin_top">5dp</dimen>
 
     <dimen name="pub_name_textsize">25dp</dimen>
@@ -36,11 +36,17 @@
     <dimen name="pub_image_width">300dp</dimen>
     <dimen name="pub_image_height">300dp</dimen>
     <dimen name="pub_description_textsize">15dp</dimen>
+    <dimen name="pub_description_margin">5dp</dimen>
 
     <dimen name="drawer_item_text_size">20dp</dimen>
     <dimen name="drawer_item_padding_left">10dp</dimen>
     <dimen name="drawer_item_padding_top">15dp</dimen>
     <dimen name="drawer_item_padding_bottom">15dp</dimen>
+
+    <!-- About Author -->
+    <dimen name="iv_author_width">250dp</dimen>
+    <dimen name="iv_author_height">250dp</dimen>
+    <dimen name="author_bio_margin">5dp</dimen>
 
     <!-- Pub Item -->
     <dimen name="pub_item_layout_margin_bottom">1dp</dimen>

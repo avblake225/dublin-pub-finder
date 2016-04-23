@@ -2,6 +2,13 @@
 
     <string name="app_name">Dublin Pub Finder</string>
     <string name="copyright">© Tony Blake 2016</string>
+    <string name="author">Author...</string>
+    <string name="author_name">Tony Blake</string>
+    <string name="author_bio">I\'m a Software Engineer from Dublin, Ireland.
+        I\'ve had the opportunity to work for a range of tech companies from start-up size to multinational.
+        I have experience developing all types of Software (Embedded, Mobile, Desktop and Web) but my expertise
+        is in Android Development. At the time of writing I am available for work and can be found at
+        https://www.linkedin.com/in/tonyblakesoftware. Alternatively you can email me at avblake225@gmail.com</string>
 
     <string name="featured_pub">Featured pub...</string>
     <string name="o_donoghues_place_ID">"ChIJw-DhupkOZ0gRzPibivFAces"</string>
