@@ -2,6 +2,9 @@ package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.LayerDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -56,6 +59,10 @@ public class PubLayout{
     }
 
     public void setPubRating(String rating, int numStars, float stepSize){
+
+        LayerDrawable stars = (LayerDrawable) rating_bar.getProgressDrawable();
+        stars.getDrawable(2).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
+        stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP);
 
         rating_bar.setNumStars(numStars);
         rating_bar.setStepSize(stepSize);

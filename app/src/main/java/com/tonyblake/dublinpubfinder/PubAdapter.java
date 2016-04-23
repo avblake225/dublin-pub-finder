@@ -3,6 +3,9 @@ package com.tonyblake.dublinpubfinder;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.LayerDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -90,7 +93,12 @@ public class PubAdapter extends BaseAdapter implements View.OnClickListener {
 
             holder.pub_image.setImageBitmap(pubItem.getPubImage());
             holder.pub_name.setText( pubItem.getPubName() );
-            holder.pub_address.setText( pubItem.getPubAddress() );
+            holder.pub_address.setText(pubItem.getPubAddress());
+
+            LayerDrawable stars = (LayerDrawable) holder.pub_rating.getProgressDrawable();
+            stars.getDrawable(2).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
+            stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP);
+
             holder.pub_rating.setRating(Float.valueOf(pubItem.getPubRating()));
 
             v.setOnClickListener(new OnItemClickListener( position ));
