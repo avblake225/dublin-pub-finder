@@ -39,6 +39,7 @@
     <string name="enter_pub_name">Enter pub name...</string>
     <string name="search">Search</string>
     <string name="cancel">Cancel</string>
+    <string name="search_by_name_dialog_height">270</string>
 
     <!-- Rating Bar -->
     <string name="half_a_star">0.5</string>

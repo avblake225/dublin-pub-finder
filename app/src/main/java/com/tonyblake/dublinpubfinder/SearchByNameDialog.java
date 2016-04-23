@@ -12,6 +12,7 @@ import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -26,6 +27,7 @@ public class SearchByNameDialog extends DialogFragment {
     private AutoCompleteTextView tv_pub_name;
     public static String pub_name = "";
     private Pub pub;
+    private WindowManager.LayoutParams lp;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -85,6 +87,12 @@ public class SearchByNameDialog extends DialogFragment {
                 });
 
         final AlertDialog dialog = builder.create();
+
+        lp = new WindowManager.LayoutParams();
+
+        lp.copyFrom(dialog.getWindow().getAttributes());
+        lp.height = Integer.valueOf(context.getString(R.string.search_by_name_dialog_height));
+        dialog.getWindow().setAttributes(lp);
 
         dialog.setOnShowListener(new DialogInterface.OnShowListener() {
 
