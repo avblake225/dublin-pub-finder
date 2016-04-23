@@ -63,12 +63,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/btn_find_on_map_margin_top"
+                style="@style/button_style"
                 android:text="@string/find_on_map"/>
 
             <Button
                 android:id="@+id/btn_add_to_favourites"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/btn_add_to_favourites_margin_top"
+                style="@style/button_style"
                 android:text="@string/add_to_favourites"/>
 
         </LinearLayout>
