@@ -11,9 +11,7 @@
     <dimen name="option_text_size">18dp</dimen>
 
     <dimen name="tv_home_screen_textsize">15dp</dimen>
-    <dimen name="tv_home_screen_padding_left">5dp</dimen>
-    <dimen name="tv_home_screen_padding_top">5dp</dimen>
-    <dimen name="tv_home_screen_padding_bottom">5dp</dimen>
+    <dimen name="tv_home_screen_padding">5dp</dimen>
     <dimen name="no_margin_left">0dp</dimen>
     <dimen name="tv_description_margin_left">10dp</dimen>
     <dimen name="tv_margin_top">2dp</dimen>

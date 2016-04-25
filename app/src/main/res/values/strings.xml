@@ -2,6 +2,7 @@
 
     <string name="app_name">Dublin Pub Finder</string>
     <string name="copyright">© Tony Blake 2016</string>
+    <string name="welcome">Welcome to Dublin Pub Finder. Use the menu button at the top of the screen to get started.</string>
     <string name="author">Author...</string>
     <string name="author_name">Tony Blake</string>
     <string name="author_bio">I\'m a Software Engineer from Dublin, Ireland.

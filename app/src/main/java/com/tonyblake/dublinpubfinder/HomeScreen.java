@@ -17,7 +17,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -49,11 +48,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private RelativeLayout single_pub_details_container_parent;
     private LinearLayout single_pub_details_container;
-
-    private PubLayout featured_pub;
-
-    private Button findOnMapButton;
-    private Button addToFavouritesButton;
 
     private GoogleApiClient client;
 
@@ -110,6 +104,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         // Set up Home Screen TextView
         tv_home_screen = (TextView)findViewById(R.id.tv_home_screen);
+        tv_home_screen.setText(context.getString(R.string.welcome));
         tv_home_screen_parent = (RelativeLayout) findViewById(R.id.tv_home_screen_parent);
 
         // Set up Google API Client
@@ -127,14 +122,9 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         downloadedPhoto_width = (int)context.getResources().getDimension(R.dimen.pub_image_width);
         downloadedPhoto_height = (int)context.getResources().getDimension(R.dimen.pub_image_height);
 
-        // Set up Featured Pub
+        // Set up Single Pub Details
         single_pub_details_container_parent = (RelativeLayout) findViewById(R.id.single_pub_details_container_parent);
         single_pub_details_container = (LinearLayout) findViewById(R.id.single_pub_details_container);
-        featured_pub = new PubLayout(context, single_pub_details_container);
-        addFeaturedPub();
-
-        findOnMapButton = featured_pub.getFindOnMapButton();
-        addToFavouritesButton = featured_pub.getAddToFavouritesButton();
     }
 
     @Override
@@ -197,11 +187,13 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         dLayout.closeDrawer(dList);
 
+                        tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
+
                         tv_home_screen.setText(context.getString(R.string.author));
 
                         single_pub_details_container.removeAllViews();
 
-                        LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
                         View about_author_layout = inflater.inflate(R.layout.about_author_layout, null);
 
@@ -218,32 +210,12 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         String disclaimer = "<i>" + context.getString(R.string.disclaimer) + "</i>";
 
-                        tv_home_screen.setPadding((int) context.getResources().getDimension(R.dimen.tv_home_screen_padding_left), 0, 0, 0);
-
                         tv_home_screen.setText((Html.fromHtml(disclaimer)));
 
                         tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
 
                         break;
                 }
-            }
-        });
-
-        findOnMapButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                launchMapScreen(context.getString(R.string.o_donoghues), context.getString(R.string.o_donoghues_place_ID));
-            }
-        });
-
-        addToFavouritesButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                showToastMessage(context.getString(R.string.feature_unavailable));
             }
         });
     }
@@ -253,25 +225,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         intent.putExtra("name", name);
         intent.putExtra("place_ID", place_ID);
         startActivity(intent);
-    }
-
-    private void addFeaturedPub(){
-
-        tv_home_screen.setText(context.getString(R.string.featured_pub));
-
-        featured_pub.setPubName(context.getString(R.string.o_donoghues));
-
-        featured_pub.setPubAddress(context.getString(R.string.o_donoghues_address));
-
-        featured_pub.setPubRating(context.getString(R.string.four_stars),
-                                  Integer.valueOf(context.getString(R.string.five_stars)),
-                                  Float.valueOf(context.getString(R.string.half_a_star)));
-
-        getPubImage(featured_pub, context.getString(R.string.o_donoghues_place_ID));
-
-        featured_pub.setPubDescription(context.getString(R.string.o_donoghues_description));
-
-        featured_pub.attachToParent();
     }
 
     @Override
