@@ -11,9 +11,6 @@
         is in Android Development. You can find me on LinkedIn at https://www.linkedin.com/in/tonyblakesoftware.
         Alternatively you can email me at avblake225@gmail.com</string>
 
-    <string name="featured_pub">Featured pub...</string>
-    <string name="o_donoghues_place_ID">"ChIJw-DhupkOZ0gRzPibivFAces"</string>
-
     <string name="no_favourites">No favourites</string>
 
     <string-array name="menu_items">
@@ -48,6 +45,7 @@
     <string name="search">Search</string>
     <string name="cancel">Cancel</string>
     <string name="search_by_name_dialog_height">270</string>
+    <string name="searching_for_pubs">Searching for pubs...</string>
 
     <!-- Rating Bar -->
     <string name="half_a_star">0.5</string>
@@ -60,6 +58,7 @@
     <string name="four_stars">4</string>
     <string name="four_and_a_half_stars">4.5</string>
     <string name="five_stars">5</string>
+    <string name="rating_multiplier">10</string>
 
     <string name="pub_not_found">Pub not found</string>
     <string name="disclaimer">Disclaimer: Live music, live sports and late opening only on certain nights. Ratings and descriptions based on Google Reviews</string>

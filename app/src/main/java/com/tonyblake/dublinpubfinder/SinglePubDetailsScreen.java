@@ -3,7 +3,6 @@ package com.tonyblake.dublinpubfinder;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -26,7 +25,7 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
     private Toolbar actionBar;
 
     private String name, address, description, place_ID;
-    private String rating;
+    private float rating;
 
     private LinearLayout single_pub_details_container;
 
@@ -71,7 +70,7 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
         address = savedInstanceState.getString("address");
         description = savedInstanceState.getString("description");
         place_ID = savedInstanceState.getString("place_ID");
-        rating = savedInstanceState.getString("rating");
+        rating = savedInstanceState.getFloat("rating");
 
         single_pub_details_container = (LinearLayout)findViewById(R.id.single_pub_details_container);
 
@@ -82,8 +81,6 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
 
         pub.setPubRating(rating, Integer.valueOf(context.getString(R.string.five_stars)),
                          Float.valueOf(context.getString(R.string.half_a_star)));
-
-        setPubImage(place_ID);
 
         pub.setPubDescription(description);
 
@@ -143,29 +140,6 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
         intent.putExtra("name", name);
         intent.putExtra("place_ID", place_ID);
         startActivity(intent);
-    }
-
-    private void setPubImage(String placeId) {
-
-        // Create a new AsyncTask that displays the bitmap once loaded.
-        new PhotoTask(downloadedPhoto_width, downloadedPhoto_height, client) {
-
-            @Override
-            protected void onPostExecute(AttributedPhoto attributedPhoto) {
-
-                if (attributedPhoto != null) {
-
-                    downloadedPhoto = attributedPhoto.bitmap;
-                }
-                else{
-
-                    downloadedPhoto = BitmapFactory.decodeResource(getResources(), R.drawable.image_unavailable);
-                }
-
-                pub.setPubImage(downloadedPhoto);
-
-            }
-        }.execute(placeId);
     }
 
     @Override

@@ -58,7 +58,7 @@ public class PubLayout{
         tv_pub_address.setText(name);
     }
 
-    public void setPubRating(String rating, int numStars, float stepSize){
+    public void setPubRating(float rating, int numStars, float stepSize){
 
         LayerDrawable stars = (LayerDrawable) rating_bar.getProgressDrawable();
         stars.getDrawable(2).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
@@ -66,7 +66,7 @@ public class PubLayout{
 
         rating_bar.setNumStars(numStars);
         rating_bar.setStepSize(stepSize);
-        rating_bar.setRating(Float.valueOf(rating));
+        rating_bar.setRating(rating);
     }
 
     public void setPubImage(Bitmap image){

@@ -19,7 +19,7 @@ public class SearchDialog extends DialogFragment{
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
-        search_options = new ArrayList();
+        search_options = new ArrayList<Integer>();
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 

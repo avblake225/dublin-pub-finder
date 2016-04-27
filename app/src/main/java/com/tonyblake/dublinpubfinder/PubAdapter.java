@@ -22,7 +22,7 @@ public class PubAdapter extends BaseAdapter implements View.OnClickListener {
     private ArrayList data;
     private static LayoutInflater inflater = null;
     public Resources res;
-    PubItem pubItem = null;
+    Pub pub = null;
     int i=0;
 
     public PubAdapter(Activity a, ArrayList d,Resources resLocal) {
@@ -56,10 +56,10 @@ public class PubAdapter extends BaseAdapter implements View.OnClickListener {
 
     public static class ViewHolder{
 
-        public ImageView pub_image;
         public TextView pub_name;
         public TextView pub_address;
         public RatingBar pub_rating;
+        public ImageView pub_image;
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -72,10 +72,10 @@ public class PubAdapter extends BaseAdapter implements View.OnClickListener {
             v = inflater.inflate(R.layout.pub_item_layout, null);
 
             holder = new ViewHolder();
-            holder.pub_image = (ImageView) v.findViewById(R.id.pub_image);
             holder.pub_name = (TextView) v.findViewById(R.id.pub_name);
             holder.pub_address=(TextView)v.findViewById(R.id.pub_address);
             holder.pub_rating=(RatingBar)v.findViewById(R.id.rating_bar);
+            holder.pub_image = (ImageView) v.findViewById(R.id.pub_image);
 
             v.setTag( holder );
         }
@@ -89,17 +89,17 @@ public class PubAdapter extends BaseAdapter implements View.OnClickListener {
         }
         else
         {
-            pubItem = ( PubItem ) data.get( position );
+            pub = ( Pub ) data.get( position );
 
-            holder.pub_image.setImageBitmap(pubItem.getPubImage());
-            holder.pub_name.setText( pubItem.getPubName() );
-            holder.pub_address.setText(pubItem.getPubAddress());
+            holder.pub_name.setText(pub.name);
+            holder.pub_address.setText(pub.address);
 
             LayerDrawable stars = (LayerDrawable) holder.pub_rating.getProgressDrawable();
             stars.getDrawable(2).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
             stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP);
 
-            holder.pub_rating.setRating(Float.valueOf(pubItem.getPubRating()));
+            holder.pub_rating.setRating(pub.rating);
+            holder.pub_image.setImageBitmap(pub.image);
 
             v.setOnClickListener(new OnItemClickListener( position ));
         }

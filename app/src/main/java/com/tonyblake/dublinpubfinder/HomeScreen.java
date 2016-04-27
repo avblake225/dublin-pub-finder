@@ -1,11 +1,11 @@
 package com.tonyblake.dublinpubfinder;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
@@ -57,11 +57,9 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private String query;
 
-    private ArrayList<Pub> pubs_found;
+    private ArrayList<String> placeIDs;
 
-    private int num_pubs_found;
-
-    private PubItem pubItem;
+    private int num_place_IDs_found;
 
     private SearchDialog searchDialog;
 
@@ -73,12 +71,14 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     private int downloadedPhoto_width;
     private int downloadedPhoto_height;
 
-    private String num_pubs_returned_str;
+    private String num_pubs_str;
 
     private ListView list;
     private PubAdapter adapter;
 
-    public ArrayList<PubItem> pubItems = new ArrayList<>();
+    private ArrayList<Pub> pubsToDisplay;
+
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -220,13 +220,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         });
     }
 
-    private void launchMapScreen(String name, String place_ID){
-        Intent intent = new Intent(this, MapScreen.class);
-        intent.putExtra("name", name);
-        intent.putExtra("place_ID", place_ID);
-        startActivity(intent);
-    }
-
     @Override
     public void onStop() {
         super.onStop();
@@ -236,20 +229,22 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private void search(){
 
-        pubs_found = new ArrayList<>();
+        placeIDs = new ArrayList<>();
+
+        pubsToDisplay = new ArrayList<>();
 
         query = context.getString(R.string.select_all_rows_from) + MainActivity.dbManager.getTableName()
                             + context.getString(R.string.where) + getPubTypeSelection() + getSideOfCitySelection()
                             + getLiveMusicSelection() + getLiveSportsSelection() + getCocktailsSelection()
                             + getCraftBeerSelection() + getLatePubSelection() + context.getString(R.string.end_query);
 
-        if(pubItems.size() != 0){
+        if(pubsToDisplay.size() != 0){
 
-            pubItems.removeAll(pubItems);
+            pubsToDisplay.removeAll(pubsToDisplay);
             adapter.notifyDataSetChanged();
         }
 
-        num_pubs_returned_str = "";
+        num_pubs_str = "";
 
         try {
             Cursor res = MainActivity.dbManager.getPubs(query);
@@ -257,121 +252,87 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             res.moveToFirst();
 
             do {
-                Pub pub = new Pub();
-                pub.name = res.getString(1);
-                pub.address = res.getString(2);
-                pub.description = res.getString(3);
-                pub.place_ID = res.getString(4);
-                pub.rating = res.getString(5);
-                pubs_found.add(pub);
+                String placeId = res.getString(4);
+                placeIDs.add(placeId);
 
             } while (res.moveToNext());
 
-            num_pubs_found = pubs_found.size();
+            num_place_IDs_found = placeIDs.size();
 
-            if(num_pubs_found == 1){
-                num_pubs_returned_str = num_pubs_found + " " + context.getString(R.string.pub_found);
+            if(num_place_IDs_found == 1){
+                num_pubs_str = num_place_IDs_found + " " + context.getString(R.string.pub_found);
             }
-            else if(num_pubs_found > 1){
-                num_pubs_returned_str = num_pubs_found + " " + context.getString(R.string.pubs_found);
+            else if(num_place_IDs_found > 1){
+                num_pubs_str = num_place_IDs_found + " " + context.getString(R.string.pubs_found);
             }
 
-            displayPubs();
+            getPubItems();
+
         }
         catch (Exception e) {
             showToastMessage(context.getString(R.string.no_pubs_match_your_search));
         }
+    }
 
-        tv_home_screen.setText(num_pubs_returned_str);
+    private void getPubItems(){
+
+        downloadedPhoto_width = (int)context.getResources().getDimension(R.dimen.pub_item_image_width);
+        downloadedPhoto_height = (int)context.getResources().getDimension(R.dimen.pub_item_image_height);
+
+        tv_home_screen.setText("");
+
+        new GetPubsTask(client, downloadedPhoto_height, downloadedPhoto_width, context) {
+
+            @Override
+            protected void onPreExecute() {
+
+                progressDialog = new ProgressDialog(context);
+                progressDialog.setMessage(context.getString(R.string.searching_for_pubs));
+                progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                progressDialog.setIndeterminate(true);
+                progressDialog.show();
+            }
+
+            @Override
+            protected void onPostExecute(ArrayList<Pub> pubs_returned) {
+
+                if (pubs_returned != null) {
+
+                    pubsToDisplay = pubs_returned;
+
+                    progressDialog.dismiss();
+
+                    displayPubs();
+
+                }
+            }
+        }.execute(placeIDs);
     }
 
     private void displayPubs(){
 
-        downloadedPhoto = null;
-        downloadedPhoto_width = (int)context.getResources().getDimension(R.dimen.pub_item_image_width);
-        downloadedPhoto_height = (int)context.getResources().getDimension(R.dimen.pub_item_image_height);
-
-        for(int i=0;i<num_pubs_found;i++){
-
-            pubItem = new PubItem();
-
-            pubItem.setPubName(pubs_found.get(i).name);
-
-            pubItem.setPubAddress(pubs_found.get(i).address);
-
-            pubItem.setPubRating(pubs_found.get(i).rating);
-
-            pubItem.setPubPlaceId(pubs_found.get(i).place_ID);
-
-            getPubImage(pubItem, pubItem.getPubPlaceId());
-
-            pubItem.setPubDescription(pubs_found.get(i).description);
-
-            pubItems.add(pubItem);
-        }
+        tv_home_screen.setText(num_pubs_str);
 
         Resources res = getResources();
 
         list= ( ListView )findViewById( R.id.pub_list );
 
-        adapter = new PubAdapter( homeScreen, pubItems, res);
+        adapter = new PubAdapter( homeScreen, pubsToDisplay, res);
 
         list.setAdapter(adapter);
     }
 
-    private void getPubImage(final PubItem pubItem, String placeId) {
-
-        new PhotoTask(downloadedPhoto_width, downloadedPhoto_height, client) {
-
-            @Override
-            protected void onPostExecute(AttributedPhoto attributedPhoto) {
-
-                if (attributedPhoto != null) {
-
-                    downloadedPhoto = attributedPhoto.bitmap;
-                }
-                else{
-
-                    downloadedPhoto = BitmapFactory.decodeResource(getResources(), R.drawable.image_unavailable);
-                }
-
-                pubItem.setPubImage(downloadedPhoto);
-            }
-        }.execute(placeId);
-    }
-
-    private void getPubImage(final PubLayout featured_pub, String placeId) {
-
-        new PhotoTask(downloadedPhoto_width, downloadedPhoto_height, client) {
-
-            @Override
-            protected void onPostExecute(AttributedPhoto attributedPhoto) {
-
-                if (attributedPhoto != null) {
-
-                    downloadedPhoto = attributedPhoto.bitmap;
-                }
-                else{
-
-                    downloadedPhoto = BitmapFactory.decodeResource(getResources(), R.drawable.image_unavailable);
-                }
-
-                featured_pub.setPubImage(downloadedPhoto);
-            }
-        }.execute(placeId);
-    }
-
     public void onItemClick(int mPosition){
 
-        PubItem pubItem = pubItems.get(mPosition);
+        Pub pub = pubsToDisplay.get(mPosition);
 
         Intent intent = new Intent(this, SinglePubDetailsScreen.class);
 
-        intent.putExtra("name",pubItem.getPubName());
-        intent.putExtra("address",pubItem.getPubAddress());
-        intent.putExtra("description",pubItem.getPubDescription());
-        intent.putExtra("place_ID", pubItem.getPubPlaceId());
-        intent.putExtra("rating",pubItem.getPubRating());
+        intent.putExtra("name", pub.name);
+        intent.putExtra("address", pub.address);
+        intent.putExtra("description", pub.description);
+        intent.putExtra("place_ID", pub.placeID);
+        intent.putExtra("rating", pub.rating);
 
         startActivity(intent);
 
