@@ -3,6 +3,7 @@ package com.tonyblake.dublinpubfinder;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.LayerDrawable;
@@ -100,6 +101,11 @@ public class PubAdapter extends BaseAdapter implements View.OnClickListener {
 
             holder.pub_rating.setRating(pub.rating);
             holder.pub_image.setImageBitmap(pub.image);
+
+            if(pub.image == null){
+
+                holder.pub_image.setImageBitmap(BitmapFactory.decodeResource(res, R.drawable.image_unavailable));
+            }
 
             v.setOnClickListener(new OnItemClickListener( position ));
         }
