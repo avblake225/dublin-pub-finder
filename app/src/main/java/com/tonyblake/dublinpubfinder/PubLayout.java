@@ -2,6 +2,7 @@ package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.LayerDrawable;
@@ -69,9 +70,16 @@ public class PubLayout{
         rating_bar.setRating(rating);
     }
 
-    public void setPubImage(Bitmap image){
+    public void setPubImage(Bitmap image, Context context){
 
-        iv_pub.setImageBitmap(image);
+        if(image != null){
+
+            iv_pub.setImageBitmap(image);
+        }
+        else{
+
+            iv_pub.setImageBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.image_unavailable));
+        }
     }
 
     public void setPubDescription(String description){

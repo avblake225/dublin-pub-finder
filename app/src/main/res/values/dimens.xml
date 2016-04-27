@@ -31,8 +31,8 @@
     <dimen name="pub_item_name_textsize">20dp</dimen>
     <dimen name="pub_address_textsize">20dp</dimen>
     <dimen name="pub_item_address_textsize">15dp</dimen>
-    <dimen name="pub_image_width">300dp</dimen>
-    <dimen name="pub_image_height">300dp</dimen>
+    <dimen name="pub_image_width">250dp</dimen>
+    <dimen name="pub_image_height">250dp</dimen>
     <dimen name="pub_description_textsize">15dp</dimen>
     <dimen name="pub_description_margin">5dp</dimen>
 

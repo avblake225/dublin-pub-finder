@@ -328,14 +328,14 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         Intent intent = new Intent(this, SinglePubDetailsScreen.class);
 
+        intent.putExtra("place_ID", pub.placeID);
         intent.putExtra("name", pub.name);
         intent.putExtra("address", pub.address);
-        intent.putExtra("description", pub.description);
-        intent.putExtra("place_ID", pub.placeID);
         intent.putExtra("rating", pub.rating);
+        intent.putExtra("image", pub.image);
+        intent.putExtra("description", pub.description);
 
         startActivity(intent);
-
     }
 
     private String getPubTypeSelection(){

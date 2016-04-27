@@ -26,10 +26,11 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
 
     private String name, address, description, place_ID;
     private float rating;
+    private Bitmap image;
 
     private LinearLayout single_pub_details_container;
 
-    private PubLayout pub;
+    private PubLayout pubLayout;
 
     private Bitmap downloadedPhoto;
     private int downloadedPhoto_width, downloadedPhoto_height;
@@ -66,28 +67,32 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
         downloadedPhoto_height = 300;
 
         savedInstanceState = getIntent().getExtras();
+        place_ID = savedInstanceState.getString("place_ID");
         name = savedInstanceState.getString("name");
         address = savedInstanceState.getString("address");
-        description = savedInstanceState.getString("description");
-        place_ID = savedInstanceState.getString("place_ID");
         rating = savedInstanceState.getFloat("rating");
+        image = savedInstanceState.getParcelable("image");
+        description = savedInstanceState.getString("description");
 
         single_pub_details_container = (LinearLayout)findViewById(R.id.single_pub_details_container);
 
-        pub = new PubLayout(context,single_pub_details_container);
+        pubLayout = new PubLayout(context,single_pub_details_container);
 
-        pub.setPubName(name);
-        pub.setPubAddress(address);
+        pubLayout.setPubName(name);
+        pubLayout.setPubAddress(address);
 
-        pub.setPubRating(rating, Integer.valueOf(context.getString(R.string.five_stars)),
-                         Float.valueOf(context.getString(R.string.half_a_star)));
+        pubLayout.setPubRating(rating, Integer.valueOf(context.getString(R.string.five_stars)),
+                Float.valueOf(context.getString(R.string.half_a_star)));
 
-        pub.setPubDescription(description);
+        pubLayout.setPubImage(image, context);
 
-        pub.attachToParent();
 
-        findOnMapButton = pub.getFindOnMapButton();
-        addToFavouritesButton = pub.getAddToFavouritesButton();
+        pubLayout.setPubDescription(description);
+
+        pubLayout.attachToParent();
+
+        findOnMapButton = pubLayout.getFindOnMapButton();
+        addToFavouritesButton = pubLayout.getAddToFavouritesButton();
     }
 
     @Override
