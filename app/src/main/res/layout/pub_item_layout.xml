@@ -2,11 +2,12 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@drawable/pub_item_background_color">
+    android:background="?attr/colorPrimaryDark">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/pub_item_background_color"
         android:layout_marginBottom="@dimen/pub_item_layout_margin_bottom"
         android:paddingTop="@dimen/pub_item_padding_top"
         android:paddingBottom="@dimen/pub_item_padding_bottom"
