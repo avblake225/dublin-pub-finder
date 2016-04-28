@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/pub_item_background_color"
-        android:layout_marginBottom="@dimen/pub_item_layout_margin_bottom"
+        android:layout_marginBottom="@dimen/divider_line"
         android:paddingTop="@dimen/pub_item_padding_top"
         android:paddingBottom="@dimen/pub_item_padding_bottom"
         android:orientation="horizontal">

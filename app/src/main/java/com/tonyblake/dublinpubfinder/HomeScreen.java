@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
@@ -67,7 +66,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private ArrayList<Integer> options_selected;
 
-    private Bitmap downloadedPhoto;
     private int downloadedPhoto_width;
     private int downloadedPhoto_height;
 
@@ -284,8 +282,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private void getPubItems(){
 
-        downloadedPhoto_width = (int)context.getResources().getDimension(R.dimen.pub_item_image_width);
-        downloadedPhoto_height = (int)context.getResources().getDimension(R.dimen.pub_item_image_height);
+        downloadedPhoto_width = (int)context.getResources().getDimension(R.dimen.pub_image_width);
+        downloadedPhoto_height = (int)context.getResources().getDimension(R.dimen.pub_image_height);
 
         new GetPubsTask(client, downloadedPhoto_height, downloadedPhoto_width, context) {
 
@@ -293,7 +291,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             protected void onPreExecute() {
 
                 progressDialog = new ProgressDialog(context);
-                progressDialog.setMessage(context.getString(R.string.searching_for_pubs));
+                progressDialog.setMessage(context.getString(R.string.searching));
                 progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                 progressDialog.setIndeterminate(true);
                 progressDialog.show();

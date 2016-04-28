@@ -22,7 +22,7 @@
 
         <LinearLayout
             android:id="@+id/single_pub_details_container"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/single_pub_details_container_margin_top"
             android:orientation="vertical"

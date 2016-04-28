@@ -47,13 +47,15 @@
     <dimen name="drawer_item_padding_top">15dp</dimen>
     <dimen name="drawer_item_padding_bottom">15dp</dimen>
 
+    <dimen name="rating_bar_margin_bottom">5dp</dimen>
+
     <!-- About Author -->
     <dimen name="iv_author_width">250dp</dimen>
     <dimen name="iv_author_height">250dp</dimen>
     <dimen name="author_bio_margin">5dp</dimen>
 
     <!-- Pub Item -->
-    <dimen name="pub_item_layout_margin_bottom">1dp</dimen>
+    <dimen name="divider_line">1dp</dimen>
     <dimen name="pub_item_padding_top">5dp</dimen>
     <dimen name="pub_item_padding_bottom">5dp</dimen>
     <dimen name="pub_item_image_width">80dp</dimen>
