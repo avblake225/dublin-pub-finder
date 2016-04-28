@@ -150,8 +150,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                     // Find A Pub
                     case 0:
 
-                        clearScreen();
-
                         dLayout.closeDrawer(dList);
 
                         searchDialog = new SearchDialog();
@@ -161,8 +159,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                     // Search For Pub Name
                     case 1:
-
-                        clearScreen();
 
                         dLayout.closeDrawer(dList);
 
@@ -233,18 +229,10 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         placeIDs = new ArrayList<>();
 
-        pubsToDisplay = new ArrayList<>();
-
         query = context.getString(R.string.select_all_rows_from) + MainActivity.dbManager.getTableName()
                             + context.getString(R.string.where) + getPubTypeSelection() + getSideOfCitySelection()
                             + getLiveMusicSelection() + getLiveSportsSelection() + getCocktailsSelection()
                             + getCraftBeerSelection() + getLatePubSelection() + context.getString(R.string.end_query);
-
-        if(pubsToDisplay.size() != 0){
-
-            pubsToDisplay.removeAll(pubsToDisplay);
-            adapter.notifyDataSetChanged();
-        }
 
         num_pubs_str = "";
 
@@ -281,6 +269,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     }
 
     private void getPubItems(){
+
+        pubsToDisplay = new ArrayList<>();
 
         downloadedPhoto_width = (int)context.getResources().getDimension(R.dimen.pub_image_width);
         downloadedPhoto_height = (int)context.getResources().getDimension(R.dimen.pub_image_height);
@@ -416,10 +406,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         clearAllSelections();
 
-        single_pub_details_container.removeAllViews();
-        single_pub_details_container_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
-        single_pub_details_container_parent.getLayoutParams().width = RelativeLayout.LayoutParams.WRAP_CONTENT;
-        tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
+        clearScreen();
 
         options_selected = SearchDialog.search_options;
 
@@ -484,6 +471,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         single_pub_details_container.removeAllViews();
         single_pub_details_container_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
         single_pub_details_container_parent.getLayoutParams().width = RelativeLayout.LayoutParams.WRAP_CONTENT;
+
+        if(list != null) list.setAdapter(null);
     }
 
     private void clearAllSelections(){
