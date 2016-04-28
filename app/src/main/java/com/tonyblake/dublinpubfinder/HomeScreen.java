@@ -152,6 +152,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                     // Find A Pub
                     case 0:
 
+                        clearScreen();
+
                         dLayout.closeDrawer(dList);
 
                         searchDialog = new SearchDialog();
@@ -161,6 +163,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                     // Search For Pub Name
                     case 1:
+
+                        clearScreen();
 
                         dLayout.closeDrawer(dList);
 
@@ -282,8 +286,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         downloadedPhoto_width = (int)context.getResources().getDimension(R.dimen.pub_item_image_width);
         downloadedPhoto_height = (int)context.getResources().getDimension(R.dimen.pub_item_image_height);
-
-        tv_home_screen.setText("");
 
         new GetPubsTask(client, downloadedPhoto_height, downloadedPhoto_width, context) {
 
@@ -471,12 +473,18 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     @Override
     public void onSearchByNameDialogSearchClick(DialogFragment dialog, String placeID) {
 
+        clearScreen();
+
+        search(placeID);
+    }
+
+    private void clearScreen(){
+
         single_pub_details_container.removeAllViews();
         single_pub_details_container_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
         single_pub_details_container_parent.getLayoutParams().width = RelativeLayout.LayoutParams.WRAP_CONTENT;
+        tv_home_screen.setText("");
         tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
-
-        search(placeID);
     }
 
     private void clearAllSelections(){

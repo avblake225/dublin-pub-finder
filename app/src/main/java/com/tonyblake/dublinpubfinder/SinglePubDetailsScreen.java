@@ -87,7 +87,7 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
         pubLayout.setPubImage(image, context);
 
 
-        pubLayout.setPubDescription(description);
+        pubLayout.setPubDescription("Some description");
 
         pubLayout.attachToParent();
 

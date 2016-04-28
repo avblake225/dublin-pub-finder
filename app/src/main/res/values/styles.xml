@@ -33,7 +33,6 @@
     <style name="pub_description_style">
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:textStyle">italic</item>
         <item name="android:textSize">@dimen/pub_description_textsize</item>
     </style>
 
