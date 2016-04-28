@@ -7,8 +7,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -35,8 +35,8 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
     private Bitmap downloadedPhoto;
     private int downloadedPhoto_width, downloadedPhoto_height;
 
-    private Button findOnMapButton;
-    private Button addToFavouritesButton;
+    private TextView findOnMapButton;
+    private TextView addToFavouritesButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

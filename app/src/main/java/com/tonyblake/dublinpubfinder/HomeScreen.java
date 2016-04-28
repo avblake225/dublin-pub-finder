@@ -478,11 +478,12 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private void clearScreen(){
 
+        tv_home_screen.setText("");
+        tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
+
         single_pub_details_container.removeAllViews();
         single_pub_details_container_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
         single_pub_details_container_parent.getLayoutParams().width = RelativeLayout.LayoutParams.WRAP_CONTENT;
-        tv_home_screen.setText("");
-        tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
     }
 
     private void clearAllSelections(){

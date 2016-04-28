@@ -32,8 +32,9 @@
 
                 <TextView
                     android:id="@+id/tv_pub_address"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/pub_address_width"
                     android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
                     android:layout_gravity="center_horizontal"
                     android:textAppearance="@style/pub_address_style"
                     android:layout_marginTop="@dimen/tv_margin_top"
@@ -75,39 +76,26 @@
                     android:textAppearance="@style/pub_description_style"
                     android:layout_margin="@dimen/pub_description_margin"/>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/btn_find_on_map"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/btn_layout_margin_top"
-                    android:layout_marginBottom="@dimen/btn_layout_margin_bottom"
-                    android:layout_gravity="center_horizontal"
-                    android:orientation="horizontal">
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/btn_padding"
+                    android:layout_marginTop="@dimen/btn_find_on_map_margin_top"
+                    style="@style/button_style"
+                    android:text="@string/find_on_map"/>
 
-                    <Button
-                        android:id="@+id/btn_find_on_map"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="@dimen/no_padding"
-                        android:paddingBottom="@dimen/no_padding"
-                        android:paddingLeft="@dimen/btn_padding_left"
-                        android:paddingRight="@dimen/btn_padding_right"
-                        android:layout_marginRight="@dimen/btn_find_on_map_margin_right"
-                        style="@style/button_style"
-                        android:text="@string/find_on_map"/>
-
-                    <Button
-                        android:id="@+id/btn_add_to_favourites"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="@dimen/no_padding"
-                        android:paddingBottom="@dimen/no_padding"
-                        android:paddingLeft="@dimen/btn_padding_left"
-                        android:paddingRight="@dimen/btn_padding_right"
-                        android:layout_marginLeft="@dimen/btn_add_to_favourites_margin_left"
-                        style="@style/button_style"
-                        android:text="@string/add_to_favourites"/>
-
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/btn_add_to_favourites"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/btn_padding"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/btn_add_to_favourites_margin_top"
+                    android:layout_marginBottom="@dimen/btn_add_to_favourites_margin_bottom"
+                    style="@style/button_style"
+                    android:text="@string/add_to_favourites"/>
 
             </LinearLayout>
 

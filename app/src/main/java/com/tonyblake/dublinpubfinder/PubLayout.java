@@ -8,7 +8,6 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.LayerDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
@@ -23,8 +22,8 @@ public class PubLayout{
     public RatingBar rating_bar;
     public ImageView iv_pub;
     public TextView tv_pub_description;
-    public Button btn_find_on_map;
-    public Button btn_add_to_favourites;
+    public TextView btn_find_on_map;
+    public TextView btn_add_to_favourites;
 
     public PubLayout(Context context, LinearLayout pub_layout_container){
 
@@ -44,9 +43,9 @@ public class PubLayout{
 
         tv_pub_description = (TextView) pub_layout.findViewById(R.id.tv_pub_description);
 
-        btn_find_on_map = (Button) pub_layout.findViewById(R.id.btn_find_on_map);
+        btn_find_on_map = (TextView) pub_layout.findViewById(R.id.btn_find_on_map);
 
-        btn_add_to_favourites = (Button) pub_layout.findViewById(R.id.btn_add_to_favourites);
+        btn_add_to_favourites = (TextView) pub_layout.findViewById(R.id.btn_add_to_favourites);
     }
 
     public void setPubName(String name){
@@ -92,12 +91,12 @@ public class PubLayout{
         pub_layout_container.addView(pub_layout);
     }
 
-    public Button getFindOnMapButton(){
+    public TextView getFindOnMapButton(){
 
         return btn_find_on_map;
     }
 
-    public Button getAddToFavouritesButton(){
+    public TextView getAddToFavouritesButton(){
 
         return btn_add_to_favourites;
     }
