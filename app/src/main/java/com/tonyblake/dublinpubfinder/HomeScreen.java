@@ -30,7 +30,7 @@ import com.google.android.gms.location.places.Places;
 
 import java.util.ArrayList;
 
-public class HomeScreen extends AppCompatActivity implements SearchDialog.SearchDialogListener,
+public class HomeScreen extends AppCompatActivity implements SearchDialog.SearchDialogListener, SearchByNameDialog.SearchByNameDialogListener,
                                                  GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener{
 
     private Context context;
@@ -227,7 +227,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         client.disconnect();
     }
 
-    private void search(){
+    private void search(String placeID){
 
         placeIDs = new ArrayList<>();
 
@@ -251,11 +251,15 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
             res.moveToFirst();
 
-            do {
-                String placeId = res.getString(4);
-                placeIDs.add(placeId);
+            if(placeID == null){
 
-            } while (res.moveToNext());
+                do {
+                    placeID = res.getString(4);
+                    placeIDs.add(placeID);
+
+                } while (res.moveToNext());
+            }
+            else placeIDs.add(placeID);
 
             num_place_IDs_found = placeIDs.size();
 
@@ -315,7 +319,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         Resources res = getResources();
 
-        list= ( ListView )findViewById( R.id.pub_list );
+        list= ( ListView )findViewById(R.id.pub_list);
 
         adapter = new PubAdapter( homeScreen, pubsToDisplay, res);
 
@@ -461,7 +465,18 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             }
         }
 
-        search();
+        search(null);
+    }
+
+    @Override
+    public void onSearchByNameDialogSearchClick(DialogFragment dialog, String placeID) {
+
+        single_pub_details_container.removeAllViews();
+        single_pub_details_container_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
+        single_pub_details_container_parent.getLayoutParams().width = RelativeLayout.LayoutParams.WRAP_CONTENT;
+        tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
+
+        search(placeID);
     }
 
     private void clearAllSelections(){

@@ -1,9 +1,9 @@
 package com.tonyblake.dublinpubfinder;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -13,6 +13,7 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -58,12 +59,17 @@ public class SearchByNameDialog extends DialogFragment {
 
                             res.moveToFirst();
 
+                            String placeID;
+
                             do {
-                                String place_ID = res.getString(4);
+                                placeID = res.getString(4);
+                            }
+                            while (res.moveToNext());
 
-                            } while (res.moveToNext());
+                            ((InputMethodManager) getActivity().getSystemService(Activity.INPUT_METHOD_SERVICE))
+                                    .toggleSoftInput(InputMethodManager.SHOW_IMPLICIT, 0);
 
-                            launchSinglePubDetailsScreen();
+                            mListener.onSearchByNameDialogSearchClick(SearchByNameDialog.this, placeID);
 
                         } catch (Exception e) {
                             showToastMessage(context.getString(R.string.no_pubs_match_your_search));
@@ -111,6 +117,25 @@ public class SearchByNameDialog extends DialogFragment {
         return dialog;
     }
 
+    public interface SearchByNameDialogListener {
+
+        void onSearchByNameDialogSearchClick(DialogFragment dialog, String placeID);
+    }
+
+    SearchByNameDialogListener mListener;
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+
+        try {
+            mListener = (SearchByNameDialogListener) activity;
+        }
+        catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString() + " must implement NoticeDialogListener");
+        }
+    }
+
     @Override
     public void onActivityCreated (Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
@@ -123,7 +148,7 @@ public class SearchByNameDialog extends DialogFragment {
     }
 
     @Override
-    public void onResume(){
+    public void onResume() {
         super.onResume();
 
         tv_pub_name.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -135,19 +160,6 @@ public class SearchByNameDialog extends DialogFragment {
 
             }
         });
-    }
-
-    private void launchSinglePubDetailsScreen(){
-
-        Intent intent = new Intent(context, SinglePubDetailsScreen.class);
-
-        intent.putExtra("name", pub.name);
-        intent.putExtra("address", pub.address);
-        intent.putExtra("description", pub.description);
-        //intent.putExtra("place_ID", pub.place_ID);
-        intent.putExtra("rating", pub.rating);
-
-        startActivity(intent);
     }
 
     private void showToastMessage(CharSequence text) {
