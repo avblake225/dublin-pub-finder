@@ -185,11 +185,9 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         dLayout.closeDrawer(dList);
 
-                        tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
+                        clearScreen();
 
                         tv_home_screen.setText(context.getString(R.string.author));
-
-                        single_pub_details_container.removeAllViews();
 
                         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -204,7 +202,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         dLayout.closeDrawer(dList);
 
-                        single_pub_details_container.removeAllViews();
+                        clearScreen();
 
                         String disclaimer = "<i>" + context.getString(R.string.disclaimer) + "</i>";
 
