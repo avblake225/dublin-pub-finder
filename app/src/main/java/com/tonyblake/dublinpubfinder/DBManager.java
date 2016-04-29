@@ -14,17 +14,16 @@ public class DBManager extends SQLiteOpenHelper{
     public static final String TABLE_NAME = "pubs_table";
     public static final String COL_1 = "ID";
     public static final String COL_2 = "NAME";
-    public static final String COL_3 = "ADDRESS";
+    public static final String COL_3 = "PLACE_ID";
     public static final String COL_4 = "DESCRIPTION";
-    public static final String COL_5 = "PLACE_ID";
-    public static final String COL_6 = "RATING";
-    public static final String COL_7 = "PUB_TYPE";
-    public static final String COL_8 = "SIDE_OF_CITY";
-    public static final String COL_9 = "LIVE_MUSIC";
-    public static final String COL_10 = "LIVE_SPORTS";
-    public static final String COL_11 = "COCKTAILS";
-    public static final String COL_12 = "CRAFT_BEER";
-    public static final String COL_13 = "LATE_PUB";
+    public static final String COL_5 = "FAVOURITE";
+    public static final String COL_6 = "PUB_TYPE";
+    public static final String COL_7 = "SIDE_OF_CITY";
+    public static final String COL_8 = "LIVE_MUSIC";
+    public static final String COL_9 = "LIVE_SPORTS";
+    public static final String COL_10 = "COCKTAILS";
+    public static final String COL_11 = "CRAFT_BEER";
+    public static final String COL_12 = "LATE_PUB";
 
     private File db_file;
 
@@ -51,10 +50,9 @@ public class DBManager extends SQLiteOpenHelper{
             j = 0;
 
             boolean against_the_grain = insertData(context.getString(R.string.against_the_grain),
-                    context.getString(R.string.against_the_grain_address),
-                    context.getString(R.string.against_the_grain_description),
                     context.getString(R.string.against_the_grain_place_ID),
-                    context.getString(R.string.four_and_a_half_stars),
+                    context.getString(R.string.against_the_grain_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.modern),
                     context.getString(R.string.southside),
                     context.getString(R.string.no),
@@ -69,10 +67,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean alfie_byrnes = insertData(context.getString(R.string.alfie_byrnes),
-                    context.getString(R.string.alfie_byrnes_address),
-                    context.getString(R.string.alfie_byrnes_description),
                     context.getString(R.string.alfie_byrnes_place_ID),
-                    context.getString(R.string.four_stars),
+                    context.getString(R.string.alfie_byrnes_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.modern),
                     context.getString(R.string.southside),
                     context.getString(R.string.no),
@@ -87,10 +84,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean alfies = insertData(context.getString(R.string.alfies),
-                    context.getString(R.string.alfies_address),
-                    context.getString(R.string.alfies_description),
                     context.getString(R.string.alfies_place_ID),
-                    context.getString(R.string.three_and_a_half_stars),
+                    context.getString(R.string.alfies_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.modern),
                     context.getString(R.string.southside),
                     context.getString(R.string.no),
@@ -105,10 +101,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean anseo = insertData(context.getString(R.string.anseo),
-                    context.getString(R.string.anseo_address),
-                    context.getString(R.string.anseo_description),
                     context.getString(R.string.anseo_place_ID),
-                    context.getString(R.string.four_stars),
+                    context.getString(R.string.anseo_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.modern),
                     context.getString(R.string.southside),
                     context.getString(R.string.yes),
@@ -123,10 +118,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean bad_bobs = insertData(context.getString(R.string.bad_bobs),
-                    context.getString(R.string.bad_bobs_address),
-                    context.getString(R.string.bad_bobs_description),
                     context.getString(R.string.bad_bobs_place_ID),
-                    context.getString(R.string.four_stars),
+                    context.getString(R.string.bad_bobs_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.modern),
                     context.getString(R.string.southside),
                     context.getString(R.string.yes),
@@ -141,10 +135,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean break_for_the_border = insertData(context.getString(R.string.break_for_the_border),
-                    context.getString(R.string.break_for_the_border_address),
-                    context.getString(R.string.break_for_the_border_description),
                     context.getString(R.string.break_for_the_border_place_ID),
-                    context.getString(R.string.three_and_a_half_stars),
+                    context.getString(R.string.break_for_the_border_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.modern),
                     context.getString(R.string.southside),
                     context.getString(R.string.no),
@@ -159,10 +152,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean bruxelles = insertData(context.getString(R.string.bruxelles),
-                    context.getString(R.string.bruxelles_address),
-                    context.getString(R.string.bruxelles_description),
                     context.getString(R.string.bruxelles_place_ID),
-                    context.getString(R.string.four_stars),
+                    context.getString(R.string.bruxelles_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.traditional_irish),
                     context.getString(R.string.southside),
                     context.getString(R.string.yes),
@@ -177,10 +169,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean buskers = insertData(context.getString(R.string.buskers),
-                    context.getString(R.string.buskers_address),
-                    context.getString(R.string.buskers_description),
                     context.getString(R.string.buskers_place_ID),
-                    context.getString(R.string.four_stars),
+                    context.getString(R.string.buskers_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.modern),
                     context.getString(R.string.southside),
                     context.getString(R.string.yes),
@@ -195,10 +186,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean cafe_en_seine = insertData(context.getString(R.string.café_en_seine),
-                    context.getString(R.string.café_en_seine_address),
-                    context.getString(R.string.café_en_seine_description),
                     context.getString(R.string.café_en_seine_place_ID),
-                    context.getString(R.string.four_stars),
+                    context.getString(R.string.café_en_seine_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.modern),
                     context.getString(R.string.southside),
                     context.getString(R.string.no),
@@ -213,10 +203,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean cassidys = insertData(context.getString(R.string.cassidys),
-                    context.getString(R.string.cassidys_address),
-                    context.getString(R.string.cassidys_description),
                     context.getString(R.string.cassidys_place_ID),
-                    context.getString(R.string.four_and_a_half_stars),
+                    context.getString(R.string.cassidys_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.modern),
                     context.getString(R.string.southside),
                     context.getString(R.string.yes),
@@ -231,10 +220,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean devitts = insertData(context.getString(R.string.devitts),
-                    context.getString(R.string.devitts_address),
-                    context.getString(R.string.devitts_description),
                     context.getString(R.string.devitts_place_ID),
-                    context.getString(R.string.four_and_a_half_stars),
+                    context.getString(R.string.devitts_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.traditional_irish),
                     context.getString(R.string.southside),
                     context.getString(R.string.yes),
@@ -249,10 +237,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean doheny_and_nesbitts = insertData(context.getString(R.string.doheny_and_nesbitts),
-                    context.getString(R.string.doheny_and_nesbitts_address),
-                    context.getString(R.string.doheny_and_nesbitts_description),
                     context.getString(R.string.doheny_and_nesbitts_place_ID),
-                    context.getString(R.string.four_and_a_half_stars),
+                    context.getString(R.string.doheny_and_nesbitts_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.traditional_irish),
                     context.getString(R.string.southside),
                     context.getString(R.string.no),
@@ -267,10 +254,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean doyles = insertData(context.getString(R.string.doyles),
-                    context.getString(R.string.doyles_address),
-                    context.getString(R.string.doyles_description),
                     context.getString(R.string.doyles_place_ID),
-                    context.getString(R.string.four_and_a_half_stars),
+                    context.getString(R.string.doyles_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.modern),
                     context.getString(R.string.southside),
                     context.getString(R.string.no),
@@ -285,10 +271,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean fibber_magees = insertData(context.getString(R.string.fibber_magees),
-                    context.getString(R.string.fibber_magees_address),
-                    context.getString(R.string.fibber_magees_description),
                     context.getString(R.string.fibber_magees_place_ID),
-                    context.getString(R.string.four_and_a_half_stars),
+                    context.getString(R.string.fibber_magees_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.modern),
                     context.getString(R.string.northside),
                     context.getString(R.string.yes),
@@ -303,10 +288,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean fitzgeralds = insertData(context.getString(R.string.fitzgeralds),
-                    context.getString(R.string.fitzgeralds_address),
-                    context.getString(R.string.fitzgeralds_description),
                     context.getString(R.string.fitzgeralds_place_ID),
-                    context.getString(R.string.four_and_a_half_stars),
+                    context.getString(R.string.fitzgeralds_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.traditional_irish),
                     context.getString(R.string.southside),
                     context.getString(R.string.yes),
@@ -321,10 +305,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean fitzsimons = insertData(context.getString(R.string.fitzsimons),
-                    context.getString(R.string.fitzsimons_address),
-                    context.getString(R.string.fitzsimons_description),
                     context.getString(R.string.fitzsimons_place_ID),
-                    context.getString(R.string.three_and_a_half_stars),
+                    context.getString(R.string.fitzsimons_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.modern),
                     context.getString(R.string.southside),
                     context.getString(R.string.yes),
@@ -339,10 +322,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean flannerys = insertData(context.getString(R.string.flannerys),
-                    context.getString(R.string.flannerys_address),
-                    context.getString(R.string.flannerys_description),
                     context.getString(R.string.flannerys_place_ID),
-                    context.getString(R.string.four_stars),
+                    context.getString(R.string.flannerys_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.traditional_irish),
                     context.getString(R.string.southside),
                     context.getString(R.string.yes),
@@ -357,10 +339,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean four_dame_lane = insertData(context.getString(R.string.four_dame_lane),
-                    context.getString(R.string.four_dame_lane_address),
-                    context.getString(R.string.four_dame_lane_description),
                     context.getString(R.string.four_dame_lane_place_ID),
-                    context.getString(R.string.four_stars),
+                    context.getString(R.string.four_dame_lane_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.modern),
                     context.getString(R.string.southside),
                     context.getString(R.string.yes),
@@ -375,10 +356,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean grogans = insertData(context.getString(R.string.grogans),
-                    context.getString(R.string.grogans_address),
-                    context.getString(R.string.grogans_description),
                     context.getString(R.string.grogans_place_ID),
-                    context.getString(R.string.four_and_a_half_stars),
+                    context.getString(R.string.grogans_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.traditional_irish),
                     context.getString(R.string.southside),
                     context.getString(R.string.no),
@@ -393,10 +373,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean hartigans = insertData(context.getString(R.string.hartigans),
-                    context.getString(R.string.hartigans_address),
-                    context.getString(R.string.hartigans_description),
                     context.getString(R.string.hartigans_place_ID),
-                    context.getString(R.string.four_and_a_half_stars),
+                    context.getString(R.string.hartigans_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.traditional_irish),
                     context.getString(R.string.southside),
                     context.getString(R.string.no),
@@ -411,10 +390,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean hogans = insertData(context.getString(R.string.hogans),
-                    context.getString(R.string.hogans_address),
-                    context.getString(R.string.hogans_description),
                     context.getString(R.string.hogans_place_ID),
-                    context.getString(R.string.four_stars),
+                    context.getString(R.string.hogans_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.traditional_irish),
                     context.getString(R.string.southside),
                     context.getString(R.string.no),
@@ -429,10 +407,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean james_toners = insertData(context.getString(R.string.james_toners),
-                    context.getString(R.string.james_toners_address),
-                    context.getString(R.string.james_toners_description),
                     context.getString(R.string.james_toners_place_ID),
-                    context.getString(R.string.four_stars),
+                    context.getString(R.string.james_toners_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.traditional_irish),
                     context.getString(R.string.southside),
                     context.getString(R.string.no),
@@ -447,10 +424,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean jj_smyths = insertData(context.getString(R.string.jj_smyths),
-                    context.getString(R.string.jj_smyths_address),
-                    context.getString(R.string.jj_smyths_description),
                     context.getString(R.string.jj_smyths_place_ID),
-                    context.getString(R.string.four_and_a_half_stars),
+                    context.getString(R.string.jj_smyths_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.traditional_irish),
                     context.getString(R.string.southside),
                     context.getString(R.string.yes),
@@ -465,10 +441,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean john_kehoes = insertData(context.getString(R.string.john_kehoes),
-                    context.getString(R.string.john_kehoes_address),
-                    context.getString(R.string.john_kehoes_description),
                     context.getString(R.string.john_kehoes_place_ID),
-                    context.getString(R.string.four_stars),
+                    context.getString(R.string.john_kehoes_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.traditional_irish),
                     context.getString(R.string.southside),
                     context.getString(R.string.yes),
@@ -483,10 +458,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean jw_sweetmans = insertData(context.getString(R.string.jw_sweetmans),
-                    context.getString(R.string.jw_sweetmans_address),
-                    context.getString(R.string.jw_sweetmans_description),
                     context.getString(R.string.jw_sweetmans_place_ID),
-                    context.getString(R.string.four_stars),
+                    context.getString(R.string.jw_sweetmans_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.modern),
                     context.getString(R.string.southside),
                     context.getString(R.string.no),
@@ -501,10 +475,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean lanigans = insertData(context.getString(R.string.lanigans),
-                    context.getString(R.string.lanigans_address),
-                    context.getString(R.string.lanigans_description),
                     context.getString(R.string.lanigans_place_ID),
-                    context.getString(R.string.four_stars),
+                    context.getString(R.string.lanigans_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.traditional_irish),
                     context.getString(R.string.northside),
                     context.getString(R.string.yes),
@@ -519,10 +492,9 @@ public class DBManager extends SQLiteOpenHelper{
             }
 
             boolean lagoona = insertData(context.getString(R.string.lagoona),
-                    context.getString(R.string.lagoona_address),
-                    context.getString(R.string.lagoona_description),
                     context.getString(R.string.lagoona_place_ID),
-                    context.getString(R.string.four_stars),
+                    context.getString(R.string.lagoona_description),
+                    context.getString(R.string.no),
                     context.getString(R.string.modern),
                     context.getString(R.string.northside),
                     context.getString(R.string.no),
@@ -1012,26 +984,29 @@ public class DBManager extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_PUBS_TABLE = "CREATE TABLE " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, ADDRESS TEXT, DESCRIPTION TEXT, PLACE_ID TEXT, RATING TEXT, PUB_TYPE TEXT, SIDE_OF_CITY TEXT, LIVE_MUSIC TEXT, LIVE_SPORTS TEXT, COCKTAILS TEXT, CRAFT_BEER TEXT, LATE_PUB TEXT)";
+        String CREATE_PUBS_TABLE = "CREATE TABLE " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, PLACE_ID TEXT, DESCRIPTION TEXT, FAVOURITE TEXT, PUB_TYPE TEXT, SIDE_OF_CITY TEXT, LIVE_MUSIC TEXT, LIVE_SPORTS TEXT, COCKTAILS TEXT, CRAFT_BEER TEXT, LATE_PUB TEXT)";
         db.execSQL(CREATE_PUBS_TABLE);
     }
 
-    public boolean insertData(String name, String address, String description, String place_ID, String rating, String pub_type, String side_of_city, String live_music, String live_sports, String cocktails, String craft_beer, String late_pub){
+    public void execQuery(String query){
+        db.execSQL(query);
+    }
+
+    public boolean insertData(String name, String place_ID, String description, String favourite, String pub_type, String side_of_city, String live_music, String live_sports, String cocktails, String craft_beer, String late_pub){
 
         ContentValues contentValues = new ContentValues();
 
         contentValues.put(COL_2, name);
-        contentValues.put(COL_3, address);
+        contentValues.put(COL_3, place_ID);
         contentValues.put(COL_4, description);
-        contentValues.put(COL_5, place_ID);
-        contentValues.put(COL_6, rating);
-        contentValues.put(COL_7, pub_type);
-        contentValues.put(COL_8, side_of_city);
-        contentValues.put(COL_9, live_music);
-        contentValues.put(COL_10, live_sports);
-        contentValues.put(COL_11, cocktails);
-        contentValues.put(COL_12, craft_beer);
-        contentValues.put(COL_13, late_pub);
+        contentValues.put(COL_5, favourite);
+        contentValues.put(COL_6, pub_type);
+        contentValues.put(COL_7, side_of_city);
+        contentValues.put(COL_8, live_music);
+        contentValues.put(COL_9, live_sports);
+        contentValues.put(COL_10, cocktails);
+        contentValues.put(COL_11, craft_beer);
+        contentValues.put(COL_12, late_pub);
 
         long result = db.insert(TABLE_NAME, null, contentValues);
 

@@ -62,7 +62,7 @@ public class SearchByNameDialog extends DialogFragment {
                             String placeID;
 
                             do {
-                                placeID = res.getString(4);
+                                placeID = res.getString(2);
                             }
                             while (res.moveToNext());
 

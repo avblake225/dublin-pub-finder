@@ -2,6 +2,7 @@ package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -37,6 +38,10 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
 
     private TextView findOnMapButton;
     private TextView addToFavouritesButton;
+
+    private String favourite;
+    private boolean addToFavourites;
+    private String state;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +98,43 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
 
         findOnMapButton = pubLayout.getFindOnMapButton();
         addToFavouritesButton = pubLayout.getAddToFavouritesButton();
+
+        String query = context.getString(R.string.select_all_rows_from) + MainActivity.dbManager.getTableName()
+                + context.getString(R.string.where) + context.getString(R.string.name_equals) + name + "'" + context.getString(R.string.end_query);
+
+        try{
+            Cursor res = MainActivity.dbManager.getPubs(query);
+
+            res.moveToFirst();
+
+            do {
+                favourite = res.getString(4);
+            }
+            while (res.moveToNext());
+
+            // Add to Favourites
+            if(context.getString(R.string.no).equals(favourite)){
+
+                addToFavouritesButton.setText(context.getString(R.string.add_to_favourites));
+
+                addToFavourites = true;
+
+                state = context.getString(R.string.yes);
+            }
+            // Remove from Favourites
+            else{
+
+                addToFavouritesButton.setText(context.getString(R.string.remove_from_favourites));
+
+                addToFavourites = false;
+
+                state = context.getString(R.string.no);
+            }
+        }
+        catch(Exception e){
+
+            showToastMessage(context.getString(R.string.error_retrieving_pub));
+        }
     }
 
     @Override
@@ -122,7 +164,34 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
             @Override
             public void onClick(View v) {
 
-                showToastMessage(context.getString(R.string.feature_unavailable));
+                String query = context.getString(R.string.update) + " " + MainActivity.dbManager.getTableName()
+                            + " " + context.getString(R.string.set_favourite_qual_to) + "'" + state
+                            + "'" + context.getString(R.string.where_placeID_equals) + "'" + place_ID + "';";
+
+                try{
+                    MainActivity.dbManager.execQuery(query);
+
+                    if(addToFavourites){
+
+                        addToFavouritesButton.setText(context.getString(R.string.remove_from_favourites));
+
+                        showToastMessage(name + " " + context.getString(R.string.has_been_added_to_favourites));
+
+                        addToFavourites = false;
+                    }
+                    else{
+
+                        addToFavouritesButton.setText(context.getString(R.string.add_to_favourites));
+
+                        showToastMessage(name + " " + context.getString(R.string.has_been_removed_from_favourites));
+
+                        addToFavourites = true;
+                    }
+                }
+                catch(Exception e){
+
+                    showToastMessage(context.getString(R.string.error_adding_to_favourites));
+                }
             }
         });
     }

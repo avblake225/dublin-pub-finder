@@ -2,7 +2,8 @@
 
     <string name="app_name">Dublin Pub Finder</string>
     <string name="copyright">© Tony Blake 2016</string>
-    <string name="welcome">Welcome to Dublin Pub Finder. Use the menu button at the top of the screen to get started.</string>
+    <string name="welcome">Welcome to Dublin Pub Finder. Use the menu button at the top of the screen to get started.
+                            Please ensure that you are connected to Wifi or have your mobile data turned on.</string>
     <string name="author">Author...</string>
     <string name="author_name">Tony Blake</string>
     <string name="author_bio">I\'m a Software Engineer from Dublin, Ireland.
@@ -69,6 +70,7 @@
 
     <string name="please_make_a_selection">Please make a selection</string>
     <string name="no_pubs_match_your_search">No pubs match your search. Please try again</string>
+    <string name="error_retrieving_pub">Error retrieving pub</string>
     <string name="error_retrieving_pub_rating">Error retrieving pub rating</string>
     <string name="error_retrieving_pub_image">Error retrieving pub image</string>
     <string name="error_retrieving_pub_type_and_side_of_city">Error retrieving pub type and side of city</string>
@@ -78,13 +80,20 @@
     <string name="pubs_found">pubs found...</string>
     <string name="find_on_map">FIND ON MAP</string>
     <string name="add_to_favourites">ADD TO FAVOURITES</string>
-    <string name="remove_from_favourites">Remove from favourites</string>
+    <string name="remove_from_favourites">REMOVE FROM FAVOURITES</string>
     <string name="you_are_here">You are here</string>
 
     <string name="select_all_rows_from">"SELECT * FROM "</string>
     <string name="where">" WHERE("</string>
+    <string name="where_placeID_equals">" WHERE PLACE_ID = "</string>
     <string name="name_equals">NAME = \'</string>
+    <string name="id_equals">ID = </string>
     <string name="end_query">");"</string>
+    <string name="update">UPDATE</string>
+    <string name="set_favourite_qual_to">SET FAVOURITE = "</string>
+    <string name="error_adding_to_favourites">Error adding to Favourites</string>
+    <string name="has_been_added_to_favourites">has been added to Favourites</string>
+    <string name="has_been_removed_from_favourites">has been removed from Favourites</string>
 
     <string name="pub_type_traditional_irish">"PUB_TYPE = 'Traditional Irish'"</string>
     <string name="pub_type_modern">"PUB_TYPE = 'Modern'"</string>

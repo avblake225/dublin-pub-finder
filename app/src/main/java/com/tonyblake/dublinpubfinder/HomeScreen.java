@@ -170,13 +170,13 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                     // Favourites
                     case 2:
 
-                        //dLayout.closeDrawer(dList);
+                        dLayout.closeDrawer(dList);
 
-                        //tv_home_screen.setText(context.getString(R.string.no_favourites));
+                        clearScreen();
 
-                        //tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
+                        tv_home_screen.setText(context.getString(R.string.no_favourites));
 
-                        showToastMessage(context.getString(R.string.feature_unavailable));
+                        tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
 
                         break;
 
@@ -242,7 +242,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             if(placeID == null){
 
                 do {
-                    placeID = res.getString(4);
+                    placeID = res.getString(2);
                     placeIDs.add(placeID);
 
                 } while (res.moveToNext());
