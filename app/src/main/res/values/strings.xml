@@ -8,8 +8,8 @@
     <string name="author_name">Tony Blake</string>
     <string name="author_bio">I\'m a Software Engineer from Dublin, Ireland.
         I\'ve had the opportunity to work for a range of tech companies from start-up size to multinational.
-        I have experience developing all types of Software (Embedded, Mobile, Desktop and Web) but my expertise
-        is in Android Development. You can find me on LinkedIn at https://www.linkedin.com/in/tonyblakesoftware.
+        I have experience developing all types of software (Embedded, Mobile, Desktop and Web) but at the time
+        of writing my expertise is in Android Development. You can find me on LinkedIn at https://www.linkedin.com/in/tonyblakesoftware.
         Alternatively you can email me at avblake225@gmail.com</string>
 
     <string name="no_favourites">No favourites</string>
@@ -63,7 +63,11 @@
     <string name="rating_multiplier">10</string>
 
     <string name="pub_not_found">Pub not found</string>
-    <string name="disclaimer">Disclaimer: Live music, live sports and late opening only on certain nights. Ratings and descriptions based on Google Reviews</string>
+    <string name="disclaimer_start">Disclaimer: Live music, live sports and late opening are at the</string>
+    <string name="discretion_of_owner">discretion of the pub owner.</string>
+    <string name="disclaimer_middle">All data used in this App (ratings, images, descriptions etc) are</string>
+    <string name="downloaded_from_google">downloaded from Google</string>
+    <string name="disclaimer_end">and in some cases may be unfavourable/unavailable.</string>
 
     <string name="invalid_selection_traditional_modern_pub">Invalid selection. Please select either a Traditional Irish pub OR a Modern pub</string>
     <string name="invalid_selection_pub_on_north_side_south_side">Invalid selection. Please select either a Pub on the north side of the city OR a Pub on the south side of the city</string>

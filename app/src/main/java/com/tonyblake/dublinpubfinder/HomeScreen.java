@@ -204,7 +204,9 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         clearScreen();
 
-                        String disclaimer = "<i>" + context.getString(R.string.disclaimer) + "</i>";
+                        String disclaimer = context.getString(R.string.disclaimer_start) + " <i>" + context.getString(R.string.discretion_of_owner) + "</i> "
+                                + context.getString(R.string.disclaimer_middle) + " <i>" + context.getString(R.string.downloaded_from_google) + "</i> "
+                                + context.getString(R.string.disclaimer_end);
 
                         tv_home_screen.setText((Html.fromHtml(disclaimer)));
 
