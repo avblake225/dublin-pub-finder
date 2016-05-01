@@ -71,6 +71,7 @@
     <string name="please_make_a_selection">Please make a selection</string>
     <string name="no_pubs_match_your_search">No pubs match your search. Please try again</string>
     <string name="error_retrieving_pub">Error retrieving pub</string>
+    <string name="error_determining_favourite">Error determining if pub is in Favourites</string>
     <string name="error_retrieving_pub_rating">Error retrieving pub rating</string>
     <string name="error_retrieving_pub_image">Error retrieving pub image</string>
     <string name="error_retrieving_pub_type_and_side_of_city">Error retrieving pub type and side of city</string>

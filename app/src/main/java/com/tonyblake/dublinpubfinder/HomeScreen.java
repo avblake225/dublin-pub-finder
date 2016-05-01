@@ -318,6 +318,26 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         Pub pub = pubsToDisplay.get(mPosition);
 
+        String query = context.getString(R.string.select_all_rows_from) + MainActivity.dbManager.getTableName()
+                + context.getString(R.string.where_placeID_equals) + "'" + pub.placeID + "';";
+
+        String favourite = "";
+
+        try{
+            Cursor res = MainActivity.dbManager.getPubs(query);
+
+            res.moveToFirst();
+
+            do {
+                favourite = res.getString(4);
+            }
+            while (res.moveToNext());
+        }
+        catch(Exception e){
+
+            showToastMessage(context.getString(R.string.error_determining_favourite));
+        }
+
         Intent intent = new Intent(this, SinglePubDetailsScreen.class);
 
         intent.putExtra("place_ID", pub.placeID);
@@ -326,6 +346,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         intent.putExtra("rating", pub.rating);
         intent.putExtra("image", pub.image);
         intent.putExtra("description", pub.description);
+        intent.putExtra("favourite", favourite);
 
         startActivity(intent);
     }

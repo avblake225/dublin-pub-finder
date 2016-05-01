@@ -2,7 +2,6 @@ package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -33,15 +32,12 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
 
     private PubLayout pubLayout;
 
-    private Bitmap downloadedPhoto;
-    private int downloadedPhoto_width, downloadedPhoto_height;
-
     private TextView findOnMapButton;
     private TextView addToFavouritesButton;
 
     private String favourite;
     private boolean addToFavourites;
-    private String state;
+    private String add;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,9 +64,6 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
 
         client.connect();
 
-        downloadedPhoto_width = 300;
-        downloadedPhoto_height = 300;
-
         savedInstanceState = getIntent().getExtras();
         place_ID = savedInstanceState.getString("place_ID");
         name = savedInstanceState.getString("name");
@@ -78,6 +71,7 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
         rating = savedInstanceState.getFloat("rating");
         image = savedInstanceState.getParcelable("image");
         description = savedInstanceState.getString("description");
+        favourite = savedInstanceState.getString("favourite");
 
         single_pub_details_container = (LinearLayout)findViewById(R.id.single_pub_details_container);
 
@@ -99,41 +93,21 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
         findOnMapButton = pubLayout.getFindOnMapButton();
         addToFavouritesButton = pubLayout.getAddToFavouritesButton();
 
-        String query = context.getString(R.string.select_all_rows_from) + MainActivity.dbManager.getTableName()
-                + context.getString(R.string.where) + context.getString(R.string.name_equals) + name + "'" + context.getString(R.string.end_query);
+        if(context.getString(R.string.no).equals(favourite)){
 
-        try{
-            Cursor res = MainActivity.dbManager.getPubs(query);
+            addToFavouritesButton.setText(context.getString(R.string.add_to_favourites));
 
-            res.moveToFirst();
+            addToFavourites = true;
 
-            do {
-                favourite = res.getString(4);
-            }
-            while (res.moveToNext());
-
-            // Add to Favourites
-            if(context.getString(R.string.no).equals(favourite)){
-
-                addToFavouritesButton.setText(context.getString(R.string.add_to_favourites));
-
-                addToFavourites = true;
-
-                state = context.getString(R.string.yes);
-            }
-            // Remove from Favourites
-            else{
-
-                addToFavouritesButton.setText(context.getString(R.string.remove_from_favourites));
-
-                addToFavourites = false;
-
-                state = context.getString(R.string.no);
-            }
+            add = context.getString(R.string.yes);
         }
-        catch(Exception e){
+        else{
 
-            showToastMessage(context.getString(R.string.error_retrieving_pub));
+            addToFavouritesButton.setText(context.getString(R.string.remove_from_favourites));
+
+            addToFavourites = false;
+
+            add = context.getString(R.string.no);
         }
     }
 
@@ -165,7 +139,7 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
             public void onClick(View v) {
 
                 String query = context.getString(R.string.update) + " " + MainActivity.dbManager.getTableName()
-                            + " " + context.getString(R.string.set_favourite_qual_to) + "'" + state
+                            + " " + context.getString(R.string.set_favourite_qual_to) + "'" + add
                             + "'" + context.getString(R.string.where_placeID_equals) + "'" + place_ID + "';";
 
                 try{
