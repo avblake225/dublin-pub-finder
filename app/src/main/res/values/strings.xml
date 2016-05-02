@@ -13,6 +13,8 @@
         Alternatively you can email me at avblake225@gmail.com</string>
 
     <string name="no_favourites">No favourites</string>
+    <string name="refresh">Refresh</string>
+    <string name="nothing_to_refresh">Nothing to refresh</string>
 
     <string-array name="menu_items">
         <item>Find A Pub</item>
@@ -48,6 +50,7 @@
     <string name="cancel">Cancel</string>
     <string name="search_by_name_dialog_height">270</string>
     <string name="searching">Searching...</string>
+    <string name="refreshing">Refreshing...</string>
 
     <!-- Rating Bar -->
     <string name="half_a_star">0.5</string>

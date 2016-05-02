@@ -13,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -78,6 +80,10 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private ProgressDialog progressDialog;
 
+    private String placeID;
+    private boolean findAPubRefresh;
+    private boolean searchForPubNameRefresh;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,6 +99,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         actionBar.setNavigationIcon(context.getResources().getDrawable(R.drawable.ic_menu_white_24dp));
         actionBar.setTitle(context.getString(R.string.app_name));
         actionBar.setTitleTextColor(context.getResources().getColor(R.color.white));
+        actionBar.setOverflowIcon(context.getResources().getDrawable(R.drawable.ic_more_vert_white_24dp));
 
         // Set up Navigation Drawer
         dLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -123,6 +130,15 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         // Set up Single Pub Details
         single_pub_details_container_parent = (RelativeLayout) findViewById(R.id.single_pub_details_container_parent);
         single_pub_details_container = (LinearLayout) findViewById(R.id.single_pub_details_container);
+
+        findAPubRefresh = false;
+        searchForPubNameRefresh = false;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.overflow_menu, menu);
+        return true;
     }
 
     @Override
@@ -135,6 +151,26 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             public void onClick(View v) {
 
                 dLayout.openDrawer(dList);
+            }
+        });
+
+        actionBar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+
+                if (findAPubRefresh) {
+
+                    search(null);
+                } else if (searchForPubNameRefresh) {
+
+                    search(placeID);
+                } else {
+
+                    showToastMessage(context.getString(R.string.nothing_to_refresh));
+                }
+
+                return true;
             }
         });
 
@@ -174,6 +210,9 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         clearScreen();
 
+                        findAPubRefresh = false;
+                        searchForPubNameRefresh = false;
+
                         tv_home_screen.setText(context.getString(R.string.no_favourites));
 
                         tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
@@ -186,6 +225,9 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                         dLayout.closeDrawer(dList);
 
                         clearScreen();
+
+                        findAPubRefresh = false;
+                        searchForPubNameRefresh = false;
 
                         tv_home_screen.setText(context.getString(R.string.author));
 
@@ -203,6 +245,9 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                         dLayout.closeDrawer(dList);
 
                         clearScreen();
+
+                        findAPubRefresh = false;
+                        searchForPubNameRefresh = false;
 
                         String disclaimer = context.getString(R.string.disclaimer_start) + " <i>" + context.getString(R.string.discretion_of_owner) + "</i> "
                                 + context.getString(R.string.disclaimer_middle) + " <i>" + context.getString(R.string.downloaded_from_google) + "</i> "
@@ -281,7 +326,16 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             protected void onPreExecute() {
 
                 progressDialog = new ProgressDialog(context);
-                progressDialog.setMessage(context.getString(R.string.searching));
+
+                if(findAPubRefresh | searchForPubNameRefresh){
+
+                    progressDialog.setMessage(context.getString(R.string.refreshing));
+                }
+                else{
+
+                    progressDialog.setMessage(context.getString(R.string.searching));
+                }
+
                 progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                 progressDialog.setIndeterminate(true);
                 progressDialog.show();
@@ -425,6 +479,9 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     @Override
     public void onSearchDialogSearchClick(DialogFragment dialog) {
 
+        findAPubRefresh = true;
+        searchForPubNameRefresh = false;
+
         clearAllSelections();
 
         clearScreen();
@@ -478,6 +535,11 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     @Override
     public void onSearchByNameDialogSearchClick(DialogFragment dialog, String placeID) {
+
+        this.placeID = placeID;
+
+        findAPubRefresh = false;
+        searchForPubNameRefresh = true;
 
         clearScreen();
 
