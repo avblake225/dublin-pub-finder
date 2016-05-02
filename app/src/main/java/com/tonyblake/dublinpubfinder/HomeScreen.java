@@ -81,6 +81,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     private ProgressDialog progressDialog;
 
     private String placeID;
+    private boolean refresh;
+    private int refreshMode;
     private boolean findAPubRefresh;
     private boolean searchForPubNameRefresh;
 
@@ -131,8 +133,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         single_pub_details_container_parent = (RelativeLayout) findViewById(R.id.single_pub_details_container_parent);
         single_pub_details_container = (LinearLayout) findViewById(R.id.single_pub_details_container);
 
-        findAPubRefresh = false;
-        searchForPubNameRefresh = false;
+        setRefreshMode(0);
     }
 
     @Override
@@ -159,12 +160,16 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             @Override
             public boolean onMenuItemClick(MenuItem item) {
 
-                if (findAPubRefresh) {
+                refresh = true;
+
+                if (refreshMode == 1) {
 
                     search(null);
-                } else if (searchForPubNameRefresh) {
+
+                } else if (refreshMode == 2) {
 
                     search(placeID);
+
                 } else {
 
                     showToastMessage(context.getString(R.string.nothing_to_refresh));
@@ -210,8 +215,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         clearScreen();
 
-                        findAPubRefresh = false;
-                        searchForPubNameRefresh = false;
+                        setRefreshMode(0);
 
                         tv_home_screen.setText(context.getString(R.string.no_favourites));
 
@@ -226,8 +230,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         clearScreen();
 
-                        findAPubRefresh = false;
-                        searchForPubNameRefresh = false;
+                        setRefreshMode(0);
 
                         tv_home_screen.setText(context.getString(R.string.author));
 
@@ -246,8 +249,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         clearScreen();
 
-                        findAPubRefresh = false;
-                        searchForPubNameRefresh = false;
+                        setRefreshMode(0);
 
                         String disclaimer = context.getString(R.string.disclaimer_start) + " <i>" + context.getString(R.string.discretion_of_owner) + "</i> "
                                 + context.getString(R.string.disclaimer_middle) + " <i>" + context.getString(R.string.downloaded_from_google) + "</i> "
@@ -327,7 +329,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                 progressDialog = new ProgressDialog(context);
 
-                if(findAPubRefresh | searchForPubNameRefresh){
+                if(refresh){
 
                     progressDialog.setMessage(context.getString(R.string.refreshing));
                 }
@@ -355,6 +357,32 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                 }
             }
         }.execute(placeIDs);
+    }
+
+    private void setRefreshMode(int mode){
+
+        refreshMode = mode;
+
+        switch(mode){
+
+            // Nothing to Refresh
+            case 0:
+                findAPubRefresh = false;
+                searchForPubNameRefresh = false;
+                break;
+
+            // Refresh "Find A Pub"
+            case 1:
+                findAPubRefresh = true;
+                searchForPubNameRefresh = false;
+                break;
+
+            // Refresh "Search For Pub Name"
+            case 2:
+                findAPubRefresh = false;
+                searchForPubNameRefresh = true;
+                break;
+        }
     }
 
     private void displayPubs(){
@@ -479,8 +507,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     @Override
     public void onSearchDialogSearchClick(DialogFragment dialog) {
 
-        findAPubRefresh = true;
-        searchForPubNameRefresh = false;
+        refresh = false;
+        setRefreshMode(1);
 
         clearAllSelections();
 
@@ -538,8 +566,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         this.placeID = placeID;
 
-        findAPubRefresh = false;
-        searchForPubNameRefresh = true;
+        refresh = false;
+        setRefreshMode(2);
 
         clearScreen();
 
