@@ -85,6 +85,9 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     private int refreshMode;
     private boolean findAPubRefresh;
     private boolean searchForPubNameRefresh;
+    private boolean favouritesRefresh;
+
+    private boolean getFavourites;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,6 +137,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         single_pub_details_container = (LinearLayout) findViewById(R.id.single_pub_details_container);
 
         setRefreshMode(0);
+
+        getFavourites = false;
     }
 
     @Override
@@ -167,6 +172,10 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                     search(null);
 
                 } else if (refreshMode == 2) {
+
+                    search(placeID);
+
+                } else if (refreshMode == 3) {
 
                     search(placeID);
 
@@ -215,11 +224,13 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         clearScreen();
 
-                        setRefreshMode(0);
+                        setRefreshMode(3);
 
-                        tv_home_screen.setText(context.getString(R.string.no_favourites));
+                        tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
 
-                        tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
+                        getFavourites = true;
+
+                        search(null);
 
                         break;
 
@@ -276,10 +287,18 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         placeIDs = new ArrayList<>();
 
-        query = context.getString(R.string.select_all_rows_from) + MainActivity.dbManager.getTableName()
-                            + context.getString(R.string.where) + getPubTypeSelection() + getSideOfCitySelection()
-                            + getLiveMusicSelection() + getLiveSportsSelection() + getCocktailsSelection()
-                            + getCraftBeerSelection() + getLatePubSelection() + context.getString(R.string.end_query);
+        if(getFavourites){
+
+            query = context.getString(R.string.select_all_rows_from) + MainActivity.dbManager.getTableName()
+                    + " " + context.getString(R.string.where_favourite_equals_yes);
+        }
+        else{
+
+            query = context.getString(R.string.select_all_rows_from) + MainActivity.dbManager.getTableName()
+                    + context.getString(R.string.where) + getPubTypeSelection() + getSideOfCitySelection()
+                    + getLiveMusicSelection() + getLiveSportsSelection() + getCocktailsSelection()
+                    + getCraftBeerSelection() + getLatePubSelection() + context.getString(R.string.end_query);
+        }
 
         num_pubs_str = "";
 
@@ -301,17 +320,41 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             num_place_IDs_found = placeIDs.size();
 
             if(num_place_IDs_found == 1){
-                num_pubs_str = num_place_IDs_found + " " + context.getString(R.string.pub_found);
+
+                if(getFavourites){
+
+                    num_pubs_str = num_place_IDs_found + " " + context.getString(R.string.favourite);
+                }
+                else{
+
+                    num_pubs_str = num_place_IDs_found + " " + context.getString(R.string.pub_found);
+                }
             }
             else if(num_place_IDs_found > 1){
-                num_pubs_str = num_place_IDs_found + " " + context.getString(R.string.pubs_found);
+
+                if(getFavourites){
+
+                    num_pubs_str = num_place_IDs_found + " " + context.getString(R.string.favourites);
+                }
+                else{
+
+                    num_pubs_str = num_place_IDs_found + " " + context.getString(R.string.pubs_found);
+                }
             }
 
             getPubItems();
-
         }
         catch (Exception e) {
-            showToastMessage(context.getString(R.string.no_pubs_match_your_search));
+
+            if(getFavourites){
+
+                tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
+                tv_home_screen.setText(context.getString(R.string.no_favourites));
+            }
+            else{
+
+                showToastMessage(context.getString(R.string.no_pubs_match_your_search));
+            }
         }
     }
 
@@ -362,6 +405,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     private void setRefreshMode(int mode){
 
         refreshMode = mode;
+        refresh = false;
+        getFavourites = false;
 
         switch(mode){
 
@@ -369,18 +414,28 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             case 0:
                 findAPubRefresh = false;
                 searchForPubNameRefresh = false;
+                favouritesRefresh = false;
                 break;
 
             // Refresh "Find A Pub"
             case 1:
                 findAPubRefresh = true;
                 searchForPubNameRefresh = false;
+                favouritesRefresh = false;
                 break;
 
             // Refresh "Search For Pub Name"
             case 2:
                 findAPubRefresh = false;
                 searchForPubNameRefresh = true;
+                favouritesRefresh = false;
+                break;
+
+            // Refresh "Favourites"
+            case 3:
+                findAPubRefresh = false;
+                searchForPubNameRefresh = true;
+                favouritesRefresh = true;
                 break;
         }
     }

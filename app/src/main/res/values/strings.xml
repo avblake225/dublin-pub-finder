@@ -86,6 +86,8 @@
 
     <string name="pub_found">pub found...</string>
     <string name="pubs_found">pubs found...</string>
+    <string name="favourite">favourite...</string>
+    <string name="favourites">favourites...</string>
     <string name="find_on_map">FIND ON MAP</string>
     <string name="add_to_favourites">ADD TO FAVOURITES</string>
     <string name="remove_from_favourites">REMOVE FROM FAVOURITES</string>
@@ -94,6 +96,7 @@
     <string name="select_all_rows_from">"SELECT * FROM "</string>
     <string name="where">" WHERE("</string>
     <string name="where_placeID_equals">" WHERE PLACE_ID = "</string>
+    <string name="where_favourite_equals_yes">WHERE FAVOURITE = \'Yes\';</string>
     <string name="name_equals">NAME = \'</string>
     <string name="id_equals">ID = </string>
     <string name="end_query">");"</string>
