@@ -11,7 +11,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -257,11 +256,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         setRefreshMode(0);
 
-                        String disclaimer = context.getString(R.string.disclaimer_start) + " <i>" + context.getString(R.string.discretion_of_owner) + "</i> "
-                                + context.getString(R.string.disclaimer_middle) + " <i>" + context.getString(R.string.downloaded_from_google) + "</i> "
-                                + context.getString(R.string.disclaimer_end);
-
-                        tv_home_screen.setText((Html.fromHtml(disclaimer)));
+                        tv_home_screen.setText(context.getString(R.string.disclaimer));
 
                         tv_home_screen_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
 
