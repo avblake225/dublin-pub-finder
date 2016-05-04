@@ -147,6 +147,11 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     protected void onResume() {
         super.onResume();
 
+        if(getFavourites){
+
+            search(null);
+        }
+
         actionBar.setNavigationOnClickListener(new View.OnClickListener() {
 
             @Override
