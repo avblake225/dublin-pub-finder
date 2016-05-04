@@ -14,7 +14,7 @@
 
     <string name="no_favourites">No favourites</string>
     <string name="refresh">Refresh</string>
-    <string name="nothing_to_refresh">Nothing to refresh</string>
+    <string name="screen_is_up_to_date">Screen is up to date</string>
 
     <string-array name="menu_items">
         <item>Find A Pub</item>

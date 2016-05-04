@@ -13,11 +13,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -89,6 +88,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private boolean getFavourites;
 
+    private ImageView refreshButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -104,7 +105,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         actionBar.setNavigationIcon(context.getResources().getDrawable(R.drawable.ic_menu_white_24dp));
         actionBar.setTitle(context.getString(R.string.app_name));
         actionBar.setTitleTextColor(context.getResources().getColor(R.color.white));
-        actionBar.setOverflowIcon(context.getResources().getDrawable(R.drawable.ic_more_vert_white_24dp));
+        actionBar.setOverflowIcon(context.getResources().getDrawable(R.drawable.ic_refresh_white_24dp));
 
         // Set up Navigation Drawer
         dLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -139,12 +140,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         setRefreshMode(0);
 
         getFavourites = false;
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.overflow_menu, menu);
-        return true;
+        refreshButton = (ImageView) findViewById(R.id.refresh_btn);
     }
 
     @Override
@@ -160,10 +157,10 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             }
         });
 
-        actionBar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+        refreshButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public boolean onMenuItemClick(MenuItem item) {
+            public void onClick(View v) {
 
                 refresh = true;
 
@@ -181,10 +178,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                 } else {
 
-                    showToastMessage(context.getString(R.string.nothing_to_refresh));
+                    showToastMessage(context.getString(R.string.screen_is_up_to_date));
                 }
-
-                return true;
             }
         });
 

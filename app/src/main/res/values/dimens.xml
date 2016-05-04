@@ -48,12 +48,12 @@
 
     <dimen name="rating_bar_margin_bottom">5dp</dimen>
 
-    <!-- About Author -->
+    <dimen name="refresh_btn_margin_left">30dp</dimen>
+
     <dimen name="iv_author_width">250dp</dimen>
     <dimen name="iv_author_height">250dp</dimen>
     <dimen name="author_bio_margin">5dp</dimen>
 
-    <!-- Pub Item -->
     <dimen name="divider_line">1dp</dimen>
     <dimen name="pub_item_padding_top">5dp</dimen>
     <dimen name="pub_item_padding_bottom">5dp</dimen>

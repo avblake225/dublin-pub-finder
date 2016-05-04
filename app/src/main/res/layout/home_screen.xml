@@ -22,10 +22,20 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimaryDark"
+                android:background="@drawable/clr_normal_gray"
                 android:elevation="4dp"
                 android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <ImageView
+                    android:id="@+id/refresh_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background_color"
+                    android:layout_marginLeft="@dimen/refresh_btn_margin_left"
+                    android:src="@drawable/ic_refresh_white_24dp"/>
+
+            </android.support.v7.widget.Toolbar>
 
             <RelativeLayout
                 android:id="@+id/tv_home_screen_parent"
