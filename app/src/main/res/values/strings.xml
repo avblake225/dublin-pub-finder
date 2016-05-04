@@ -18,7 +18,7 @@
 
     <string-array name="menu_items">
         <item>Find A Pub</item>
-        <item>Search For Pub Name</item>
+        <item>Search For Pub By Name</item>
         <item>Favourites</item>
         <item>About Author</item>
         <item>Disclaimer</item>
