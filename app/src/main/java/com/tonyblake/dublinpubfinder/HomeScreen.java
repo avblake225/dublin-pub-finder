@@ -178,7 +178,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                 } else {
 
-                    showToastMessage(context.getString(R.string.screen_is_up_to_date));
+                    showToastMessage(context.getString(R.string.nothing_to_refresh));
                 }
             }
         });
@@ -370,6 +370,10 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                 if(refresh){
 
                     progressDialog.setMessage(context.getString(R.string.refreshing));
+                }
+                else if(getFavourites){
+
+                    progressDialog.setMessage(context.getString(R.string.getting_favourites));
                 }
                 else{
 

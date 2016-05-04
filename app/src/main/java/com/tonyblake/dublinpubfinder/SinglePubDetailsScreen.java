@@ -80,8 +80,8 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
         pubLayout.setPubName(name);
         pubLayout.setPubAddress(address);
 
-        pubLayout.setPubRating(rating, Integer.valueOf(context.getString(R.string.five_stars)),
-                Float.valueOf(context.getString(R.string.half_a_star)));
+        pubLayout.setPubRating(rating, Integer.valueOf(context.getString(R.string.num_stars)),
+                Float.valueOf(context.getString(R.string.rating_step)));
 
         pubLayout.setPubImage(image, context);
 
