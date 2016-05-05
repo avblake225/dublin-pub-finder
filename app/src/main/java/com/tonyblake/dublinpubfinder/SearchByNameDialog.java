@@ -35,7 +35,7 @@ public class SearchByNameDialog extends DialogFragment {
 
         context = getActivity();
 
-        dbManager = MainActivity.dbManager;
+        dbManager = HomeScreen.dbManager;
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
@@ -50,12 +50,12 @@ public class SearchByNameDialog extends DialogFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
 
-                        String query = context.getString(R.string.select_all_rows_from) + MainActivity.dbManager.getTableName()
+                        String query = context.getString(R.string.select_all_rows_from) + dbManager.getTableName()
                                 + context.getString(R.string.where) + context.getString(R.string.name_equals)
                                 + pub_name + "'" + context.getString(R.string.end_query);
 
                         try {
-                            Cursor res = MainActivity.dbManager.getPubs(query);
+                            Cursor res = dbManager.getPubs(query);
 
                             res.moveToFirst();
 

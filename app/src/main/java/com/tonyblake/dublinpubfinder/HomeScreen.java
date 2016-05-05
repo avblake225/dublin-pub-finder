@@ -34,6 +34,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private Context context;
 
+    public static DBManager dbManager;
+
     public  HomeScreen homeScreen;
 
     private Toolbar actionBar;
@@ -87,14 +89,24 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private boolean getFavourites;
 
-    private ImageView refreshButton;
+    private ImageView reloadButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_screen);
 
+        // Show Status Bar
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_VISIBLE;
+        decorView.setSystemUiVisibility(uiOptions);
+
         context = this;
+
+        dbManager = new DBManager(this);
+
+        int num_pubs_listed = dbManager.getNumPubsListed();
+        int num_pubs_added_to_DB = dbManager.getNumPubsAddedToDB();
 
         homeScreen = this;
 
@@ -140,7 +152,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         getFavourites = false;
 
-        refreshButton = (ImageView) findViewById(R.id.refresh_btn);
+        reloadButton = (ImageView) findViewById(R.id.reload_btn);
     }
 
     @Override
@@ -161,7 +173,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             }
         });
 
-        refreshButton.setOnClickListener(new View.OnClickListener() {
+        reloadButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -182,7 +194,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                 } else {
 
-                    showToastMessage(context.getString(R.string.nothing_to_refresh));
+                    showToastMessage(context.getString(R.string.nothing_to_reload));
                 }
             }
         });
@@ -284,12 +296,12 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         if(getFavourites){
 
-            query = context.getString(R.string.select_all_rows_from) + MainActivity.dbManager.getTableName()
+            query = context.getString(R.string.select_all_rows_from) + dbManager.getTableName()
                     + " " + context.getString(R.string.where_favourite_equals_yes);
         }
         else{
 
-            query = context.getString(R.string.select_all_rows_from) + MainActivity.dbManager.getTableName()
+            query = context.getString(R.string.select_all_rows_from) + dbManager.getTableName()
                     + context.getString(R.string.where) + getPubTypeSelection() + getSideOfCitySelection()
                     + getLiveMusicSelection() + getLiveSportsSelection() + getCocktailsSelection()
                     + getCraftBeerSelection() + getLatePubSelection() + context.getString(R.string.end_query);
@@ -298,7 +310,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         num_pubs_str = "";
 
         try {
-            Cursor res = MainActivity.dbManager.getPubs(query);
+            Cursor res = dbManager.getPubs(query);
 
             res.moveToFirst();
 
@@ -369,7 +381,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                 if(refresh){
 
-                    progressDialog.setMessage(context.getString(R.string.refreshing));
+                    progressDialog.setMessage(context.getString(R.string.reloading));
                 }
                 else if(getFavourites){
 
@@ -456,13 +468,13 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         Pub pub = pubsToDisplay.get(mPosition);
 
-        String query = context.getString(R.string.select_all_rows_from) + MainActivity.dbManager.getTableName()
+        String query = context.getString(R.string.select_all_rows_from) + dbManager.getTableName()
                 + context.getString(R.string.where_placeID_equals) + "'" + pub.placeID + "';";
 
         String favourite = "";
 
         try{
-            Cursor res = MainActivity.dbManager.getPubs(query);
+            Cursor res = dbManager.getPubs(query);
 
             res.moveToFirst();
 

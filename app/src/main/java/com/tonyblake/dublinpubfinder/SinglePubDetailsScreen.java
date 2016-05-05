@@ -39,10 +39,14 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
     private boolean addToFavourites;
     private String add;
 
+    private DBManager dbManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.single_pub_details_screen);
+
+        dbManager = HomeScreen.dbManager;
 
         context = this;
 
@@ -138,12 +142,12 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
             @Override
             public void onClick(View v) {
 
-                String query = context.getString(R.string.update) + " " + MainActivity.dbManager.getTableName()
+                String query = context.getString(R.string.update) + " " + dbManager.getTableName()
                             + " " + context.getString(R.string.set_favourite_qual_to) + "'" + add
                             + "'" + context.getString(R.string.where_placeID_equals) + "'" + place_ID + "';";
 
                 try{
-                    MainActivity.dbManager.execQuery(query);
+                    dbManager.execQuery(query);
 
                     if(addToFavourites){
 

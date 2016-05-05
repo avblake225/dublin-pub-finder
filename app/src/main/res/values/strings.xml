@@ -1,7 +1,6 @@
 <resources>
 
     <string name="app_name">Dublin Pub Finder</string>
-    <string name="copyright">© Tony Blake 2016</string>
     <string name="welcome">Welcome to Dublin Pub Finder. Use the menu button at the top of the screen to get started.
                             Please ensure that you are connected to Wifi or have your mobile data turned on.</string>
     <string name="author">Author...</string>
@@ -14,7 +13,7 @@
 
     <string name="no_favourites">No favourites</string>
     <string name="refresh">Refresh</string>
-    <string name="nothing_to_refresh">Nothing to refresh</string>
+    <string name="nothing_to_reload">Nothing to reload</string>
 
     <string-array name="menu_items">
         <item>Find A Pub</item>
@@ -50,7 +49,7 @@
     <string name="cancel">Cancel</string>
     <string name="search_by_name_dialog_height">270</string>
     <string name="searching">Searching...</string>
-    <string name="refreshing">Refreshing...</string>
+    <string name="reloading">Reloading...</string>
     <string name="getting_favourites">Getting Favourites...</string>
 
     <string name="rating_step">0.5</string>
@@ -58,7 +57,7 @@
     <string name="rating_multiplier">10</string>
 
     <string name="pub_not_found">Pub not found</string>
-    <string name="disclaimer">Disclaimer: Live music, live sports and late opening are at the
+    <string name="disclaimer">DISCLAIMER: Live music, live sports and late opening are at the
         discretion of the pub owner. All data used in this App (ratings, images, descriptions etc) are
         downloaded from Google Servers and in some cases may be unavailable.</string>
 
