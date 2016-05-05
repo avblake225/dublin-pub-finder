@@ -18,46 +18,59 @@
             android:layout_width="@dimen/pub_item_image_width"
             android:layout_height="match_parent"/>
 
-        <LinearLayout
-            android:id="@+id/pub_details"
-            android:layout_width="@dimen/pub_details_max_width"
+        <FrameLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/pub_details_padding_left"
-            android:orientation="vertical">
+            android:paddingLeft="@dimen/pub_details_padding_left">
 
-            <TextView
-                android:id="@+id/pub_name"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_chevron_right_white_24dp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/pub_details"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Pub Name"
-                android:textSize="@dimen/pub_item_name_textsize"
-                android:textColor="@color/white"/>
+                android:layout_marginRight="@dimen/pub_details_margin_right"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/pub_address"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Pub Address"
-                android:textSize="@dimen/pub_item_address_textsize"
-                android:textColor="@color/white"/>
+                <TextView
+                    android:id="@+id/pub_name"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Pub Name"
+                    android:textSize="@dimen/pub_item_name_textsize"
+                    android:textColor="@color/white"/>
 
-            <RatingBar
-                android:id="@+id/rating_bar"
-                style="?android:attr/ratingBarStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:isIndicator="true"
-                android:progressBackgroundTint="@color/white"
-                android:progressTint="@color/yellow"/>
+                <TextView
+                    android:id="@+id/pub_address"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Pub Address"
+                    android:textSize="@dimen/pub_item_address_textsize"
+                    android:textColor="@color/white"/>
 
-        </LinearLayout>
+                <RatingBar
+                    android:id="@+id/rating_bar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="true"
+                    android:progressBackgroundTint="@color/white"
+                    android:progressTint="@color/yellow"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_chevron_right_white_24dp"/>
+            </LinearLayout>
+
+        </FrameLayout>
 
     </LinearLayout>
 
