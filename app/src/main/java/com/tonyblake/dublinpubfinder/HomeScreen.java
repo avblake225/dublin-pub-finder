@@ -91,6 +91,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private ImageView reloadButton;
 
+    public static boolean updateFavourites;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -153,6 +155,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         getFavourites = false;
 
         reloadButton = (ImageView) findViewById(R.id.reload_btn);
+
+        updateFavourites = false;
     }
 
     @Override
@@ -161,7 +165,10 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         if(getFavourites){
 
-            search(null);
+            if(updateFavourites){
+
+                search(null);
+            }
         }
 
         actionBar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -385,7 +392,14 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                 }
                 else if(getFavourites){
 
-                    progressDialog.setMessage(context.getString(R.string.getting_favourites));
+                    if(updateFavourites){
+
+                        progressDialog.setMessage(context.getString(R.string.updating_favourites));
+                    }
+                    else{
+
+                        progressDialog.setMessage(context.getString(R.string.getting_favourites));
+                    }
                 }
                 else{
 
@@ -405,6 +419,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                     pubsToDisplay = pubs_returned;
 
                     progressDialog.dismiss();
+
+                    updateFavourites = false;
 
                     displayPubs();
 

@@ -165,6 +165,8 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
 
                         addToFavourites = true;
                     }
+
+                    HomeScreen.updateFavourites = true;
                 }
                 catch(Exception e){
 

@@ -51,6 +51,7 @@
     <string name="searching">Searching...</string>
     <string name="reloading">Reloading...</string>
     <string name="getting_favourites">Getting Favourites...</string>
+    <string name="updating_favourites">Updating Favourites...</string>
 
     <string name="rating_step">0.5</string>
     <string name="num_stars">5</string>
