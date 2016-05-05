@@ -240,6 +240,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         dLayout.closeDrawer(dList);
 
+                        updateFavourites = false;
+
                         clearScreen();
 
                         setRefreshMode(3);
