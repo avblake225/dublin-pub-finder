@@ -7,7 +7,7 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/dublin_apps_logo"/>
+            android:src="@drawable/dublin_apps_logo_gray"/>
     </item>
 
 </layer-list>
