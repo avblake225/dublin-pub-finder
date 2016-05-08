@@ -13,10 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Display;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -90,8 +92,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private boolean getFavourites;
 
-    private ImageView reloadButton;
-
     public static boolean updateFavourites;
 
     private LinearLayout search_options_layout_1;
@@ -132,7 +132,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         actionBar.setNavigationIcon(context.getResources().getDrawable(R.drawable.ic_menu_white_24dp));
         actionBar.setTitle(context.getString(R.string.app_name));
         actionBar.setTitleTextColor(context.getResources().getColor(R.color.white));
-        actionBar.setOverflowIcon(context.getResources().getDrawable(R.drawable.ic_refresh_white_24dp));
+        actionBar.setOverflowIcon(context.getResources().getDrawable(R.drawable.ic_more_vert_white_24dp));
 
         // Set up Navigation Drawer
         dLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -168,8 +168,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         getFavourites = false;
 
-        reloadButton = (ImageView) findViewById(R.id.reload_btn);
-
         updateFavourites = false;
 
         search_options_layout_1 = (LinearLayout) findViewById(R.id.search_options_layout_1);
@@ -185,6 +183,50 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         display = getWindowManager().getDefaultDisplay();
         max_width = display.getWidth() - 200;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+
+        inflater.inflate(R.menu.overflow_menu, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()){
+
+            case R.id.reload:
+
+                refresh = true;
+
+                if (refreshMode == 1) {
+
+                    search(null);
+
+                } else if (refreshMode == 2) {
+
+                    search(placeID);
+
+                } else if (refreshMode == 3) {
+
+                    search(placeID);
+
+                } else {
+
+                    showToastMessage(context.getString(R.string.nothing_to_reload));
+                }
+
+                return true;
+
+            default:
+
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override
@@ -205,32 +247,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             public void onClick(View v) {
 
                 dLayout.openDrawer(dList);
-            }
-        });
-
-        reloadButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                refresh = true;
-
-                if (refreshMode == 1) {
-
-                    search(null);
-
-                } else if (refreshMode == 2) {
-
-                    search(placeID);
-
-                } else if (refreshMode == 3) {
-
-                    search(placeID);
-
-                } else {
-
-                    showToastMessage(context.getString(R.string.nothing_to_reload));
-                }
             }
         });
 

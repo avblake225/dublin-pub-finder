@@ -2,7 +2,7 @@
 
     <string name="app_name">Dublin Pub Finder</string>
     <string name="welcome">Welcome to Dublin Pub Finder, the first App in the Dublin Apps series. Use the menu button at the top of the screen to get started.
-                            Please ensure that you are connected to Wifi or have your mobile data turned on.</string>
+                           Please ensure that you are connected to Wifi or have your mobile data turned on.</string>
     <string name="author">Author:</string>
     <string name="author_name">Tony Blake</string>
     <string name="author_bio">I\'m a Software Engineer from Dublin, Ireland.
@@ -12,7 +12,7 @@
         Alternatively you can email me at avblake225@gmail.com</string>
 
     <string name="no_favourites">No favourites</string>
-    <string name="refresh">Refresh</string>
+    <string name="reload">Reload</string>
     <string name="nothing_to_reload">Nothing to reload</string>
 
     <string-array name="menu_items">
