@@ -3,7 +3,7 @@
     <string name="app_name">Dublin Pub Finder</string>
     <string name="welcome">Welcome to Dublin Pub Finder, the first App in the Dublin Apps series. Use the menu button at the top of the screen to get started.
                             Please ensure that you are connected to Wifi or have your mobile data turned on.</string>
-    <string name="author">Author...</string>
+    <string name="author">Author:</string>
     <string name="author_name">Tony Blake</string>
     <string name="author_bio">I\'m a Software Engineer from Dublin, Ireland.
         I\'ve had the opportunity to work for a range of tech companies from start-up size to multinational.

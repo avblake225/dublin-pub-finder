@@ -291,7 +291,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         setRefreshMode(0);
 
-                        tv_home_screen.setText(context.getString(R.string.author));
+                        single_pub_details_container_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
 
                         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
