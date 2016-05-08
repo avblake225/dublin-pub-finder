@@ -1,14 +1,16 @@
 <resources>
 
-    <dimen name="title_size">30dp</dimen>
-    <dimen name="copyright_margin_top">5dp</dimen>
-    <dimen name="copyright_text_size">12dp</dimen>
-    <dimen name="home_screen_margin">10dp</dimen>
-    <dimen name="home_screen_button_margin">20dp</dimen>
-    <dimen name="home_screen_top_margin">20dp</dimen>
-    <dimen name="question_margin_left">5dp</dimen>
-    <dimen name="question_text_size">20dp</dimen>
-    <dimen name="option_text_size">18dp</dimen>
+    <dimen name="search_options_margin_top">10dp</dimen>
+
+    <dimen name="option_margin_left">5dp</dimen>
+    <dimen name="option_margin_top">5dp</dimen>
+    <dimen name="option_margin_right">5dp</dimen>
+    <dimen name="option_margin_bottom">5dp</dimen>
+
+    <dimen name="option_padding_left">5dp</dimen>
+    <dimen name="option_padding_top">0dp</dimen>
+    <dimen name="option_padding_right">5dp</dimen>
+    <dimen name="option_padding_bottom">0dp</dimen>
 
     <dimen name="tv_home_screen_textsize">15dp</dimen>
     <dimen name="tv_home_screen_padding">5dp</dimen>

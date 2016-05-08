@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -93,6 +94,19 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     public static boolean updateFavourites;
 
+    private LinearLayout search_options_layout_1;
+    private LinearLayout search_options_layout_2;
+    private LinearLayout search_options_layout_3;
+    private LinearLayout search_options_layout_4;
+
+    private TextView tv_search_option;
+
+    private LinearLayout.LayoutParams option_params;
+
+    private Display display;
+
+    private int max_width;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -157,6 +171,20 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         reloadButton = (ImageView) findViewById(R.id.reload_btn);
 
         updateFavourites = false;
+
+        search_options_layout_1 = (LinearLayout) findViewById(R.id.search_options_layout_1);
+        search_options_layout_2 = (LinearLayout) findViewById(R.id.search_options_layout_2);
+        search_options_layout_3 = (LinearLayout) findViewById(R.id.search_options_layout_3);
+        search_options_layout_4 = (LinearLayout) findViewById(R.id.search_options_layout_4);
+
+        option_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        option_params.setMargins((int)context.getResources().getDimension(R.dimen.option_margin_left),
+                                 (int)context.getResources().getDimension(R.dimen.option_margin_top),
+                                 (int)context.getResources().getDimension(R.dimen.option_margin_right),
+                                 (int)context.getResources().getDimension(R.dimen.option_margin_bottom));
+
+        display = getWindowManager().getDefaultDisplay();
+        max_width = display.getWidth() - 200;
     }
 
     @Override
@@ -605,44 +633,133 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             switch(option){
 
                 case 0:
+
                     traditional_irish_pub = true;
+
+                    displaySearchOptions(context.getString(R.string.traditional_irish_pub));
+
                     break;
 
                 case 1:
+
                     modern_pub = true;
+
+                    displaySearchOptions(context.getString(R.string.modern_pub));
+
                     break;
 
                 case 2:
+
                     north_side_of_city = true;
+
+                    displaySearchOptions(context.getString(R.string._north_side_of_city));
+
                     break;
 
                 case 3:
+
                     south_side_of_city = true;
+
+                    displaySearchOptions(context.getString(R.string._south_side_of_city));
+
                     break;
 
                 case 4:
+
                     live_music = true;
+
+                    displaySearchOptions(context.getString(R.string.live_music));
+
                     break;
 
                 case 5:
+
                     live_sports = true;
+
+                    displaySearchOptions(context.getString(R.string.live_sports));
+
                     break;
 
                 case 6:
+
                     cocktails = true;
+
+                    displaySearchOptions(context.getString(R.string.cocktails));
+
                     break;
 
                 case 7:
+
                     craft_beer = true;
+
+                    displaySearchOptions(context.getString(R.string.craft_beer));
+
                     break;
 
                 case 8:
+
                     late_pub = true;
+
+                    displaySearchOptions(context.getString(R.string.late_pub));
+
                     break;
             }
         }
 
         search(null);
+    }
+
+    private void displaySearchOptions(String option){
+
+        tv_search_option = new TextView(context);
+
+        tv_search_option.setLayoutParams(option_params);
+
+        tv_search_option.setPadding((int) context.getResources().getDimension(R.dimen.option_padding_left),
+                (int) context.getResources().getDimension(R.dimen.option_padding_top),
+                (int) context.getResources().getDimension(R.dimen.option_padding_right),
+                (int) context.getResources().getDimension(R.dimen.option_padding_bottom));
+
+        tv_search_option.setText(option);
+
+        tv_search_option.setTextColor(context.getResources().getColor(R.color.white));
+
+        tv_search_option.setBackground(context.getResources().getDrawable(R.drawable.clr_normal_gray));
+
+        search_options_layout_1.measure(0, 0);
+
+        int layout_1_width = search_options_layout_1.getMeasuredWidth();
+
+        search_options_layout_2.measure(0, 0);
+
+        int layout_2_width = search_options_layout_2.getMeasuredWidth();
+
+        search_options_layout_3.measure(0, 0);
+
+        int layout_3_width = search_options_layout_3.getMeasuredWidth();
+
+        if(layout_1_width >= max_width){
+
+            if(layout_2_width >= max_width){
+
+                if(layout_3_width >= max_width){
+
+                    search_options_layout_4.addView(tv_search_option);
+                }
+                else{
+
+                    search_options_layout_3.addView(tv_search_option);
+                }
+            }
+            else{
+
+                search_options_layout_2.addView(tv_search_option);
+            }
+        }
+        else{
+
+            search_options_layout_1.addView(tv_search_option);
+        }
     }
 
     @Override
@@ -668,6 +785,11 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         single_pub_details_container_parent.getLayoutParams().width = RelativeLayout.LayoutParams.WRAP_CONTENT;
 
         if(list != null) list.setAdapter(null);
+
+        search_options_layout_1.removeAllViews();
+        search_options_layout_2.removeAllViews();
+        search_options_layout_3.removeAllViews();
+        search_options_layout_4.removeAllViews();
     }
 
     private void clearAllSelections(){

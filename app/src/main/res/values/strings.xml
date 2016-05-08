@@ -44,6 +44,17 @@
         <item>Craft beer</item>
         <item>Late pub</item>
     </string-array>
+
+    <string name="traditional_irish_pub">Traditional Irish pub</string>
+    <string name="modern_pub">Modern pub</string>
+    <string name="_north_side_of_city">North side of city</string>
+    <string name="_south_side_of_city">South side of city</string>
+    <string name="live_music">Live music</string>
+    <string name="live_sports">Live sports</string>
+    <string name="cocktails">Cocktails</string>
+    <string name="craft_beer">Craft beer</string>
+    <string name="late_pub">Late pub</string>
+
     <string name="enter_pub_name">Enter pub name...</string>
     <string name="search">Search</string>
     <string name="cancel">Cancel</string>
@@ -74,10 +85,10 @@
     <string name="error_retrieving_pub_type_and_side_of_city">Error retrieving pub type and side of city</string>
     <string name="error_retrieving_extras">Error retrieving extras</string>
 
-    <string name="pub_found">pub found...</string>
-    <string name="pubs_found">pubs found...</string>
-    <string name="favourite">favourite...</string>
-    <string name="favourites">favourites...</string>
+    <string name="pub_found">pub matches your search:</string>
+    <string name="pubs_found">pubs match your search:</string>
+    <string name="favourite">favourite:</string>
+    <string name="favourites">favourites:</string>
     <string name="find_on_map">FIND ON MAP</string>
     <string name="add_to_favourites">ADD TO FAVOURITES</string>
     <string name="remove_from_favourites">REMOVE FROM FAVOURITES</string>
@@ -93,8 +104,8 @@
     <string name="update">UPDATE</string>
     <string name="set_favourite_qual_to">SET FAVOURITE = "</string>
     <string name="error_adding_to_favourites">Error adding to Favourites</string>
-    <string name="has_been_added_to_favourites">has been added to Favourites</string>
-    <string name="has_been_removed_from_favourites">has been removed from Favourites</string>
+    <string name="has_been_added_to_favourites">has been added to your favourites</string>
+    <string name="has_been_removed_from_favourites">has been removed from your favourites</string>
 
     <string name="pub_type_traditional_irish">"PUB_TYPE = 'Traditional Irish'"</string>
     <string name="pub_type_modern">"PUB_TYPE = 'Modern'"</string>

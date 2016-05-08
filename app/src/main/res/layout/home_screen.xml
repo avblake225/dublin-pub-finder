@@ -37,6 +37,38 @@
 
             </android.support.v7.widget.Toolbar>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/search_options_margin_top"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/search_options_layout_1"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:id="@+id/search_options_layout_2"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:id="@+id/search_options_layout_3"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:id="@+id/search_options_layout_4"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
             <RelativeLayout
                 android:id="@+id/tv_home_screen_parent"
                 android:layout_width="match_parent"
