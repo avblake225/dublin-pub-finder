@@ -1,5 +1,7 @@
 <resources>
 
+    <string name="server_key">AIzaSyBHAwyvNujQeHkD8Rr8MqlHdV0vKhzckyM</string>
+
     <string name="app_name">Dublin Pub Finder</string>
     <string name="welcome">Welcome to Dublin Pub Finder, the first App in the Dublin Apps series. Use the menu button at the top of the screen to get started.
                            Please ensure that you are connected to Wifi or have your mobile data turned on.</string>
@@ -61,6 +63,8 @@
     <string name="reloading">Reloading...</string>
     <string name="getting_favourites">Getting Favourites...</string>
     <string name="updating_favourites">Updating Favourites...</string>
+    <string name="no_network_connection">No network connection</string>
+    <string name="getting_reviews">Getting Reviews...</string>
 
     <string name="rating_step">0.5</string>
     <string name="num_stars">5</string>
