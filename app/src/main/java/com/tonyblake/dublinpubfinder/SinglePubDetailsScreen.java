@@ -24,9 +24,7 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
 
     private Toolbar actionBar;
 
-    private String name, address, description, place_ID;
-    private float rating;
-    private Bitmap image;
+
 
     private LinearLayout single_pub_details_container;
 
@@ -35,7 +33,7 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
     private TextView findOnMapButton;
     private TextView addToFavouritesButton;
 
-    private String favourite;
+
     private boolean addToFavourites;
     private String add;
 
@@ -68,14 +66,7 @@ public class SinglePubDetailsScreen extends AppCompatActivity implements GoogleA
 
         client.connect();
 
-        savedInstanceState = getIntent().getExtras();
-        place_ID = savedInstanceState.getString("place_ID");
-        name = savedInstanceState.getString("name");
-        address = savedInstanceState.getString("address");
-        rating = savedInstanceState.getFloat("rating");
-        image = savedInstanceState.getParcelable("image");
-        description = savedInstanceState.getString("description");
-        favourite = savedInstanceState.getString("favourite");
+
 
         single_pub_details_container = (LinearLayout)findViewById(R.id.single_pub_details_container);
 
