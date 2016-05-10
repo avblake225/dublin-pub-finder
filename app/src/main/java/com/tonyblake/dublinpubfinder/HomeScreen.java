@@ -550,17 +550,15 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             showToastMessage(context.getString(R.string.error_determining_favourite));
         }
 
-//        Intent intent = new Intent(this, SinglePubDetailsScreen.class);
-//
-//        intent.putExtra("place_ID", pub.placeID);
-//        intent.putExtra("name", pub.name);
-//        intent.putExtra("address", pub.address);
-//        intent.putExtra("rating", pub.rating);
-//        intent.putExtra("image", pub.image);
-//        intent.putExtra("description", pub.description);
-//        intent.putExtra("favourite", favourite);
-
         Intent intent = new Intent(this, SinglePubActivity.class);
+
+        intent.putExtra("place_ID", pub.placeID);
+        intent.putExtra("name", pub.name);
+        intent.putExtra("address", pub.address);
+        intent.putExtra("rating", pub.rating);
+        intent.putExtra("image", pub.image);
+        intent.putExtra("description", pub.description);
+        intent.putExtra("favourite", favourite);
 
         startActivity(intent);
     }

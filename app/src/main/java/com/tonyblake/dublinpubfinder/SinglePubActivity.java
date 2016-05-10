@@ -12,12 +12,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.places.Places;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class SinglePubActivity extends AppCompatActivity {
+public class SinglePubActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener{
 
     private Context context;
+
+    public static DBManager dbManager;
+
+    private GoogleApiClient client;
 
     private Toolbar actionBar;
     private TabLayout tabLayout;
@@ -34,6 +43,19 @@ public class SinglePubActivity extends AppCompatActivity {
         setContentView(R.layout.single_pub_activity);
 
         context = this;
+
+        dbManager = HomeScreen.dbManager;
+
+        client = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .addApi(Places.GEO_DATA_API)
+                .addApi(Places.PLACE_DETECTION_API)
+                .enableAutoManage(this, this)
+                .build();
+
+        client.connect();
 
         actionBar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(actionBar);
@@ -111,5 +133,27 @@ public class SinglePubActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        client.disconnect();
+    }
+
+    @Override
+    public void onConnected(Bundle bundle) {
+
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+
     }
 }
