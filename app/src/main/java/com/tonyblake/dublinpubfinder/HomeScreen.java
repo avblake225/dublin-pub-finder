@@ -669,7 +669,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                     traditional_irish_pub = true;
 
-                    displaySearchOption(context.getString(R.string.traditional_irish_pub));
+                    displaySearchTag(context.getString(R.string.traditional_irish_pub));
 
                     break;
 
@@ -677,7 +677,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                     modern_pub = true;
 
-                    displaySearchOption(context.getString(R.string.modern_pub));
+                    displaySearchTag(context.getString(R.string.modern_pub));
 
                     break;
 
@@ -685,7 +685,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                     north_side_of_city = true;
 
-                    displaySearchOption(context.getString(R.string._north_side_of_city));
+                    displaySearchTag(context.getString(R.string._north_side_of_city));
 
                     break;
 
@@ -693,7 +693,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                     south_side_of_city = true;
 
-                    displaySearchOption(context.getString(R.string._south_side_of_city));
+                    displaySearchTag(context.getString(R.string._south_side_of_city));
 
                     break;
 
@@ -701,7 +701,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                     live_music = true;
 
-                    displaySearchOption(context.getString(R.string.live_music));
+                    displaySearchTag(context.getString(R.string.live_music));
 
                     break;
 
@@ -709,7 +709,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                     live_sports = true;
 
-                    displaySearchOption(context.getString(R.string.live_sports));
+                    displaySearchTag(context.getString(R.string.live_sports));
 
                     break;
 
@@ -717,7 +717,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                     cocktails = true;
 
-                    displaySearchOption(context.getString(R.string.cocktails));
+                    displaySearchTag(context.getString(R.string.cocktails));
 
                     break;
 
@@ -725,7 +725,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                     craft_beer = true;
 
-                    displaySearchOption(context.getString(R.string.craft_beer));
+                    displaySearchTag(context.getString(R.string.craft_beer));
 
                     break;
 
@@ -733,7 +733,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                     late_pub = true;
 
-                    displaySearchOption(context.getString(R.string.late_pub));
+                    displaySearchTag(context.getString(R.string.late_pub));
 
                     break;
             }
@@ -742,7 +742,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         search(null);
     }
 
-    private void displaySearchOption(String option){
+    private void displaySearchTag(String option){
 
         tv_search_option = new TextView(context);
 
