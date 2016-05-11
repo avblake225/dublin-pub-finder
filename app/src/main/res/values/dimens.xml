@@ -57,7 +57,7 @@
     <dimen name="iv_author_height">250dp</dimen>
     <dimen name="author_bio_margin">5dp</dimen>
 
-    <dimen name="divider_line">1dp</dimen>
+    <dimen name="divider_line">2dp</dimen>
     <dimen name="pub_item_padding_left">5dp</dimen>
     <dimen name="pub_item_padding_top">5dp</dimen>
     <dimen name="pub_item_padding_right">10dp</dimen>

@@ -72,8 +72,8 @@
 
     <string name="pub_not_found">Pub not found</string>
     <string name="disclaimer">DISCLAIMER: Live music, live sports and late opening are at the
-        discretion of the pub owner. All data used in this App (ratings, images, descriptions etc) are
-        downloaded from Google Servers and in some cases may be unavailable.</string>
+        discretion of the pub owner. All data used in this app (ratings, images, reviews etc) are
+        downloaded from Google servers and in some cases may be unavailable.</string>
 
     <string name="invalid_selection_traditional_modern_pub">Invalid selection. Please select either a Traditional Irish pub OR a Modern pub</string>
     <string name="invalid_selection_pub_on_north_side_south_side">Invalid selection. Please select either a Pub on the north side of the city OR a Pub on the south side of the city</string>
