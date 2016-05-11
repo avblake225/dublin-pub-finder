@@ -37,31 +37,33 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/search_tags_layout_parent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/search_options_margin_top"
+                android:background="@color/clr_normal_gray"
+                android:layout_marginTop="@dimen/search_tags_margin_top"
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/search_options_layout_1"
+                    android:id="@+id/search_tags_layout_1"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
                 <LinearLayout
-                    android:id="@+id/search_options_layout_2"
+                    android:id="@+id/search_tags_layout_2"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
                 <LinearLayout
-                    android:id="@+id/search_options_layout_3"
+                    android:id="@+id/search_tags_layout_3"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
                 <LinearLayout
-                    android:id="@+id/search_options_layout_4"
+                    android:id="@+id/search_tags_layout_4"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -69,20 +71,33 @@
             </LinearLayout>
 
             <RelativeLayout
-                android:id="@+id/tv_home_screen_parent"
+                android:id="@+id/home_screen_layout_parent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/tv_home_screen"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/home_screen_layout"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_centerInParent="true"
-                    android:padding="@dimen/tv_home_screen_padding"
-                    android:textSize="@dimen/tv_home_screen_textsize"
-                    android:textColor="@color/black"
-                    android:background="@color/white"/>
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/iv_home_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_home_white_24dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_home_screen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/tv_home_screen_textsize"
+                        android:textColor="@color/black"
+                        android:background="@color/white"/>
+
+                </LinearLayout>
 
             </RelativeLayout>
 

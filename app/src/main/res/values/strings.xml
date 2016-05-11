@@ -31,7 +31,7 @@
     <drawable name="clr_focused">#FF6600</drawable>
     <drawable name="clr_pressed">#FFD700</drawable>
 
-    <string name="make_selections">Select Criteria...</string>
+    <string name="make_selections">Make selections...</string>
     <string-array
         name="search_options">
         <item>Traditional Irish pub</item>

@@ -92,7 +92,7 @@ public class SearchByNameDialog extends DialogFragment {
         lp = new WindowManager.LayoutParams();
 
         lp.copyFrom(dialog.getWindow().getAttributes());
-        lp.height = Integer.valueOf(context.getString(R.string.search_by_name_dialog_height));
+        //lp.height = Integer.valueOf(context.getString(R.string.search_by_name_dialog_height));
         dialog.getWindow().setAttributes(lp);
 
         dialog.setOnShowListener(new DialogInterface.OnShowListener() {

@@ -2,14 +2,16 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="?attr/colorPrimaryDark">
+    android:background="@drawable/clr_normal_gray">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/pub_item_background_color"
         android:layout_marginBottom="@dimen/divider_line"
+        android:paddingLeft="@dimen/pub_item_padding_left"
         android:paddingTop="@dimen/pub_item_padding_top"
+        android:paddingRight="@dimen/pub_item_padding_right"
         android:paddingBottom="@dimen/pub_item_padding_bottom"
         android:orientation="horizontal">
 
@@ -32,7 +34,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/ic_chevron_right_white_24dp"/>
+                    android:src="@drawable/ic_chevron_right_black_24dp"/>
 
             </RelativeLayout>
 
@@ -49,7 +51,7 @@
                     android:layout_width="wrap_content"
                     android:text="Pub Name"
                     android:textSize="@dimen/pub_item_name_textsize"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:id="@+id/pub_address"
@@ -57,7 +59,7 @@
                     android:layout_width="wrap_content"
                     android:text="Pub Address"
                     android:textSize="@dimen/pub_item_address_textsize"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/black"/>
 
                 <RatingBar
                     android:id="@+id/rating_bar"
