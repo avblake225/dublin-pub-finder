@@ -9,30 +9,27 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.LinearLayout;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 public class SinglePubReviewsFragment extends Fragment {
 
     private Context context;
 
-    private TextView tv_author_name;
+    private LinearLayout review_layout_container;
 
-    private TextView tv_rating;
-
-    private TextView tv_text;
+    private ArrayList<Review> userReviews;
 
     private ConnectivityManager check;
 
     private NetworkInfo[] info;
 
     private boolean connectedToNetwork;
-
-    private String[] author_name, rating, text;
 
     private boolean download_reviews;
 
@@ -45,11 +42,7 @@ public class SinglePubReviewsFragment extends Fragment {
 
         context = this.getActivity();
 
-        tv_author_name = (TextView) view.findViewById(R.id.tv_author_name);
-
-        tv_rating = (TextView) view.findViewById(R.id.tv_rating);
-
-        tv_text = (TextView) view.findViewById(R.id.tv_text);
+        review_layout_container = (LinearLayout)view.findViewById(R.id.review_layout_container);
 
         check = (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
 
@@ -64,6 +57,8 @@ public class SinglePubReviewsFragment extends Fragment {
         }
 
         download_reviews = true;
+
+        userReviews = new ArrayList<>();
 
         return view;
     }
@@ -114,33 +109,45 @@ public class SinglePubReviewsFragment extends Fragment {
 
             JSONArray reviews  = result.optJSONArray("reviews");
 
-            author_name = new String[reviews.length()];
-            rating = new String[reviews.length()];
-            text = new String[reviews.length()];
-
             for(int i=0; i < reviews.length(); i++){
 
                 JSONObject jsonObject = reviews.getJSONObject(i);
 
-                author_name[i]  = jsonObject.optString("author_name");
+                Review review = new Review();
 
-                rating[i] = jsonObject.optString("rating");
+                review.author_name = jsonObject.optString("author_name");
 
-                text[i] = jsonObject.optString("text");
+                review.rating = jsonObject.optString("rating");
+
+                review.text = jsonObject.optString("text");
+
+                userReviews.add(review);
+            }
+
+            for(Review review: userReviews){
+
+                ReviewLayout reviewLayout = new ReviewLayout(context, review_layout_container);
+
+                reviewLayout.setAuthorName(review.author_name);
+
+                reviewLayout.setRating(review.rating);
+
+                reviewLayout.setText(review.text);
+
+                reviewLayout.finish();
             }
         }
         catch (JSONException e) {
             e.printStackTrace();
         }
 
-        tv_author_name.setText(author_name[0]);
-        tv_rating.setText(rating[0]);
-        tv_text.setText(text[0]);
+
     }
 
-    private void showToastMessage(CharSequence text) {
-        int duration = Toast.LENGTH_LONG;
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
+    private class Review{
+
+        String author_name;
+        String rating;
+        String text;
     }
 }

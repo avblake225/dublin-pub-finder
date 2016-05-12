@@ -20,7 +20,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -50,7 +49,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     private ArrayAdapter<String> drawerAdapter;
 
     private RelativeLayout home_screen_layout_parent;
-    private ImageView iv_home_screen_icon;
     private TextView tv_home_screen;
 
     private RelativeLayout single_pub_details_container_parent;
@@ -146,7 +144,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         // Set up Home Screen TextView
         home_screen_layout_parent = (RelativeLayout) findViewById(R.id.home_screen_layout_parent);
-        iv_home_screen_icon = (ImageView) findViewById(R.id.iv_home_icon);
         tv_home_screen = (TextView)findViewById(R.id.tv_home_screen);
         tv_home_screen.setText(context.getString(R.string.welcome));
         setHomeScreenTextViewMode(1);
@@ -810,8 +807,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     }
 
     private void clearScreen(){
-
-        iv_home_screen_icon.setImageDrawable(null);
 
         setHomeScreenTextViewMode(0);
 

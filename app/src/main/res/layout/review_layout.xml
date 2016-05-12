@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginLeft="@dimen/review_layout_margin"
+        android:layout_marginTop="@dimen/review_layout_margin"
+        android:layout_marginRight="@dimen/review_layout_margin"
+        android:padding="@dimen/review_layout_padding"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_author_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/review_text_size"/>
+
+        <RatingBar
+            android:id="@+id/review_rating_bar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:progressBackgroundTint="@color/white"
+            android:progressTint="@color/yellow"/>
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/review_text_size"/>
+
+    </LinearLayout>
+
+</LinearLayout>
