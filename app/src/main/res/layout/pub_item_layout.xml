@@ -2,17 +2,16 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@drawable/clr_normal_gray">
+    android:background="@color/light_gray">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/pub_item_background_color"
-        android:layout_marginBottom="@dimen/divider_line"
-        android:paddingLeft="@dimen/pub_item_padding_left"
-        android:paddingTop="@dimen/pub_item_padding_top"
-        android:paddingRight="@dimen/pub_item_padding_right"
-        android:paddingBottom="@dimen/pub_item_padding_bottom"
+        android:layout_marginLeft="@dimen/pub_item_margin"
+        android:layout_marginTop="@dimen/pub_item_margin"
+        android:layout_marginRight="@dimen/pub_item_margin"
+        android:padding="@dimen/pub_item_padding"
         android:orientation="horizontal">
 
         <ImageView

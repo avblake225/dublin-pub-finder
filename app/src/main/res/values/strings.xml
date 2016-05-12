@@ -8,7 +8,7 @@
     <string name="author">Author:</string>
     <string name="author_name">Tony Blake</string>
     <string name="author_bio">I\'m a Software Engineer from Dublin, Ireland.
-        I\'ve had the opportunity to work for a range of tech companies from start-up size to multinational.
+        I\'ve had the opportunity to work for a range of tech companies from start-up to multinational.
         I have experience developing all types of software (Embedded, Mobile, Desktop and Web).
         You can find me on LinkedIn at https://www.linkedin.com/in/tonyblakesoftware.
         Alternatively you can email me at avblake225@gmail.com</string>
@@ -86,6 +86,8 @@
     <string name="error_retrieving_pub_image">Error retrieving pub image</string>
     <string name="error_retrieving_pub_type_and_side_of_city">Error retrieving pub type and side of city</string>
     <string name="error_retrieving_extras">Error retrieving extras</string>
+    <string name="error_downloading_reviews">Error downloading reviews</string>
+    <string name="no_reviews_found">No reviews found</string>
 
     <string name="pub_found">pub matches your search:</string>
     <string name="pubs_found">pubs match your search:</string>

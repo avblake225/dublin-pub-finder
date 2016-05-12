@@ -65,6 +65,8 @@ public class ReviewLayout {
         String text_with_quotes = "\"" + text + "\"";
 
         tv_text.setText(text_with_quotes);
+
+        tv_text.setTypeface(null, Typeface.ITALIC);
     }
 
     public void finish(){

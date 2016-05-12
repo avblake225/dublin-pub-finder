@@ -95,15 +95,11 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     public static boolean updateFavourites;
 
-    private LinearLayout search_tags_layout_parent;
-    private LinearLayout search_tags_layout_1;
-    private LinearLayout search_tags_layout_2;
-    private LinearLayout search_tags_layout_3;
-    private LinearLayout search_tags_layout_4;
+    private LinearLayout search_tag_layout_container;
 
-    private TextView tv_search_option;
+    private SearchTagLayout searchTagLayout;
 
-    private LinearLayout.LayoutParams option_params;
+    private TextView tv_search_tag;
 
     private Display display;
 
@@ -173,17 +169,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         updateFavourites = false;
 
-        search_tags_layout_parent = (LinearLayout) findViewById(R.id.search_tags_layout_parent);
-        search_tags_layout_1 = (LinearLayout) findViewById(R.id.search_tags_layout_1);
-        search_tags_layout_2 = (LinearLayout) findViewById(R.id.search_tags_layout_2);
-        search_tags_layout_3 = (LinearLayout) findViewById(R.id.search_tags_layout_3);
-        search_tags_layout_4 = (LinearLayout) findViewById(R.id.search_tags_layout_4);
-
-        option_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        option_params.setMargins((int)context.getResources().getDimension(R.dimen.option_margin_left),
-                                 (int)context.getResources().getDimension(R.dimen.option_margin_top),
-                                 (int)context.getResources().getDimension(R.dimen.option_margin_right),
-                                 (int)context.getResources().getDimension(R.dimen.option_margin_bottom));
+        search_tag_layout_container = (LinearLayout) findViewById(R.id.search_tag_layout_container);
 
         display = getWindowManager().getDefaultDisplay();
         max_width = display.getWidth() - 200;
@@ -296,9 +282,9 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         setHomeScreenTextViewMode(2);
 
-                        tv_home_screen.setBackgroundColor(context.getResources().getColor(R.color.clr_normal_gray));
+                        home_screen_layout_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
 
-                        home_screen_layout_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
+                        tv_home_screen.setBackgroundColor(context.getResources().getColor(R.color.light_gray));
 
                         getFavourites = true;
 
@@ -315,7 +301,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         setRefreshMode(0);
 
-                        setHomeScreenTextViewMode(2);
+                        setHomeScreenTextViewMode(0);
 
                         single_pub_details_container_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
 
@@ -420,7 +406,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
             if(getFavourites){
 
-                home_screen_layout_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
+                setHomeScreenTextViewMode(3);
+
                 tv_home_screen.setText(context.getString(R.string.no_favourites));
             }
             else{
@@ -741,54 +728,32 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private void displaySearchTag(String option){
 
-        tv_search_option = new TextView(context);
+        tv_search_tag = (TextView) getLayoutInflater().inflate(R.layout.search_tag, null);
 
-        tv_search_option.setLayoutParams(option_params);
+        tv_search_tag.setText(option);
 
-        tv_search_option.setPadding((int) context.getResources().getDimension(R.dimen.option_padding_left),
-                (int) context.getResources().getDimension(R.dimen.option_padding_top),
-                (int) context.getResources().getDimension(R.dimen.option_padding_right),
-                (int) context.getResources().getDimension(R.dimen.option_padding_bottom));
+        search_tag_layout_container.measure(0, 0);
 
-        tv_search_option.setText(option);
+        int container_width = search_tag_layout_container.getMeasuredWidth();
 
-        tv_search_option.setTextColor(context.getResources().getColor(R.color.black));
+        if(container_width == 0){
 
-        tv_search_option.setBackground(context.getResources().getDrawable(R.drawable.clr_normal_white));
+            searchTagLayout = new SearchTagLayout(context,search_tag_layout_container,max_width);
 
-        search_tags_layout_1.measure(0, 0);
-
-        int layout_1_width = search_tags_layout_1.getMeasuredWidth();
-
-        search_tags_layout_2.measure(0, 0);
-
-        int layout_2_width = search_tags_layout_2.getMeasuredWidth();
-
-        search_tags_layout_3.measure(0, 0);
-
-        int layout_3_width = search_tags_layout_3.getMeasuredWidth();
-
-        if(layout_1_width >= max_width){
-
-            if(layout_2_width >= max_width){
-
-                if(layout_3_width >= max_width){
-
-                    search_tags_layout_4.addView(tv_search_option);
-                }
-                else{
-
-                    search_tags_layout_3.addView(tv_search_option);
-                }
-            }
-            else{
-
-                search_tags_layout_2.addView(tv_search_option);
-            }
+            searchTagLayout.addSearchTag(tv_search_tag);
         }
         else{
 
-            search_tags_layout_1.addView(tv_search_option);
+            if(searchTagLayout.hasSpaceForMoreTags()){
+
+                searchTagLayout.addSearchTag(tv_search_tag);
+            }
+            else{
+
+                searchTagLayout = new SearchTagLayout(context,search_tag_layout_container,max_width);
+
+                searchTagLayout.addSearchTag(tv_search_tag);
+            }
         }
     }
 
@@ -819,17 +784,12 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         if(list != null) list.setAdapter(null);
 
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        params.setMargins((int)context.getResources().getDimension(R.dimen.no_margin),
-                            (int)context.getResources().getDimension(R.dimen.no_margin),
-                            (int)context.getResources().getDimension(R.dimen.no_margin),
-                            (int)context.getResources().getDimension(R.dimen.no_margin));
+        params.setMargins((int) context.getResources().getDimension(R.dimen.no_margin),
+                (int) context.getResources().getDimension(R.dimen.no_margin),
+                (int) context.getResources().getDimension(R.dimen.no_margin),
+                (int) context.getResources().getDimension(R.dimen.no_margin));
 
-        search_tags_layout_parent.setLayoutParams(params);
-
-        search_tags_layout_1.removeAllViews();
-        search_tags_layout_2.removeAllViews();
-        search_tags_layout_3.removeAllViews();
-        search_tags_layout_4.removeAllViews();
+        search_tag_layout_container.removeAllViews();
     }
 
     private void clearAllSelections(){
@@ -879,7 +839,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                 break;
 
-            // TextView is horizontally centered (padding has no effect)
+            // TextView is horizontally centered and width matched to parent
             case 2:
 
                 tv_home_screen.getLayoutParams().width = LinearLayout.LayoutParams.MATCH_PARENT;
@@ -887,6 +847,23 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                 tv_home_screen.setGravity(Gravity.CENTER_HORIZONTAL);
 
                 break;
+
+            // TextView is horizontally centered in parent and wrapped in width
+            case 3:
+
+                tv_home_screen.getLayoutParams().width = RelativeLayout.LayoutParams.WRAP_CONTENT;
+
+                RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams)tv_home_screen.getLayoutParams();
+
+                layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
+
+                tv_home_screen.setPadding((int) context.getResources().getDimension(R.dimen.tv_home_screen_padding),
+                        (int) context.getResources().getDimension(R.dimen.tv_home_screen_padding),
+                        (int) context.getResources().getDimension(R.dimen.tv_home_screen_padding),
+                        (int) context.getResources().getDimension(R.dimen.tv_home_screen_padding));
+
+                tv_home_screen.setBackgroundColor(context.getResources().getColor(R.color.white));
+
         }
     }
 

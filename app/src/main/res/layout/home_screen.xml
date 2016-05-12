@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_gray"
     tools:context="com.tonyblake.dublinpubfinder.MainActivity">
 
     <android.support.v4.widget.DrawerLayout
@@ -29,35 +30,10 @@
             </android.support.v7.widget.Toolbar>
 
             <LinearLayout
-                android:id="@+id/search_tags_layout_parent"
+                android:id="@+id/search_tag_layout_container"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/light_gray"
                 android:orientation="vertical">
-
-                <LinearLayout
-                    android:id="@+id/search_tags_layout_1"
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <LinearLayout
-                    android:id="@+id/search_tags_layout_2"
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <LinearLayout
-                    android:id="@+id/search_tags_layout_3"
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <LinearLayout
-                    android:id="@+id/search_tags_layout_4"
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
 
             </LinearLayout>
 
@@ -72,6 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/tv_home_screen_margin"
+                    android:layout_marginTop="@dimen/tv_home_screen_margin"
                     android:layout_marginRight="@dimen/tv_home_screen_margin"
                     android:layout_centerInParent="true"
                     android:textSize="@dimen/tv_home_screen_textsize"
@@ -108,7 +85,7 @@
                 android:layout_gravity="start"
                 android:choiceMode="singleChoice"
                 android:divider="@color/black"
-                android:dividerHeight="1dp"
+                android:dividerHeight="@dimen/divider_line"
                 android:background="@color/white"/>
 
     </android.support.v4.widget.DrawerLayout>

@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -91,9 +92,15 @@ public class SinglePubReviewsFragment extends Fragment {
 
                         download_reviews = false;
 
-                        parseJsonData(result);
-                    }
+                        if(result != null){
 
+                            parseJsonData(result);
+                        }
+                        else{
+
+                            showToastMessage(context.getString(R.string.error_downloading_reviews));
+                        }
+                    }
                 }.execute(SinglePubActivity.place_ID);
             }
         }
@@ -109,39 +116,51 @@ public class SinglePubReviewsFragment extends Fragment {
 
             JSONArray reviews  = result.optJSONArray("reviews");
 
-            for(int i=0; i < reviews.length(); i++){
+            if(reviews != null) {
 
-                JSONObject jsonObject = reviews.getJSONObject(i);
+                for (int i = 0; i < reviews.length(); i++) {
 
-                Review review = new Review();
+                    JSONObject jsonObject = reviews.getJSONObject(i);
 
-                review.author_name = jsonObject.optString("author_name");
+                    Review review = new Review();
 
-                review.rating = jsonObject.optString("rating");
+                    review.author_name = jsonObject.optString("author_name");
 
-                review.text = jsonObject.optString("text");
+                    review.rating = jsonObject.optString("rating");
 
-                userReviews.add(review);
+                    review.text = jsonObject.optString("text");
+
+                    userReviews.add(review);
+                }
+
+                for (Review review : userReviews) {
+
+                    ReviewLayout reviewLayout = new ReviewLayout(context, review_layout_container);
+
+                    reviewLayout.setAuthorName(review.author_name);
+
+                    reviewLayout.setRating(review.rating);
+
+                    reviewLayout.setText(review.text);
+
+                    reviewLayout.finish();
+                }
             }
+            else{
 
-            for(Review review: userReviews){
-
-                ReviewLayout reviewLayout = new ReviewLayout(context, review_layout_container);
-
-                reviewLayout.setAuthorName(review.author_name);
-
-                reviewLayout.setRating(review.rating);
-
-                reviewLayout.setText(review.text);
-
-                reviewLayout.finish();
+                showToastMessage(context.getString(R.string.no_reviews_found));
             }
         }
         catch (JSONException e) {
-            e.printStackTrace();
+
+            showToastMessage(context.getString(R.string.error_downloading_reviews));
         }
+    }
 
-
+    private void showToastMessage(CharSequence text) {
+        int duration = Toast.LENGTH_LONG;
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
     }
 
     private class Review{

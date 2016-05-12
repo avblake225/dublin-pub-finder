@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:id="@+id/review_layout_container"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/light_gray"
         android:orientation="vertical">

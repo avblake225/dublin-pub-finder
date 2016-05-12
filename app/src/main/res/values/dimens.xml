@@ -3,15 +3,8 @@
     <dimen name="search_tags_margin_top">10dp</dimen>
     <dimen name="no_margin">0dp</dimen>
 
-    <dimen name="option_margin_left">5dp</dimen>
-    <dimen name="option_margin_top">5dp</dimen>
-    <dimen name="option_margin_right">5dp</dimen>
-    <dimen name="option_margin_bottom">5dp</dimen>
-
-    <dimen name="option_padding_left">5dp</dimen>
-    <dimen name="option_padding_top">0dp</dimen>
-    <dimen name="option_padding_right">5dp</dimen>
-    <dimen name="option_padding_bottom">0dp</dimen>
+    <dimen name="search_tag_margin">5dp</dimen>
+    <dimen name="search_tag_padding">5dp</dimen>
 
     <dimen name="tv_home_screen_textsize">20dp</dimen>
     <dimen name="tv_home_screen_margin">5dp</dimen>
@@ -54,15 +47,15 @@
 
     <dimen name="refresh_btn_margin_left">30dp</dimen>
 
+    <dimen name="single_pub_details_margin">5dp</dimen>
+
     <dimen name="iv_author_width">250dp</dimen>
     <dimen name="iv_author_height">250dp</dimen>
     <dimen name="author_bio_margin">5dp</dimen>
 
-    <dimen name="divider_line">2dp</dimen>
-    <dimen name="pub_item_padding_left">5dp</dimen>
-    <dimen name="pub_item_padding_top">5dp</dimen>
-    <dimen name="pub_item_padding_right">10dp</dimen>
-    <dimen name="pub_item_padding_bottom">5dp</dimen>
+    <dimen name="divider_line">1dp</dimen>
+    <dimen name="pub_item_padding">5dp</dimen>
+    <dimen name="pub_item_margin">5dp</dimen>
     <dimen name="pub_item_image_width">80dp</dimen>
     <dimen name="pub_item_image_height">80dp</dimen>
     <dimen name="pub_details_padding_left">5dp</dimen>

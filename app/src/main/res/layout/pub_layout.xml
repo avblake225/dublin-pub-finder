@@ -10,13 +10,16 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:background="@drawable/clr_normal_gray"
+            android:background="@color/light_gray"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/single_pub_details_margin"
+                android:layout_marginRight="@dimen/single_pub_details_margin"
+                android:layout_marginTop="@dimen/single_pub_details_margin"
                 android:layout_marginBottom="@dimen/divider_line"
                 android:background="@color/white"
                 android:orientation="vertical">
@@ -58,6 +61,8 @@
                 android:id="@+id/iv_pub"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/pub_image_height"
+                android:layout_marginLeft="@dimen/single_pub_details_margin"
+                android:layout_marginRight="@dimen/single_pub_details_margin"
                 android:background="@color/white"
                 android:layout_gravity="center_horizontal"/>
 
@@ -66,6 +71,9 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:orientation="vertical"
+                android:layout_marginLeft="@dimen/single_pub_details_margin"
+                android:layout_marginRight="@dimen/single_pub_details_margin"
+                android:layout_marginBottom="@dimen/single_pub_details_margin"
                 android:layout_marginTop="@dimen/divider_line">
 
                 <TextView
