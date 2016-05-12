@@ -6,6 +6,8 @@
     <dimen name="search_tag_margin">5dp</dimen>
     <dimen name="search_tag_padding">5dp</dimen>
 
+    <dimen name="home_screen_layout_parent_margin">5dp</dimen>
+
     <dimen name="tv_home_screen_textsize">20dp</dimen>
     <dimen name="tv_home_screen_margin">5dp</dimen>
     <dimen name="tv_home_screen_padding">5dp</dimen>
@@ -46,6 +48,8 @@
     <dimen name="rating_bar_margin_bottom">5dp</dimen>
 
     <dimen name="refresh_btn_margin_left">30dp</dimen>
+
+    <dimen name="single_pub_details_container_margin">5dp</dimen>
 
     <dimen name="single_pub_details_margin">5dp</dimen>
 

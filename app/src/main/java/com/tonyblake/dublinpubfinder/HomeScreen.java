@@ -99,11 +99,15 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private SearchTagLayout searchTagLayout;
 
+    private View tv_search_tag_parent;
+
     private TextView tv_search_tag;
 
     private Display display;
 
     private int max_width;
+
+    private LayoutInflater inflater;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -173,6 +177,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         display = getWindowManager().getDefaultDisplay();
         max_width = display.getWidth() - 200;
+
+        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
@@ -282,8 +288,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         setHomeScreenTextViewMode(2);
 
-                        home_screen_layout_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
-
                         tv_home_screen.setBackgroundColor(context.getResources().getColor(R.color.light_gray));
 
                         getFavourites = true;
@@ -301,11 +305,11 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         setRefreshMode(0);
 
-                        setHomeScreenTextViewMode(0);
+                        setHomeScreenTextViewMode(2);
+
+                        tv_home_screen.setText(context.getString(R.string.author));
 
                         single_pub_details_container_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
-
-                        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
                         View about_author_layout = inflater.inflate(R.layout.about_author_layout, null);
 
@@ -728,7 +732,9 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private void displaySearchTag(String option){
 
-        tv_search_tag = (TextView) getLayoutInflater().inflate(R.layout.search_tag, null);
+        tv_search_tag_parent = inflater.inflate(R.layout.search_tag, null);
+
+        tv_search_tag = (TextView)tv_search_tag_parent.findViewById(R.id.tv_search_tag);
 
         tv_search_tag.setText(option);
 
@@ -740,19 +746,19 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
             searchTagLayout = new SearchTagLayout(context,search_tag_layout_container,max_width);
 
-            searchTagLayout.addSearchTag(tv_search_tag);
+            searchTagLayout.addSearchTag(tv_search_tag_parent);
         }
         else{
 
             if(searchTagLayout.hasSpaceForMoreTags()){
 
-                searchTagLayout.addSearchTag(tv_search_tag);
+                searchTagLayout.addSearchTag(tv_search_tag_parent);
             }
             else{
 
                 searchTagLayout = new SearchTagLayout(context,search_tag_layout_container,max_width);
 
-                searchTagLayout.addSearchTag(tv_search_tag);
+                searchTagLayout.addSearchTag(tv_search_tag_parent);
             }
         }
     }
@@ -814,6 +820,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             // TextView is hidden
             case 0:
 
+                home_screen_layout_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
+
                 tv_home_screen.setText("");
 
                 tv_home_screen.getLayoutParams().width = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -825,8 +833,10 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                 break;
 
-            // TextView is aligned left with padding
+            // TextView is aligned left with padding and centered in parent
             case 1:
+
+                home_screen_layout_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
 
                 tv_home_screen.getLayoutParams().width = LinearLayout.LayoutParams.MATCH_PARENT;
 
@@ -839,8 +849,10 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                 break;
 
-            // TextView is horizontally centered and width matched to parent
+            // TextView is on top and horizontally centered
             case 2:
+
+                home_screen_layout_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
 
                 tv_home_screen.getLayoutParams().width = LinearLayout.LayoutParams.MATCH_PARENT;
 
@@ -848,14 +860,12 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                 break;
 
-            // TextView is horizontally centered in parent and wrapped in width
+            // TextView is centered in parent and wrapped in width
             case 3:
 
+                home_screen_layout_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
+
                 tv_home_screen.getLayoutParams().width = RelativeLayout.LayoutParams.WRAP_CONTENT;
-
-                RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams)tv_home_screen.getLayoutParams();
-
-                layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
 
                 tv_home_screen.setPadding((int) context.getResources().getDimension(R.dimen.tv_home_screen_padding),
                         (int) context.getResources().getDimension(R.dimen.tv_home_screen_padding),

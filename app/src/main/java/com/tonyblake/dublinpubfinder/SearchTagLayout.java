@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 public class SearchTagLayout {
 
@@ -37,9 +36,9 @@ public class SearchTagLayout {
         search_tag_layout_container.addView(view);
     }
 
-    public void addSearchTag(TextView tv_search_tag){
+    public void addSearchTag(View tv_search_tag_parent){
 
-        search_tag_layout.addView(tv_search_tag);
+        search_tag_layout.addView(tv_search_tag_parent);
     }
 
     public boolean hasSpaceForMoreTags(){
