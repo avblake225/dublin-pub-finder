@@ -11,6 +11,7 @@
         android:layout_marginLeft="@dimen/pub_item_margin"
         android:layout_marginTop="@dimen/pub_item_margin"
         android:layout_marginRight="@dimen/pub_item_margin"
+        android:layout_marginBottom="@dimen/pub_item_margin"
         android:padding="@dimen/pub_item_padding"
         android:orientation="horizontal">
 
