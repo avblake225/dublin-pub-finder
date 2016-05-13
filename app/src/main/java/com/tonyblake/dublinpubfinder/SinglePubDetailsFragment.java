@@ -45,7 +45,7 @@ public class SinglePubDetailsFragment extends Fragment {
         pubLayout.setPubImage(SinglePubActivity.image, context);
 
 
-        pubLayout.setPubDescription("Some description");
+        pubLayout.setPubDescription(SinglePubActivity.description);
 
         pubLayout.attachToParent();
 

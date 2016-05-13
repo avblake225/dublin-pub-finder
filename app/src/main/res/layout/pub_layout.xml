@@ -82,6 +82,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:textAppearance="@style/pub_description_style"
+                    android:textColor="@color/black"
                     android:layout_margin="@dimen/pub_description_margin"/>
 
                 <TextView

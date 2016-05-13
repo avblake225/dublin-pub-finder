@@ -55,7 +55,7 @@ public class SearchByNameDialog extends DialogFragment {
                                 + pub_name + "'" + context.getString(R.string.end_query);
 
                         try {
-                            Cursor res = dbManager.getPubs(query);
+                            Cursor res = dbManager.rawQuery(query);
 
                             res.moveToFirst();
 

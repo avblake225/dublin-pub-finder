@@ -365,7 +365,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         num_pubs_str = "";
 
         try {
-            Cursor res = dbManager.getPubs(query);
+            Cursor res = dbManager.rawQuery(query);
 
             res.moveToFirst();
 
@@ -428,7 +428,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         downloadedPhoto_width = (int)context.getResources().getDimension(R.dimen.pub_image_width);
         downloadedPhoto_height = (int)context.getResources().getDimension(R.dimen.pub_image_height);
 
-        new GetPubsTask(client, downloadedPhoto_height, downloadedPhoto_width, context) {
+        new GetPubsTask(client, downloadedPhoto_height, downloadedPhoto_width, context, dbManager) {
 
             @Override
             protected void onPreExecute() {
@@ -475,6 +475,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                 }
             }
+
         }.execute(placeIDs);
     }
 
@@ -541,7 +542,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         String favourite = "";
 
         try{
-            Cursor res = dbManager.getPubs(query);
+            Cursor res = dbManager.rawQuery(query);
 
             res.moveToFirst();
 

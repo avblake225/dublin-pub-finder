@@ -113,6 +113,8 @@
     <string name="has_been_added_to_favourites">has been added to your favourites</string>
     <string name="has_been_removed_from_favourites">has been removed from your favourites</string>
 
+    <string name="error_retrieving_pub_description">Error retrieving pub description</string>
+
     <string name="pub_type_traditional_irish">"PUB_TYPE = 'Traditional Irish'"</string>
     <string name="pub_type_modern">"PUB_TYPE = 'Modern'"</string>
     <string name="pub_type_traditional_irish_or_modern">"(PUB_TYPE = 'Traditional Irish' OR PUB_TYPE = 'Modern')"</string>

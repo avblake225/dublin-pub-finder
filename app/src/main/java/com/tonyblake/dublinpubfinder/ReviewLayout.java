@@ -19,7 +19,7 @@ public class ReviewLayout {
 
     private LayoutInflater inflater;
 
-    private View view;
+    private View review_layout;
 
     private TextView tv_author_name;
 
@@ -35,13 +35,13 @@ public class ReviewLayout {
 
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        view = inflater.inflate(R.layout.review_layout, null);
+        review_layout = inflater.inflate(R.layout.review_layout, null);
 
-        tv_author_name = (TextView)view.findViewById(R.id.tv_author_name);
+        tv_author_name = (TextView)review_layout.findViewById(R.id.tv_author_name);
 
-        review_rating_bar = (RatingBar)view.findViewById(R.id.review_rating_bar);
+        review_rating_bar = (RatingBar)review_layout.findViewById(R.id.review_rating_bar);
 
-        tv_text = (TextView)view.findViewById(R.id.tv_text);
+        tv_text = (TextView)review_layout.findViewById(R.id.tv_text);
     }
 
     public void setAuthorName(String name){
@@ -71,6 +71,6 @@ public class ReviewLayout {
 
     public void finish(){
 
-        review_layout_container.addView(view);
+        review_layout_container.addView(review_layout);
     }
 }

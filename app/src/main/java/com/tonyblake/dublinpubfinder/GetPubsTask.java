@@ -1,8 +1,10 @@
 package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
+import android.widget.Toast;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
@@ -32,12 +34,15 @@ public class GetPubsTask extends AsyncTask<ArrayList<String>, Void, ArrayList<Pu
 
     private PlacePhotoMetadataBuffer photoMetadataBuffer;
 
-    public GetPubsTask(GoogleApiClient client, int image_height, int image_width, Context context) {
+    private DBManager dbManager;
+
+    public GetPubsTask(GoogleApiClient client, int image_height, int image_width, Context context, DBManager dbManager) {
 
         this.context = context;
         this.image_height = image_height;
         this.image_width = image_width;
         this.client = client;
+        this.dbManager = dbManager;
 
         multiplier = Integer.valueOf(context.getString(R.string.rating_multiplier));
 
@@ -54,6 +59,25 @@ public class GetPubsTask extends AsyncTask<ArrayList<String>, Void, ArrayList<Pu
             pub = new Pub();
 
             pub.placeID = placeID;
+
+            String descriptionQuery = context.getString(R.string.select_all_rows_from) + dbManager.getTableName()
+                    + context.getString(R.string.where_placeID_equals) + "'" + pub.placeID + "'";
+
+            try{
+
+                Cursor res = dbManager.rawQuery(descriptionQuery);
+
+                res.moveToFirst();
+
+                do {
+                    pub.description = res.getString(3);
+                }
+                while (res.moveToNext());
+            }
+            catch(Exception e){
+
+                showToastMessage(context.getString(R.string.error_retrieving_pub_description));
+            }
 
             Places.GeoDataApi.getPlaceById(client, placeID).setResultCallback(new ResultCallback<PlaceBuffer>() {
 
@@ -97,5 +121,11 @@ public class GetPubsTask extends AsyncTask<ArrayList<String>, Void, ArrayList<Pu
         }
 
         return pubs;
+    }
+
+    private void showToastMessage(CharSequence text) {
+        int duration = Toast.LENGTH_LONG;
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
     }
 }
