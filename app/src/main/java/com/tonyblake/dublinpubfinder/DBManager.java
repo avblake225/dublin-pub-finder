@@ -678,27 +678,92 @@ public class DBManager extends SQLiteOpenHelper{
                 j++;
             }
 
-        /*insertData(context.getString(R.string.searsons),
-                context.getString(R.string.searsons_address),
-                context.getString(R.string.searsons_directions));
+            boolean searsons = insertData(context.getString(R.string.searsons),
+                    context.getString(R.string.searsons_place_ID),
+                    context.getString(R.string.searsons_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes));
 
-        insertData(context.getString(R.string.sheehans),
-                context.getString(R.string.sheehans_address),
-                context.getString(R.string.sheehans_directions));
+            i++;
+            if (searsons) {
+                j++;
+            }
 
-        insertData(context.getString(R.string.sin_é),
-                context.getString(R.string.sin_é_address),
-                context.getString(R.string.sin_é_directions));
+            boolean sheehans = insertData(context.getString(R.string.sheehans),
+                    context.getString(R.string.sheehans_place_ID),
+                    context.getString(R.string.sheehans_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
 
-        insertData(context.getString(R.string.synnotts),
-                context.getString(R.string.synnotts_address),
-                context.getString(R.string.synnotts_directions));
+            i++;
+            if (sheehans) {
+                j++;
+            }
 
-        insertData(context.getString(R.string.the_auld_dubliner),
-                context.getString(R.string.the_auld_dubliner_address),
-                context.getString(R.string.the_auld_dubliner_directions));
+            boolean sin_é = insertData(context.getString(R.string.sin_é),
+                    context.getString(R.string.sin_é_place_ID),
+                    context.getString(R.string.sin_é_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.modern),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes));
 
-        insertData(context.getString(R.string.the_bailey_bar),
+            i++;
+            if (sin_é) {
+                j++;
+            }
+
+            boolean sinnotts = insertData(context.getString(R.string.sinnotts),
+                    context.getString(R.string.sinnotts_place_ID),
+                    context.getString(R.string.sinnotts_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
+
+            i++;
+            if (sinnotts) {
+                j++;
+            }
+
+            boolean the_auld_dubliner = insertData(context.getString(R.string.the_auld_dubliner),
+                    context.getString(R.string.the_auld_dubliner_place_ID),
+                    context.getString(R.string.the_auld_dubliner_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes));
+
+            i++;
+            if (the_auld_dubliner) {
+                j++;
+            }
+
+        /*insertData(context.getString(R.string.the_bailey_bar),
                 context.getString(R.string.the_bailey_bar_address),
                 context.getString(R.string.the_bailey_bar_directions));
 
@@ -956,10 +1021,12 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.robert_reades),
                 context.getString(R.string.ryans),
                 context.getString(R.string.sams_bar),
-                context.getString(R.string.the_bar_with_no_name)
+                context.getString(R.string.searsons),
+                context.getString(R.string.sheehans),
+                context.getString(R.string.sin_é),
+                context.getString(R.string.sinnotts),
+                context.getString(R.string.the_auld_dubliner)
         };
-
-        int num_pubs_in_autocomplete = pub_names.length;
     }
 
     public int getNumPubsListed(){
@@ -969,6 +1036,8 @@ public class DBManager extends SQLiteOpenHelper{
     public int getNumPubsAddedToDB(){
         return j;
     }
+
+    public int getNumPubsInAutocomplete(){ return pub_names.length;};
 
     public String[] getPubNames() { return pub_names; }
 

@@ -125,6 +125,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         int num_pubs_listed = dbManager.getNumPubsListed();
         int num_pubs_added_to_DB = dbManager.getNumPubsAddedToDB();
+        int num_pubs_in_autocomplete = dbManager.getNumPubsInAutocomplete();
 
         homeScreen = this;
 

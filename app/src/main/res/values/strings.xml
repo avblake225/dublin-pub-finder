@@ -301,24 +301,24 @@
     <string name="sams_bar_place_ID">ChIJgTw-4ZsOZ0gRjpSosWQ3MH8</string>
 
     <string name="searsons">Searsons</string>
-    <string name="searsons_address">44 Baggot Street Upper, Dublin 4</string>
-    <string name="searsons_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk around Trinity College. Take the first right turn and walk all the way up Dawson Street. Then, turn left at St. Stephen\'s Green and continue on to Merrion Row. Walk up this street and continue onto Baggot Street Lower. At the end of this street, walk over the bridge and continue onto Baggot Street Upper. You will see Searson\'s at the end of this street on the left.</string>
+    <string name="searsons_description">Skylights fill this 1920s-style bar with light while a back courtyard provides outdoor space</string>
+    <string name="searsons_place_ID">ChIJR_ZbaTIJZ0gRhO7ThY46D9U</string>
 
     <string name="sheehans">Sheehans</string>
-    <string name="sheehans_address">17 Chatham St, Dublin 2</string>
-    <string name="sheehans_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the fourth right turn onto Chatham Street. Walk a few feet up this street and you will see Sheehan\'s on the right hand corner.</string>
+    <string name="sheehans_description">No description available</string>
+    <string name="sheehans_place_ID">ChIJl2qSFpwOZ0gR12lonunWfG4</string>
 
     <string name="sin_é">Sin É</string>
-    <string name="sin_é_address">15 Ormond Quay Upper, Dublin 1</string>
-    <string name="sin_é_directions">From O\' Connell Street, walk towards O\' Connell bridge and turn right onto Bachelors Walk. Walk straight up this street and continue on past the Ha\'penny bridge onto Ormond Quay Lower. Continue straight, past the Millenium bridge, then past Grattan bridge onto Ormond Quay Upper. You will see Sin É a few feet up on the right.</string>
+    <string name="sin_é_description">No description available</string>
+    <string name="sin_é_place_ID">ChIJG3HQECgMZ0gRl8tazYEbIug</string>
 
-    <string name="synnotts">Synnotts</string>
-    <string name="synnotts_address">South King Street, Dublin 2</string>
-    <string name="synnotts_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the last right turn onto South King Street. You will see Synnott\'s on the left.</string>
+    <string name="sinnotts">Sinnotts</string>
+    <string name="sinnotts_description">Traditional Irish pub that is usually packed out for the big GAA, football and rugby matches</string>
+    <string name="sinnotts_place_ID">ChIJF_ZkH5wOZ0gRc9YMKcz01tE</string>
 
     <string name="the_auld_dubliner">The Auld Dubliner</string>
-    <string name="the_auld_dubliner_address">24 Temple Bar, Dublin 2</string>
-    <string name="the_auld_dubliner_directions">From O\'Connell Street, walk over O\'Connell bridge and continue straight onto Westmoreland Street. Walk up this street and take the first right turn onto Fleet Street. Walk up this street and you will soon see The Auld Dubliner on the left hand corner.</string>
+    <string name="the_auld_dubliner_description">An oasis of quiet in busy Temple Bar, this pub serves Irish food with traditional music upstairs</string>
+    <string name="the_auld_dubliner_place_ID">ChIJMVe9U4MOZ0gRE1iw8A0lOkw</string>
 
     <string name="the_bank">The Bank</string>
     <string name="the_bank_address">20 College Green, Dublin 2</string>
