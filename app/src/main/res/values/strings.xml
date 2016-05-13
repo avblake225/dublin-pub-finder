@@ -152,89 +152,76 @@
     <string name="no">No</string>
 
     <string name="against_the_grain">Against The Grain</string>
-    <string name="against_the_grain_address">11 Wexford Street, Dublin 2</string>
     <string name="against_the_grain_description">Modern bar with a huge array of local and international craft beers on tap and big-screen TV sport</string>
     <string name="against_the_grain_place_ID">ChIJBQqn0p8OZ0gR5uqZlXXpmnU</string>
 
     <string name="alfie_byrnes">Alfie Byrnes</string>
-    <string name="alfie_byrnes_address">Earlsfort Terrace, Dublin 2</string>
     <string name="alfie_byrnes_description">No description available</string>
     <string name="alfie_byrnes_place_ID">ChIJO3QGC6IOZ0gR1kO_UzJmuOY</string>
 
     <string name="alfies">Alfies</string>
-    <string name="alfies_address">10 South William Street, Dublin 2</string>
     <string name="alfies_description">Glitter balls and chandeliers give a young edge to a simple menu of international dishes</string>
     <string name="alfies_place_ID">ChIJVyyQX5wOZ0gRbKriCFNgWvk</string>
 
     <string name="anseo">Anseo</string>
-    <string name="anseo_address">18 Camden Street Lower, Dublin 2</string>
     <string name="anseo_description">No description available</string>
     <string name="anseo_place_ID">ChIJK_hq758OZ0gRc-q7KyQHvqo</string>
 
     <string name="bad_bobs">Bad Bobs</string>
-    <string name="bad_bobs_address">35 Essex Street East, Dublin 2</string>
     <string name="bad_bobs_description">Full of vintage ephemera, this large, lively bar, restaurant and nightclub includes a roof terrace</string>
     <string name="bad_bobs_place_ID">ChIJnUe-NZ0OZ0gRcURhnZCniJE</string>
 
     <string name="break_for_the_border">Break For The Border</string>
-    <string name="break_for_the_border_address">Stephen Street Lower, Dublin 2</string>
     <string name="break_for_the_border_description">No description available</string>
     <string name="break_for_the_border_place_ID">ChIJZ0zjyp0OZ0gRaqvpgBR0CNk</string>
 
     <string name="bruxelles">Bruxelles</string>
-    <string name="bruxelles_address">7 Harry St, Dublin 2</string>
     <string name="bruxelles_description">Bustling joint with an Irish heavy rock heritage, with 3 bars and live music, plus TV sports</string>
     <string name="bruxelles_place_ID">ChIJEYHHDJwOZ0gRVbbA0NQyqRU</string>
 
     <string name="buskers">Buskers</string>
-    <string name="buskers_address">13 Fleet St, Dublin 2</string>
     <string name="buskers_description">Vibrant modern bar with nightly live bands, TV sports, cocktail classes, stag and hen parties</string>
     <string name="buskers_place_ID">ChIJMQYhsoQOZ0gRQA9AVljYjPo</string>
 
     <string name="café_en_seine">Café en Seine</string>
-    <string name="café_en_seine_address">40 Dawson Street, Dublin 2</string>
     <string name="café_en_seine_description">Elegant art nouveau bar spread over 3 floors with doric columns and glass panelled ceilings</string>
     <string name="café_en_seine_place_ID">ChIJC7OZ55sOZ0gRrO9y748QF9k</string>
 
     <string name="cassidys">Cassidys</string>
-    <string name="cassidys_address">27 Westmoreland St, Dublin 2</string>
     <string name="cassidys_description">No description available</string>
     <string name="cassidys_place_ID">ChIJcZrG2oQOZ0gRDsK0hvBOw1g</string>
 
     <string name="devitts">Devitts</string>
-    <string name="devitts_address">78 Lower Camden Street, Dublin 2</string>
     <string name="devitts_description">No description available</string>
     <string name="devitts_place_ID">ChIJA4Ky-p8OZ0gRhXikn1xYL6U</string>
 
     <string name="doheny_and_nesbitts">Doheny And Nesbitts</string>
-    <string name="doheny_and_nesbitts_address">5 Baggot Street Lower, Dublin 2</string>
     <string name="doheny_and_nesbitts_description">This classic pub houses 2 fine old snugs (small rooms for women in days of old) and an Irish menu</string>
     <string name="doheny_and_nesbitts_place_ID">ChIJR1zDf5cOZ0gR5CT7Xyk8ERQ</string>
 
     <string name="doyles">Doyles</string>
-    <string name="doyles_address">9 College St, Dublin 2</string>
     <string name="doyles_description">This 19th century bar with bare brick walls and stripped wood floors serves pub grub classics</string>
     <string name="doyles_place_ID">ChIJYUKVK4UOZ0gR7vvLW430XO8</string>
 
     <string name="fibber_magees">Fibber Magees</string>
-    <string name="fibber_magees_address">80 Parnel Street, Dublin 1</string>
     <string name="fibber_magees_description">Classic pub with a predilection for hard guitar music with brick walls, pool tables and beer garden</string>
     <string name="fibber_magees_place_ID">ChIJL7OO74YOZ0gRNw4CmOJh5Kk</string>
 
     <string name="fitzgeralds">Fitzgeralds</string>
-    <string name="fitzgeralds_address">22 Aston Quay, Dublin 2</string>
     <string name="fitzgeralds_description">No description available</string>
     <string name="fitzgeralds_place_ID">ChIJNVQTwIQOZ0gRikXC6r6VR_w</string>
 
     <string name="fitzsimons">Fitzsimons</string>
-    <string name="fitzsimons_address">21 Wellington Quay, Temple Bar, Dublin 2</string>
     <string name="fitzsimons_description">No description available</string>
-    <string name="fitzsimons_place_ID">ChIJS5hU0YIOZ0gRLdi5U2EBI8M</string>
+    <string name="fitzsimons_place_ID">ChIJww8Q1IIOZ0gRtDK-tFjPNu4</string>
 
     <string name="flannerys">Flannerys</string>
-    <string name="flannerys_address">6 Camden Street Lower, Dublin 2</string>
     <string name="flannerys_description">A quaint pub facade gives way to a cavernous and wood-filled interior at this late opening pub/bar</string>
     <string name="flannerys_place_ID">ChIJLw6exJ8OZ0gRZPe_OqqaKW4</string>
+
+    <string name="foleys">Foleys</string>
+    <string name="foleys_description">No description available</string>
+    <string name="foleys_place_ID">ChIJ9Uq2zpkOZ0gR3bM6S_o6jnw</string>
 
     <string name="four_dame_lane">4 Dame Lane</string>
     <string name="four_dame_lane_address">4 Dame Lane, Dublin 2</string>
@@ -242,109 +229,76 @@
     <string name="four_dame_lane_place_ID">ChIJtVgD65wOZ0gRU-Va5Q-sWxM</string>
 
     <string name="grogans">Grogans</string>
-    <string name="grogans_address">15 South William Street, Dublin 2</string>
     <string name="grogans_description">Higgledy piggledy artworks by local artists dot the walls of this local pub which hosts book events</string>
     <string name="grogans_place_ID">ChIJMTezXZwOZ0gRcOVCwfcvvk8</string>
 
     <string name="hartigans">Hartigans</string>
-    <string name="hartigans_address">100 Leeson Street Lower, Dublin 2</string>
     <string name="hartigans_description">No description available</string>
     <string name="hartigans_place_ID">ChIJMTFIkpgOZ0gRf0BlhsVzwwk</string>
 
     <string name="hogans">Hogans</string>
-    <string name="hogans_address">35 South Great Georges Street, Dublin 2</string>
     <string name="hogans_description">Spacious bar with upstairs room for typical selection of beer in Victorian surroundings</string>
     <string name="hogans_place_ID">ChIJc_TIwFoJZ0gRX1BlS-bn5WA</string>
 
     <string name="james_toners">James Toners</string>
-    <string name="james_toners_address">139 Baggot Street Lower, Dublin 2</string>
     <string name="james_toners_description">Long established, traditional pub with a dark wooden bar, picture framed snug and popular beer yard</string>
     <string name="james_toners_place_ID">ChIJR1zDf5cOZ0gRmIywC_s8buc</string>
 
     <string name="jj_smyths">J.J. Smyths</string>
-    <string name="jj_smyths_address">12 Aungier St, Dublin 2</string>
     <string name="jj_smyths_description">Typical Irish ground floor pub with 1st floor venue for the leading lights in live jazz and blues</string>
     <string name="jj_smyths_place_ID">ChIJ1-pT6J0OZ0gRR-iMd2c6nu4</string>
 
     <string name="john_kehoes">John Kehoes</string>
-    <string name="john_kehoes_address">9 South Anne Street, Dublin 2</string>
     <string name="john_kehoes_description">Classic pub scattered with original features such as mahogany doors and wood partitioned snug areas</string>
     <string name="john_kehoes_place_ID">ChIJ8wUZ8psOZ0gRY_Z66tz8_OE</string>
 
     <string name="jw_sweetmans">J.W. Sweetmans</string>
-    <string name="jw_sweetmans_address">1 Burgh Quay, Dublin 2</string>
     <string name="jw_sweetmans_description">No description available</string>
     <string name="jw_sweetmans_place_ID">ChIJVyv8H4UOZ0gREKGhgosrQy8</string>
 
     <string name="lanigans">Lanigans</string>
-    <string name="lanigans_address">10 Eden Quay, Dublin 1</string>
     <string name="lanigans_description">No description available</string>
     <string name="lanigans_place_ID">ChIJK-E4BIUOZ0gRd-kUnF2f98U</string>
 
     <string name="lagoona">Lagoona</string>
-    <string name="lagoona_address">Mayor Street Lower, IFSC, Dublin 1</string>
     <string name="lagoona_description">No description available</string>
     <string name="lagoona_place_ID">ChIJCVErT4wOZ0gRTb822t6ZGw4</string>
 
     <string name="mulligans">Mulligans</string>
-    <string name="mulligans_address">8 Poolbeg Street, Dublin 2</string>
     <string name="mulligans_description">No nonsense 18th century pub with a cast of regulars and lack of modern pomposity</string>
-    <string name="mulligans_latitude">53.346900</string>
-    <string name="mulligans_longitude">-6.255585</string>
+    <string name="mulligans_place_ID">ChIJ30HSXIUOZ0gRJNh5Fic-vUE</string>
 
     <string name="nearys">Nearys</string>
-    <string name="nearys_address">1 Chatham Street, Dublin 2</string>
     <string name="nearys_description">Adjacent to the back door of the Gaiety Theatre, this is a favourite of stage folk and theatergoers</string>
-    <string name="nearys_latitude">53.340764</string>
-    <string name="nearys_longitude">-6.261343</string>
+    <string name="nearys_place_ID">ChIJPUh5D5wOZ0gRVnkOMmDe_2M</string>
 
     <string name="o_donoghues">O Donoghues</string>
-    <string name="o_donoghues_address">15 Merrion Row, Dublin 2</string>
     <string name="o_donoghues_description">Renowned traditional music pub with packed nightly live sessions and simple en suite bedrooms</string>
-    <string name="o_donoghues_latitude">53.338144</string>
-    <string name="o_donoghues_longitude">-6.254240</string>
+    <string name="o_donoghues_place_ID">ChIJw-DhupkOZ0gRzPibivFAces</string>
 
     <string name="o_reillys">O Reillys</string>
-    <string name="o_reillys_address">2 Poolbeg Street, Dublin 2</string>
     <string name="o_reillys_description">Large and lively Victorian era bar with iron chandeliers and church pews hosting Saturday rock club</string>
-    <string name="o_reillys_latitude">53.347145</string>
-    <string name="o_reillys_longitude">-6.254025</string>
+    <string name="o_reillys_place_ID">ChIJ3wjf8I8OZ0gR5tvtJlkau4c</string>
 
     <string name="peters_pub">Peters Pub</string>
-    <string name="peters_pub_address">William Street South, Dublin 2</string>
     <string name="peters_pub_description">Traditional, convivial and compact pub with white walls, serving whiskies, beers and sandwiches</string>
-    <string name="peters_pub_latitude">53.340831</string>
-    <string name="peters_pub_longitude">-6.263242</string>
+    <string name="peters_pub_place_ID">ChIJGa6WM5wOZ0gRxjvzzfvaYQU</string>
 
     <string name="p_macs">P. Macs</string>
-    <string name="p_macs_address">30 Stephen Street Lower, Dublin 2</string>
     <string name="p_macs_description">No description available</string>
-    <string name="p_macs_latitude">53.341122</string>
-    <string name="p_macs_longitude">-6.264388</string>
-
-    <string name="reillys">Reillys</string>
-    <string name="reillys_address">1 Merrion Row, Dublin 2</string>
-    <string name="reillys_description">No description available</string>
-    <string name="reillys_latitude">53.338303</string>
-    <string name="reillys_longitude">-6.253786</string>
+    <string name="p_macs_place_ID">ChIJJ07hyZ0OZ0gRxQXAO1EYbMo</string>
 
     <string name="robert_reades">Robert Reades</string>
-    <string name="robert_reades_address">19 Store Street, Dublin 1</string>
     <string name="robert_reades_description">No description available</string>
-    <string name="robert_reades_latitude">53.350234</string>
-    <string name="robert_reades_longitude">-6.253076</string>
+    <string name="robert_reades_place_ID">ChIJzeeBPI8OZ0gRQ696vb_3d_A</string>
 
     <string name="ryans">Ryans</string>
-    <string name="ryans_address">92 Camden Street Lower, Dublin 2</string>
     <string name="ryans_description">No description available</string>
-    <string name="ryans_latitude">53.336345</string>
-    <string name="ryans_longitude">-6.265731</string>
+    <string name="ryans_place_ID">ChIJXSll2p8OZ0gRQcO01pUDZx8</string>
 
     <string name="sams_bar">Sams bar</string>
-    <string name="sams_bar_address">36 Dawson Street, Dublin 2</string>
     <string name="sams_bar_description">Funky murals and vintage accents adorn this chic, spacious bar for cocktails and sharing platters</string>
-    <string name="sams_bar_latitude">53.340335</string>
-    <string name="sams_bar_longitude">-6.258677</string>
+    <string name="sams_bar_place_ID">ChIJgTw-4ZsOZ0gRjpSosWQ3MH8</string>
 
     <string name="searsons">Searsons</string>
     <string name="searsons_address">44 Baggot Street Upper, Dublin 4</string>

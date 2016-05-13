@@ -338,6 +338,23 @@ public class DBManager extends SQLiteOpenHelper{
                 j++;
             }
 
+            boolean reillys = insertData(context.getString(R.string.foleys),
+                    context.getString(R.string.foleys_place_ID),
+                    context.getString(R.string.foleys_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
+
+            i++;
+            if (reillys) {
+                j++;
+            }
+
             boolean four_dame_lane = insertData(context.getString(R.string.four_dame_lane),
                     context.getString(R.string.four_dame_lane_place_ID),
                     context.getString(R.string.four_dame_lane_description),
@@ -508,185 +525,158 @@ public class DBManager extends SQLiteOpenHelper{
                 j++;
             }
 
-//            boolean mulligans = insertData(context.getString(R.string.mulligans),
-//                    context.getString(R.string.mulligans_address),
-//                    context.getString(R.string.mulligans_description),
-//                    context.getString(R.string.mulligans_latitude),
-//                    context.getString(R.string.mulligans_longitude),
-//                    context.getString(R.string.traditional_irish),
-//                    context.getString(R.string.southside),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no));
-//
-//            i++;
-//            if (mulligans) {
-//                j++;
-//            }
-//
-//            boolean nearys = insertData(context.getString(R.string.nearys),
-//                    context.getString(R.string.nearys_address),
-//                    context.getString(R.string.nearys_description),
-//                    context.getString(R.string.nearys_latitude),
-//                    context.getString(R.string.nearys_longitude),
-//                    context.getString(R.string.traditional_irish),
-//                    context.getString(R.string.southside),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no));
-//
-//            i++;
-//            if (nearys) {
-//                j++;
-//            }
-//
-//            boolean o_donoghues = insertData(context.getString(R.string.o_donoghues),
-//                    context.getString(R.string.o_donoghues_address),
-//                    context.getString(R.string.o_donoghues_description),
-//                    context.getString(R.string.o_donoghues_latitude),
-//                    context.getString(R.string.o_donoghues_longitude),
-//                    context.getString(R.string.traditional_irish),
-//                    context.getString(R.string.southside),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no));
-//
-//            i++;
-//            if (o_donoghues) {
-//                j++;
-//            }
-//
-//            boolean o_reillys = insertData(context.getString(R.string.o_reillys),
-//                    context.getString(R.string.o_reillys_address),
-//                    context.getString(R.string.o_reillys_description),
-//                    context.getString(R.string.o_reillys_latitude),
-//                    context.getString(R.string.o_reillys_longitude),
-//                    context.getString(R.string.modern),
-//                    context.getString(R.string.northside),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.yes));
-//
-//            i++;
-//            if (o_reillys) {
-//                j++;
-//            }
-//
-//            boolean peters_pub = insertData(context.getString(R.string.peters_pub),
-//                    context.getString(R.string.peters_pub_address),
-//                    context.getString(R.string.peters_pub_description),
-//                    context.getString(R.string.peters_pub_latitude),
-//                    context.getString(R.string.peters_pub_longitude),
-//                    context.getString(R.string.traditional_irish),
-//                    context.getString(R.string.southside),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.no));
-//
-//            i++;
-//            if (peters_pub) {
-//                j++;
-//            }
-//
-//            boolean p_macs = insertData(context.getString(R.string.p_macs),
-//                    context.getString(R.string.p_macs_address),
-//                    context.getString(R.string.p_macs_description),
-//                    context.getString(R.string.p_macs_latitude),
-//                    context.getString(R.string.p_macs_longitude),
-//                    context.getString(R.string.modern),
-//                    context.getString(R.string.southside),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.no));
-//
-//            i++;
-//            if (p_macs) {
-//                j++;
-//            }
-//
-//            boolean reillys = insertData(context.getString(R.string.reillys),
-//                    context.getString(R.string.reillys_address),
-//                    context.getString(R.string.reillys_description),
-//                    context.getString(R.string.reillys_latitude),
-//                    context.getString(R.string.reillys_longitude),
-//                    context.getString(R.string.traditional_irish),
-//                    context.getString(R.string.southside),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no));
-//
-//            i++;
-//            if (reillys) {
-//                j++;
-//            }
-//
-//            boolean robert_reades = insertData(context.getString(R.string.robert_reades),
-//                    context.getString(R.string.robert_reades_address),
-//                    context.getString(R.string.robert_reades_description),
-//                    context.getString(R.string.robert_reades_latitude),
-//                    context.getString(R.string.robert_reades_longitude),
-//                    context.getString(R.string.traditional_irish),
-//                    context.getString(R.string.northside),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no));
-//
-//            i++;
-//            if (robert_reades) {
-//                j++;
-//            }
-//
-//            boolean ryans = insertData(context.getString(R.string.ryans),
-//                    context.getString(R.string.ryans_address),
-//                    context.getString(R.string.ryans_description),
-//                    context.getString(R.string.ryans_latitude),
-//                    context.getString(R.string.ryans_longitude),
-//                    context.getString(R.string.traditional_irish),
-//                    context.getString(R.string.southside),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.no));
-//
-//            i++;
-//            if (ryans) {
-//                j++;
-//            }
-//
-//            boolean sams_bar = insertData(context.getString(R.string.sams_bar),
-//                    context.getString(R.string.sams_bar_address),
-//                    context.getString(R.string.sams_bar_description),
-//                    context.getString(R.string.sams_bar_latitude),
-//                    context.getString(R.string.sams_bar_longitude),
-//                    context.getString(R.string.modern),
-//                    context.getString(R.string.southside),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.yes),
-//                    context.getString(R.string.no),
-//                    context.getString(R.string.yes));
-//
-//            i++;
-//            if (sams_bar) {
-//                j++;
-//            }
+            boolean mulligans = insertData(context.getString(R.string.mulligans),
+                    context.getString(R.string.mulligans_place_ID),
+                    context.getString(R.string.mulligans_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
+
+            i++;
+            if (mulligans) {
+                j++;
+            }
+
+            boolean nearys = insertData(context.getString(R.string.nearys),
+                    context.getString(R.string.nearys_place_ID),
+                    context.getString(R.string.nearys_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
+
+            i++;
+            if (nearys) {
+                j++;
+            }
+
+            boolean o_donoghues = insertData(context.getString(R.string.o_donoghues),
+                    context.getString(R.string.o_donoghues_place_ID),
+                    context.getString(R.string.o_donoghues_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
+
+            i++;
+            if (o_donoghues) {
+                j++;
+            }
+
+            boolean o_reillys = insertData(context.getString(R.string.o_reillys),
+                    context.getString(R.string.o_reillys_place_ID),
+                    context.getString(R.string.o_reillys_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.modern),
+                    context.getString(R.string.northside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes));
+
+            i++;
+            if (o_reillys) {
+                j++;
+            }
+
+            boolean peters_pub = insertData(context.getString(R.string.peters_pub),
+                    context.getString(R.string.peters_pub_place_ID),
+                    context.getString(R.string.peters_pub_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no));
+
+            i++;
+            if (peters_pub) {
+                j++;
+            }
+
+            boolean p_macs = insertData(context.getString(R.string.p_macs),
+                    context.getString(R.string.p_macs_place_ID),
+                    context.getString(R.string.p_macs_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.modern),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no));
+
+            i++;
+            if (p_macs) {
+                j++;
+            }
+
+            boolean robert_reades = insertData(context.getString(R.string.robert_reades),
+                    context.getString(R.string.robert_reades_place_ID),
+                    context.getString(R.string.robert_reades_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.northside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
+
+            i++;
+            if (robert_reades) {
+                j++;
+            }
+
+            boolean ryans = insertData(context.getString(R.string.ryans),
+                    context.getString(R.string.ryans_place_ID),
+                    context.getString(R.string.ryans_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no));
+
+            i++;
+            if (ryans) {
+                j++;
+            }
+
+            boolean sams_bar = insertData(context.getString(R.string.sams_bar),
+                    context.getString(R.string.sams_bar_place_ID),
+                    context.getString(R.string.sams_bar_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.modern),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes));
+
+            i++;
+            if (sams_bar) {
+                j++;
+            }
 
         /*insertData(context.getString(R.string.searsons),
                 context.getString(R.string.searsons_address),
@@ -946,6 +936,7 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.fitzgeralds),
                 context.getString(R.string.fitzsimons),
                 context.getString(R.string.flannerys),
+                context.getString(R.string.foleys),
                 context.getString(R.string.four_dame_lane),
                 context.getString(R.string.grogans),
                 context.getString(R.string.hartigans),
@@ -962,7 +953,6 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.o_reillys),
                 context.getString(R.string.peters_pub),
                 context.getString(R.string.p_macs),
-                context.getString(R.string.reillys),
                 context.getString(R.string.robert_reades),
                 context.getString(R.string.ryans),
                 context.getString(R.string.sams_bar),
