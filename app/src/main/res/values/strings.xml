@@ -320,39 +320,37 @@
     <string name="the_auld_dubliner_description">An oasis of quiet in busy Temple Bar, this pub serves Irish food with traditional music upstairs</string>
     <string name="the_auld_dubliner_place_ID">ChIJMVe9U4MOZ0gRE1iw8A0lOkw</string>
 
+    <string name="the_bailey_bar">The Bailey Bar</string>
+    <string name="the_bailey_bar_description">Contemporary bar serving a menu of tapas in a modern room with a massive portrait of James Joyce</string>
+    <string name="the_bailey_bar_place_ID">ChIJn6bGvZsOZ0gRO0jtYlxf5GU</string>
+
     <string name="the_bank">The Bank</string>
-    <string name="the_bank_address">20 College Green, Dublin 2</string>
-    <string name="the_bank_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight up Westmoreland Street. Walk to the end of this street and onto College Green (Trinity College). Turn to face Dame Street and you will see The Bank a few feet up on the left hand side.</string>
+    <string name="the_bank_description">Elegant bar with live piano music and chandeliers hanging from an intricately decorated ceiling</string>
+    <string name="the_bank_place_ID">ChIJb01BopwOZ0gRGK_aIlZ-Q4g</string>
 
     <string name="the_bankers">The Bankers</string>
-    <string name="the_bankers_address">Trinity Street, Dublin 2</string>
-    <string name="the_bankers_directions">From College Green (Trinity College), turn to face Dame Street. Walk up this street and take the second left turn onto Trinity Street. Walk a few feet up this street and you will see the Banker\'s on the right hand corner</string>
+    <string name="the_bankers_description">No description available</string>
+    <string name="the_bankers_place_ID">ChIJiTZhlZwOZ0gR1GiRj8Y6XFk</string>
 
     <string name="the_bar_with_no_name">The Bar With No Name</string>
-    <string name="the_bar_with_no_name_address">3 Fade Street, Dublin 2</string>
-    <string name="the_bar_with_no_name_description">Hip, bare bones hangout with art and sofas in a townhouse hotel, popular for brunch and mojitos</string>
-    <string name="the_bar_with_no_name_latitude">53.341910</string>
-    <string name="the_bar_with_no_name_longitude">-6.264176</string>
-
-    <string name="the_bailey_bar">The Bailey Bar</string>
-    <string name="the_bailey_bar_address">2 Duke St, Dublin 2</string>
-    <string name="the_bailey_bar_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first left turn onto Duke Street. You will see the Bailey Bar on the left.</string>
+    <string name="the_bar_with_no_name_description">Hip, bare-bones hangout with art and sofas in a townhouse hotel, popular for brunch and mojitos</string>
+    <string name="the_bar_with_no_name_place_ID">ChIJi4OCsp0OZ0gRMPjSpf7T66c</string>
 
     <string name="the_bison_bar">The Bison Bar</string>
-    <string name="the_bison_bar_address">11 Wellington Quay, Dublin 2</string>
-    <string name="the_bison_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and turn right onto Aston Quay. Walk straight along the Quays, past the Ha\'penny bridge. Continue on straight, past the Millenium bridge. You will soon see The Bison Bar on the left.</string>
+    <string name="the_bison_bar_description">No description available</string>
+    <string name="the_bison_bar_place_ID">ChIJE7I4yoIOZ0gRMST5XljG4p4</string>
 
     <string name="the_brew_dock">The Brew Dock</string>
-    <string name="the_brew_dock_address">1 Amiens Street, Dublin 1</string>
-    <string name="the_brew_dock_directions">From O\' Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk all the way up this street and around the bus garage (Busáras). You will see The Brew Dock straight in front of you.</string>
+    <string name="the_brew_dock_description">Craft and own-brand beers and classic pub grub are served in this homely, micro-brewery owned bar</string>
+    <string name="the_brew_dock_place_ID">ChIJMz1p3Y4OZ0gRY8yocw58yj4</string>
 
     <string name="the_bull_and_castle">The Bull And Castle</string>
-    <string name="the_bull_and_castle_address">5 Lord Edward Street, Dublin 8</string>
-    <string name="the_bull_and_castle_directions">From College Green (Trinity College), turn to face Dame Street. Walk up the entire length of this street, past City Hall, and continue straight onto Lord Edward Street. You will see The Bull And Castle at the end of this street on the left corner.</string>
+    <string name="the_bull_and_castle_description">Steaks supplied by own butcher served in a lowlit pub setting with sheepskin covered benches</string>
+    <string name="the_bull_and_castle_place_ID">ChIJn50iuScMZ0gRVB6JeHsYLMM</string>
 
     <string name="the_camden_exchange">The Camden Exchange</string>
-    <string name="the_camden_exchange_address">72 Camden Street Lower, Dublin 2</string>
-    <string name="the_camden_exchange_directions">From College Green (Trinity College), turn to face Dame Street. Walk straight up Dame Street and take the third left turn onto South Great George\'s Street. Walk straight up this street and continue onto Aungier Street. Walk straight up this street and continue onto Wexford Street. Continue straight onto Camden Street and you will see The Camden Exchange on the right.</string>
+    <string name="the_camden_exchange_description">No description available</string>
+    <string name="the_camden_exchange_place_ID">ChIJo43j5Z8OZ0gRmZVaOsKupEs</string>
 
     <string name="the_capitol_bar">The Capitol Bar</string>
     <string name="the_capitol_bar_address">1 Aungier St, Dublin 2</string>
