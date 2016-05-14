@@ -899,31 +899,92 @@ public class DBManager extends SQLiteOpenHelper{
                 j++;
             }
 
-        /*insertData(context.getString(R.string.the_capitol_bar),
-                context.getString(R.string.the_capitol_bar_address),
-                context.getString(R.string.the_capitol_bar_directions));
+            boolean the_capitol_lounge = insertData(context.getString(R.string.the_capitol_lounge),
+                    context.getString(R.string.the_capitol_lounge_place_ID),
+                    context.getString(R.string.the_capitol_lounge_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.modern),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes));
 
-        insertData(context.getString(R.string.the_celt),
-                context.getString(R.string.the_celt_address),
-                context.getString(R.string.the_celt_directions));
+            i++;
+            if (the_capitol_lounge) {
+                j++;
+            }
 
-        insertData(context.getString(R.string.the_church),
-                context.getString(R.string.the_church_address),
-                context.getString(R.string.the_church_directions));
+            boolean the_church = insertData(context.getString(R.string.the_church),
+                    context.getString(R.string.the_church_place_ID),
+                    context.getString(R.string.the_church_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.modern),
+                    context.getString(R.string.northside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes));
 
-        insertData(context.getString(R.string.the_czech_inn),
-                context.getString(R.string.the_czech_inn_address),
-                context.getString(R.string.the_czech_inn_directions));
+            i++;
+            if (the_church) {
+                j++;
+            }
 
-        insertData(context.getString(R.string.the_dame_tavern),
-                context.getString(R.string.the_dame_tavern_address),
-                context.getString(R.string.the_dame_tavern_directions));
+            boolean the_czech_inn = insertData(context.getString(R.string.the_czech_inn),
+                    context.getString(R.string.the_czech_inn_place_ID),
+                    context.getString(R.string.the_czech_inn_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.modern),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes));
 
-        insertData(context.getString(R.string.the_dawson_lounge),
-                context.getString(R.string.the_dawson_lounge_address),
-                context.getString(R.string.the_dawson_lounge_directions));
+            i++;
+            if (the_czech_inn) {
+                j++;
+            }
 
-        insertData(context.getString(R.string.the_drury_buildings),
+            boolean the_dame_tavern = insertData(context.getString(R.string.the_dame_tavern),
+                    context.getString(R.string.the_dame_tavern_place_ID),
+                    context.getString(R.string.the_dame_tavern_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
+
+            i++;
+            if (the_dame_tavern) {
+                j++;
+            }
+
+            boolean the_dawson_lounge = insertData(context.getString(R.string.the_dawson_lounge),
+                    context.getString(R.string.the_dawson_lounge_place_ID),
+                    context.getString(R.string.the_dawson_lounge_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
+
+            i++;
+            if (the_dawson_lounge) {
+                j++;
+            }
+
+        /*insertData(context.getString(R.string.the_drury_buildings),
                 context.getString(R.string.the_drury_buildings_address),
                 context.getString(R.string.the_drury_buildings_directions));
 
@@ -1123,7 +1184,12 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.the_bison_bar),
                 context.getString(R.string.the_brew_dock),
                 context.getString(R.string.the_bull_and_castle),
-                context.getString(R.string.the_camden_exchange)
+                context.getString(R.string.the_camden_exchange),
+                context.getString(R.string.the_capitol_lounge),
+                context.getString(R.string.the_church),
+                context.getString(R.string.the_czech_inn),
+                context.getString(R.string.the_dame_tavern),
+                context.getString(R.string.the_dawson_lounge)
         };
     }
 

@@ -352,29 +352,25 @@
     <string name="the_camden_exchange_description">No description available</string>
     <string name="the_camden_exchange_place_ID">ChIJo43j5Z8OZ0gRmZVaOsKupEs</string>
 
-    <string name="the_capitol_bar">The Capitol Bar</string>
-    <string name="the_capitol_bar_address">1 Aungier St, Dublin 2</string>
-    <string name="the_capitol_bar_directions">From College Green (Trinity College), walk straight up Dame Street. Take the third left turn onto South Great George\'s Street. Walk up this street until you come to Aungier Street. You will see the Capitol Bar on the left corner.</string>
-
-    <string name="the_celt">The Celt</string>
-    <string name="the_celt_address">81 Talbot Street, Dublin 1</string>
-    <string name="the_celt_directions">From O\' Connell Street (the Spire), turn to face O\' Connell bridge and turn left onto Earl Street North. Walk up this street and continue on to Talbot Street. Walk down Talbot Street and you will soon see The Celt on the right.</string>
+    <string name="the_capitol_lounge">The Capitol Lounge</string>
+    <string name="the_capitol_lounge_description">No description available</string>
+    <string name="the_capitol_lounge_place_ID">ChIJ-TLVxRuQREgRGUNMEs5QZ-w</string>
 
     <string name="the_church">The Church</string>
-    <string name="the_church_address">Jervis Street, Dublin 1</string>
-    <string name="the_church_directions">From O\' Connell Street (the Spire), turn to face O\' Connell bridge and turn right onto Henry Street. Walk all the way up this street and you will see The Church on the left hand corner.</string>
+    <string name="the_church_description">Sympathetic conversion of imposing church with cafe/bar and Irish restaurant surrounded by terraces</string>
+    <string name="the_church_place_ID">ChIJtTOXRIIOZ0gRiLAbrd61jVs</string>
 
     <string name="the_czech_inn">The Czech Inn</string>
-    <string name="the_czech_inn_address">Essex gate, Temple Bar, Dublin 8</string>
-    <string name="the_czech_inn_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street. Walk up this street and you will see The Czech Inn on the right hand corner.</string>
+    <string name="the_czech_inn_description">No description available</string>
+    <string name="the_czech_inn_place_ID">ChIJOxV7U50OZ0gRRO9-YVORwpw</string>
 
     <string name="the_dame_tavern">The Dame Tavern</string>
-    <string name="the_dame_tavern_address">18 Dame Court, Dublin 2</string>
-    <string name="the_dame_tavern_directions">From College Green (Trinity College), turn to face Dame Street. Walk up this street and take the second left turn onto Trinity Street. Then, take the first right turn onto Dame Lane. Walk up this lane and you will see Dame Tavern on the left hand corner.</string>
+    <string name="the_dame_tavern_description">No description available</string>
+    <string name="the_dame_tavern_place_ID">ChIJtaDa5pwOZ0gRGE1TdBU_Y64</string>
 
     <string name="the_dawson_lounge">The Dawson Lounge</string>
-    <string name="the_dawson_lounge_address">25 Dawson Street, Dublin 2</string>
-    <string name="the_dawson_lounge_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk around Trinity College. Take the first right turn onto Dawson Street. Walk all the way up this street and you will see The Dawson Lounge on the right.</string>
+    <string name="the_dawson_lounge_description">One of the smallest pubs in the country provides an intimate atmosphere for a drink</string>
+    <string name="the_dawson_lounge_place_ID">ChIJifM5W5kOZ0gRdvKCX7HHmPw</string>
 
     <string name="the_drury_buildings">The Drury Buildings</string>
     <string name="the_drury_buildings_address">55 Drury Street, Dublin 2</string>
