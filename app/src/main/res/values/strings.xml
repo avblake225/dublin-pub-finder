@@ -9,9 +9,8 @@
     <string name="author_name">Tony Blake</string>
     <string name="author_bio">I\'m a Software Engineer from Dublin, Ireland.
         I\'ve had the opportunity to work for a range of tech companies from start-up to multinational.
-        I have experience developing all types of software (Embedded, Mobile, Desktop and Web).
-        You can find me on LinkedIn at https://www.linkedin.com/in/tonyblakesoftware.
-        Alternatively you can email me at avblake225@gmail.com</string>
+        I have experience developing all types of software but this is my first Android app so I hope
+    you like it. When I\'m not writing code you\'ll find me playing my guitar, watching rugby or out cycling in the sunshine.</string>
 
     <string name="no_favourites">No favourites</string>
     <string name="reload">Reload</string>
@@ -373,24 +372,24 @@
     <string name="the_dawson_lounge_place_ID">ChIJifM5W5kOZ0gRdvKCX7HHmPw</string>
 
     <string name="the_drury_buildings">The Drury Buildings</string>
-    <string name="the_drury_buildings_address">55 Drury Street, Dublin 2</string>
-    <string name="the_drury_buildings_directions">From College Green (Trinity College), turn to face Dame Street. Walk up this street and take the third left turn and walk up South Great George\'s Street. Take the third left turn onto Fade Street. Walk to the end of this street and you will see The Drury Buildings across the road.</string>
+    <string name="the_drury_buildings_description">No description available</string>
+    <string name="the_drury_buildings_place_ID">ChIJPS_UT5wOZ0gRmOgA9V8Jp8M</string>
 
     <string name="the_duke">The Duke</string>
-    <string name="the_duke_address">8 Duke St, Dublin 2</string>
-    <string name="the_duke_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first left turn onto Duke Street. You will see The Duke on the left.</string>
+    <string name="the_duke_description">Victorian watering hole with heated smoking terrace and traditional music sessions each Sunday</string>
+    <string name="the_duke_place_ID">ChIJOe_6vZsOZ0gRZivVj7LCvic</string>
 
     <string name="the_east_side_tavern">The East Side Tavern</string>
-    <string name="the_east_side_tavern_address">104 Leeson Street Lower, Dublin 2</string>
-    <string name="the_east_side_tavern_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk down Nassau Street. Take the first right turn and walk all the way up Dawson Street. Then, turn left and walk around St. Stephen\'s Green. Turn left onto Leeson Street Lower and you will immediately see the East Side Tavern.</string>
+    <string name="the_east_side_tavern_description">No description available</string>
+    <string name="the_east_side_tavern_place_ID">ChIJbY9Hk5gOZ0gR947MRQpiQA4</string>
 
     <string name="the_exchequer">The Exchequer</string>
-    <string name="the_exchequer_address">3 Exchequer Street, Dublin 2</string>
-    <string name="the_exchequer_directions">From College Green (Trinity College), turn to face Dame Street. Then, turn left and walk straight towards Grafton Street. Walk a few feet up Grafton Street and take the first right turn onto Wicklow Street. Walk up this street continue onto Exchequer Street. You will see The Exchequer at the end of this street on the right hand corner.</string>
+    <string name="the_exchequer_description">Imaginative pub grub using Irish meat and sustainable native seafood served in a contemporary space</string>
+    <string name="the_exchequer_place_ID">ChIJly2p8JwOZ0gRmT7PjSiRto0</string>
 
     <string name="the_garage_bar">The Garage Bar</string>
-    <string name="the_garage_bar_address">Essex St East, Dublin 2</string>
-    <string name="the_garage_bar_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street East. You will see the Garage Bar a few feet up on the right.</string>
+    <string name="the_garage_bar_description">No description available</string>
+    <string name="the_garage_bar_place_ID">ChIJt3DQzIIOZ0gRMIMT7t_LHbg</string>
 
     <string name="the_george">The George</string>
     <string name="the_george_address">George\'s Street, Dublin 2</string>
