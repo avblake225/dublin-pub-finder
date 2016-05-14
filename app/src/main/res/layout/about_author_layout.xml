@@ -31,7 +31,8 @@
                 android:layout_height="@dimen/iv_author_height"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/tv_margin_top"
-                android:layout_marginBottom="@dimen/tv_margin_bottom"/>
+                android:layout_marginBottom="@dimen/tv_margin_bottom"
+                android:src="@drawable/me"/>
 
             <TextView
                 android:id="@+id/tv_author_bio"

@@ -5,10 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
-import android.media.ExifInterface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
@@ -24,7 +20,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -36,7 +31,6 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.places.Places;
 
-import java.io.File;
 import java.util.ArrayList;
 
 public class HomeScreen extends AppCompatActivity implements SearchDialog.SearchDialogListener, SearchByNameDialog.SearchByNameDialogListener,
@@ -116,8 +110,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     private LayoutInflater inflater;
 
     private View about_author_layout;
-
-    private ImageView iv_author;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -323,10 +315,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                         single_pub_details_container_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
 
                         about_author_layout = inflater.inflate(R.layout.about_author_layout, null);
-
-                        iv_author = (ImageView)about_author_layout.findViewById(R.id.iv_author);
-
-                        prepareImage("me.png");
 
                         single_pub_details_container.addView(about_author_layout);
 
@@ -890,45 +878,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                 tv_home_screen.setBackgroundColor(context.getResources().getColor(R.color.white));
 
-        }
-    }
-
-    private void prepareImage(String imagePath){
-
-        Bitmap original_image = BitmapFactory.decodeResource(context.getResources(), R.drawable.me);
-
-        Matrix matrix = new Matrix();
-
-        int orientation = 0;
-
-        try {
-
-            File imageFile = new File(imagePath);
-
-            ExifInterface exif = new ExifInterface(imageFile.getAbsolutePath());
-
-            orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
-
-            if(orientation == 0){
-
-                orientation -= 90;
-
-                matrix.postRotate(orientation);
-
-                Bitmap new_image = Bitmap.createBitmap(original_image, 0, 0, original_image.getWidth(), original_image.getHeight(), matrix, true);
-
-                iv_author.setImageBitmap(new_image);
-            }
-            else{
-
-                iv_author.setImageBitmap(original_image);
-            }
-
-            //iv_author.setMaxWidth((int)context.getResources().getDimension(R.dimen.iv_author_width));
-            //iv_author.setMaxHeight((int)context.getResources().getDimension(R.dimen.iv_author_height));
-        }
-        catch (Exception e) {
-            e.printStackTrace();
         }
     }
 
