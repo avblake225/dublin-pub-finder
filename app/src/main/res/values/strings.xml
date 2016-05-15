@@ -363,6 +363,10 @@
     <string name="the_capitol_lounge_description">No description available</string>
     <string name="the_capitol_lounge_place_ID">ChIJ-TLVxRuQREgRGUNMEs5QZ-w</string>
 
+    <string name="the_celt">The Celt</string>
+    <string name="the_celt_description">No description available</string>
+    <string name="the_celt_place_ID">ChIJZwg6WI8OZ0gRuDskFjw5m84</string>
+
     <string name="the_church">The Church</string>
     <string name="the_church_description">Sympathetic conversion of imposing church with cafe/bar and Irish restaurant surrounded by terraces</string>
     <string name="the_church_place_ID">ChIJtTOXRIIOZ0gRiLAbrd61jVs</string>
@@ -420,24 +424,24 @@
     <string name="the_grand_social_place_ID">ChIJgzxUFYMOZ0gRahqesNCyL9M</string>
 
     <string name="the_gypsy_rose">The Gypsy Rose</string>
-    <string name="the_gypsy_rose_address">5 Aston Quay, Dublin 2</string>
-    <string name="the_gypsy_rose_directions">From O\' Connell Street, walk over O\' Connell bridge and turn right onto Aston Quay. Walk up this street towards the Ha\'penny bridge. You will soon see The Gypsy Rose on the left.</string>
+    <string name="the_gypsy_rose_description">No description available</string>
+    <string name="the_gypsy_rose_place_ID">ChIJeXtDaIMOZ0gRFmKdbra0zX4</string>
 
     <string name="the_hairy_lemon">The Hairy Lemon</string>
-    <string name="the_hairy_lemon_address">Stephen Street Lower, Dublin 2</string>
-    <string name="the_hairy_lemon_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk all the way up this street and take the last right turn. You will see The Hairy Lemon on the right hand corner.</string>
+    <string name="the_hairy_lemon_description">Unconventional pub where The Commitments was filmed with years worth of memorabilia on the walls</string>
+    <string name="the_hairy_lemon_place_ID">ChIJ2Qf_MpwOZ0gRo65Kwjms1JE</string>
 
     <string name="the_harbourmaster">The Harbourmaster</string>
-    <string name="the_harbourmaster_address">1 Custom House Quay, IFSC, Dublin 1</string>
-    <string name="the_harbourmaster_directions">From O\'Connell Street (the Spire), turn to face O\' Connell bridge and walk straight. Take the second left turn onto Abbey Street Lower. Walk all the way up this street and around the bus garage (Busáras). Turn right and walk into the IFSC. You will see the Harbourmaster on the left corner.</string>
+    <string name="the_harbourmaster_description">Varied menu served in converted brick walled harbourmaster\'s office with feature glass and wood</string>
+    <string name="the_harbourmaster_place_ID">ChIJP7_1W50OZ0gRt9-cEWsKBVw</string>
 
     <string name="the_liquor_rooms">The Liquor Rooms</string>
-    <string name="the_liquor_rooms_address">7 Wellington Quay, Dublin 2</string>
-    <string name="the_liquor_rooms_directions">From O\' Connell Street, walk over O\' Connell bridge and turn right onto Aston Quay. Walk straight along the Quays, past the Ha\'penny bridge. Continue on straight, past the Millenium bridge. You will soon see The Liquor Room\'s on the left.</string>
+    <string name="the_liquor_rooms_description">Creative cocktails and sharing platters in a cosy basement bar with opulent rooms, plus dance floor</string>
+    <string name="the_liquor_rooms_place_ID">ChIJY-HBs4IOZ0gR8Tzb0TWJx90</string>
 
     <string name="the_living_room">The Living Room</string>
-    <string name="the_living_room_address">Cathal Brugha Street, Dublin 1</string>
-    <string name="the_living_room_directions">From O\'Connell Street (the Spire), turn away from O\' Connell bridge and walk straight. Take the second right turn onto Cathal Brugha Street and you will see The Living Room on the left.</string>
+    <string name="the_living_room_description">One of Dublin\'s biggest TVs for a range of sports as well as a beer garden and weekend DJ sessions</string>
+    <string name="the_living_room_place_ID">ChIJbV4GlYYOZ0gRaGe3lJppVYw</string>
 
     <string name="the_lombard">The Lombard</string>
     <string name="the_lombard_address">44 Pearse Street, Dublin 2</string>
