@@ -1256,27 +1256,92 @@ public class DBManager extends SQLiteOpenHelper{
                 j++;
             }
 
-        /*insertData(context.getString(R.string.the_lombard),
-                context.getString(R.string.the_lombard_address),
-                context.getString(R.string.the_lombard_directions));
+            boolean the_lombard = insertData(context.getString(R.string.the_lombard),
+                    context.getString(R.string.the_lombard_place_ID),
+                    context.getString(R.string.the_lombard_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no));
 
-        insertData(context.getString(R.string.the_long_hall),
-                context.getString(R.string.the_long_hall_address),
-                context.getString(R.string.the_long_hall_directions));
+            i++;
+            if (the_lombard) {
+                j++;
+            }
 
-        insertData(context.getString(R.string.the_long_stone),
-                context.getString(R.string.the_long_stone_address),
-                context.getString(R.string.the_long_stone_directions));
+            boolean the_long_hall = insertData(context.getString(R.string.the_long_hall),
+                    context.getString(R.string.the_long_hall_place_ID),
+                    context.getString(R.string.the_long_hall_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
 
-        insertData(context.getString(R.string.the_market_bar),
-                context.getString(R.string.the_market_bar_address),
-                context.getString(R.string.the_market_bar_directions));
+            i++;
+            if (the_long_hall) {
+                j++;
+            }
 
-        insertData(context.getString(R.string.the_mercantile),
-                context.getString(R.string.the_mercantile_address),
-                context.getString(R.string.the_mercantile_directions));
+            boolean the_long_stone = insertData(context.getString(R.string.the_long_stone),
+                    context.getString(R.string.the_long_stone_place_ID),
+                    context.getString(R.string.the_long_stone_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
 
-        insertData(context.getString(R.string.the_morgan_bar),
+            i++;
+            if (the_long_stone) {
+                j++;
+            }
+
+            boolean the_market_bar = insertData(context.getString(R.string.the_market_bar),
+                    context.getString(R.string.the_market_bar_place_ID),
+                    context.getString(R.string.the_market_bar_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.modern),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no));
+
+            i++;
+            if (the_market_bar) {
+                j++;
+            }
+
+            boolean the_mercantile = insertData(context.getString(R.string.the_mercantile),
+                    context.getString(R.string.the_mercantile_place_ID),
+                    context.getString(R.string.the_mercantile_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.modern),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes));
+
+            i++;
+            if (the_mercantile) {
+                j++;
+            }
+
+        /*insertData(context.getString(R.string.the_morgan_bar),
                 context.getString(R.string.the_morgan_bar_address),
                 context.getString(R.string.the_morgan_bar_directions));
 
@@ -1417,7 +1482,12 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.the_hairy_lemon),
                 context.getString(R.string.the_harbourmaster),
                 context.getString(R.string.the_liquor_rooms),
-                context.getString(R.string.the_living_room)
+                context.getString(R.string.the_living_room),
+                context.getString(R.string.the_lombard),
+                context.getString(R.string.the_long_hall),
+                context.getString(R.string.the_long_stone),
+                context.getString(R.string.the_market_bar),
+                context.getString(R.string.the_mercantile)
         };
     }
 
