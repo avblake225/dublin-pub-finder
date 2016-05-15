@@ -8,10 +8,17 @@
     <string name="author">Author:</string>
     <string name="author_name">Tony Blake</string>
     <string name="author_bio">I\'m a Software Engineer from Dublin, Ireland.
-        I\'ve had the opportunity to work for a range of tech companies on the island of Ireland from start-up to multinational.
-        I have experience developing all kinds of software, from embedded firmware in electronic devices through to web and mobile applications.
+        I\'ve had the opportunity to work for a range of tech companies from start-up to multinational.
+        I have experience developing all kinds of software, from embedded firmware for electronic devices through to web and mobile applications.
         When I\'m not writing code you\'ll find me indulging in my passion for music. I\'m a guitarist and a songwriter and I have a number of songs
-        on SoundCloud: www.soundcloud.com/tonyblakemusic.</string>
+        on SoundCloud.</string>
+
+    <string name="email_header">Email:</string>
+    <string name="email_address">avblake225@gmail.com</string>
+    <string name="linkedin_header">LinkedIn:</string>
+    <string name="linkedin_url">https://www.linkedin.com/in/tonyblakesoftware</string>
+    <string name="music_header">Music:</string>
+    <string name="music_url">https://soundcloud.com/tonyblakemusic</string>
 
     <string name="no_favourites">No favourites</string>
     <string name="reload">Reload</string>

@@ -43,6 +43,79 @@
                 android:layout_margin="@dimen/author_bio_margin"
                 android:text="@string/author_bio"/>
 
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/url_section_margin_left"
+                android:layout_marginTop="@dimen/url_section_margin_top">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email_header"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/url_section_margin_left"
+                    android:text="@string/email_address"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/url_section_margin_left"
+                android:layout_marginTop="@dimen/url_section_margin_top">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/linkedin_header"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_linkedin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/url_section_margin_left"
+                    android:autoLink="web"
+                    android:text="@string/linkedin_url"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/url_section_margin_left"
+                android:layout_marginBottom="@dimen/url_section_margin_bottom"
+                android:layout_marginTop="@dimen/url_section_margin_top">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/music_header"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/url_section_margin_left"
+                    android:autoLink="web"
+                    android:text="@string/music_url"/>
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>
