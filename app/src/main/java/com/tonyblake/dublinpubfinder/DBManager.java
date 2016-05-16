@@ -1603,6 +1603,15 @@ public class DBManager extends SQLiteOpenHelper{
         insertData(context.getString(R.string.the_workmans_club),
                 context.getString(R.string.the_workmans_club_address),
                 context.getString(R.string.the_workmans_club_directions));*/
+
+        /* Dakota
+        *  The Brazen Head
+        *  Graingers
+        *  Slatterys
+        *  O' Shea's
+        *  The Lotts
+        *  The Parnell
+        *  The Black Sheep*/
         }
 
         pub_names = new String[]{
