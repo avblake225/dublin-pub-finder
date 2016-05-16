@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
@@ -31,6 +32,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.places.Places;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 public class HomeScreen extends AppCompatActivity implements SearchDialog.SearchDialogListener, SearchByNameDialog.SearchByNameDialogListener,
@@ -565,7 +567,11 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         intent.putExtra("name", pub.name);
         intent.putExtra("address", pub.address);
         intent.putExtra("rating", pub.rating);
-        intent.putExtra("image", pub.image);
+
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        pub.image.compress(Bitmap.CompressFormat.PNG, 50, byteArrayOutputStream);
+        intent.putExtra("byteArray", byteArrayOutputStream.toByteArray());
+
         intent.putExtra("description", pub.description);
         intent.putExtra("favourite", favourite);
 

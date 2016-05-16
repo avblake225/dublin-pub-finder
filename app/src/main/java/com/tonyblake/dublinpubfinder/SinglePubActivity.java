@@ -2,6 +2,7 @@ package com.tonyblake.dublinpubfinder;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -74,7 +75,10 @@ public class SinglePubActivity extends AppCompatActivity implements GoogleApiCli
         name = savedInstanceState.getString("name");
         address = savedInstanceState.getString("address");
         rating = savedInstanceState.getFloat("rating");
-        image = savedInstanceState.getParcelable("image");
+
+        image = BitmapFactory.decodeByteArray(
+                    getIntent().getByteArrayExtra("byteArray"), 0, getIntent().getByteArrayExtra("byteArray").length);
+
         description = savedInstanceState.getString("description");
         favourite = savedInstanceState.getString("favourite");
     }
