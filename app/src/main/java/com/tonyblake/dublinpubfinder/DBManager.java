@@ -1341,27 +1341,92 @@ public class DBManager extends SQLiteOpenHelper{
                 j++;
             }
 
-        /*insertData(context.getString(R.string.the_morgan_bar),
-                context.getString(R.string.the_morgan_bar_address),
-                context.getString(R.string.the_morgan_bar_directions));
+            boolean the_morgan_bar = insertData(context.getString(R.string.the_morgan_bar),
+                    context.getString(R.string.the_morgan_bar_place_ID),
+                    context.getString(R.string.the_morgan_bar_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.modern),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes));
 
-        insertData(context.getString(R.string.the_norseman),
-                context.getString(R.string.the_norseman_address),
-                context.getString(R.string.the_norseman_directions));
+            i++;
+            if (the_morgan_bar) {
+                j++;
+            }
 
-        insertData(context.getString(R.string.the_octagon_bar),
-                context.getString(R.string.the_octagon_bar_address),
-                context.getString(R.string.the_octagon_bar_directions));
+            boolean the_norseman = insertData(context.getString(R.string.the_norseman),
+                    context.getString(R.string.the_norseman_place_ID),
+                    context.getString(R.string.the_norseman_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes));
 
-        insertData(context.getString(R.string.the_odeon),
-                context.getString(R.string.the_odeon_address),
-                context.getString(R.string.the_odeon_directions));
+            i++;
+            if (the_norseman) {
+                j++;
+            }
 
-        insertData(context.getString(R.string.the_old_stand),
-                context.getString(R.string.the_old_stand_address),
-                context.getString(R.string.the_old_stand_directions));
+            boolean the_octagon_bar = insertData(context.getString(R.string.the_octagon_bar),
+                    context.getString(R.string.the_octagon_bar_place_ID),
+                    context.getString(R.string.the_octagon_bar_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.modern),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes));
 
-        insertData(context.getString(R.string.the_oliver_st_john_gogarty),
+            i++;
+            if (the_octagon_bar) {
+                j++;
+            }
+
+            boolean the_odeon = insertData(context.getString(R.string.the_odeon),
+                    context.getString(R.string.the_odeon_place_ID),
+                    context.getString(R.string.the_odeon_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.modern),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes));
+
+            i++;
+            if (the_odeon) {
+                j++;
+            }
+
+            boolean the_old_stand = insertData(context.getString(R.string.the_old_stand),
+                    context.getString(R.string.the_old_stand_place_ID),
+                    context.getString(R.string.the_old_stand_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
+
+            i++;
+            if (the_old_stand) {
+                j++;
+            }
+
+        /*insertData(context.getString(R.string.the_oliver_st_john_gogarty),
                 context.getString(R.string.the_oliver_st_john_gogarty_address),
                 context.getString(R.string.the_oliver_st_john_gogarty_directions));
 
@@ -1487,7 +1552,12 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.the_long_hall),
                 context.getString(R.string.the_long_stone),
                 context.getString(R.string.the_market_bar),
-                context.getString(R.string.the_mercantile)
+                context.getString(R.string.the_mercantile),
+                context.getString(R.string.the_morgan_bar),
+                context.getString(R.string.the_norseman),
+                context.getString(R.string.the_octagon_bar),
+                context.getString(R.string.the_odeon),
+                context.getString(R.string.the_old_stand)
         };
     }
 

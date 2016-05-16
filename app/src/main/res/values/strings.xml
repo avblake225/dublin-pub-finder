@@ -464,24 +464,24 @@
     <string name="the_mercantile_place_ID">ChIJzyav3ZwOZ0gRcAn07eqye4I</string>
 
     <string name="the_morgan_bar">The Morgan Bar</string>
-    <string name="the_morgan_bar_address">10 Fleet Street, Dublin 2</string>
-    <string name="the_morgan_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight onto Westmoreland Street. Take the first right turn onto Fleet Street. Walk a few feet up this street and you will see The Morgan Bar on the right.</string>
+    <string name="the_morgan_bar_description">Funky and buzzy cocktail bar with live DJs and a courtyard</string>
+    <string name="the_morgan_bar_place_ID">ChIJISjK0PEMZ0gRLn5bYGkhZdc</string>
 
     <string name="the_norseman">The Norseman</string>
-    <string name="the_norseman_address">28 Essex Street East, Dublin 2</string>
-    <string name="the_norseman_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street. Walk up this street and you will see The Norseman on the left hand corner.</string>
+    <string name="the_norseman_description">Traditional Irish pub serving a light international menu retaining original 120 year old partitions</string>
+    <string name="the_norseman_place_ID">ChIJVfWIKoMOZ0gRIX4KZlTka4k</string>
 
     <string name="the_octagon_bar">The Octagon Bar</string>
-    <string name="the_octagon_bar_address">8 Wellington Quay, Dublin 2</string>
-    <string name="the_octagon_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and turn right onto Aston Quay. Walk straight along the Quays, past the Ha\'penny bridge. Continue on straight, past the Millenium bridge. You will soon see The Octagon Bar on the left.</string>
+    <string name="the_octagon_bar_description">Stylish venue in an upscale hotel, with cool 8-sided bar and art deco back room, plus cocktails</string>
+    <string name="the_octagon_bar_place_ID">ChIJo8oetYIOZ0gRQq0j6TS7s3w</string>
 
     <string name="the_odeon">The Odeon</string>
-    <string name="the_odeon_address">Old Railway Station, 57 Harcourt Street, Dublin 2</string>
-    <string name="the_odeon_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk all the way up Grafton Street. Then, turn right and walk past St. Stephen\'s Green. Continue straight onto Harcourt Street. Walk all the way up this street and you will see The Odeon on the left.</string>
+    <string name="the_odeon_description">This lively, lavish nightspot has high ceilings, a curtain-draped interior and an ornate marble bar</string>
+    <string name="the_odeon_place_ID">ChIJ3Qk9L6AOZ0gRf_L2tNDZcOY</string>
 
     <string name="the_old_stand">The Old Stand</string>
-    <string name="the_old_stand_address">37 Exchequer Street, Dublin 2</string>
-    <string name="the_old_stand_directions">From College Green (Trinity College), turn to face Dame Street. Then, turn left and walk straight towards Grafton Street. Walk a few feet up Grafton Street and take the first right turn onto Wicklow Street. Walk up this street and you will see The Old Stand across the road on the right hand corner.</string>
+    <string name="the_old_stand_description">Sports and political heritage in a cosy traditional pub-eatery with a horseshoe bar and tiled floor</string>
+    <string name="the_old_stand_place_ID">ChIJMdEljJwOZ0gRBxkvK7TJW_0</string>
 
     <string name="the_oliver_st_john_gogarty">The Oliver St John Gogarty</string>
     <string name="the_oliver_st_john_gogarty_address">58 Fleet Street, Dublin 2</string>
