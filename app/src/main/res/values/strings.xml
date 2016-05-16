@@ -484,24 +484,24 @@
     <string name="the_old_stand_place_ID">ChIJMdEljJwOZ0gRBxkvK7TJW_0</string>
 
     <string name="the_oliver_st_john_gogarty">The Oliver St John Gogarty</string>
-    <string name="the_oliver_st_john_gogarty_address">58 Fleet Street, Dublin 2</string>
-    <string name="the_oliver_st_john_gogarty_directions">From O\'Connell Street, walk over O\'Connell bridge and continue straight onto Westmoreland Street. Walk up this street and take the first right turn onto Fleet Street. Walk up this street and you will soon see Oliver St. John Gogarty\'s on the left hand corner.</string>
+    <string name="the_oliver_st_john_gogarty_description">Storied Irish pub featuring nightly live music</string>
+    <string name="the_oliver_st_john_gogarty_place_ID">ChIJITCoVIMOZ0gRyPcpKKtEkEM</string>
 
     <string name="the_palace_bar">The Palace Bar</string>
-    <string name="the_palace_bar_address">21 Fleet Street, Dublin 2</string>
-    <string name="the_palace_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and continue straight onto Westmoreland Street. Take the first right turn onto Fleet Street. You will see The Palace Bar on the right.</string>
+    <string name="the_palace_bar_description">Victorian bar with stained glass skylight and timeless ambiance for hosting Irish music sessions</string>
+    <string name="the_palace_bar_place_ID">ChIJY8EByoQOZ0gRSMYJds1CQHU</string>
 
     <string name="the_porterhouse_central">The Porterhouse Central</string>
-    <string name="the_porterhouse_central_address">45 Nassau Street, Dublin 2</string>
-    <string name="the_porterhouse_central_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Nassau Street. You will see Porterhouse Central a few feet up on the right.</string>
+    <string name="the_porterhouse_central_description">Local real ales and comfort food in huge, traditional pub with long mahogany bar and vintage prints</string>
+    <string name="the_porterhouse_central_place_ID">ChIJ7yhNC5sOZ0gRj37xd2bZyjY</string>
 
     <string name="the_river_bar">The River Bar</string>
-    <string name="the_river_bar_address">1 Burgh Quay, Dublin 2</string>
-    <string name="the_river_bar_directions">From O\' Connell Street, walk over O\' Connell bridge and turn left onto Burgh Quay. You will see the River Bar on the right.</string>
+    <string name="the_river_bar_description">No description available</string>
+    <string name="the_river_bar_place_ID">ChIJH9113oQOZ0gR4vSG0NFAm0M</string>
 
     <string name="the_south_william">The South William</string>
-    <string name="the_south_william_address">52 South William Street, Dublin 2</string>
-    <string name="the_south_william_directions">From College Green (Trinity College), turn to face Dame Street. Turn left and walk up Grafton Street. Take the first right turn onto Wicklow Street and then take the second left turn onto William Street South. Walk up this street and you will soon see the South William on the left.</string>
+    <string name="the_south_william_description">Contemporary venue for varied international dishes, DJ sessions, cocktails and craft beers</string>
+    <string name="the_south_william_place_ID">ChIJjXYDRJwOZ0gRyDUh7I5Rtic</string>
 
     <string name="the_stags_head">The Stags Head</string>
     <string name="the_stags_head_address">1 Dame Court, Dublin 2</string>

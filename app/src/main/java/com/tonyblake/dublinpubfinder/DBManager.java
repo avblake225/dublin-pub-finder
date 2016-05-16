@@ -1426,27 +1426,92 @@ public class DBManager extends SQLiteOpenHelper{
                 j++;
             }
 
-        /*insertData(context.getString(R.string.the_oliver_st_john_gogarty),
-                context.getString(R.string.the_oliver_st_john_gogarty_address),
-                context.getString(R.string.the_oliver_st_john_gogarty_directions));
+            boolean the_oliver_st_john_gogarty = insertData(context.getString(R.string.the_oliver_st_john_gogarty),
+                    context.getString(R.string.the_oliver_st_john_gogarty_place_ID),
+                    context.getString(R.string.the_oliver_st_john_gogarty_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes));
 
-        insertData(context.getString(R.string.the_palace_bar),
-                context.getString(R.string.the_palace_bar_address),
-                context.getString(R.string.the_palace_bar_directions));
+            i++;
+            if (the_oliver_st_john_gogarty) {
+                j++;
+            }
 
-        insertData(context.getString(R.string.the_porterhouse_central),
-                context.getString(R.string.the_porterhouse_central_address),
-                context.getString(R.string.the_porterhouse_central_directions));
+            boolean the_palace_bar = insertData(context.getString(R.string.the_palace_bar),
+                    context.getString(R.string.the_palace_bar_place_ID),
+                    context.getString(R.string.the_palace_bar_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no));
 
-        insertData(context.getString(R.string.the_river_bar),
-                context.getString(R.string.the_river_bar_address),
-                context.getString(R.string.the_river_bar_directions));
+            i++;
+            if (the_palace_bar) {
+                j++;
+            }
 
-        insertData(context.getString(R.string.the_south_william),
-                context.getString(R.string.the_south_william_address),
-                context.getString(R.string.the_south_william_directions));
+            boolean the_porterhouse_central = insertData(context.getString(R.string.the_porterhouse_central),
+                    context.getString(R.string.the_porterhouse_central_place_ID),
+                    context.getString(R.string.the_porterhouse_central_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes));
 
-        insertData(context.getString(R.string.the_stags_head),
+            i++;
+            if (the_porterhouse_central) {
+                j++;
+            }
+
+            boolean the_river_bar = insertData(context.getString(R.string.the_river_bar),
+                    context.getString(R.string.the_river_bar_place_ID),
+                    context.getString(R.string.the_river_bar_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.modern),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes));
+
+            i++;
+            if (the_river_bar) {
+                j++;
+            }
+
+            boolean the_south_william = insertData(context.getString(R.string.the_south_william),
+                    context.getString(R.string.the_south_william_place_ID),
+                    context.getString(R.string.the_south_william_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.modern),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes));
+
+            i++;
+            if (the_south_william) {
+                j++;
+            }
+
+        /*insertData(context.getString(R.string.the_stags_head),
                 context.getString(R.string.the_stags_head_address),
                 context.getString(R.string.the_stags_head_directions));
 
@@ -1557,7 +1622,12 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.the_norseman),
                 context.getString(R.string.the_octagon_bar),
                 context.getString(R.string.the_odeon),
-                context.getString(R.string.the_old_stand)
+                context.getString(R.string.the_old_stand),
+                context.getString(R.string.the_oliver_st_john_gogarty),
+                context.getString(R.string.the_palace_bar),
+                context.getString(R.string.the_porterhouse_central),
+                context.getString(R.string.the_river_bar),
+                context.getString(R.string.the_south_william)
         };
     }
 
