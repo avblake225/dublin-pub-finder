@@ -245,7 +245,7 @@ public class DBManager extends SQLiteOpenHelper{
                     context.getString(R.string.no),
                     context.getString(R.string.yes),
                     context.getString(R.string.no),
-                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
                     context.getString(R.string.yes));
 
             i++;
@@ -345,7 +345,7 @@ public class DBManager extends SQLiteOpenHelper{
                     context.getString(R.string.traditional_irish),
                     context.getString(R.string.southside),
                     context.getString(R.string.yes),
-                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
                     context.getString(R.string.no),
                     context.getString(R.string.no),
                     context.getString(R.string.no));
@@ -1511,27 +1511,92 @@ public class DBManager extends SQLiteOpenHelper{
                 j++;
             }
 
-        /*insertData(context.getString(R.string.the_stags_head),
-                context.getString(R.string.the_stags_head_address),
-                context.getString(R.string.the_stags_head_directions));
+            boolean the_stags_head = insertData(context.getString(R.string.the_stags_head),
+                    context.getString(R.string.the_stags_head_place_ID),
+                    context.getString(R.string.the_stags_head_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
 
-        insertData(context.getString(R.string.the_sweeney_mongrel),
-                context.getString(R.string.the_sweeney_mongrel_address),
-                context.getString(R.string.the_sweeney_mongrel_directions));
+            i++;
+            if (the_stags_head) {
+                j++;
+            }
 
-        insertData(context.getString(R.string.the_temple_bar),
-                   context.getString(R.string.the_temple_bar_address),
-                   context.getString(R.string.the_temple_bar_directions));
+            boolean the_sweeney_mongrel = insertData(context.getString(R.string.the_sweeney_mongrel),
+                    context.getString(R.string.the_sweeney_mongrel_place_ID),
+                    context.getString(R.string.the_sweeney_mongrel_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.modern),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes));
 
-        insertData(context.getString(R.string.the_turks_head),
-                context.getString(R.string.the_turks_head_address),
-                context.getString(R.string.the_turks_head_directions));
+            i++;
+            if (the_sweeney_mongrel) {
+                j++;
+            }
 
-        insertData(context.getString(R.string.whelans),
-                context.getString(R.string.whelans_address),
-                context.getString(R.string.whelans_directions));
+            boolean the_temple_bar = insertData(context.getString(R.string.the_temple_bar),
+                    context.getString(R.string.the_temple_bar_place_ID),
+                    context.getString(R.string.the_temple_bar_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes));
 
-        insertData(context.getString(R.string.the_woolshed),
+            i++;
+            if (the_temple_bar) {
+                j++;
+            }
+
+            boolean the_turks_head = insertData(context.getString(R.string.the_turks_head),
+                    context.getString(R.string.the_turks_head_place_ID),
+                    context.getString(R.string.the_turks_head_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes));
+
+            i++;
+            if (the_turks_head) {
+                j++;
+            }
+
+            boolean whelans = insertData(context.getString(R.string.whelans),
+                    context.getString(R.string.whelans_place_ID),
+                    context.getString(R.string.whelans_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes));
+
+            i++;
+            if (whelans) {
+                j++;
+            }
+
+        /*insertData(context.getString(R.string.the_woolshed),
                 context.getString(R.string.the_woolshed_address),
                 context.getString(R.string.the_woolshed_directions));
 
@@ -1627,7 +1692,12 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.the_palace_bar),
                 context.getString(R.string.the_porterhouse_central),
                 context.getString(R.string.the_river_bar),
-                context.getString(R.string.the_south_william)
+                context.getString(R.string.the_south_william),
+                context.getString(R.string.the_stags_head),
+                context.getString(R.string.the_sweeney_mongrel),
+                context.getString(R.string.the_temple_bar),
+                context.getString(R.string.the_turks_head),
+                context.getString(R.string.whelans)
         };
     }
 

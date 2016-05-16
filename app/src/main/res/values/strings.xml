@@ -504,24 +504,24 @@
     <string name="the_south_william_place_ID">ChIJjXYDRJwOZ0gRyDUh7I5Rtic</string>
 
     <string name="the_stags_head">The Stags Head</string>
-    <string name="the_stags_head_address">1 Dame Court, Dublin 2</string>
-    <string name="the_stags_head_directions">From O\'Connell Street, walk over O\'Connell bridge and continue straight onto D\'Olier Street. At the end of this street, take a right up to College Green. From there, walk up Dame Street and turn left onto Trinity Street. Turn right onto Dame Lane and you\'ll see The Stag\'s Head up on the left.</string>
+    <string name="the_stags_head_description">Victorian pub with wrought-iron chandeliers, polished granite, old barrels and ceiling-high mirrors</string>
+    <string name="the_stags_head_place_ID">ChIJ8ZuR6JwOZ0gR5jtVW54gEHM</string>
 
     <string name="the_sweeney_mongrel">The Sweeney Mongrel</string>
-    <string name="the_sweeney_mongrel_address">32 Dame Street, Dublin 2</string>
-    <string name="the_sweeney_mongrel_directions">From College Green (Trinity College), turn to face Dame Street. Walk up Dame Street. Continue on past Church Lane. Continue on past Trinity Street. You will soon see The Sweeney Mongrel on the left.</string>
+    <string name="the_sweeney_mongrel_description">No description available</string>
+    <string name="the_sweeney_mongrel_place_ID">ChIJHxNVwpwOZ0gRzSn327Ut-p0</string>
 
     <string name="the_temple_bar">The Temple Bar</string>
-    <string name="the_temple_bar_address">47 Temple Bar, Dublin 2</string>
-    <string name="the_temple_bar_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Then, turn left and walk under Merchant Arch. You are now in Temple Bar, the Temple Bar is down the cobblestones on the right.</string>
+    <string name="the_temple_bar_description">Irish and international craft beer in legendary venue with Temple Bar\'s only licensed gardene</string>
+    <string name="the_temple_bar_place_ID">ChIJR9mP8ScMZ0gRWDrL2dfqLBA</string>
 
     <string name="the_turks_head">The Turks Head</string>
-    <string name="the_turks_head_address">27 Parliament Street, Dublin 2</string>
-    <string name="the_turks_head_directions">From O\'Connell Street, walk over O\'Connell bridge and turn right onto Aston Quay. Walk straight until you come to the Ha\'penny bridge. Continue on straight until you come to the Millennium bridge. Then, turn left onto Eustace Street and turn right onto Essex Street East. Walk up this street and you will see The Turk\'s Head on the left hand corner.</string>
+    <string name="the_turks_head_description">Bar and late night club with DJs in varied rooms with Gaudi-esque mosaics or painted ceiling domes</string>
+    <string name="the_turks_head_place_ID">ChIJw9a9U50OZ0gRRF9EShp8At4</string>
 
     <string name="whelans">Whelans</string>
-    <string name="whelans_address">25 Wexford Street, Dublin 2</string>
-    <string name="whelans_directions">From College Green (Trinity College), turn to face Dame Street. Walk straight up Dame Street and take the third left turn onto South Great George\'s Street. Walk straight up this street and continue onto Aungier Street. Walk straight up this street and continue onto Wexford Street. You will see Whelan\'s a few feet up on the right.</string>
+    <string name="whelans_description">Venue for live music and clubs or relaxing in The Parlour, decorated in 1950s sitting room-style</string>
+    <string name="whelans_place_ID">ChIJeVe40Z8OZ0gRWQrpG0YiJXA</string>
 
     <string name="the_woolshed">The Woolshed</string>
     <string name="the_woolshed_address">The Parnell Centre, Parnell Street, Dublin 1</string>
