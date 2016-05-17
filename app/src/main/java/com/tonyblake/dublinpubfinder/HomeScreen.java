@@ -53,8 +53,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     private RelativeLayout home_screen_layout_parent;
     private TextView tv_home_screen;
 
-    private RelativeLayout single_pub_details_container_parent;
-    private LinearLayout single_pub_details_container;
+    private LinearLayout about_author_layout_container;
 
     private GoogleApiClient client;
 
@@ -168,9 +167,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         downloadedPhoto_width = (int)context.getResources().getDimension(R.dimen.pub_image_width);
         downloadedPhoto_height = (int)context.getResources().getDimension(R.dimen.pub_image_height);
 
-        // Set up Single Pub Details
-        single_pub_details_container_parent = (RelativeLayout) findViewById(R.id.single_pub_details_container_parent);
-        single_pub_details_container = (LinearLayout) findViewById(R.id.single_pub_details_container);
+        about_author_layout_container = (LinearLayout) findViewById(R.id.about_author_layout_container);
 
         setRefreshMode(0);
 
@@ -310,13 +307,13 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         setRefreshMode(0);
 
-                        setHomeScreenTextViewMode(0);
+                        setHomeScreenTextViewMode(2);
 
-                        single_pub_details_container_parent.getLayoutParams().height = RelativeLayout.LayoutParams.MATCH_PARENT;
+                        tv_home_screen.setText(context.getString(R.string.author));
 
                         about_author_layout = inflater.inflate(R.layout.about_author_layout, null);
 
-                        single_pub_details_container.addView(about_author_layout);
+                        about_author_layout_container.addView(about_author_layout);
 
                         break;
 
@@ -791,9 +788,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         home_screen_layout_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
 
-        single_pub_details_container.removeAllViews();
-        single_pub_details_container_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
-        single_pub_details_container_parent.getLayoutParams().width = RelativeLayout.LayoutParams.WRAP_CONTENT;
+        about_author_layout_container.removeAllViews();
 
         if(list != null) list.setAdapter(null);
 
