@@ -3,6 +3,7 @@ package com.tonyblake.dublinpubfinder;
 import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
@@ -112,6 +113,10 @@ public class GetPubsTask extends AsyncTask<ArrayList<String>, Void, ArrayList<Pu
                     Bitmap image = photo.getScaledPhoto(client, image_width, image_height).await().getBitmap();
 
                     pub.image = image;
+                }
+                else{
+
+                    pub.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.image_unavailable);
                 }
 
                 photoMetadataBuffer.release();

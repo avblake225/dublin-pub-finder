@@ -525,9 +525,9 @@ public class DBManager extends SQLiteOpenHelper{
                 j++;
             }
 
-            boolean lanigans = insertData(context.getString(R.string.lanigans),
-                    context.getString(R.string.lanigans_place_ID),
-                    context.getString(R.string.lanigans_description),
+            boolean lanigans = insertData(context.getString(R.string.lannigans),
+                    context.getString(R.string.lannigans_place_ID),
+                    context.getString(R.string.lannigans_description),
                     context.getString(R.string.no),
                     context.getString(R.string.traditional_irish),
                     context.getString(R.string.northside),
@@ -1797,7 +1797,7 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.jj_smyths),
                 context.getString(R.string.john_kehoes),
                 context.getString(R.string.jw_sweetmans),
-                context.getString(R.string.lanigans),
+                context.getString(R.string.lannigans),
                 context.getString(R.string.lagoona),
                 context.getString(R.string.mulligans),
                 context.getString(R.string.nearys),
