@@ -92,7 +92,7 @@ public class GetPubsTask extends AsyncTask<ArrayList<String>, Void, ArrayList<Pu
 
                         pub.address = String.valueOf(place.getAddress());
 
-                        pub.rating = place.getRating()*multiplier;
+                        pub.rating = place.getRating();
                     }
 
                     places.release();
