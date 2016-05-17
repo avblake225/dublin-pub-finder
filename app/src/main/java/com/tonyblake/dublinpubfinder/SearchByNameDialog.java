@@ -63,7 +63,7 @@ public class SearchByNameDialog extends DialogFragment {
                         else {
 
                             String query = context.getString(R.string.select_all_rows_from) + dbManager.getTableName()
-                                    + context.getString(R.string.where) + context.getString(R.string.name_equals)
+                                    + context.getString(R.string.where) + context.getString(R.string.name_like)
                                     + pub_name + "'" + context.getString(R.string.end_query);
 
                             try {

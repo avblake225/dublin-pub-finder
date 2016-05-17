@@ -112,7 +112,7 @@
     <string name="where">" WHERE("</string>
     <string name="where_placeID_equals">" WHERE PLACE_ID = "</string>
     <string name="where_favourite_equals_yes">WHERE FAVOURITE = \'Yes\';</string>
-    <string name="name_equals">NAME = \'</string>
+    <string name="name_like">NAME LIKE \'</string>
     <string name="id_equals">ID = </string>
     <string name="end_query">");"</string>
     <string name="update">UPDATE</string>
