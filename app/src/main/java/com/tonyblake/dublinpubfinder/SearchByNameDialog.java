@@ -26,8 +26,7 @@ public class SearchByNameDialog extends DialogFragment {
     private DBManager dbManager;
     private View view;
     private AutoCompleteTextView tv_pub_name;
-    public static String pub_name = "";
-    private Pub pub;
+    public static String pub_name;
     private WindowManager.LayoutParams lp;
 
     @Override
@@ -43,6 +42,8 @@ public class SearchByNameDialog extends DialogFragment {
 
         view = inflater.inflate(R.layout.search_by_name_dialog, null);
 
+        pub_name = null;
+
         builder.setTitle(R.string.enter_pub_name)
                 .setView(view)
                 .setPositiveButton(R.string.search, new DialogInterface.OnClickListener() {
@@ -50,31 +51,43 @@ public class SearchByNameDialog extends DialogFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
 
-                        String query = context.getString(R.string.select_all_rows_from) + dbManager.getTableName()
-                                + context.getString(R.string.where) + context.getString(R.string.name_equals)
-                                + pub_name + "'" + context.getString(R.string.end_query);
+                        if(pub_name == null) {
 
-                        try {
-                            Cursor res = dbManager.rawQuery(query);
-
-                            res.moveToFirst();
-
-                            String placeID;
-
-                            do {
-                                placeID = res.getString(2);
-                            }
-                            while (res.moveToNext());
-
-                            ((InputMethodManager) getActivity().getSystemService(Activity.INPUT_METHOD_SERVICE))
-                                    .toggleSoftInput(InputMethodManager.SHOW_IMPLICIT, 0);
-
-                            mListener.onSearchByNameDialogSearchClick(SearchByNameDialog.this, placeID);
-
-                        } catch (Exception e) {
-                            showToastMessage(context.getString(R.string.no_pubs_match_your_search));
+                            pub_name = tv_pub_name.getText().toString();
                         }
 
+                        if("".equals(pub_name)){
+
+                            showToastMessage(context.getString(R.string.no_pub_name_entered));
+                        }
+                        else {
+
+                            String query = context.getString(R.string.select_all_rows_from) + dbManager.getTableName()
+                                    + context.getString(R.string.where) + context.getString(R.string.name_equals)
+                                    + pub_name + "'" + context.getString(R.string.end_query);
+
+                            try {
+                                Cursor res = dbManager.rawQuery(query);
+
+                                res.moveToFirst();
+
+                                String placeID;
+
+                                do {
+                                    placeID = res.getString(2);
+                                }
+                                while (res.moveToNext());
+
+                                ((InputMethodManager) getActivity().getSystemService(Activity.INPUT_METHOD_SERVICE))
+                                        .toggleSoftInput(InputMethodManager.SHOW_IMPLICIT, 0);
+
+                                mListener.onSearchByNameDialogSearchClick(SearchByNameDialog.this, placeID);
+
+                            } catch (Exception e) {
+
+                                showToastMessage(context.getString(R.string.no_pubs_match_your_search));
+                            }
+                        }
                     }
                 })
 

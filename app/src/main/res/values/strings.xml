@@ -85,7 +85,8 @@
     <string name="invalid_selection_traditional_modern_pub">Invalid selection. Please select either a Traditional Irish pub OR a Modern pub</string>
     <string name="invalid_selection_pub_on_north_side_south_side">Invalid selection. Please select either a Pub on the north side of the city OR a Pub on the south side of the city</string>
 
-    <string name="please_make_a_selection">Please make a selection</string>
+    <string name="no_selections_made">No selections made</string>
+    <string name="no_pub_name_entered">No pub name entered</string>
     <string name="no_pubs_match_your_search">No pubs match your search. Please try again</string>
     <string name="error_retrieving_pub">Error retrieving pub</string>
     <string name="error_determining_favourite">Error determining if pub is in Favourites</string>

@@ -2,6 +2,7 @@ package com.tonyblake.dublinpubfinder;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -9,15 +10,20 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class SearchDialog extends DialogFragment{
 
+    private Context context;
+
     public static ArrayList<Integer> search_options;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
+
+        context = getActivity();
 
         search_options = new ArrayList<Integer>();
 
@@ -46,7 +52,14 @@ public class SearchDialog extends DialogFragment{
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
 
-                        mListener.onSearchDialogSearchClick(SearchDialog.this);
+                        if (search_options.size() == 0) {
+
+                            showToastMessage(context.getString(R.string.no_selections_made));
+                        }
+                        else {
+
+                            mListener.onSearchDialogSearchClick(SearchDialog.this);
+                        }
                     }
                 })
 
@@ -100,5 +113,11 @@ public class SearchDialog extends DialogFragment{
         catch (ClassCastException e) {
             throw new ClassCastException(activity.toString() + " must implement NoticeDialogListener");
         }
+    }
+
+    private void showToastMessage(CharSequence text) {
+        int duration = Toast.LENGTH_LONG;
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
     }
 }
