@@ -198,6 +198,10 @@
     <string name="cassidys_description">No description available</string>
     <string name="cassidys_place_ID">ChIJcZrG2oQOZ0gRDsK0hvBOw1g</string>
 
+    <string name="dakota">Dakota</string>
+    <string name="dakota_description">Large and stylish bar with a compact international menu and daily deals on freshly made cocktails</string>
+    <string name="dakota_place_ID">ChIJ5ylG9ZwOZ0gRUMjOMVhYuyw</string>
+
     <string name="devitts">Devitts</string>
     <string name="devitts_description">No description available</string>
     <string name="devitts_place_ID">ChIJA4Ky-p8OZ0gRhXikn1xYL6U</string>
@@ -231,9 +235,12 @@
     <string name="foleys_place_ID">ChIJ9Uq2zpkOZ0gR3bM6S_o6jnw</string>
 
     <string name="four_dame_lane">4 Dame Lane</string>
-    <string name="four_dame_lane_address">4 Dame Lane, Dublin 2</string>
     <string name="four_dame_lane_description">Brick walled bar with high beamed ceilings creating large music venue with memorabilia-covered bar</string>
     <string name="four_dame_lane_place_ID">ChIJtVgD65wOZ0gRU-Va5Q-sWxM</string>
+
+    <string name="graingers">Graingers</string>
+    <string name="graingers_description">No description available</string>
+    <string name="graingers_place_ID">ChIJg-AutI4OZ0gRw8d1iUjjq0A</string>
 
     <string name="grogans">Grogans</string>
     <string name="grogans_description">Higgledy piggledy artworks by local artists dot the walls of this local pub which hosts book events</string>
@@ -346,6 +353,10 @@
     <string name="the_bison_bar">The Bison Bar</string>
     <string name="the_bison_bar_description">No description available</string>
     <string name="the_bison_bar_place_ID">ChIJE7I4yoIOZ0gRMST5XljG4p4</string>
+
+    <string name="the_brazen_head">The Brazen Head</string>
+    <string name="the_brazen_head_description">Meeting place for historic rebels, this brass-filled, lantern-lit pub hosts live music each night</string>
+    <string name="the_brazen_head_place_ID">ChIJ5wqZWS8MZ0gRq5auJO7NbDE</string>
 
     <string name="the_brew_dock">The Brew Dock</string>
     <string name="the_brew_dock_description">Craft and own-brand beers and classic pub grub are served in this homely, micro-brewery owned bar</string>
@@ -524,11 +535,11 @@
     <string name="whelans_place_ID">ChIJeVe40Z8OZ0gRWQrpG0YiJXA</string>
 
     <string name="the_woolshed">The Woolshed</string>
-    <string name="the_woolshed_address">The Parnell Centre, Parnell Street, Dublin 1</string>
-    <string name="the_woolshed_directions">From O\'Connell Street (the Spire), turn away from O\' Connell bridge and walk straight. At the end of the Street, turn left onto Parnell Street. Walk all the way up this street and you will see The Woolshed on the right</string>
+    <string name="the_woolshed_description">No-nonsense pub with tellies showing all the big sporting events and a simple pizza and grill menu</string>
+    <string name="the_woolshed_place_ID">ChIJEff8I4IOZ0gRa3Aap96eX9g</string>
 
     <string name="the_workmans_club">The Workmans Club</string>
-    <string name="the_workmans_club_address">10 Wellington Quay, Dublin 2</string>
-    <string name="the_workmans_club_directions">From O\' Connell Street, walk over O\' Connell bridge and turn right onto Aston Quay. Walk straight along the Quays, past the Ha\'penny bridge. Continue on straight, past the Millenium bridge. You will soon see The Workman\'s Club on the left.</string>
+    <string name="the_workmans_club_description">Colourful bar and stage for live music that is a passionate haven for art and art lovers</string>
+    <string name="the_workmans_club_place_ID">ChIJZ6LROoMOZ0gR43amfj6EPN0</string>
 
 </resources>
