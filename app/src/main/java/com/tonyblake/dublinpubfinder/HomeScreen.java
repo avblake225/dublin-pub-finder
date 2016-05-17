@@ -796,8 +796,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         setHomeScreenTextViewMode(0);
 
-        tv_home_screen.setBackgroundColor(context.getResources().getColor(R.color.light_gray));
-
         home_screen_layout_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
 
         about_author_layout_container.removeAllViews();
