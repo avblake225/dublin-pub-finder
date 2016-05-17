@@ -86,11 +86,11 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     private ProgressDialog progressDialog;
 
     private String placeID;
-    private boolean refresh;
-    private int refreshMode;
-    private boolean findAPubRefresh;
-    private boolean searchForPubNameRefresh;
-    private boolean favouritesRefresh;
+    private boolean reload;
+    private int reloadMode;
+    private boolean findAPubReload;
+    private boolean searchForPubNameReload;
+    private boolean favouritesReload;
 
     private boolean getFavourites;
 
@@ -169,7 +169,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         about_author_layout_container = (LinearLayout) findViewById(R.id.about_author_layout_container);
 
-        setRefreshMode(0);
+        setReloadMode(0);
 
         getFavourites = false;
 
@@ -200,17 +200,17 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
             case R.id.reload:
 
-                refresh = true;
+                reload = true;
 
-                if (refreshMode == 1) {
+                if (reloadMode == 1) {
 
                     search(null);
 
-                } else if (refreshMode == 2) {
+                } else if (reloadMode == 2) {
 
                     search(placeID);
 
-                } else if (refreshMode == 3) {
+                } else if (reloadMode == 3) {
 
                     search(placeID);
 
@@ -286,7 +286,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         clearScreen();
 
-                        setRefreshMode(3);
+                        setReloadMode(3);
 
                         setHomeScreenTextViewMode(2);
 
@@ -305,7 +305,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         clearScreen();
 
-                        setRefreshMode(0);
+                        setReloadMode(0);
 
                         setHomeScreenTextViewMode(2);
 
@@ -326,7 +326,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                         setHomeScreenTextViewMode(1);
 
-                        setRefreshMode(0);
+                        setReloadMode(0);
 
                         tv_home_screen.setText(context.getString(R.string.disclaimer));
 
@@ -408,9 +408,11 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             @Override
             protected void onPreExecute() {
 
+                clearScreenKeepSearchTags();
+
                 progressDialog = new ProgressDialog(context);
 
-                if(refresh){
+                if(reload){
 
                     progressDialog.setMessage(context.getString(R.string.reloading));
                 }
@@ -479,40 +481,40 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         }.execute(placeIDs);
     }
 
-    private void setRefreshMode(int mode){
+    private void setReloadMode(int mode){
 
-        refreshMode = mode;
-        refresh = false;
+        reloadMode = mode;
+        reload = false;
         getFavourites = false;
 
         switch(mode){
 
-            // Nothing to Refresh
+            // Nothing to Reload
             case 0:
-                findAPubRefresh = false;
-                searchForPubNameRefresh = false;
-                favouritesRefresh = false;
+                findAPubReload = false;
+                searchForPubNameReload = false;
+                favouritesReload = false;
                 break;
 
-            // Refresh "Find A Pub"
+            // Reload "Find A Pub"
             case 1:
-                findAPubRefresh = true;
-                searchForPubNameRefresh = false;
-                favouritesRefresh = false;
+                findAPubReload = true;
+                searchForPubNameReload = false;
+                favouritesReload = false;
                 break;
 
-            // Refresh "Search For Pub Name"
+            // Reload "Search For Pub Name"
             case 2:
-                findAPubRefresh = false;
-                searchForPubNameRefresh = true;
-                favouritesRefresh = false;
+                findAPubReload = false;
+                searchForPubNameReload = true;
+                favouritesReload = false;
                 break;
 
-            // Refresh "Favourites"
+            // Reload "Favourites"
             case 3:
-                findAPubRefresh = false;
-                searchForPubNameRefresh = true;
-                favouritesRefresh = true;
+                findAPubReload = false;
+                searchForPubNameReload = true;
+                favouritesReload = true;
                 break;
         }
     }
@@ -645,8 +647,9 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
     @Override
     public void onSearchDialogSearchClick(DialogFragment dialog) {
 
-        refresh = false;
-        setRefreshMode(1);
+        reload = false;
+
+        setReloadMode(1);
 
         clearAllSelections();
 
@@ -773,9 +776,9 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
         this.placeID = placeID;
 
-        refresh = false;
+        reload = false;
 
-        setRefreshMode(2);
+        setReloadMode(2);
 
         clearScreen();
 
@@ -784,21 +787,22 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private void clearScreen(){
 
+        clearScreenKeepSearchTags();
+
+        search_tag_layout_container.removeAllViews();
+    }
+
+    private void clearScreenKeepSearchTags(){
+
         setHomeScreenTextViewMode(0);
+
+        tv_home_screen.setBackgroundColor(context.getResources().getColor(R.color.light_gray));
 
         home_screen_layout_parent.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
 
         about_author_layout_container.removeAllViews();
 
         if(list != null) list.setAdapter(null);
-
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        params.setMargins((int) context.getResources().getDimension(R.dimen.no_margin),
-                (int) context.getResources().getDimension(R.dimen.no_margin),
-                (int) context.getResources().getDimension(R.dimen.no_margin),
-                (int) context.getResources().getDimension(R.dimen.no_margin));
-
-        search_tag_layout_container.removeAllViews();
     }
 
     private void clearAllSelections(){
@@ -875,8 +879,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
                         (int) context.getResources().getDimension(R.dimen.tv_home_screen_padding),
                         (int) context.getResources().getDimension(R.dimen.tv_home_screen_padding));
 
-                tv_home_screen.setBackgroundColor(context.getResources().getColor(R.color.white));
-
+                break;
         }
     }
 
