@@ -3,8 +3,8 @@
     <string name="server_key">AIzaSyBHAwyvNujQeHkD8Rr8MqlHdV0vKhzckyM</string>
 
     <string name="app_name">Dublin Pub Finder</string>
-    <string name="welcome">Welcome to Dublin Pub Finder. Use the menu button at the top of the screen to get started.
-                           Please ensure that you are connected to Wifi or have your mobile data turned on.</string>
+    <string name="welcome">Welcome to Dublin Pub Finder. Use the menu button at the top left corner of the screen to get started.
+                           Please ensure that you are connected to Wifi or that your mobile data is turned on.</string>
     <string name="author">Author:</string>
     <string name="author_name">Tony Blake</string>
     <string name="author_bio">I\'m a Software Engineer from Dublin, Ireland.

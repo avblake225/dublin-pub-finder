@@ -122,7 +122,10 @@ public class GetPubsTask extends AsyncTask<ArrayList<String>, Void, ArrayList<Pu
                 photoMetadataBuffer.release();
             }
 
-            pubs.add(pub);
+            if(pub.name != null){
+
+                pubs.add(pub);
+            }
         }
 
         return pubs;

@@ -66,8 +66,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private ArrayList<String> placeIDs;
 
-    private int num_place_IDs_found;
-
     private SearchDialog searchDialog;
 
     private SearchByNameDialog searchByNameDialog;
@@ -76,6 +74,8 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
     private int downloadedPhoto_width;
     private int downloadedPhoto_height;
+
+    private int num_pubs_found;
 
     private String num_pubs_str;
 
@@ -384,31 +384,6 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
             }
             else placeIDs.add(placeID);
 
-            num_place_IDs_found = placeIDs.size();
-
-            if(num_place_IDs_found == 1){
-
-                if(getFavourites){
-
-                    num_pubs_str = num_place_IDs_found + " " + context.getString(R.string.favourite);
-                }
-                else{
-
-                    num_pubs_str = num_place_IDs_found + " " + context.getString(R.string.pub_found);
-                }
-            }
-            else if(num_place_IDs_found > 1){
-
-                if(getFavourites){
-
-                    num_pubs_str = num_place_IDs_found + " " + context.getString(R.string.favourites);
-                }
-                else{
-
-                    num_pubs_str = num_place_IDs_found + " " + context.getString(R.string.pubs_found);
-                }
-            }
-
             getPubItems();
         }
         catch (Exception e) {
@@ -470,11 +445,36 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
 
                 if (pubs_returned != null) {
 
+                    num_pubs_found = pubs_returned.size();
+
                     pubsToDisplay = pubs_returned;
 
                     progressDialog.dismiss();
 
                     updateFavourites = false;
+
+                    if(num_pubs_found == 1){
+
+                        if(getFavourites){
+
+                            num_pubs_str = num_pubs_found + " " + context.getString(R.string.favourite);
+                        }
+                        else{
+
+                            num_pubs_str = num_pubs_found + " " + context.getString(R.string.pub_found);
+                        }
+                    }
+                    else if(num_pubs_found > 1){
+
+                        if(getFavourites){
+
+                            num_pubs_str = num_pubs_found + " " + context.getString(R.string.favourites);
+                        }
+                        else{
+
+                            num_pubs_str = num_pubs_found + " " + context.getString(R.string.pubs_found);
+                        }
+                    }
 
                     displayPubs();
 
