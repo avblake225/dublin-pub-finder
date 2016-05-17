@@ -627,6 +627,23 @@ public class DBManager extends SQLiteOpenHelper{
                 j++;
             }
 
+            boolean o_sheas = insertData(context.getString(R.string.o_sheas),
+                    context.getString(R.string.o_sheas_place_ID),
+                    context.getString(R.string.o_sheas_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.northside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
+
+            i++;
+            if (o_sheas) {
+                j++;
+            }
+
             boolean peters_pub = insertData(context.getString(R.string.peters_pub),
                     context.getString(R.string.peters_pub_place_ID),
                     context.getString(R.string.peters_pub_description),
@@ -780,6 +797,23 @@ public class DBManager extends SQLiteOpenHelper{
                 j++;
             }
 
+            boolean slatterys = insertData(context.getString(R.string.slatterys),
+                    context.getString(R.string.slatterys_place_ID),
+                    context.getString(R.string.slatterys_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.northside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
+
+            i++;
+            if (slatterys) {
+                j++;
+            }
+
             boolean the_auld_dubliner = insertData(context.getString(R.string.the_auld_dubliner),
                     context.getString(R.string.the_auld_dubliner_place_ID),
                     context.getString(R.string.the_auld_dubliner_description),
@@ -879,6 +913,23 @@ public class DBManager extends SQLiteOpenHelper{
 
             i++;
             if (the_bison_bar) {
+                j++;
+            }
+
+            boolean the_black_sheep = insertData(context.getString(R.string.the_black_sheep),
+                    context.getString(R.string.the_black_sheep_place_ID),
+                    context.getString(R.string.the_black_sheep_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.northside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no));
+
+            i++;
+            if (the_black_sheep) {
                 j++;
             }
 
@@ -1137,6 +1188,23 @@ public class DBManager extends SQLiteOpenHelper{
                 j++;
             }
 
+            boolean the_gasworks = insertData(context.getString(R.string.the_gasworks),
+                    context.getString(R.string.the_gasworks_place_ID),
+                    context.getString(R.string.the_gasworks_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.modern),
+                    context.getString(R.string.southside),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.yes));
+
+            i++;
+            if (the_gasworks) {
+                j++;
+            }
+
             boolean the_george = insertData(context.getString(R.string.the_george),
                     context.getString(R.string.the_george_place_ID),
                     context.getString(R.string.the_george_description),
@@ -1355,6 +1423,23 @@ public class DBManager extends SQLiteOpenHelper{
 
             i++;
             if (the_long_stone) {
+                j++;
+            }
+
+            boolean the_lotts = insertData(context.getString(R.string.the_lotts),
+                    context.getString(R.string.the_lotts_place_ID),
+                    context.getString(R.string.the_lotts_description),
+                    context.getString(R.string.no),
+                    context.getString(R.string.traditional_irish),
+                    context.getString(R.string.northside),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.yes),
+                    context.getString(R.string.no),
+                    context.getString(R.string.no));
+
+            i++;
+            if (the_lotts) {
                 j++;
             }
 
@@ -1680,13 +1765,6 @@ public class DBManager extends SQLiteOpenHelper{
             if (the_workmans_club) {
                 j++;
             }
-
-        /*  Graingers
-        *  Slatterys
-        *  O' Shea's
-        *  The Lotts
-        *  The Gasworks
-        *  The Black Sheep*/
         }
 
         pub_names = new String[]{
@@ -1725,6 +1803,7 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.nearys),
                 context.getString(R.string.o_donoghues),
                 context.getString(R.string.o_reillys),
+                context.getString(R.string.o_sheas),
                 context.getString(R.string.peters_pub),
                 context.getString(R.string.p_macs),
                 context.getString(R.string.robert_reades),
@@ -1734,12 +1813,14 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.sheehans),
                 context.getString(R.string.sin_é),
                 context.getString(R.string.sinnotts),
+                context.getString(R.string.slatterys),
                 context.getString(R.string.the_auld_dubliner),
                 context.getString(R.string.the_bailey_bar),
                 context.getString(R.string.the_bank),
                 context.getString(R.string.the_bankers),
                 context.getString(R.string.the_bar_with_no_name),
                 context.getString(R.string.the_bison_bar),
+                context.getString(R.string.the_black_sheep),
                 context.getString(R.string.the_brazen_head),
                 context.getString(R.string.the_brew_dock),
                 context.getString(R.string.the_bull_and_castle),
@@ -1755,6 +1836,7 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.the_east_side_tavern),
                 context.getString(R.string.the_exchequer),
                 context.getString(R.string.the_garage_bar),
+                context.getString(R.string.the_gasworks),
                 context.getString(R.string.the_george),
                 context.getString(R.string.the_gingerman),
                 context.getString(R.string.the_globe),
@@ -1768,6 +1850,7 @@ public class DBManager extends SQLiteOpenHelper{
                 context.getString(R.string.the_lombard),
                 context.getString(R.string.the_long_hall),
                 context.getString(R.string.the_long_stone),
+                context.getString(R.string.the_lotts),
                 context.getString(R.string.the_market_bar),
                 context.getString(R.string.the_mercantile),
                 context.getString(R.string.the_morgan_bar),

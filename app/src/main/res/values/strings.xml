@@ -294,6 +294,10 @@
     <string name="o_reillys_description">Large and lively Victorian era bar with iron chandeliers and church pews hosting Saturday rock club</string>
     <string name="o_reillys_place_ID">ChIJ3wjf8I8OZ0gR5tvtJlkau4c</string>
 
+    <string name="o_sheas">O\' Shea\'s</string>
+    <string name="o_sheas_description">This traditional bar is a bustling spot for Irish music, live bands and dancing</string>
+    <string name="o_sheas_place_ID">ChIJrwr1To8OZ0gRssdwcC6f8hA</string>
+
     <string name="peters_pub">Peters Pub</string>
     <string name="peters_pub_description">Traditional, convivial and compact pub with white walls, serving whiskies, beers and sandwiches</string>
     <string name="peters_pub_place_ID">ChIJGa6WM5wOZ0gRxjvzzfvaYQU</string>
@@ -330,6 +334,10 @@
     <string name="sinnotts_description">Traditional Irish pub that is usually packed out for the big GAA, football and rugby matches</string>
     <string name="sinnotts_place_ID">ChIJF_ZkH5wOZ0gRc9YMKcz01tE</string>
 
+    <string name="slatterys">Slatterys</string>
+    <string name="slatterys_description">One of few pubs in Ireland with licence to open at 7am on weekends with a carvery and pub grub menu</string>
+    <string name="slatterys_place_ID">ChIJE42FqWAMZ0gRNgtpxlLd7wQ</string>
+
     <string name="the_auld_dubliner">The Auld Dubliner</string>
     <string name="the_auld_dubliner_description">An oasis of quiet in busy Temple Bar, this pub serves Irish food with traditional music upstairs</string>
     <string name="the_auld_dubliner_place_ID">ChIJMVe9U4MOZ0gRE1iw8A0lOkw</string>
@@ -353,6 +361,10 @@
     <string name="the_bison_bar">The Bison Bar</string>
     <string name="the_bison_bar_description">No description available</string>
     <string name="the_bison_bar_place_ID">ChIJE7I4yoIOZ0gRMST5XljG4p4</string>
+
+    <string name="the_black_sheep">The Black Sheep</string>
+    <string name="the_black_sheep_description">Craft ales and global comfort food in traditional pub with olive-green walls and eclectic furniture</string>
+    <string name="the_black_sheep_place_ID">ChIJk1IUCIIOZ0gRL4X5sjOjIFQ</string>
 
     <string name="the_brazen_head">The Brazen Head</string>
     <string name="the_brazen_head_description">Meeting place for historic rebels, this brass-filled, lantern-lit pub hosts live music each night</string>
@@ -414,6 +426,10 @@
     <string name="the_garage_bar_description">No description available</string>
     <string name="the_garage_bar_place_ID">ChIJt3DQzIIOZ0gRMIMT7t_LHbg</string>
 
+    <string name="the_gasworks">The Gasworks</string>
+    <string name="the_gasworks_description">No description available</string>
+    <string name="the_gasworks_place_ID">ChIJ9w8v5uoOZ0gR0TxMt7V-cRU</string>
+
     <string name="the_george">The George</string>
     <string name="the_george_description">Low-lit front bar with velvet clad barstools and a club room for raucous DJs and live bands</string>
     <string name="the_george_place_ID">ChIJ_8isAPULZ0gRfC-Ciqzqcxc</string>
@@ -465,6 +481,10 @@
     <string name="the_long_stone">The Long Stone</string>
     <string name="the_long_stone_description">Lively 18th-century pub with exuberant plasterwork and wood-carvings, plus big-screen TV sport</string>
     <string name="the_long_stone_place_ID">ChIJPx4HTIUOZ0gRFLXjONp1Cp8</string>
+
+    <string name="the_lotts">The Lotts</string>
+    <string name="the_lotts_description">Hot stone-cooked steaks served in an elegant cafe/bar with ornate chandeliers and a mosaic floor</string>
+    <string name="the_lotts_place_ID">ChIJ0XdmbYMOZ0gRzhQBeKi5pTU</string>
 
     <string name="the_market_bar">The Market Bar</string>
     <string name="the_market_bar_description">Soaring ceilings and a no-music policy give unusually laid-back vibe to this bar with a tapas menu</string>
