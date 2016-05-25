@@ -566,7 +566,7 @@ public class HomeScreen extends AppCompatActivity implements SearchDialog.Search
         intent.putExtra("rating", pub.rating);
 
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        pub.image.compress(Bitmap.CompressFormat.PNG, 50, byteArrayOutputStream);
+        pub.image.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
         intent.putExtra("byteArray", byteArrayOutputStream.toByteArray());
 
         intent.putExtra("description", pub.description);
